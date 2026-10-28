@@ -1598,20 +1598,21 @@ CLI_COMPAT_ALL=1
 
 由`scripts/i18n/run-translation.mjs` （ `npm run i18n:run`指令）使用。預設情況下，所有六個變數均未設定 - 僅在應該能夠運行文件翻譯器的電腦上在`.env`中設定它們。
 
-| 多變的                                     | 預設         | 原始檔                                   | 描述                                                                                                                                      |
-| ------------------------------------------ | ------------ | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| `OMNIROUTE_TRANSLATION_API_URL`            | _（未設定）_ | `scripts/i18n/run-translation.mjs`       | 用於翻譯後端的 OpenAI 相容基礎URL 。                                                                                                      |
-| `OMNIROUTE_TRANSLATION_API_KEY`            | _（未設定）_ | `scripts/i18n/run-translation.mjs`       | 翻譯後端的承載令牌（從未記錄）。                                                                                                          |
-| `OMNIROUTE_TRANSLATION_MODEL`              | _（未設定）_ | `scripts/i18n/run-translation.mjs`       | 型號 ID，例如`gpt-4o-mini`或`cx/gpt-5.4-mini`。                                                                                           |
-| `OMNIROUTE_TRANSLATION_FALLBACK_MODELS`    | _（未設定）_ | `scripts/i18n/lib/translate-backend.mjs` | 當主模型失敗時，可選的以逗號分隔的模型鏈依序嘗試（429配額、 401/402、5xx、超時、網路）；格式錯誤的請求 (400/413/422) 不會在其他地方重試。 |
-| `OMNIROUTE_TRANSLATION_TIMEOUT_MS`         | `60000`      | `scripts/i18n/run-translation.mjs`       | 每個請求的超時時間（以毫秒為單位）。                                                                                                      |
-| `OMNIROUTE_TRANSLATION_REASONING_EFFORT`   | _（未設定）_ | `scripts/i18n/lib/translate-backend.mjs` | 可選的推理控制，設定後按原樣發送到後端。                                                                                                  |
-| `OMNIROUTE_TRANSLATION_CONCURRENCY`        | `4`          | `scripts/i18n/run-translation.mjs`       | 在多個文件/區域設定上運行時的並行翻譯請求。                                                                                               |
-| `OMNIROUTE_TRANSLATION_ENGINE`             | `llm`        | `scripts/i18n/run-translation.mjs`       | `llm`使用上面的後端； `google`透過結構安全Google引擎進行轉換，不需要任何LLM變數。                                                         |
-| `OMNIROUTE_TRANSLATION_GOOGLE_FALLBACK`    | `1`          | `scripts/i18n/run-translation.mjs`       | 使用`llm`引擎，模型無法產生的區塊（輸出防護每次嘗試都失敗，或模型錯誤）由Google轉換，而不是使語言環境失敗。 `0`禁用它。                   |
-| `OMNIROUTE_TRANSLATION_GOOGLE_API_KEY`     | _（未設定）_ | `scripts/i18n/lib/google-translate.mjs`  | 可選的雲端翻譯 v2 密鑰。 Unset 使用無密鑰 Web 端點（速率有限，適合偶爾波動）。                                                            |
-| `OMNIROUTE_TRANSLATION_GOOGLE_CONCURRENCY` | `6`          | `scripts/i18n/lib/google-translate.mjs`  | 由運行的每個區域設定共享的並行Google請求。                                                                                                |
-| `OMNIROUTE_TRANSLATION_GOOGLE_TIMEOUT_MS`  | `30000`      | `scripts/i18n/lib/google-translate.mjs`  | Google引擎的每個請求逾時（以毫秒為單位）。                                                                                                |
+| 多變的                                     | 預設         | 原始檔                                    | 描述                                                                                                                                      |
+| ------------------------------------------ | ------------ | ----------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| `OMNIROUTE_TRANSLATION_API_URL`            | _（未設定）_ | `scripts/i18n/run-translation.mjs`        | 用於翻譯後端的 OpenAI 相容基礎URL 。                                                                                                      |
+| `OMNIROUTE_TRANSLATION_API_KEY`            | _（未設定）_ | `scripts/i18n/run-translation.mjs`        | 翻譯後端的承載令牌（從未記錄）。                                                                                                          |
+| `OMNIROUTE_TRANSLATION_MODEL`              | _（未設定）_ | `scripts/i18n/run-translation.mjs`        | 型號 ID，例如`gpt-4o-mini`或`cx/gpt-5.4-mini`。                                                                                           |
+| `OMNIROUTE_TRANSLATION_FALLBACK_MODELS`    | _（未設定）_ | `scripts/i18n/lib/translate-backend.mjs`  | 當主模型失敗時，可選的以逗號分隔的模型鏈依序嘗試（429配額、 401/402、5xx、超時、網路）；格式錯誤的請求 (400/413/422) 不會在其他地方重試。 |
+| `OMNIROUTE_TRANSLATION_TIMEOUT_MS`         | `60000`      | `scripts/i18n/run-translation.mjs`        | 每個請求的超時時間（以毫秒為單位）。                                                                                                      |
+| `OMNIROUTE_TRANSLATION_REASONING_EFFORT`   | _（未設定）_ | `scripts/i18n/lib/translate-backend.mjs`  | 可選的推理控制，設定後按原樣發送到後端。                                                                                                  |
+| `OMNIROUTE_TRANSLATION_CONCURRENCY`        | `4`          | `scripts/i18n/run-translation.mjs`        | 在多個文件/區域設定上運行時的並行翻譯請求。                                                                                               |
+| `OMNIROUTE_TRANSLATION_ENGINE`             | `llm`        | `scripts/i18n/run-translation.mjs`        | `llm`使用上面的後端； `google`透過結構安全Google引擎進行轉換，不需要任何LLM變數。                                                         |
+| `OMNIROUTE_TRANSLATION_GOOGLE_FALLBACK`    | `1`          | `scripts/i18n/run-translation.mjs`        | 使用`llm`引擎，模型無法產生的區塊（輸出防護每次嘗試都失敗，或模型錯誤）由Google轉換，而不是使語言環境失敗。 `0`禁用它。                   |
+| `OMNIROUTE_TRANSLATION_GOOGLE_API_KEY`     | _（未設定）_ | `scripts/i18n/lib/google-translate.mjs`   | 可選的雲端翻譯 v2 密鑰。 Unset 使用無密鑰 Web 端點（速率有限，適合偶爾波動）。                                                            |
+| `OMNIROUTE_TRANSLATION_GOOGLE_CONCURRENCY` | `6`          | `scripts/i18n/lib/google-translate.mjs`   | 由運行的每個區域設定共享的並行Google請求。                                                                                                |
+| `OMNIROUTE_TRANSLATION_GOOGLE_TIMEOUT_MS`  | `30000`      | `scripts/i18n/lib/google-translate.mjs`   | Google引擎的每個請求逾時（以毫秒為單位）。                                                                                                |
+| `UI_KIT_READ_TOKEN`                        | _（未設定）_ | `scripts/check/check-ui-kit-upstream.mjs` | 私有上游UI套件儲存庫的唯讀令牌，由`npm run check:ui-kit-upstream`和每週的「UI套件上游觀察」工作流程使用。在本機，檢查使用您的 git 憑證。  |
 
 ---
 
