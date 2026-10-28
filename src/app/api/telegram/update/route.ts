@@ -110,30 +110,36 @@ export async function POST(request: Request) {
 
   // ── Mini App direct path: { initData, message } ──────────────────────────
   const initData = typeof body.initData === "string" ? body.initData : "";
-  if (initData) {
-    const botToken = getTelegramBotToken();
-    if (!verifyInitData(initData, botToken)) {
-      return NextResponse.json({ ok: false, error: "Invalid initData signature" }, { status: 401 });
-    }
-    const message = typeof body.message === "string" ? body.message : "";
-    if (!message.trim()) {
-      return NextResponse.json({ ok: false, error: "message is required" }, { status: 400 });
-    }
-    // Resolve the Telegram user id from the verified initData for key mapping.
-    const telegramUserId = extractInitDataUserId(initData);
-    if (!isTelegramUserAllowed(telegramUserId)) {
-      log.warn("TELEGRAM", "Mini App user not in TELEGRAM_ALLOWED_USER_IDS", {
-        userId: telegramUserId,
-      });
-      return NextResponse.json({ ok: false, error: "Telegram user not allowed" }, { status: 403 });
-    }
-    // Proxy synchronously and return the reply (Mini App awaits the fetch).
-    const reply = await proxyChat(telegramUserId, message);
-    return NextResponse.json({ ok: true, reply: reply || "⚠️ Empty gateway response." });
-  }
+  if (initData) return handleMiniAppRequest(initData, body);
+  return handleWebhookUpdate(request, body);
+}
 
-  // ── Bot webhook path: TelegramUpdate ─────────────────────────────────────
-  // Unlike the Mini App branch above (which verifies the initData HMAC), a
+/** Mini App path: the initData HMAC proves origin; the allowlist decides who is served. */
+async function handleMiniAppRequest(initData: string, body: Record<string, unknown>) {
+  const botToken = getTelegramBotToken();
+  if (!verifyInitData(initData, botToken)) {
+    return NextResponse.json({ ok: false, error: "Invalid initData signature" }, { status: 401 });
+  }
+  const message = typeof body.message === "string" ? body.message : "";
+  if (!message.trim()) {
+    return NextResponse.json({ ok: false, error: "message is required" }, { status: 400 });
+  }
+  // Resolve the Telegram user id from the verified initData for key mapping.
+  const telegramUserId = extractInitDataUserId(initData);
+  if (!isTelegramUserAllowed(telegramUserId)) {
+    log.warn("TELEGRAM", "Mini App user not in TELEGRAM_ALLOWED_USER_IDS", {
+      userId: telegramUserId,
+    });
+    return NextResponse.json({ ok: false, error: "Telegram user not allowed" }, { status: 403 });
+  }
+  // Proxy synchronously and return the reply (Mini App awaits the fetch).
+  const reply = await proxyChat(telegramUserId, message);
+  return NextResponse.json({ ok: true, reply: reply || "⚠️ Empty gateway response." });
+}
+
+/** Bot webhook path: TelegramUpdate. */
+function handleWebhookUpdate(request: Request, body: Record<string, unknown>) {
+  // Unlike the Mini App branch (which verifies the initData HMAC), a
   // webhook body carries no proof of origin: `chat.id` is attacker-chosen and
   // reaches proxyChat(), which mints a real API key and spends upstream quota.
   // Telegram's `secret_token` echo is the only authentication available here.
