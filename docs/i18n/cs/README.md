@@ -6,14 +6,14 @@
 
 <div align="center">
 
-<img src="./docs/screenshots/MainOmniRoute.png" alt="Řídicí panel OmniRoute" width="820"/>
+<img src="./docs/screenshots/MainOmniRoute.png" alt="OmniRoute Dashboard" width="820"/>
 
 <br/>
 <br/>
 
-# 🚀 OmniRoute — Bezplatná AI brána
+# 🚀 OmniRoute — bezplatná brána AI
 
-<img src="./docs/diagrams/readme-hero.svg" width="100%" alt="OmniRoute — Nikdy nepřestávejte programovat. Každý AI nástroj → 376 poskytovatelů — 150+ zdarma — prostřednictvím jednoho koncového bodu. Claude Code, Codex, Cursor, Cline, Copilot a Antigravity s přístupem ZDARMA ke Claude / GPT / Gemini a automatickým záložním přepínáním. Kombinovaná komprese RTK + Caveman šetří 15–95 % tokenů (v průměru ~89 %) — nikdy nenarazíte na limity. 376 poskytovatelů AI · 150+ bezplatných tarifů · ~1,62 mld. bezplatných tokenů/měsíc · 20 strategií směrování · počáteční náklady 0 $."/>
+<img src="./docs/diagrams/readme-hero.svg" width="100%" alt="OmniRoute — Never stop coding. Every AI tool → 377 providers — 150+ free — through one endpoint. Claude Code, Codex, Cursor, Cline, Copilot & Antigravity into FREE Claude / GPT / Gemini with auto-fallback. RTK + Caveman stacked compression saves 15–95% tokens (~89% avg) — never hit limits. 377 AI providers · 150+ free tiers · ~1.62B free tokens/mo · 20 routing strategies · $0 to start."/>
 
 </div>
 
@@ -226,29 +226,29 @@
 
 </div>
 
-<img src="./docs/diagrams/works-zero-config.svg" width="100%" alt="Tři kroky: nainstalujte a spusťte OmniRoute, připojte podporovaného poskytovatele pomocí vlastního účtu nebo API klíče a poté nasměrujte svůj nástroj na localhost:20128/v1 s použitím API klíče OmniRoute a modelu auto. Směrování závisí na dostupných podporovaných připojeních a limitech poskytovatelů."/>
+<img src="./docs/diagrams/works-zero-config.svg" width="100%" alt="Three steps: install and start OmniRoute, connect an eligible provider with your own account or API key, then point your tool at localhost:20128/v1 using an OmniRoute API key and model auto. Routing depends on available eligible connections and provider limits."/>
 
 ```bash
-# Po připojení poskytovatele zkopírujte svůj klíč OmniRoute z Nástěnka → Koncové body:
+# After connecting a provider, copy your OmniRoute key from Dashboard → Endpoints:
 curl http://localhost:20128/v1/chat/completions \
   -H "Authorization: Bearer YOUR_OMNIROUTE_KEY" \
   -H "Content-Type: application/json" \
   -d '{"model":"auto","messages":[{"role":"user","content":"Hello!"}]}'
 ```
 
-<sub>`auto` vyžaduje způsobilou trasu. Nová instalace nemusí mít žádné způsobilé cíle bez klíče a poskytovatel bez klíče může odmítnout klienty třetích stran. Poskytovatelé označení jako `tos: avoid`, včetně Kiro, jsou ve výchozím nastavení z automatického směrování vyloučeni; připojení účtu toto nastavení nemění. Před výběrem poskytovatele si přečtěte [Průvodce bezplatnými úrovněmi](docs/getting-started/FREE-TIERS-GUIDE.md).</sub>
+<sub> `auto` potřebuje vhodnou trasu. Nová instalace nemůže mít žádné způsobilé bezklíčové cíle a poskytovatel bezklíčového připojení může odmítnout klienty třetích stran. Poskytovatelé označení `tos: avoid`, včetně Kiro, jsou ve výchozím nastavení vyloučeni z automatického směrování; připojení účtu toto nastavení nepřepíše. Před výběrem poskytovatele si prostudujte [Průvodce bezplatnými úrovněmi](docs/getting-started/FREE-TIERS-GUIDE.md).</sub>
 
-<sub>📦 Skripty pro rychlý start metodou zkopírovat a vložit pro **Python, Node.js, PHP a cURL** → [`examples/quickstart/`](examples/quickstart/)</sub>
+<sub>📦 Kopírování a vkládání skriptů rychlého spuštění pro** Python, Node.js, PHP a cURL** → [`examples/quickstart/`](examples/quickstart/)</sub>
 
 <br/>
 
 <div align="center">
 
-# 💥 Příslib
+# 💥 The Promise
 
 </div>
 
-<img src="./docs/diagrams/promise-pillars.svg" width="100%" alt="Příslib — jeden koncový bod a 376 poskytovatelů. Automatický záložní přechod zachovává směrování, dokud je k dispozici jiný funkční cíl. Šest pilířů: odolný záložní přechod mezi 376 poskytovateli · až 95% úspora tokenů u způsobilých pracovních úloh · počáteční náklady $0 díky více než 150 bezplatným úrovním a 52 trvale bezplatným poskytovatelům s opakovanými limity nebo bez potřeby klíče · 37 integrací CLI/agentů prostřednictvím jediné konfigurace · kompatibilita s API OpenAI, Claude, Gemini a Responses na /v1 · produkční nástroje včetně jističů, maskování TLS, MCP se 110 nástroji, A2A, paměti, bezpečnostních omezení, vyhodnocování a více než 56 000 deklarací statických testů ve více než 7 800 sledovaných testovacích souborech."/>
+<img src="./docs/diagrams/promise-pillars.svg" width="100%" alt="The Promise — One endpoint and 377 providers. Automatic fallback keeps routing while another healthy target is available. Six pillars: resilient fallback across 377 providers · up to 95% token savings on eligible workloads · $0 to start with 150+ free tiers and 52 recurring/keyless free-forever providers · 37 CLI/agent integrations through one config · OpenAI, Claude, Gemini and Responses API compatibility at /v1 · production controls including circuit breakers, TLS stealth, MCP 110 tools, A2A, memory, guardrails, evals and 56,000+ static test declarations across 7,800+ tracked test files."/>
 
 <br/>
 <br/>
@@ -259,11 +259,11 @@ curl http://localhost:20128/v1/chat/completions \
 
 </div>
 
-<img src="./docs/diagrams/why-pain-fix.svg" width="100%" alt="Proč OmniRoute — přestaňte žonglovat s 10 nástěnkami, nefunkčními API klíči a nečekanými účty. Deset každodenních problémů a jejich řešení: nevyužité kvóty s končící platností → maximalizace předplatných; limity požadavků uprostřed programování → čtyřúrovňový automatický záložní přechod (Předplatné → API → Levné → Zdarma); výstupy nástrojů spotřebovávající tokeny → komprese RTK + Caveman (15–95 %); drahá API → směrování optimalizované podle nákladů; každý nástroj má vlastní nastavení → jeden koncový bod, jedna nástěnka; blokovaná AI → tříúrovňové proxy + maskování TLS; nefunkční klíče → třívrstvá odolnost (jističe, dočasné vyřazení klíčů, uzamčení modelů); tým sdílející jedno předplatné → fondy klíčů s férovými kvótami; prompty procházející cizím cloudem → lokální přístup s klíči šifrovanými pomocí AES-256-GCM; žádný přehled o výdajích → živé analytické údaje (využití, kvóty, úspory, latence p95)."/>
+<img src="./docs/diagrams/why-pain-fix.svg" width="100%" alt="Why OmniRoute — stop juggling 10 dashboards, dead API keys and surprise bills. Ten daily pains vs fixes: quota expiring unused → maximize subscriptions; rate limits mid-coding → 4-tier auto-fallback (Subscription → API → Cheap → Free); tool outputs burning tokens → RTK + Caveman compression (15–95%); expensive APIs → cost-optimized routing; every tool its own setup → one endpoint, one dashboard; AI blocked → 3-level proxy + TLS stealth; dead keys → 3-layer resilience (circuit breakers, key cooldown, model lockout); team sharing one subscription → key pools with fair-share quotas; prompts through someone's cloud → local-first with AES-256-GCM encrypted keys; no spend visibility → live analytics (usage, quota, savings, p95 latency)."/>
 
 <div align="center">
 
-<img src="./docs/diagrams/tier-cascade.svg" width="100%" alt="Tok požadavků OmniRoute: vaše IDE nebo CLI (Claude Code, Cursor, Cline…) volá jediný lokální koncový bod (http://localhost:20128/v1); chytrý směrovač OmniRoute (komprese RTK + Caveman, 20 strategií směrování, jističe, maskování TLS, MCP, A2A, bezpečnostní omezení) může přecházet mezi 4 úrovněmi poskytovatelů, dokud zůstává dostupný způsobilý a funkční cíl — úroveň 1 Předplatné, úroveň 2 API klíč, úroveň 3 Levné a úroveň 4 Zdarma."/>
+<img src="./docs/diagrams/tier-cascade.svg" width="100%" alt="OmniRoute request flow: your IDE or CLI (Claude Code, Cursor, Cline…) calls one local endpoint (http://localhost:20128/v1); the OmniRoute Smart Router (RTK + Caveman compression, 20 routing strategies, circuit breakers, TLS stealth, MCP, A2A, guardrails) can fall back across 4 provider tiers while an eligible healthy target remains — Tier 1 Subscription, Tier 2 API Key, Tier 3 Cheap and Tier 4 Free."/>
 
 </div>
 
@@ -504,13 +504,13 @@ Všech **20** strategií — libovolně je kombinujte v jednotlivých krocích k
 
 <div align="center">
 
-## 🏆 V čem OmniRoute vyniká
+## 🏆 Co odlišuje OmniRoute
 
 </div>
 
-<img src="./docs/diagrams/comparison-table.svg" width="100%" alt="Čím se OmniRoute odlišuje — časově vymezené porovnání funkcí s 9router, OpenRouter, CLIProxyAPI a LiteLLM napříč 13 možnostmi. OmniRoute: 376 poskytovatelů, více než 150 integrovaných bezplatných úrovní, 20 strategií směrování, komprese tokenů využívající 12 enginů, integrovaný server MCP se 110 nástroji, protokol agentů A2A, trvalá paměť, ochranná pravidla, cloudoví agenti, maskování otisku TLS, Desktop/Termux/PWA a uživatelské rozhraní v 67 lokalizacích. OmniRoute je licencován pod licencí MIT a lze jej provozovat na vlastní infrastruktuře. Možnosti a počty funkcí konkurence se mohou měnit; viz odkazovaná metodika."/>
+<img src="./docs/diagrams/comparison-table.svg" width="100%" alt="What sets OmniRoute apart — a dated feature snapshot vs 9router, OpenRouter, CLIProxyAPI and LiteLLM across 13 capabilities. OmniRoute: 377 providers, 150+ free tiers built in, 20 routing strategies, 12-engine token compression, built-in MCP server with 110 tools, A2A agent protocol, persistent memory, guardrails, cloud agents, TLS fingerprint stealth, Desktop/Termux/PWA and 67 i18n UI locales. OmniRoute is MIT-licensed and self-hostable. Competitor capabilities and counts may change; see the linked methodology."/>
 
-<sub>📊 Kompletní metodika &amp; podrobnosti o jednotlivých funkcích v porovnání s 9router, OpenRouter, CLIProxyAPI &amp; LiteLLM → [`docs/comparison/OMNIROUTE_VS_ALTERNATIVES.md`](docs/comparison/OMNIROUTE_VS_ALTERNATIVES.md)</sub>
+<sub>📊 Úplná metodika &amp; detail jednotlivých funkcí vs 9router, OpenRouter, CLIProxyAPI &amp; LiteLLM → [`docs/comparison/OMNIROUTE_VS_ALTERNATIVES.md`](docs/comparison/OMNIROUTE_VS_ALTERNATIVES.md)</sub>
 
 <br/>
 
@@ -586,35 +586,35 @@ aktuálním katalogu najdete na **[radar.omniroute.online/planos](https://radar.
 
 </div>
 
-> Nejnovější změny od **v3.8.20 → v3.8.53**. Úplnou historii najdete v souboru [`CHANGELOG.md`](CHANGELOG.md).
+> Nedávné zajímavosti z** v3.8.20 → v3.8.53** . Celá historie v [`CHANGELOG.md`](CHANGELOG.md).
 
-- **⚖️ Směrování `quota-weighted`** — 20. kombinovaná strategie přeskakuje účty s vyčerpanou kvótou a poté vybírá ze zbývajících v poměru zbývající kvóty ÷ aktuálního zatížení, přičemž stávající konverzace zůstávají připnuté. → [Automatické kombinace](docs/routing/AUTO-COMBO.md)
-- **🧰 Bezobslužný režim** — `omniroute serve --headless` (nebo `OMNIROUTE_HEADLESS=1`) spouští pouze proxy engine `/v1/*`, zatímco řídicí panel a subsystémy určené výhradně pro něj zůstávají vypnuté. → [Bezobslužný režim](docs/guides/HEADLESS.md)
-- **🔎 Vyhledávání modelů** — `/v1/models` filtruje podle schopností, kontextu, druhu a textu a `POST /v1/models/query` vrací krátký deterministický výběr se stejnou viditelností pro jednotlivé klíče. → [Referenční příručka API](docs/reference/API_REFERENCE.md)
-- **🔑 Řízení směrování podle klíče** — připněte API klíč k jednomu modelu nebo kombinaci pomocí `forcedModel` a atomicky přidávejte či odebírejte modely a kombinace daného klíče (`/api/keys/{id}/access`). → [Referenční příručka API](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
-- **🛡️ Podrobnější řízení PII** — výběr podle jednotlivých typů, až 20 ověřovaných vlastních vzorů maskování a počítadla detekcí pro jednotlivé typy; samotné maskování zůstává volitelné. → [Ochranná opatření](docs/security/GUARDRAILS.md)
-- **🌍 67 jazyků** — řídicí panel, zrcadla dokumentace a CLI, přičemž `npm run i18n:add-locale` přidá jazyk všude jediným příkazem. → [Průvodce i18n](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — příchozí delegování A2A do vaší flotily agentů, dovednosti Conductor na kartě agenta a panel v řídicím panelu s hlasovým chatem Faro využívajícím funkci push-to-talk. → [Server A2A](docs/frameworks/A2A-SERVER.md)
-- **🛂 Adaptivní přijímání a ochrana proti přetížení** — náročné požadavky chatu se namísto vrácení chyby 503 zařadí do fronty, s atomickými průběžnými pronájmy RPM pro jednotlivá připojení. → [Průvodce odolností](docs/architecture/RESILIENCE_GUIDE.md)
-- **🗂️ Kanonické řazení `/v1/models`** — jeden souvislý blok seskupený podle poskytovatele pro každého poskytovatele (kombinace jsou připnuté jako první), stabilní napříč všemi zdroji katalogu. → [Referenční příručka API](docs/reference/API_REFERENCE.md)
-- **🗜️ Posílení komprese** — ve výchozím nastavení zapnutá ochrana proti inflaci, balíčky Caveman pro DE / FR / JA + čínštinu (wényán), filtry RTK pro Gradle a .NET. → [Komprese](docs/compression/COMPRESSION_ENGINES.md)
-- **💸 Pravdivé náklady u paušálních tarifů** — poskytovatelé s předplatným / programátorským tarifem vykazují v analýze nákladů **$0**; rozpočet, kvóta a směrování nadále používají odhady. → [Referenční příručka API](docs/reference/API_REFERENCE.md)
-- **⚖️ Směrování Quota-Share** — spravedlivě rozděluje kvótu sdíleného účtu mezi sdružené klíče a zachovává využití kapacity tím, že nevyužité podíly zapůjčuje ostatním. → [Průvodce odolností](docs/architecture/RESILIENCE_GUIDE.md)
-- **🤖 Nastavení CLI/agentů jediným příkazem** — 15 registrovaných příkazů `setup-*`; `omniroute run` spouští 7 CLI (Claude Code, Codex, Aider, Goose, OpenCode, Qwen Code, Gemini CLI); `omniroute configure` podporuje 11 cílů s interaktivním výběrem poskytovatele a modelu a oblíbenými položkami pro jednotlivé kontexty. → [Integrace CLI](docs/guides/CLI-INTEGRATIONS.md)
-- **🛰️ Vzdálený režim** — ovládejte vzdálenou instanci OmniRoute pomocí tokenů s omezeným rozsahem (`connect` / `contexts` / `tokens`) a pomocníka OAuth `antigravity` pro instalace na VPS. → [Vzdálený režim](docs/guides/REMOTE-MODE.md)
-- **🧭 Chytřejší automatické směrování** — kombinace `auto/<category>:<tier>`, **Fusion** (panel modelů + rozhodčí), směrování zohledňující úlohu a možnost přepsat pro jednotlivé požadavky model / režim / rozpočet v USD. → [Automatické kombinace](docs/routing/AUTO-COMBO.md)
-- **🗜️ Modulární komprese** — 12 kombinovatelných enginů + Compression Studios: LLMLingua-2, dvouúrovňové Ultra, omniglyph, kontrola věrnosti pro každý krok, GCF v3.2 a editor s přetahováním pro změnu pořadí. → [Komprese](docs/compression/COMPRESSION_ENGINES.md)
-- **🕵️ Transparentní dešifrování MITM (TPROXY)** — zachycuje CLI, která ignorují proměnné prostředí proxy, pomocí certifikační autority pro jednotlivá SNI a instalačního nástroje úložiště důvěryhodných certifikátů. → [MITM/TPROXY](docs/security/MITM-TPROXY-DECRYPT.md)
-- **💸 Telemetrie nákladů všude** — hlavičky nákladů/využití `X-OmniRoute-*` na každém koncovém bodu, hlavička úspor při zásahu do mezipaměti a kvóty výdajů v USD pro jednotlivé klíče. → [Referenční příručka API](docs/reference/API_REFERENCE.md)
-- **🧠 Paměť pod vaší kontrolou** — ve výchozím nastavení vypnutá, volitelná kvantizace vektorů int8 + typovaný útlum, `x-omniroute-no-memory` pro jednotlivé požadavky. → [Paměť](docs/frameworks/MEMORY.md)
-- **🛡️ Zabezpečení** — ochrana proti prompt injection na každé trase LLM (sada red-team testů), volitelná ochrana maskující přihlašovací údaje (rediguje uniklé API klíče/tajné údaje v obou směrech), bezplatné webové vyhledávání DuckDuckGo jako poslední možnost a volitelná přihlašovací brána OIDC pro řídicí panel (přihlášení heslem zůstává vždy dostupné). → [Ochranná opatření](docs/security/GUARDRAILS.md)
-- **🖼️ Nové koncové body** — `/v1/ocr` (Mistral OCR) a `/v1/audio/translations` (ve stylu Whisper) doplňují nabídku médií. → [Referenční příručka API](docs/reference/API_REFERENCE.md)
-- **🎨 Generování obrázků / videa / zvuku** — jedno API pro média: xAI Grok Imagine a video Novita AI, ComfyUI, Magnific, Adobe Firefly, Segmind a poskytovatelé hlasových služeb, jako je ElevenLabs. → [Referenční příručka API](docs/reference/API_REFERENCE.md)
-- **🌍 Nasazení a provoz** — `basePath` pro reverzní proxy, automatická detekce jazyka prohlížeče, sledování zařízení pro jednotlivé klíče, důvěryhodnost MITM bez oprávnění root a lokalizace zh-TW. → [Prostředí](docs/reference/ENVIRONMENT.md)
-- **🤝 Více poskytovatelů a agentů** — cloudoví agenti (Codex Cloud, Cursor, Devin, Jules), Grok Build (xAI) s prohlížečem + přihlášením OAuth, plnohodnotná karta Ollama, Claude Opus 5 a Sonnet 5, oficiální partnerství s Kimi (Code/Web/Moonshot), Zed, Requesty, SenseNova, Yuanbao, Agnes AI… a aktualizovaný **katalog 376 poskytovatelů**. → [Poskytovatelé](docs/reference/PROVIDER_REFERENCE.md)
-- **📡 Transparentnost směrování** — každá odpověď obsahuje hlavičku `X-OmniRoute-Decision` uvádějící strategii/poskytovatele/latenci, které ji obsloužily; nová kombinovaná strategie `cache-optimized` + faktor Auto-Combo `cacheAffinity` směrují opakované požadavky zpět na připojení obsahující prefix v mezipaměti a koncový bod pouze pro čtení `/v1/auto-combo/{channel}/candidates` zpřístupňuje aktuální fond kandidátů kanálu `auto/*`. → [Automatické kombinace](docs/routing/AUTO-COMBO.md)
-- **⚡ Lokální výkon a infrastruktura** — lokální Redis jedním kliknutím, deployery relay pro Cloudflare Workers / Deno Deploy, Bifrost a Mux jako supervizované vestavěné služby. → [Vestavěné služby](docs/frameworks/EMBEDDED-SERVICES.md)
-- **🧩 Také součástí balení** — plugin framework + marketplace, frameworky dovedností Omni/Agent/GitHub, integrace úložiště Obsidian (22 nástrojů MCP), rozhraní Batch a Files API kompatibilní s OpenAI, sémantická cache odpovědí, gamifikace s žebříčky, objevování agentů ACP (15 vestavěných agentů), plánovaný export logů do BigQuery, paralelní multi-model fan-out `auto/chaos`, bridge pro Telegram bota, správce verzí přímo v aplikaci a žebříčky bezplatných poskytovatelů LMArena-ELO. → [Dokumentace](docs/README.md)
+- **⚖️ `quota-weighted` směrování** — 20. kombinovaná strategie přeskakuje vyčerpané účty a poté čerpá ze zbývajících v poměru ke zbývající kvótě ÷ během letu, přičemž stávající konverzace zůstávají připnuté. → [Auto-Combo](docs/routing/AUTO-COMBO.md)
+- **🧰 Bezhlavý režim** — `omniroute serve --headless` (nebo `OMNIROUTE_HEADLESS=1`) spouští pouze `/v1/*` proxy engine s vypnutým dashboardem a subsystémy pouze pro dashboard. → [bezhlavý režim](docs/guides/HEADLESS.md)
+- **🔎 Objev modelu** — `/v1/models` filtruje podle schopností, kontextu, druhu a textu a `POST /v1/models/query` vrací krátký deterministický výběr se stejnou viditelností pro jednotlivé klávesy. → [API Reference](docs/reference/API_REFERENCE.md)
+- **🔑 Řízení směrování na klíč** — připnout klávesu API k jednomu modelu nebo kombinaci pomocí `forcedModel` a přidat nebo odebrat modely a komba klávesy atomicky (`/api/keys/{id}/access`). → [API Reference](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
+- **🛡️ Jemnější ovládání PII** — výběr podle typu, až 20 ověřených vlastních maskovacích vzorů a počítadla detekce podle typu; samotné maskování zůstává přihlášeno. → [zábradlí](docs/security/GUARDRAILS.md)
+- **🌍 67 jazyků** — řídicí panel, zrcadla dokumentů a CLI, přičemž `npm run i18n:add-locale` přidává jazyk všude v jednom příkazu. [Průvodce](docs/guides/I18N.md) → i18n
+- **🎛️ OmniConductor** — příchozí delegování A2A do vaší flotily agentů, dovednosti dirigenta na kartě agenta a panel řídicího panelu s hlasovým chatem Faro push-to-talk. [A2A](docs/frameworks/A2A-SERVER.md) → zqe
+- **🛂 Adaptivní přístup a ochrana proti přetížení** — fronta požadavků na chat namísto 503ing, s atomickými pronájmy RPM na připojení. [Průvodce odolností](docs/architecture/RESILIENCE_GUIDE.md) →
+- **🗂️ Canonical `/v1/models` objednávání** — jeden souvislý blok seskupený poskytovatelem na poskytovatele (kombinace připojené jako první), stabilní ve všech zdrojích katalogu. → [API Reference](docs/reference/API_REFERENCE.md)
+- **🗜️ Kompresní zpevnění** — default-on inflace guard, Caveman packs pro DE / FR / JA + Chinese (wényán), RTK filtry pro Gradle & .NET. → [komprese](docs/compression/COMPRESSION_ENGINES.md)
+- **💸 Poctivé paušální náklady** — přečtení poskytovatelů předplatného / kódovacího plánu** 0 $** v analýze nákladů; rozpočet, kvóta a směrování pokračují v odhadu. → [API Reference](docs/reference/API_REFERENCE.md)
+- **⚖️ Quota-Share směrování** — spravedlivě rozdělit kvótu sdíleného účtu mezi sdílené klíče, což šetří práci, takže nečinné části jsou půjčovány. [Průvodce odolností](docs/architecture/RESILIENCE_GUIDE.md) →
+- **🤖 Nastavení CLI/agent jedním příkazem** — 15 registrovaných příkazů `setup-*` ; `omniroute run` spustí 7 CLIs (Claude Code, Codex, Aider, Husa, OpenCode, Qwen Code, Gemini CLI); `omniroute configure` podporuje 11 cílů pomocí interaktivního výběru modelu + poskytovatele a oblíbených položek podle kontextu. → [CLI integrace](docs/guides/CLI-INTEGRATIONS.md)
+- **🛰️ Vzdálený režim** — řídit vzdálené OmniRoute pomocí tokenů s rozsahem (`connect` / `contexts` / `tokens`) + pomocníka `antigravity` OAuth pro instalace VPS. → [Vzdálený režim](docs/guides/REMOTE-MODE.md)
+- **🧭 Chytřejší automatické směrování** – `auto/<category>:<tier>` komba,** Fúze** (posouzení modelového panelu + ), směrování podle úkolů, přepisy modelu / režimu / rozpočtu v USD. → [Auto-Combo](docs/routing/AUTO-COMBO.md)
+- **🗜️ Zásuvná komprese** — 12 komponovatelných enginů + Compression Studios: LLMLingua-2, dvouvrstvý Ultra, omniglyph, per-step fidelity gate, GCF v3.2, drag-reorder editor. → [komprese](docs/compression/COMPRESSION_ENGINES.md)
+- **🕵️ transparentní dešifrování MITM (TPROXY)** — zachytit CLIs, které ignorují proxy env vars, pomocí instalátoru důvěryhodného úložiště CA + pro SNI. → [MITM/TPROXY](docs/security/MITM-TPROXY-DECRYPT.md)
+- **💸 Cenová telemetrie všude** — hlavičky `X-OmniRoute-*` cost/usage na každém koncovém bodu, hlavička pro úsporu mezipaměti HIT, kvóty výdajů USD na klíč. → [API Reference](docs/reference/API_REFERENCE.md)
+- **🧠 Paměť, kterou ovládáte** — ve výchozím nastavení vypnuto, volitelná vektorová kvantizace int8 pokles typu +, `x-omniroute-no-memory` na žádost. → [paměť](docs/frameworks/MEMORY.md)
+- **🛡️ bezpečnost** — ochrana pro rychlé vložení na každé trase LLM (sada červených týmů), ochranná zábradlí pro maskování přihlašovacích údajů (uniklé zprávy API keys/secrets v obou směrech), bezplatné vyhledávání na webu DuckDuckGo poslední instance a volitelná přihlašovací brána OIDC pro řídicí panel (přihlašování heslem zůstává vždy k dispozici). → [zábradlí](docs/security/GUARDRAILS.md)
+- **🖼️ Nové koncové body** — `/v1/ocr` (Mistral OCR) a `/v1/audio/translations` (ve stylu šepotu) zaoblují povrch média. → [API Reference](docs/reference/API_REFERENCE.md)
+- **🎨 Generování obrazu / videa / zvuku** — jeden API pro média: xAI Grok Imagine & Novita AI video, ComfyUI, Magnific, Adobe Firefly, Segmind a poskytovatelé řeči, jako je ElevenLabs. → [API Reference](docs/reference/API_REFERENCE.md)
+- **🌍 Deployment & ops** — reverzní proxy `basePath`, automatická detekce jazyka prohlížeče, sledování zařízení na klíč, důvěryhodnost MITM bez root, lokalizace zh-TW. → [prostředí](docs/reference/ENVIRONMENT.md)
+- **🤝 Více poskytovatelů a agentů** — cloud agenti (Codex Cloud, Cursor, Devin, Jules), Grok Build (xAI) s prohlížečem + OAuth přihlášení, Ollama prvotřídní karta, Claude Opus 5 & Sonnet 5, Kimi oficiální partnerství (Code/Web/Moonshot), Zed, Requested, SenseNova, Yuanbao … a AI refreshed** Katalog poskytovatelů 377** . [Poskytovatelé](docs/reference/PROVIDER_REFERENCE.md) →
+- **📡 Průhlednost směrování** — každá odpověď nese hlavičku `X-OmniRoute-Decision` pojmenující strategy/provider/latency, který ji obsluhoval, novou kombinovanou strategii `cache-optimized` + Auto-Combo `cacheAffinity` factor opakující se požadavky na směrování zpět k připojení obsahujícímu předponu uloženou v mezipaměti a koncový bod `/v1/auto-combo/{channel}/candidates` pouze pro čtení odhaluje aktivní fond kandidátů kanálu `auto/*`. → [Auto-Combo](docs/routing/AUTO-COMBO.md)
+- **⚡ Místní výkon & infra** — jedním kliknutím místní Redis, Cloudflare Workers / Deno Deploy relay deployers, Bifrost & Mux jako vestavěné služby pod dohledem. → [Embedded Services](docs/frameworks/EMBEDDED-SERVICES.md)
+- **🧩 Také v krabici** — plugin framework + marketplace, Omni/Agent/GitHub skills framework, Obsidian integrace vaultu (22 MCP nástrojů), OpenAI-kompatibilní Batch & Files APIs, sémantická mezipaměť odpovědí, gamifikace s výsledkovými tabulkami, ACP zjišťování agentů (15 vestavěných agentů), naplánovaný export logu do BigQuery, `auto/chaos` paralelní multi-model fan-out, LO a free-app manager botrena most verze Telegram žebříčku. [Dokumenty](docs/README.md) →
 
 <br/>
 
@@ -692,35 +692,35 @@ Každý příkaz respektuje aktivní vzdálený kontext (`omniroute connect <hos
 
 <div align="center">
 
-## 🌐 376 poskytovatelů AI — 153 označených v katalogu jako bezplatní
+## 🌐 377 poskytovatelů AI — 153 katalogově označeno zdarma
 
 </div>
 
-> **376 registrovaných poskytovatelů** napříč kanonickými kolekcemi pro chat, média, vyhledávání, lokální provoz, cloudové agenty a systémové služby, včetně **153 poskytovatelů s metadaty pro vyhledávání `hasFree: true`**. Registr chatovacích modelů zahrnuje **239 poskytovatelů / 3 059 jedinečných dvojic poskytovatel–model / 1 475 nezpracovaných ID modelů**; samostatný katalog bezplatných kvót obsahuje **471 řádků pro jednotlivé modely**, **34 obnovovaných fondů** a **52 poskytovatelů s trvale bezplatným přístupem bez klíče nebo s obnovovanou kvótou**. Tyto jmenovatele se záměrně liší; definice a výpočty s deduplikovanými fondy najdete v dokumentech [Přehled poskytovatelů](docs/reference/PROVIDER_REFERENCE.md) a [Bezplatné úrovně](docs/reference/FREE_TIERS.md).
+> **377 registrovaných poskytovatelů** v rámci kanonických chat, médií, vyhledávání, místních kolekcí, cloudových agentů a systémových kolekcí, včetně** 153 nesoucí metadata `hasFree: true` discovery** . Registr modelu chatu pokrývá** 239 poskytovatelů / 3 059 různých párů poskytovatel-model / 1 475 nezpracovaných modelů IDs** ; samostatný katalog s volným rozpočtem má** 471 řad na model** ,** 34 opakujících se bazénů** a** Poskytovatelé 52 recurring/keyless zdarma a navždy** . Jedná se o různé jmenovatele záměrně; definice a kalkulace zbavené duplicitních zdrojů jsou k dispozici v referenčních a [bezplatných úrovních](docs/reference/FREE_TIERS.md) [poskytovatele](docs/reference/PROVIDER_REFERENCE.md).
 
 <div align="center">
 
-### 🏢 Všechny významné laboratoře — prostřednictvím jediného koncového bodu
+### 🏢 Každá velká laboratoř – prostřednictvím jednoho koncového bodu
 
 <table>
   <tr>
     <td align="center" width="80"><picture><source media="(prefers-color-scheme:dark)" srcset="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-png@1.91.0/dark/openai.png"/><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/openai.svg" width="40" alt="OpenAI"/></picture><br/><sub>OpenAI</sub><br/><sub>                           </sub></td>
     <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/claude-color.svg" width="40" alt="Anthropic"/><br/><sub>Anthropic</sub><br/><sub>                           </sub></td>
     <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/gemini-color.svg" width="40" alt="Gemini"/><br/><sub>Gemini</sub><br/><sub>                           </sub></td>
-    <td align="center" width="80"><picture><source media="(prefers-color-scheme:dark)" srcset="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-png@1.91.0/dark/grok.png"/><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/grok.svg" width="40" alt="xAI Grok"/></picture><br/><sub>xAI Grok</sub><br/><sub>                           </sub></td>
+    <td align="center" width="80"><picture><source media="(prefers-color-scheme:dark)" srcset="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-png@1.91.0/dark/grok.png"/><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/grok.svg" width="40" alt="xAI Grok"/></picture><br/><sub> xAI Grok</sub><br/><sub> </sub></td>
     <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/deepseek-color.svg" width="40" alt="DeepSeek"/><br/><sub>DeepSeek</sub><br/><sub>                           </sub></td>
     <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/mistral-color.svg" width="40" alt="Mistral"/><br/><sub>Mistral</sub><br/><sub>                           </sub></td>
   </tr>
   <tr>
     <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/qwen-color.svg" width="40" alt="Qwen"/><br/><sub>Qwen</sub><br/><sub>                           </sub></td>
-    <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/meta-color.svg" width="40" alt="Meta Llama"/><br/><sub>Meta Llama</sub><br/><sub>                           </sub></td>
+    <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/meta-color.svg" width="40" alt="Meta Llama"/><br/><sub> Meta Llama</sub><br/><sub> </sub></td>
     <td align="center" width="80"><picture><source media="(prefers-color-scheme:dark)" srcset="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-png@1.91.0/dark/groq.png"/><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/groq.svg" width="40" alt="Groq"/></picture><br/><sub>Groq</sub><br/><sub>                           </sub></td>
     <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/nvidia-color.svg" width="40" alt="NVIDIA"/><br/><sub>NVIDIA</sub><br/><sub>                           </sub></td>
     <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/minimax-color.svg" width="40" alt="MiniMax"/><br/><sub>MiniMax</sub><br/><sub>                           </sub></td>
     <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/cohere-color.svg" width="40" alt="Cohere"/><br/><sub>Cohere</sub><br/><sub>                           </sub></td>
   </tr>
   <tr>
-    <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/perplexity-color.svg" width="40" alt="Perplexity"/><br/><sub>Perplexity</sub><br/><sub>                           </sub></td>
+    <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/perplexity-color.svg" width="40" alt="Perplexity"/><br/><sub> zmatenost </sub><br/><sub> </sub></td>
     <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/huggingface-color.svg" width="40" alt="Hugging Face"/><br/><sub>HuggingFace</sub><br/><sub>                           </sub></td>
     <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/together-color.svg" width="40" alt="Together"/><br/><sub>Together</sub><br/><sub>                           </sub></td>
     <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/fireworks-color.svg" width="40" alt="Fireworks"/><br/><sub>Fireworks</sub><br/><sub>                           </sub></td>
@@ -729,28 +729,28 @@ Každý příkaz respektuje aktivní vzdálený kontext (`omniroute connect <hos
   </tr>
 </table>
 
-<sub>…a více než 350 dalších — každá ikona se načítá živě z katalogu poskytovatelů řídicího panelu. 📖 [Přehled poskytovatelů](docs/reference/PROVIDER_REFERENCE.md)</sub>
+<sub>…a dalších 350 + – každá ikona se vyřeší živě z katalogu poskytovatelů řídicího panelu. 📖 [Reference poskytovatele](docs/reference/PROVIDER_REFERENCE.md)</sub>
 
 <br/>
 
-### 🆓 Navždy zdarma — $0, bez platební karty
+### 🆓 Navždy zdarma – 0 USD, žádná karta
 
 <table>
   <tr>
-    <td align="center" width="150"><img src="./public/providers/cli-generic.svg" width="42" alt="OpenCode Zen"/><br/><b>OpenCode Zen</b><br/><sub>DeepSeek V4, Nemotron 3<br/>Bez omezení tokenů</sub></td>
-    <td align="center" width="150"><img src="./public/providers/cli-generic.svg" width="42" alt="Kilo Code"/><br/><b>Kilo Code</b><br/><sub>Automatický router, Tencent Hy3<br/>Navždy zdarma</sub></td>
-    <td align="center" width="150"><img src="./public/providers/requesty.svg" width="42" alt="Requesty"/><br/><b>Requesty</b><br/><sub>GPT-OSS 120B, Nemotron<br/>Navždy zdarma</sub></td>
-    <td align="center" width="150"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/siliconcloud-color.svg" width="42" alt="SiliconFlow"/><br/><b>SiliconFlow</b><br/><sub>DeepSeek V3.2 / R1<br/>Bezplatná úroveň</sub></td>
-    <td align="center" width="150"><img src="./public/providers/zhipu.svg" width="42" alt="Z.AI GLM"/><br/><b>Z.AI GLM</b><br/><sub>GLM-4.7 / 4.5-Flash<br/>Navždy zdarma</sub></td>
-    <td align="center" width="150"><img src="./public/providers/baidu.svg" width="42" alt="Baidu ERNIE"/><br/><b>Baidu ERNIE</b><br/><sub>ERNIE 4.0<br/>Navždy zdarma</sub></td>
+    <td align="center" width="150"><img src="./public/providers/cli-generic.svg" width="42" alt="OpenCode Zen"/><br/><b>OpenCode Zen </b><br/><sub>DeepSeek V4, Nemotron 3 <br/> Bez token cap </sub></td>
+    <td align="center" width="150"><img src="./public/providers/cli-generic.svg" width="42" alt="Kilo Code"/><br/><b> Kilo Code </b><br/><sub> Auto-router, Tencent Hy3 <br/> Navždy zdarma </sub></td>
+    <td align="center" width="150"><img src="./public/providers/requesty.svg" width="42" alt="Requesty"/><br/><b> Žádost </b><br/><sub>-OSS 120B, Nemotron <br/> Navždy zdarma </sub></td>
+    <td align="center" width="150"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/siliconcloud-color.svg" width="42" alt="SiliconFlow"/><br/><b>SiliconFlow</b><br/><sub>DeepSeek V3.2 / R1 <br/> Volná úroveň </sub></td>
+    <td align="center" width="150"><img src="./public/providers/zhipu.svg" width="42" alt="Z.AI GLM"/><br/><b> Z.AI GLM</b><br/><sub> GLM-4.7 / 4.5-Flash <br/> Navždy zdarma </sub></td>
+    <td align="center" width="150"><img src="./public/providers/baidu.svg" width="42" alt="Baidu ERNIE"/><br/><b>Baidu ERNIE</b><br/><sub>ERNIE 4,0 <br/> navždy zdarma </sub></td>
   </tr>
   <tr>
-    <td align="center" width="150"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/qoder-color.svg" width="42" alt="Qoder AI"/><br/><b>Qoder AI</b><br/><sub>Qwen3-Max, Kimi-K2<br/>Neomezeně ZDARMA</sub></td>
-    <td align="center" width="150"><img src="./public/providers/pollinations.svg" width="42" alt="Pollinations"/><br/><b>Pollinations</b><br/><sub>GPT, Llama, Claude<br/>Není potřeba klíč</sub></td>
-    <td align="center" width="150"><img src="./public/providers/cloudflare.svg" width="42" alt="Cloudflare AI"/><br/><b>Cloudflare AI</b><br/><sub>Více než 50 modelů<br/>10K neuronů/den</sub></td>
-    <td align="center" width="150"><img src="./public/providers/nvidia.svg" width="42" alt="NVIDIA NIM"/><br/><b>NVIDIA NIM</b><br/><sub>GLM, MiniMax<br/>~40 RPM zdarma</sub></td>
-    <td align="center" width="150"><img src="./public/providers/cerebras.svg" width="42" alt="Cerebras"/><br/><b>Cerebras</b><br/><sub>GLM 4.7, GPT-OSS<br/>Jednorázový kredit 5 $; vyžadována karta</sub></td>
-    <td align="center" width="150"><img src="./public/providers/openrouter.svg" width="42" alt="OpenRouter"/><br/><b>OpenRouter</b><br/><sub>:free modely<br/>+10 $ → vyšší RPM</sub></td>
+    <td align="center" width="150"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/qoder-color.svg" width="42" alt="Qoder AI"/><br/><b>Qoder AI</b><br/><sub> Qwen3-Max, Kimi-K2 <br/> neomezeně FREE</sub></td>
+    <td align="center" width="150"><img src="./public/providers/pollinations.svg" width="42" alt="Pollinations"/><br/><b> Opylení </b><br/><sub>GPT, Llama, Claude<br/> Není potřeba žádný klíč </sub></td>
+    <td align="center" width="150"><img src="./public/providers/cloudflare.svg" width="42" alt="Cloudflare AI"/><br/><b>Cloudflare AI</b><br/><sub> 50 + modely <br/> 10K neurons/day</sub></td>
+    <td align="center" width="150"><img src="./public/providers/nvidia.svg" width="42" alt="NVIDIA NIM"/><br/><b>NVIDIA NIM</b><br/><sub>GLM, MiniMax<br/>~ 40 RPM zdarma </sub></td>
+    <td align="center" width="150"><img src="./public/providers/cerebras.svg" width="42" alt="Cerebras"/><br/><b>Cerebras</b><br/><sub>GLM 4.7, GPT-OSS <br/> Jednorázový kredit 5 $; požadovaná karta </sub></td>
+    <td align="center" width="150"><img src="./public/providers/openrouter.svg" width="42" alt="OpenRouter"/><br/><b>OpenRouter</b><br/><sub>:free modely <br/>+$ 10 → vyšší RPM</sub></td>
   </tr>
 </table>
 
@@ -1289,29 +1289,29 @@ Kanonické metriky k 2026-10-18: **1.976 unikátních videí** · **20.220.289 z
 <br/>
 <div align="center">
 
-## 🛠️ Technologický stack
+## 🛠️ Tech Stack
 
 </div>
 
 <table>
-  <tr><th align="left">Vrstva</th><th align="left">Technologie</th></tr>
-  <tr><td nowrap><b>Běhové prostředí</b></td><td>Node.js 22.x / 24.x LTS — <code>&gt;=22.22.2 &lt;23 || &gt;=24.0.0 &lt;27</code></td></tr>
-  <tr><td nowrap><b>Jazyk</b></td><td>TypeScript 6.0 — <b>100% TypeScript</b> v <code>src/</code> a <code>open-sse/</code> (nula <code>any</code> v jádru od v2.0)</td></tr>
-  <tr><td nowrap><b>Framework</b></td><td>Next.js 16 + React 19 + Tailwind CSS 4</td></tr>
-  <tr><td nowrap><b>Databáze</b></td><td>better-sqlite3 (SQLite, WAL journaling) + LowDB (JSON legacy) — 147 doménových modulů, 213 migrací</td></tr>
-  <tr><td nowrap><b>Paměť</b></td><td>SQLite FTS5 fulltext + int8-kvantované vektorové embeddingy, typovaný decay</td></tr>
-  <tr><td nowrap><b>Schémata</b></td><td>Zod 4 — validace I/O nástrojů MCP + API kontrakty</td></tr>
-  <tr><td nowrap><b>Protokoly</b></td><td>MCP (stdio / HTTP / SSE) + A2A v0.3 (JSON-RPC 2.0 + SSE)</td></tr>
-  <tr><td nowrap><b>Streamování</b></td><td>Server-Sent Events (SSE) + WebSocket most (<code>/v1/ws</code>)</td></tr>
-  <tr><td nowrap><b>Komprese</b></td><td>Řetězec 12 motorů — RTK, Caveman, LLMLingua-2 (MobileBERT ONNX), GCF, OmniGlyph</td></tr>
-  <tr><td nowrap><b>Autentizace a zabezpečení</b></td><td>OAuth 2.0 (PKCE) + JWT + API klíče + autentizace MCP s rozsahy · AES-256-GCM v klidu · DOMPurify</td></tr>
-  <tr><td nowrap><b>Stealth</b></td><td>wreq-js — impersonace TLS fingerprintů JA3 / JA4, tříúrovňová proxy</td></tr>
-  <tr><td nowrap><b>Odolnost</b></td><td>Circuit breaker, exponenciální backoff, anti-thundering-herd, samoobnovovací auto-combo</td></tr>
-  <tr><td nowrap><b>Logování</b></td><td>pino — strukturované JSON logy s kontextem požadavku</td></tr>
-  <tr><td nowrap><b>Testování</b></td><td>Node.js test runner + Vitest — <b>56 000+ statických deklarací testů</b> napříč 7 800+ sledovanými testovacími soubory (unit, integrační, E2E, bezpečnostní, ekosystémové)</td></tr>
-  <tr><td nowrap><b>Platformy</b></td><td>Desktop (Electron) · Android (Termux) · PWA (jakýkoli prohlížeč)</td></tr>
-  <tr><td nowrap><b>CI/CD</b></td><td>GitHub Actions — automatické publikování na npm + Docker Hub při vydání</td></tr>
-  <tr><td nowrap><b>Odkazy</b></td><td><a href="https://omniroute.online">Web</a> · <a href="https://www.npmjs.com/package/omniroute">npm</a> · <a href="https://hub.docker.com/r/diegosouzapw/omniroute">Docker Hub</a></td></tr>
+  <tr><th align="left"> Vrstva </th><th align="left"> Technologie </th></tr>
+  <tr><td nowrap><b> Runtime </b></td><td>Node.js 22.x / 24.x LTS — <code>&gt;= 22.22.2 &lt; 23 || &gt;= 24.0.0 &lt; 27 </code></td></tr>
+  <tr><td nowrap><b> Jazyk </b></td><td>TypeScript 6.0 — <b> 100 % TypeScript</b> napříč <code> src/</code> a <code> open-sse/</code> (nula <code> žádné </code> v jádru od verze 2.0)</td></tr>
+  <tr><td nowrap><b> Framework </b></td><td>Next.js 16 + React 19 + Tailwind CSS 4 </td></tr>
+  <tr><td nowrap><b> databáze </b></td><td> better-sqlite3 (SQLite, WAL žurnálování) + LowDB (JSON legacy) — 147 doménových modulů, 213 migrací </td></tr>
+  <tr><td nowrap><b> paměť </b></td><td>SQLite FTS5 fulltextové + int8-kvantované vektorové vložení, typovaný rozpad </td></tr>
+  <tr><td nowrap><b> schémata </b></td><td>Zod 4 — nástroj MCP I/O ověření + API smlouvy </td></tr>
+  <tr><td nowrap><b> protokoly </b></td><td>MCP (stdio / HTTP / SSE) + A2A v0.3 (JSON-RPC 2.0 + SSE)</td></tr>
+  <tr><td nowrap><b> Streamování </b></td><td> Události odeslané serverem (SSE) + WebSocket bridge (<code>/v1/ws </code>)</td></tr>
+  <tr><td nowrap><b> kompresní </b></td><td> 12motorové potrubí — RTK, Caveman, LLMLingua-2 (MobileBERT ONNX), GCF, OmniGlyph</td></tr>
+  <tr><td nowrap><b> Auth &amp; zabezpečení </b></td><td>OAuth 2.0 (PKCE) + JWT + API Klíče + MCP scoped auth · AES-256-GCM v klidu · DOMPurify </td></tr>
+  <tr><td nowrap><b> Stealth </b></td><td> wreq-js — JA3 / JA4 TLS zosobnění otisku prstu, 3úrovňový proxy </td></tr>
+  <tr><td nowrap><b> Odolnost </b></td><td> Jistič, exponenciální útlum, stádo hromu, autokombo samoléčení </td></tr>
+  <tr><td nowrap><b> protokolování </b></td><td> pino — strukturované protokoly JSON s kontextem požadavku </td></tr>
+  <tr><td nowrap><b> Testování </b></td><td>Node.js testovací běžec + Vitest — <b> 56 000 + deklarace statického testu </b> napříč 7 800 + sledovanými testovacími soubory (jednotka, integrace, E2E, bezpečnost, ekosystém)</td></tr>
+  <tr><td nowrap><b> Platformy </b></td><td> Desktop (Electron) · Android (Termux) · PWA (jakýkoli prohlížeč)</td></tr>
+  <tr><td nowrap><b>CI/CD</b></td><td>GitHub Akce — automatické publikování + Docker Hub při vydání </td></tr>
+  <tr><td nowrap><b> Odkazy </b></td><td><a href="https://omniroute.online"> Web </a> · <a href="https://www.npmjs.com/package/omniroute"> npm </a> · <a href="https://hub.docker.com/r/diegosouzapw/omniroute">Docker Hub </a></td></tr>
 </table>
 
 <div align="center">

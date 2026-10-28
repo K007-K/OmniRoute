@@ -6,14 +6,14 @@
 
 <div align="center">
 
-<img src="./docs/screenshots/MainOmniRoute.png" alt="Pátákó OmniRoute" width="820"/>
+<img src="./docs/screenshots/MainOmniRoute.png" alt="OmniRoute Dashboard" width="820"/>
 
 <br/>
 <br/>
 
-# 🚀 OmniRoute — Ẹnu-ọ̀nà AI Ọ̀fẹ́
+# 🚀 OmniRoute - The Free AI Gateway
 
-<img src="./docs/diagrams/readme-hero.svg" width="100%" alt="OmniRoute — Má ṣe dáwọ́ kíkọ́ kóòdù dúró láé. Gbogbo irinṣẹ́ AI → olùpèsè 376 — 150+ ọ̀fẹ́ — nípasẹ̀ endpoint kan ṣoṣo. Claude Code, Codex, Cursor, Cline, Copilot & Antigravity sínú Claude / GPT / Gemini Ọ̀FẸ́ pẹ̀lú ìyípadà-àfẹ́yìntì aládàáṣe. Ìpọ́pọ̀ fúnmorawon RTK + Caveman ń fi 15–95% àwọn token pamọ́ (~89% ní ìpíndọ́gba) — má ṣe dé àwọn ààlà láé. Olùpèsè AI 376 · ipele ọ̀fẹ́ 150+ · ~1.62B token ọ̀fẹ́/oṣù · ọ̀nà ìdarí 20 · $0 láti bẹ̀rẹ̀."/>
+<img src="./docs/diagrams/readme-hero.svg" width="100%" alt="OmniRoute — Never stop coding. Every AI tool → 377 providers — 150+ free — through one endpoint. Claude Code, Codex, Cursor, Cline, Copilot & Antigravity into FREE Claude / GPT / Gemini with auto-fallback. RTK + Caveman stacked compression saves 15–95% tokens (~89% avg) — never hit limits. 377 AI providers · 150+ free tiers · ~1.62B free tokens/mo · 20 routing strategies · $0 to start."/>
 
 </div>
 
@@ -222,48 +222,48 @@
 
 <a id="first-run"></a>
 
-## 🆓 Ṣàgbékalẹ̀, so ọlùpèsè kan pọ̀, lẹ́yìn náà darí àwọn ìbéèrè nípasẹ̀ òpin kan ṣoṣo
+## 🆓 Fi sori ẹrọ, so olupese kan pọ, lẹhinna ipa ọna nipasẹ aaye ipari kan
 
 </div>
 
-<img src="./docs/diagrams/works-zero-config.svg" width="100%" alt="Àwọn ìgbésẹ̀ mẹ́ta: ṣàgbékalẹ̀ àti bíbẹ̀rẹ̀ OmniRoute, sisopọ̀ ọlùpèsè tó yẹ mọ́ àkáùntì tàbí kọ́kọ́rọ́ API tirẹ, lẹ́yìn náà tọ́ka irinṣẹ́ rẹ sí localhost:20128/v1 nípa lílò kọ́kọ́rọ́ API OmniRoute àti awoṣe auto. Afọmọ gbẹ́kẹ̀lé àwọn ìsopọ̀ tó yẹ tí ó wà àti àwọn ààlà àwọn ọlùpèsè."/>
+<img src="./docs/diagrams/works-zero-config.svg" width="100%" alt="Three steps: install and start OmniRoute, connect an eligible provider with your own account or API key, then point your tool at localhost:20128/v1 using an OmniRoute API key and model auto. Routing depends on available eligible connections and provider limits."/>
 
 ```bash
-# Lẹ́yìn tí o bá so ọlùpèsè kan pọ̀, da kọ́kọ́rọ́ OmniRoute rẹ kọ̀ láti Dashboard → Endpoints:
+# After connecting a provider, copy your OmniRoute key from Dashboard → Endpoints:
 curl http://localhost:20128/v1/chat/completions \
   -H "Authorization: Bearer YOUR_OMNIROUTE_KEY" \
   -H "Content-Type: application/json" \
   -d '{"model":"auto","messages":[{"role":"user","content":"Hello!"}]}'
 ```
 
-<sub>`auto` nílò ọ̀nà tó yẹ. Ìṣàgbékalẹ̀ tuntun lè má ní àwọn àfọ̀nàmọ̀ láìsí-kọ́kọ́rọ́ tó yẹ rárá, ọlùpèsè láìsí-kọ́kọ́rọ́ sì lè kọ̀ àwọn oníbàárà láti òde. Àwọn ọlùpèsè tí a ṣàmì sí `tos: avoid`, pẹ̀lú Kiro, ti yọ wọ́n kúrò nínú afọmọ àdàṣe ní àtìbẹ̀rẹ̀; sisopọ̀ àkáùntì kò ṣe àtẹ́lẹwọ́n ètò yẹn. Wo [Ìtọ́nisọ́nà Àwọn Ipele Ọ̀fẹ́](docs/getting-started/FREE-TIERS-GUIDE.md) kí o tó yan ọlùpèsè kan.</sub>
+<sub> `auto` nilo ọna ti o yẹ. Fifi sori tuntun ko le ni awọn ibi-afẹde aisi bọtini ti o yẹ, ati pe olupese ti ko ni bọtini le kọ awọn alabara ẹnikẹta. Awọn olupese ti samisi `tos: avoid`, pẹlu Kiro, ti wa ni rara lati afisona laifọwọyi nipa aiyipada; sisopọ akọọlẹ kan ko ni yiyipada eto yẹn. Wo [Itọsọna Awọn ipele Ọfẹ](docs/getting-started/FREE-TIERS-GUIDE.md) ṣaaju yiyan olupese kan.</sub>
 
-<sub>📦 Àwọn skíríìpùtì ìbẹ̀rẹ̀ kíákíá dàkọ-fírà fún **Python, Node.js, PHP, àti cURL** → [`examples/quickstart/`](examples/quickstart/)</sub>
+<sub>📦 Daakọ-lẹẹmọ awọn iwe afọwọkọ quickstart fun** Python, Node.js, PHP, ati cURL** → [`examples/quickstart/`](examples/quickstart/)</sub>
 
 <br/>
 
 <div align="center">
 
-# 💥 Ìlérí Náà
+# 💥 The Ileri
 
 </div>
 
-<img src="./docs/diagrams/promise-pillars.svg" width="100%" alt="Ìlérí Náà — Ọ̀kan òpin àti àwọn ọlùpèsè 376. Àpòdọ́pọ̀ àdàṣe máa ń tẹ̀síwájú pẹ̀lú afọmọ nígbà tí àfọ̀nàmọ̀ mìíràn tó ṣẹ̀ṣẹ̀ bá wà. Àwọn ọ̀wọ́n mẹ́fà: àpòdọ́pọ̀ olùfaradà káàkiri àwọn ọlùpèsè 376 · ìfipamọ́ token tó rí 95% lórí àwọn ẹrù-iṣẹ́ tó yẹ · $0 láti bẹ̀rẹ̀ pẹ̀lú àwọn ipele ọ̀fẹ́ 150+ àti àwọn ọlùpèsè 52 tó ń tún un ṣe/láìsí-kọ́kọ́rọ́, ọ̀fẹ́ títí láé · àwọn ìsopọ̀mọ́ CLI/agent 37 nípasẹ̀ ìṣètò kan ṣoṣo · ìbáṣepọ̀ OpenAI, Claude, Gemini àti Responses API ní /v1 · àwọn ìṣàkóso iṣelópọ̀ pẹ̀lú circuit breakers, TLS stealth, àwọn irinṣẹ́ MCP 110, A2A, ìrántí, guardrails, evals àti àwọn ìkéde ìdánwò àdúróṣinṣin 56,000+ káàkiri àwọn fáìlì ìdánwò tí a ń tọpa 7,800+."/>
+<img src="./docs/diagrams/promise-pillars.svg" width="100%" alt="The Promise — One endpoint and 377 providers. Automatic fallback keeps routing while another healthy target is available. Six pillars: resilient fallback across 377 providers · up to 95% token savings on eligible workloads · $0 to start with 150+ free tiers and 52 recurring/keyless free-forever providers · 37 CLI/agent integrations through one config · OpenAI, Claude, Gemini and Responses API compatibility at /v1 · production controls including circuit breakers, TLS stealth, MCP 110 tools, A2A, memory, guardrails, evals and 56,000+ static test declarations across 7,800+ tracked test files."/>
 
 <br/>
 <br/>
 
 <div align="center">
 
-# 🤔 Kí ló dé tí OmniRoute?
+# 🤔 Kí nìdí OmniRoute?
 
 </div>
 
-<img src="./docs/diagrams/why-pain-fix.svg" width="100%" alt="Kí ló dé tí OmniRoute — dáwọ́ jíjà pẹ̀lú àwọn dashboard 10, àwọn kọ́kọ́rọ́ API kú àti àwọn ìrìsí owó orí dúró. Àwọn ìrora ọjọ́ọjọ́ mẹ́wàá lódi sí àwọn ojútùú: iye aṣẹ ń parẹ́ láìnílò → gba àfiyèsí jùlọ lára àwọn ìforúkọsílẹ̀; ààlà ìyára láàrin kíkọ kóòdù → àpòdọ́pọ̀ àdàṣe ipele-4 (Ìforúkọsílẹ̀ → API → Ọ̀wọ́n → Ọ̀fẹ́); àwọn èsì irinṣẹ́ ń jó token lulẹ̀ → ìkópa RTK + Caveman (15–95%); àwọn API gígúnmá → afọmọ ìṣapeyẹ-owó; gbogbo irinṣẹ́ pẹ̀lú ìṣètò tirẹ̀ → òpin kan ṣoṣo, dashboard kan ṣoṣo; AI dílọ́wọ́ → proxy ìpele-3 + TLS stealth; àwọn kọ́kọ́rọ́ kú → ìfaradà ìpele-3 (circuit breakers, ìtútù kọ́kọ́rọ́, ìtìjà awoṣe); ẹgbẹ́ ń pín ìforúkọsílẹ̀ kan → àwọn kójọpọ̀ kọ́kọ́rọ́ pẹ̀lú àwọn iye aṣẹ pínpín-dédé; àwọn prompt ń rìn nípasẹ̀ àwòsánmà ẹlòmíì → ìbílẹ̀-ṣáájú pẹ̀lú àwọn kọ́kọ́rọ́ énkrípù AES-256-GCM; kò sí òye ìnáwó → àtúpalẹ̀ lọ́wọ́lọ́wọ́ (lílò, iye aṣẹ, ìfipamọ́, ìdíwọ́ p95)."/>
+<img src="./docs/diagrams/why-pain-fix.svg" width="100%" alt="Why OmniRoute — stop juggling 10 dashboards, dead API keys and surprise bills. Ten daily pains vs fixes: quota expiring unused → maximize subscriptions; rate limits mid-coding → 4-tier auto-fallback (Subscription → API → Cheap → Free); tool outputs burning tokens → RTK + Caveman compression (15–95%); expensive APIs → cost-optimized routing; every tool its own setup → one endpoint, one dashboard; AI blocked → 3-level proxy + TLS stealth; dead keys → 3-layer resilience (circuit breakers, key cooldown, model lockout); team sharing one subscription → key pools with fair-share quotas; prompts through someone's cloud → local-first with AES-256-GCM encrypted keys; no spend visibility → live analytics (usage, quota, savings, p95 latency)."/>
 
 <div align="center">
 
-<img src="./docs/diagrams/tier-cascade.svg" width="100%" alt="Ìṣàn ìbéèrè OmniRoute: IDE tàbí CLI rẹ (Claude Code, Cursor, Cline…) ń pe òpin ìbílẹ̀ kan ṣoṣo (http://localhost:20128/v1); Smart Router ti OmniRoute (ìkópa RTK + Caveman, àwọn ìlànà afọmọ 20, circuit breakers, TLS stealth, MCP, A2A, guardrails) lè ṣe àpòdọ́pọ̀ káàkiri àwọn ipele ọlùpèsè 4 nígbà tí àfọ̀nàmọ̀ tó yẹ, tó sì ṣẹ̀ṣẹ̀ bá ṣì wà — Ipele 1 Ìforúkọsílẹ̀, Ipele 2 Kọ́kọ́rọ́ API, Ipele 3 Ọ̀wọ́n àti Ipele 4 Ọ̀fẹ́."/>
+<img src="./docs/diagrams/tier-cascade.svg" width="100%" alt="OmniRoute request flow: your IDE or CLI (Claude Code, Cursor, Cline…) calls one local endpoint (http://localhost:20128/v1); the OmniRoute Smart Router (RTK + Caveman compression, 20 routing strategies, circuit breakers, TLS stealth, MCP, A2A, guardrails) can fall back across 4 provider tiers while an eligible healthy target remains — Tier 1 Subscription, Tier 2 API Key, Tier 3 Cheap and Tier 4 Free."/>
 
 </div>
 
@@ -504,13 +504,13 @@ Gbogbo ọgbọ́n **20** náà — parapọ̀ wọn bí o ṣe fẹ́ fún ìgb
 
 <div align="center">
 
-## 🏆 Ohun Tó Mú Kí OmniRoute Yàtọ̀
+## 🏆 Kini Ṣeto OmniRoute Yato si
 
 </div>
 
-<img src="./docs/diagrams/comparison-table.svg" width="100%" alt="Ohun tó mú kí OmniRoute yàtọ̀ — àwòrán àwọn ẹ̀ya ní àkókò pàtó ní ìfiwéra pẹ̀lú 9router, OpenRouter, CLIProxyAPI àti LiteLLM lórí agbára 13. OmniRoute: olùpèsè 376, àwọn ìpele ọ̀fẹ́ tó lé ní 150 tí a fi sínú rẹ̀, ọgbọ́n ìdarí 20, ìfúnpọ̀ token onímọ́tò 12, olupin MCP tí a fi sínú rẹ̀ pẹ̀lú irinṣẹ́ 110, ìlànà aṣojú A2A, ìrántí tó dúró pẹ́, àwọn ààbò ìṣàkóso, àwọn aṣojú cloud, ìfarapamọ́ àmì ìdánimọ̀ TLS, Desktop/Termux/PWA àti agbègbè èdè UI 67. OmniRoute ní ìwé-àṣẹ MIT, ó sì ṣeé gbàlejò fúnra ẹni. Agbára àti iye àwọn olùdíje lè yí padà; wo ìlànà iṣẹ́ tí a sopọ̀ mọ́ ọn."/>
+<img src="./docs/diagrams/comparison-table.svg" width="100%" alt="What sets OmniRoute apart — a dated feature snapshot vs 9router, OpenRouter, CLIProxyAPI and LiteLLM across 13 capabilities. OmniRoute: 377 providers, 150+ free tiers built in, 20 routing strategies, 12-engine token compression, built-in MCP server with 110 tools, A2A agent protocol, persistent memory, guardrails, cloud agents, TLS fingerprint stealth, Desktop/Termux/PWA and 67 i18n UI locales. OmniRoute is MIT-licensed and self-hostable. Competitor capabilities and counts may change; see the linked methodology."/>
 
-<sub>📊 Ẹ̀kúnrẹ́rẹ́ ìlànà iṣẹ́ &amp; àlàyé ẹ̀ya kọ̀ọ̀kan ní ìfiwéra pẹ̀lú 9router, OpenRouter, CLIProxyAPI &amp; LiteLLM → [`docs/comparison/OMNIROUTE_VS_ALTERNATIVES.md`](docs/comparison/OMNIROUTE_VS_ALTERNATIVES.md)</sub>
+<sub>📊 Ilana ni kikun &amp; alaye-ẹya-ara vs 9router, OpenRouter, CLIProxyAPI &amp; LiteLLM → [`docs/comparison/OMNIROUTE_VS_ALTERNATIVES.md`](docs/comparison/OMNIROUTE_VS_ALTERNATIVES.md)</sub>
 
 <br/>
 
@@ -583,39 +583,39 @@ tẹlifíṣọ̀nù lílò, tàbí ipò ìkọ̀sílẹ̀ ìkéde abẹ́lẹ̀
 
 <div align="center">
 
-## ✨ Ohun Tuntun
+## ✨ Kini Tuntun
 
 </div>
 
-> Àwọn kókó pàtàkì láìpẹ́ yìí láti **v3.8.20 → v3.8.53**. Ìtàn kíkún wà nínú [`CHANGELOG.md`](CHANGELOG.md).
+> Recent ifojusi lati** v3.8.20 → v3.8.53** . Itan-akọọlẹ ni kikun ni [`CHANGELOG.md`](CHANGELOG.md).
 
-- **⚖️ Ìtọ́nisọna `quota-weighted`** — ilana combo kẹrùndínlógún ń kọjá àwọn àkántì tí wọ́n ti parẹ́, lẹ́yìn náà ó ń yàn láàrin àwọn tókù ní ìbámu pẹ̀lú quota tó kù ÷ ẹrù tó ń lọ lọ́wọ́, ó sì ń pa àwọn ìjíròrò tó wà tẹ́lẹ̀ mọ́ ibi wọn. → [Auto-Combo](docs/routing/AUTO-COMBO.md)
-- **🧰 Ipo Headless** — `omniroute serve --headless` (tàbí `OMNIROUTE_HEADLESS=1`) ń ṣí ẹ̀rọ proxy `/v1/*` nìkan lẹ́yìn náà, pẹ̀lú dashboard àti àwọn subsystem tí ó jẹ́ ti dashboard-nìkan tí ó pa. → [Ipo Headless](docs/guides/HEADLESS.md)
-- **🔎 Ìwárí àwọn model** — `/v1/models` ń ṣàlẹ̀mọ́ gẹ́gẹ́ bí agbára, àyíká, irú àti ọ̀rọ̀, `POST /v1/models/query` sì ń dá àtòkọ ṣókí kékeré kan padà pẹ̀lú ìfarahàn per-key kannáá. → [Ìtọ́kasí API](docs/reference/API_REFERENCE.md)
-- **🔑 Ìṣàkóso ìtọ́nisọna per-key** — fi kókó API kan mọ́ model tàbí combo kan ṣoṣo pẹ̀lú `forcedModel`, kí o sì fi kún tàbí yọ àwọn model àti combo ti kókó kan kúrò ní ọ̀nà atomiki (`/api/keys/{id}/access`). → [Ìtọ́kasí API](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
-- **🛡️ Àwọn ìṣàkóso PII tó jinlẹ̀** — àṣàyàn gẹ́gẹ́ bí irú, títí dé àwọn àpẹẹrẹ ìbòjú àdáni 20 tí wọ́n ti fọwọ́ sí, àti àwọn àkóópọ̀ ìwárí gẹ́gẹ́ bí irú; ìbòjú fúnra rẹ̀ ṣì wà gẹ́gẹ́ bí ohun tí ẹni gbọ́dọ̀ yan fúnra rẹ̀ (opt-in). → [Ààbò](docs/security/GUARDRAILS.md)
-- **🌍 Àwọn èdè 67** — dashboard, àwọn digi àkọsílẹ̀ àti CLI, pẹ̀lú `npm run i18n:add-locale` tó ń fi èdè kan kún gbogbo ibi ní àṣẹ kan ṣoṣo. → [Ìtọ́sọ́nà i18n](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — ìfi àṣẹ fún àwọn agent rẹ (A2A) tó ń wọlé, àwọn ọgbọ́n Conductor lórí Káàdì Agent, àti pánéélì dashboard kan pẹ̀lú ìjíròrò ohùn Faro push-to-talk. → [A2A Server](docs/frameworks/A2A-SERVER.md)
-- **🛂 Ìgbaniláàyè àti ààbò kó ti ẹ̀rù** — àwọn ìbéèrè ìjíròrò tó lewu ń lọ sínú ìlà ìdúró dípò kí wọ́n máa dáhùn 503, pẹ̀lú àwọn àyọ̀yí RPM atomiki (rolling leases) fún ìsopọ̀ kọ̀ọ̀kan. → [Ìtọ́sọ́nà Ìfaradà](docs/architecture/RESILIENCE_GUIDE.md)
-- **🗂️ Ètò àṣẹyẹsílẹ̀ ti `/v1/models`** — àkótán kan ṣoṣo tó tẹ̀ lé ara rẹ̀ tí wọ́n ṣàkójọpọ̀ gẹ́gẹ́ bí olupese fún olupese kọ̀ọ̀kan (àwọn combo ni wọ́n fi kọ́kọ́ síwájú), tó dúró dájú ní gbogbo orísun àtòkọ. → [Ìtọ́kasí API](docs/reference/API_REFERENCE.md)
-- **🗜️ Ìmúdúró ìdínkù (compression)** — ààbò ìfúwẹ̀ tó wà láìsí ìtọ́ka, àwọn ìdì Caveman fún DE / FR / JA + èdè Ṣáínà (wényán), àti àwọn àlẹ̀mọ́ RTK fún Gradle àti .NET. → [Ìdínkù](docs/compression/COMPRESSION_ENGINES.md)
-- **💸 Iye owó alápatapọ̀ tó ṣòótọ́** — àwọn olupese subscription / coding-plan ń ka **$0** nínú ìtúpalẹ̀ iye owó; ètò ìnáwó, quota àti ìtọ́nisọna ń tẹ̀síwájú láti ṣe ìṣirò àfihàn. → [Ìtọ́kasí API](docs/reference/API_REFERENCE.md)
-- **⚖️ Ìtọ́nisọna Quota-Share** — pín quota àkántì tí wọ́n pínpín dájú láàrin àwọn kókó tó wà nínú pool, ó sì ń lo iṣẹ́ dájú (work-conserving) níwọ̀n ìgbà tí àwọn apá tó ṣìnkùn ń jẹ́ fíyànsílẹ̀ fún àwọn mìíràn. → [Ìtọ́sọ́nà Ìfaradà](docs/architecture/RESILIENCE_GUIDE.md)
-- **🤖 Ìṣètò CLI/agent pẹ̀lú àṣẹ kan ṣoṣo** — àwọn àṣẹ `setup-*` 15 tí wọ́n ti forúkọsílẹ̀; `omniroute run` ń ṣí àwọn CLI 7 (Claude Code, Codex, Aider, Goose, OpenCode, Qwen Code, Gemini CLI); `omniroute configure` ń ṣe àtìyìn fún àwọn target 11 pẹ̀lú ohun èlò àṣàyàn olupese+model alápapọ̀mẹ́rìn àti àwọn ayanfẹ fún context kọ̀ọ̀kan. → [Ìsopọ̀ CLI](docs/guides/CLI-INTEGRATIONS.md)
-- **🛰️ Ipo latọ̀kàtọ̀kà (Remote)** — darí OmniRoute latọ̀kàtọ̀kà pẹ̀lú àwọn token tí wọ́n dín kù (`connect` / `contexts` / `tokens`) + olùrànlọ́wọ́ OAuth `antigravity` fún ìfisílẹ̀ lórí VPS. → [Ipo Latọ̀kàtọ̀kà](docs/guides/REMOTE-MODE.md)
-- **🧭 Ìtọ́nisọna aifọwọyi tó gbọ́n jù** — àwọn combo `auto/<category>:<tier>`, **Fusion** (pánéélì model + adájọ́), ìtọ́nisọna tó mọ̀ nípa iṣẹ́, àti àwọn ìkọjá model / ipo / ètò ìnáwó-USD fún ìbéèrè kọ̀ọ̀kan. → [Auto-Combo](docs/routing/AUTO-COMBO.md)
-- **🗜️ Ìdínkù tó gba ohun èlò àfikún** — àwọn ẹ̀rọ 12 tí wọ́n lè dára pọ̀ + Compression Studios: LLMLingua-2, Ultra ilẹ̀wà méjì, omniglyph, ìlẹ̀kùn ìdájọ́dé (fidelity gate) fún ìgbésẹ̀ kọ̀ọ̀kan, GCF v3.2, àti òwe ìtúnṣètò fáa-kójá (drag-reorder). → [Ìdínkù](docs/compression/COMPRESSION_ENGINES.md)
-- **🕵️ Ìyọ àṣírí MITM kedere (TPROXY)** — mú àwọn CLI tí wọ́n kọjá àwọn variable ayika proxy lọ́wọ́, pẹ̀lú CA per-SNI + ohun èlò ìfisílẹ̀ trust-store. → [MITM/TPROXY](docs/security/MITM-TPROXY-DECRYPT.md)
-- **💸 Ìtànkálẹ̀ ìwọn iye owó ní gbogbo ibi** — àwọn àkọlé iye owó/ìlò `X-OmniRoute-*` lórí gbogbo endpoint, àkọlé ìfipamọ́ cache-HIT, àti àwọn quota ìnáwó USD per-key. → [Ìtọ́kasí API](docs/reference/API_REFERENCE.md)
-- **🧠 Ìrántí tí o lè darí** — wọ́n pa á láìsí ìtọ́ka, ìdínkù vector int8 àti ìrúlẹ̀ tó ṣàyèwò irú (typed decay) tí ẹni gbọ́dọ̀ yan fúnra rẹ̀, àti `x-omniroute-no-memory` fún ìbéèrè kọ̀ọ̀kan. → [Ìrántí](docs/frameworks/MEMORY.md)
-- **🛡️ Ààbò** — olùṣọ́ prompt-injection lórí gbogbo ọ̀nà LLM (ìdánwò red-team), ààbò ìbòjú ìfìwèránṣẹ̀ (credential-masking) tí ẹni gbọ́dọ̀ yan (ó ń bò àwọn kókó API/àṣírí tí ó jáńjáń kúlẹ̀ ní ìtọ́sọ́nà méjèèjì), ìwárí wẹ́ẹ̀bù DuckDuckGo ọ̀fẹ́ gẹ́gẹ́ bí ìpinnu tó kẹ́yìn, àti ìlẹ̀kùn ìwọlé OIDC àṣàyàn fún dashboard (ìwọlé pẹ̀lú ọ̀rọ̀-ìmúlẹ̀ máa wà ní gbogbo ìgbà). → [Ààbò](docs/security/GUARDRAILS.md)
-- **🖼️ Àwọn endpoint tuntun** — `/v1/ocr` (Mistral OCR) àti `/v1/audio/translations` (bí ti Whisper) ń parí ojú-ìṣàkóso mídíà náà. → [Ìtọ́kasí API](docs/reference/API_REFERENCE.md)
-- **🎨 Ìṣẹ̀dá àwòrán / fídíò / ohùn** — API kan ṣoṣo fún mídíà: fídíò xAI Grok Imagine àti Novita AI, ComfyUI, Magnific, Adobe Firefly, Segmind, àti àwọn olupese ọ̀rọ̀ bíi ElevenLabs. → [Ìtọ́kasí API](docs/reference/API_REFERENCE.md)
-- **🌍 Ìfisílẹ̀ àti ìṣiṣẹ́** — `basePath` reverse-proxy, ìwárí èdè browser fúnra rẹ̀, ìtọ́pa ẹ̀rọ per-key, ìgbẹ́kẹ̀lé MITM láìní root, àti ìsọdọ̀kan zh-TW. → [Ayika](docs/reference/ENVIRONMENT.md)
-- **🤝 Àwọn olupese àti agent sí i** — àwọn agent awọ̀sánmà (Codex Cloud, Cursor, Devin, Jules), Grok Build (xAI) pẹ̀lú ìwọlé browser + OAuth, káàdì Ollama àkọ́kọ́, Claude Opus 5 àti Sonnet 5, ìbáṣepọ̀ ọ̀ṣọ́fíìsìàlì Kimi (Code/Web/Moonshot), Zed, Requesty, SenseNova, Yuanbao, Agnes AI… àti àtòkọ **olupese 376** tí wọ́n tún ṣe. → [Àwọn Olupese](docs/reference/PROVIDER_REFERENCE.md)
-- **📡 Ìkedere ìtọ́nisọna** — gbogbo ìdáhùn ń gba àkọlé `X-OmniRoute-Decision` kan tó ń darúkọ ilana/olupese/latency tó ṣe é, ilana combo `cache-optimized` tuntun + àkíyèsí `cacheAffinity` ti Auto-Combo ń darí àwọn ìbéèrè àtúnṣe padà sí ìsopọ̀ tó ń pa prefix tó wà nínú cache mọ́, àti endpoint tí ó jẹ́ kíkà-nìkan `/v1/auto-combo/{channel}/candidates` ń ṣí pool àwọn olùdíje tó wà láààyè ti ikanni `auto/*` kan sílẹ̀. → [Auto-Combo](docs/routing/AUTO-COMBO.md)
-- **⚡ Ìdáradà agbegbe & ìlà abẹrẹ̀** — Redis agbegbe pẹ̀lú títẹ-kan, àwọn olùgbéjáde relay Cloudflare Workers / Deno Deploy, Bifrost àti Mux gẹ́gẹ́ bí àwọn iṣẹ́ tí a fi sínú ètò tí wọ́n ń ṣàkíyèsí. → [Àwọn Iṣẹ́ Tí A Fi Sínú Ètò](docs/frameworks/EMBEDDED-SERVICES.md)
-- **🧩 Àwọn ohun mìíràn nínú àpò** — ìlò plugin + ọjà, àwọn ìlò ọgbọn Omni/Agent/GitHub, ìsopọ̀ vault Obsidian (àwọn ohun èlò MCP 22), àwọn API Batch & Files tó bá OpenAI mu, cache ìdáhùn itumọ̀, gamification pẹ̀lú àwọn leaderboard, ìṣàwárí agent ACP (àwọn agent 15 tí wọ́n kọ́ sínú rẹ̀), ìgbéjáde log tí a pèsè àkókò sí BigQuery, `auto/chaos` fan-out ọ̀pọ̀-àpẹẹrẹ farapa, afárá bot Telegram kan, olùdárí ẹ̀yà inú ètò kan àti ìpò àwọn olùpèsè ọfẹ́ LMArena-ELO. → [Àwọn Ìwé Ìtọ́sọ́nà](docs/README.md)
+- **⚖️ `quota-weighted` afisona** — Ilana konbo 20 ti fo awọn akọọlẹ ti o rẹwẹsi, lẹhinna fa laarin awọn iyokù ni ibamu si pilẹṣẹ pipọ ÷ ninu ọkọ ofurufu, fifi awọn ibaraẹnisọrọ to wa tẹlẹ pinni. → [Auto-Konbo](docs/routing/AUTO-COMBO.md)
+- **🧰 Headless mode** - `omniroute serve --headless` (tabi `OMNIROUTE_HEADLESS=1`) nṣiṣẹ ẹrọ aṣoju `/v1/*` nikan, pẹlu dasibodu ati dasibodu nikan ni pipa. → [Headless Ipo](docs/guides/HEADLESS.md)
+- **🔎 Awoṣe awari** - awọn asẹ `/v1/models` nipasẹ agbara, ọrọ-ọrọ, iru ati ọrọ, ati `POST /v1/models/query` da pada atokọ kukuru ipinnu kukuru pẹlu hihan-bọtini kanna. → [API Reference](docs/reference/API_REFERENCE.md)
+- **🔑 Per-bọtini idari ipa ọna** — PIN bọtini API kan si awoṣe kan tabi konbo pẹlu `forcedModel`, ati ṣafikun tabi yọkuro awọn awoṣe bọtini kan ati awọn akojọpọ atomiki (`/api/keys/{id}/access`). → [API Reference](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
+- **🛡️ Finer PII idari** - yiyan iru-iru, to awọn ilana boju-boju aṣa ti a fọwọsi 20 ati awọn iṣiro wiwa iru-iru; masking ara duro ijade-ni. → [Guardrails](docs/security/GUARDRAILS.md)
+- **🌍 67 ede** - dasibodu, awọn digi docs ati CLI, pẹlu `npm run i18n:add-locale` fifi ede kan kun nibi gbogbo ni aṣẹ kan. → [i18n Itọsọna](docs/guides/I18N.md)
+- **🎛️ OmniConductor** - aṣoju A2A ti nwọle si ọkọ oju-omi kekere aṣoju rẹ, awọn ọgbọn adari lori Kaadi Aṣoju, ati igbimọ dasibodu kan pẹlu iwiregbe ohun titari-si-ọrọ Faro. → [A2A](docs/frameworks/A2A-SERVER.md)
+- **🛂 Gbigbawọle Adaptive & Idaabobo apọju** - Awọn ibeere iwiregbe iwuwo iwuwo ti isinyi dipo 503ing, pẹlu atomiki RPM yiyi yiyi fun asopọ. → [Resilience Itọsọna](docs/architecture/RESILIENCE_GUIDE.md)
+- **🗂️ Canonical `/v1/models` ibere** - bulọọki akojọpọ olupese kan fun olupese (combos pinni akọkọ), iduroṣinṣin kọja gbogbo orisun katalogi. → [API Itọkasi](docs/reference/API_REFERENCE.md)
+- **🗜️ funmorawon ìşọn** - aiyipada-lori afikun oluso, Caveman akopọ fun DE / FR / JA + Kannada (wényán), RTK Ajọ fun Gradle & .NET. → [funmorawon](docs/compression/COMPRESSION_ENGINES.md)
+- **💸 Otitọ alapin-oṣuwọn iye owo** - ṣiṣe alabapin / ifaminsi-awọn olupese eto ka** $0** ni awọn atupale iye owo; isuna, ipin & afisona pa ifoju. → [API Reference](docs/reference/API_REFERENCE.md)
+- **⚖️ Quota-Share afisona** - pin ipin ipin iroyin ti o pin ni deede kọja awọn bọtini ti a dapọ, titọju iṣẹ-ṣiṣe ki awọn ege ti ko ṣiṣẹ ni a ya jade. → [Resilience Itọsọna](docs/architecture/RESILIENCE_GUIDE.md)
+- **🤖 Ọkan-aṣẹ CLI/agent setup** - Awọn aṣẹ `setup-*` 15 ti o forukọsilẹ; `omniroute run` ṣe ifilọlẹ 7 CLIs (koodu Claude, Codex, Aider, Goose, OpenCode, Qwen Code, Gemini CLI); `omniroute configure` ṣe atilẹyin awọn ibi-afẹde 11 pẹlu olupilẹṣẹ alabaṣepọ olupese + awoṣe ati awọn ayanfẹ ọrọ-ọrọ. → [CLI Integration](docs/guides/CLI-INTEGRATIONS.md)
+- **🛰️ Latọna ipo** — wakọ OmniRoute latọna jijin pẹlu awọn ami ti o ni iwọn (`connect` / `contexts` / `tokens`) + oluranlọwọ `antigravity` OAuth fun fifi sori ẹrọ VPS. → [Latọna Ipo](docs/guides/REMOTE-MODE.md)
+- **🧭 Smarter laifọwọyi afisona** - awọn akojọpọ `auto/<category>:<tier>`,** Iparapọ** (apẹrẹ + nronu awoṣe), afisona-ṣiṣe-ṣiṣe, fun-ibeere awoṣe / mode / USD-isuna dojuiwọn. → [Auto-Konbo](docs/routing/AUTO-COMBO.md)
+- **🗜️ Pluggable funmorawon** - 12 composable enjini + Situdio funmorawon: LLMLinga-2, meji-ipele Ultra, omniglyph, fun-igbese iṣootọ ẹnu-ọna, GCF v3.2, fa-atunbere olootu. → [funmorawon](docs/compression/COMPRESSION_ENGINES.md)
+- **🕵️ Sihin MITM decrypt (TPROXY)** - Yaworan CLIs ti o foju parẹ aṣoju env vars, pẹlu olupilẹṣẹ ile-itaja igbẹkẹle fun SNI CA + kan. → [MITM/TPROXY](docs/security/MITM-TPROXY-DECRYPT.md)
+- **💸 Iye owo telemetry nibi gbogbo** - awọn akọle `X-OmniRoute-*` cost/usage lori gbogbo aaye ipari, kaṣe-HIT ifowopamọ akọsori, fun-bọtini USD inawo awọn ipin. → [API Reference](docs/reference/API_REFERENCE.md)
+- **🧠 Memory o dari** — pipa nipa aiyipada, ijade int8 vector quantization + ti tẹ ibajẹ, fun-ibere `x-omniroute-no-memory`. → [Iranti](docs/frameworks/MEMORY.md)
+- **🛡️ Aabo** - oluso abẹrẹ kiakia ni gbogbo ọna LLM (suite-ẹgbẹ-pupa), ijade ni ẹṣọ-masking guardrail (awọn atunṣe ti jo API keys/secrets ni awọn itọnisọna mejeeji), wiwa DuckDuckGo -aseyin ti oju opo wẹẹbu ọfẹ, ati ẹnu-ọna iwọle OIDC yiyan fun dasibodu naa (iwọle nigbagbogbo ma wa). → [Guardrails](docs/security/GUARDRAILS.md)
+- **🖼️ New endpoints** - `/v1/ocr` (Mistral OCR) ati `/v1/audio/translations` (ara-ara) yika oju-aye media. → [API Itọkasi](docs/reference/API_REFERENCE.md)
+- **🎨 Aworan / fidio / iran ohun** - ọkan API fun media: xAI Grok Fojuinu & Novita AI fidio, ComfyUI, Magnific, Adobe Firefly, Segmind, ati awọn olupese ọrọ gẹgẹbi ElevenLabs. → [API Itọkasi](docs/reference/API_REFERENCE.md)
+- **🌍 imuṣiṣẹ & ops** - yiyipada-aṣoju `basePath`, aṣawari-ede aṣawakiri, ipasẹ ẹrọ fun bọtini, igbẹkẹle MITM ti ko ni gbongbo, agbegbe zh-TW. → [Ayika](docs/reference/ENVIRONMENT.md)
+- **🤝 Awọn olupese diẹ sii & awọn aṣoju** - Awọn aṣoju awọsanma (Codex Cloud, Cursor, Devin, Jules), Grok Kọ (xAI) pẹlu iwọle + OAuth aṣawakiri, kaadi Ollama akọkọ-kilasi, Claude Opus 5 & Sonnet 5, Kimi osise ajọṣepọ (Code/Web/Moonshot), Zed, Ibere, SenseNova, Yuanbao ati Agnes AI beere** 377-olupese katalogi** . → [Awọn olupese](docs/reference/PROVIDER_REFERENCE.md)
+- **📡 afisona akoyawo** - Gbogbo idahun n gbe akọsori `X-OmniRoute-Decision` kan ti o n sọ orukọ strategy/provider/latency ti o ṣe iranṣẹ rẹ, ilana tuntun `cache-optimized` konbo + Auto-Combo `cacheAffinity` ipa ọna ifosiwewe tun awọn ibeere pada si asopọ ti o ni imuduro iṣaaju ti a fipamọ, ati aaye ipari `/v1/auto-combo/{channel}/candidates` kika-nikan ṣafihan adagun-idije ifiwe laaye ikanni `auto/*` kan. → [Auto-Konbo](docs/routing/AUTO-COMBO.md)
+- **⚡ Agbegbe išẹ & infra** — ọkan-tẹ agbegbe Redis, Cloudflare Workers / Deno Deploy relay deployers, Bifrost & Mux bi abojuto ifibọ awọn iṣẹ. [Awọn iṣẹ ifibọ](docs/frameworks/EMBEDDED-SERVICES.md) →
+- **🧩 Tun ninu apoti** - itanna ilana + ọjà, Omni/Agent/GitHub ogbon nílẹ, Obsidian vault Integration (22 MCP irinṣẹ), OpenAI-ibaramu Batch & Faili APIs, atunmọ idahun kaṣe, gamification pẹlu leaderboards, ACP oluranlowo Awari (15-itumọ ti ni òjíṣẹ 15), eto okeere log si BigQuery, zqi parallel-out log to zqh , `auto/chaos` parallel multi-bot-model ohun elo faili, ohun elo faili Telegram, afara-model ohun app faili. LMArena-ELO awọn ipo olupese ọfẹ. → [Awọn iwe aṣẹ](docs/README.md)
 
 <br/>
 
@@ -693,35 +693,35 @@ Gbogbo aṣẹ lola fun ipo isakoṣo latọna jijin ti nṣiṣe lọwọ (`omn
 
 <div align="center">
 
-## 🌐 Àwọn Olùpèsè AI 376 — 153 Tí Kátálọ́ọ̀gù Ṣàmì sí Gẹ́gẹ́ bí Ọ̀fẹ́
+## 🌐 377 AI Awọn olupese - 153 Katalogi-Sami Ọfẹ
 
 </div>
 
-> **Àwọn olùpèsè 376 tí a forúkọsílẹ̀** káàkiri àwọn àkójọpọ̀ ìfọ̀rọ̀wérọ̀, mídíà, ìṣàwárí, agbègbè, aṣojú-awọ̀sánmà àti ètò àfọwọ́ṣe, pẹ̀lú **153 tí ó ní metadata ìṣàwárí `hasFree: true`**. Ìforúkọsílẹ̀ àwòṣe ìfọ̀rọ̀wérọ̀ ní **àwọn olùpèsè 239 / àwọn tọkọtaya olùpèsè-àwòṣe ọ̀tọ̀ọ̀tọ̀ 3,059 / àwọn ID àwòṣe àìṣe-àtúnṣe 1,475**; kátálọ́ọ̀gù ìnáwó-ọ̀fẹ́ ọ̀tọ̀ náà ní **àwọn ìlà 471 fún àwòṣe kọ̀ọ̀kan**, **àwọn pool tí ń tún wá 34** àti **àwọn olùpèsè ọ̀fẹ́-títí-láé tí ń tún wá/tí kò nílò kọ́kọ́rọ́ 52**. Àwọn iye ìpínpìlẹ̀ wọ̀nyí yàtọ̀ gẹ́gẹ́ bí a ṣe ṣètò rẹ̀; àwọn ìtumọ̀ àti ìṣírò tí a ti yọ àwọn àdáwòkọ pool kúrò wà nínú [Ìtọ́kasí Olùpèsè](docs/reference/PROVIDER_REFERENCE.md) àti [Àwọn Ìpele Ọ̀fẹ́](docs/reference/FREE_TIERS.md).
+> **377 awọn olupese ti a forukọsilẹ** kọja iwiregbe canonical, media, wiwa, agbegbe, aṣoju-awọsanma ati awọn akojọpọ eto, pẹlu** 153 gbigbe `hasFree: true` metadata** . Iforukọsilẹ awoṣe iwiregbe ni wiwa** Awọn olupese 239 / 3,059 awọn orisii olupese-awoṣe pato / 1,475 awoṣe aise IDs** ; awọn lọtọ free-isuna katalogi ni o ni** 471 fun-awoṣe kana** ,** 34 loorekoore adagun** ati** 52 recurring/keyless awọn olupese ọfẹ-lailai** . Awọn wọnyi ni o yatọ si iyeida nipa oniru; awọn asọye ati awọn iṣiro ti a yọkuro adagun n gbe ni [Itọkasi Olupese](docs/reference/PROVIDER_REFERENCE.md) ati [Awọn ipele Ọfẹ](docs/reference/FREE_TIERS.md).
 
 <div align="center">
 
-### 🏢 Gbogbo ilé ìwádìí pàtàkì — nípasẹ̀ endpoint kan ṣoṣo
+### 🏢 Gbogbo laabu pataki - nipasẹ aaye ipari kan
 
 <table>
   <tr>
     <td align="center" width="80"><picture><source media="(prefers-color-scheme:dark)" srcset="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-png@1.91.0/dark/openai.png"/><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/openai.svg" width="40" alt="OpenAI"/></picture><br/><sub>OpenAI</sub><br/><sub>                           </sub></td>
     <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/claude-color.svg" width="40" alt="Anthropic"/><br/><sub>Anthropic</sub><br/><sub>                           </sub></td>
     <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/gemini-color.svg" width="40" alt="Gemini"/><br/><sub>Gemini</sub><br/><sub>                           </sub></td>
-    <td align="center" width="80"><picture><source media="(prefers-color-scheme:dark)" srcset="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-png@1.91.0/dark/grok.png"/><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/grok.svg" width="40" alt="xAI Grok"/></picture><br/><sub>xAI Grok</sub><br/><sub>                           </sub></td>
+    <td align="center" width="80"><picture><source media="(prefers-color-scheme:dark)" srcset="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-png@1.91.0/dark/grok.png"/><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/grok.svg" width="40" alt="xAI Grok"/></picture><br/><sub> xAI Grok</sub><br/><sub> </sub></td>
     <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/deepseek-color.svg" width="40" alt="DeepSeek"/><br/><sub>DeepSeek</sub><br/><sub>                           </sub></td>
     <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/mistral-color.svg" width="40" alt="Mistral"/><br/><sub>Mistral</sub><br/><sub>                           </sub></td>
   </tr>
   <tr>
     <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/qwen-color.svg" width="40" alt="Qwen"/><br/><sub>Qwen</sub><br/><sub>                           </sub></td>
-    <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/meta-color.svg" width="40" alt="Meta Llama"/><br/><sub>Meta Llama</sub><br/><sub>                           </sub></td>
+    <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/meta-color.svg" width="40" alt="Meta Llama"/><br/><sub> Meta Llama</sub><br/><sub> </sub></td>
     <td align="center" width="80"><picture><source media="(prefers-color-scheme:dark)" srcset="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-png@1.91.0/dark/groq.png"/><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/groq.svg" width="40" alt="Groq"/></picture><br/><sub>Groq</sub><br/><sub>                           </sub></td>
     <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/nvidia-color.svg" width="40" alt="NVIDIA"/><br/><sub>NVIDIA</sub><br/><sub>                           </sub></td>
     <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/minimax-color.svg" width="40" alt="MiniMax"/><br/><sub>MiniMax</sub><br/><sub>                           </sub></td>
     <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/cohere-color.svg" width="40" alt="Cohere"/><br/><sub>Cohere</sub><br/><sub>                           </sub></td>
   </tr>
   <tr>
-    <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/perplexity-color.svg" width="40" alt="Perplexity"/><br/><sub>Perplexity</sub><br/><sub>                           </sub></td>
+    <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/perplexity-color.svg" width="40" alt="Perplexity"/><br/><sub> Perplexity </sub><br/><sub> </sub></td>
     <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/huggingface-color.svg" width="40" alt="Hugging Face"/><br/><sub>HuggingFace</sub><br/><sub>                           </sub></td>
     <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/together-color.svg" width="40" alt="Together"/><br/><sub>Together</sub><br/><sub>                           </sub></td>
     <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/fireworks-color.svg" width="40" alt="Fireworks"/><br/><sub>Fireworks</sub><br/><sub>                           </sub></td>
@@ -730,32 +730,32 @@ Gbogbo aṣẹ lola fun ipo isakoṣo latọna jijin ti nṣiṣe lọwọ (`omn
   </tr>
 </table>
 
-<sub>…àti 350+ míì — gbogbo àmì-àwòrán ni a ń gbé jáde ní tààrà láti inú kátálọ́ọ̀gù àwọn olùpèsè ti dashboard. 📖 [Ìtọ́kasí Olùpèsè](docs/reference/PROVIDER_REFERENCE.md)</sub>
+<sub>…ati 350 + diẹ sii - gbogbo aami ṣe ipinnu laaye lati inu iwe akọọlẹ olupese ti dasibodu naa. 📖 [Olupese Reference](docs/reference/PROVIDER_REFERENCE.md)</sub>
 
 <br/>
 
-### 🆓 Ọ̀fẹ́ Títí Láé — $0, kò nílò káàdì
+### 🆓 Free Lailai - $ 0, ko si kaadi
 
 <table>
   <tr>
-    <td align="center" width="150"><img src="./public/providers/cli-generic.svg" width="42" alt="OpenCode Zen"/><br/><b>OpenCode Zen</b><br/><sub>DeepSeek V4, Nemotron 3<br/>Kò sí òpin token</sub></td>
-    <td align="center" width="150"><img src="./public/providers/cli-generic.svg" width="42" alt="Kilo Code"/><br/><b>Kilo Code</b><br/><sub>Olùdarí-àdáṣe, Tencent Hy3<br/>Ọ̀fẹ́ títí láé</sub></td>
-    <td align="center" width="150"><img src="./public/providers/requesty.svg" width="42" alt="Requesty"/><br/><b>Requesty</b><br/><sub>GPT-OSS 120B, Nemotron<br/>Ọ̀fẹ́ títí láé</sub></td>
-    <td align="center" width="150"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/siliconcloud-color.svg" width="42" alt="SiliconFlow"/><br/><b>SiliconFlow</b><br/><sub>DeepSeek V3.2 / R1<br/>Ìpele ọ̀fẹ́</sub></td>
-    <td align="center" width="150"><img src="./public/providers/zhipu.svg" width="42" alt="Z.AI GLM"/><br/><b>Z.AI GLM</b><br/><sub>GLM-4.7 / 4.5-Flash<br/>Ọ̀fẹ́ títí láé</sub></td>
-    <td align="center" width="150"><img src="./public/providers/baidu.svg" width="42" alt="Baidu ERNIE"/><br/><b>Baidu ERNIE</b><br/><sub>ERNIE 4.0<br/>Ọ̀fẹ́ títí láé</sub></td>
+    <td align="center" width="150"><img src="./public/providers/cli-generic.svg" width="42" alt="OpenCode Zen"/><br/><b>OpenCode Zen </b><br/><sub>DeepSeek V4, Nemotron 3 <br/> si àmi fila </sub></td>
+    <td align="center" width="150"><img src="./public/providers/cli-generic.svg" width="42" alt="Kilo Code"/><br/><b> Kilo Code </b><br/><sub> Adaparọ-ọna, Tencent Hy3 <br/> Ọfẹ lailai </sub></td>
+    <td align="center" width="150"><img src="./public/providers/requesty.svg" width="42" alt="Requesty"/><br/><b> Ibere </b><br/><sub> GPT-OSS 120B, Nemotron <br/> Ọfẹ lailai </sub></td>
+    <td align="center" width="150"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/siliconcloud-color.svg" width="42" alt="SiliconFlow"/><br/><b>SiliconFlow</b><br/><sub>DeepSeek V3.2 / R1 <br/> Ọfẹ ipele </sub></td>
+    <td align="center" width="150"><img src="./public/providers/zhipu.svg" width="42" alt="Z.AI GLM"/><br/><b> Z.AI GLM</b><br/><sub> GLM-4.7 / 4.5-Flash <br/> Ọfẹ lailai </sub></td>
+    <td align="center" width="150"><img src="./public/providers/baidu.svg" width="42" alt="Baidu ERNIE"/><br/><b>Baidu ERNIE</b><br/><sub>ERNIE 4.0 <br/> Ofe lailai </sub></td>
   </tr>
   <tr>
-    <td align="center" width="150"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/qoder-color.svg" width="42" alt="Qoder AI"/><br/><b>Qoder AI</b><br/><sub>Qwen3-Max, Kimi-K2<br/>Ọ̀FẸ́ láìlópin</sub></td>
-    <td align="center" width="150"><img src="./public/providers/pollinations.svg" width="42" alt="Pollinations"/><br/><b>Pollinations</b><br/><sub>GPT, Llama, Claude<br/>Kò nílò kọ́kọ́rọ́</sub></td>
-    <td align="center" width="150"><img src="./public/providers/cloudflare.svg" width="42" alt="Cloudflare AI"/><br/><b>Cloudflare AI</b><br/><sub>Àwọn àwòṣe 50+<br/>10K neuron/ọjọ́</sub></td>
-    <td align="center" width="150"><img src="./public/providers/nvidia.svg" width="42" alt="NVIDIA NIM"/><br/><b>NVIDIA NIM</b><br/><sub>GLM, MiniMax<br/>~40 RPM lọ́fẹ̀ẹ́</sub></td>
-    <td align="center" width="150"><img src="./public/providers/cerebras.svg" width="42" alt="Cerebras"/><br/><b>Cerebras</b><br/><sub>GLM 4.7, GPT-OSS<br/>Kirẹditi $5 ẹ̀ẹ̀kan ṣoṣo; káàdì pọndandan</sub></td>
-    <td align="center" width="150"><img src="./public/providers/openrouter.svg" width="42" alt="OpenRouter"/><br/><b>OpenRouter</b><br/><sub>Àwọn àwòṣe :free<br/>+$10 → RPM gíga sí i</sub></td>
+    <td align="center" width="150"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/qoder-color.svg" width="42" alt="Qoder AI"/><br/><b>Qoder AI</b><br/><sub> Qwen3-Max, Kimi-K2 <br/> Unlimited FREE</sub></td>
+    <td align="center" width="150"><img src="./public/providers/pollinations.svg" width="42" alt="Pollinations"/><br/><b> Pollinations </b><br/><sub>GPT, Llama, Claude<br/> si bọtini ti nilo </sub></td>
+    <td align="center" width="150"><img src="./public/providers/cloudflare.svg" width="42" alt="Cloudflare AI"/><br/><b>Cloudflare AI</b><br/><sub> 50 + awọn awoṣe <br/> 10K neurons/day</sub></td>
+    <td align="center" width="150"><img src="./public/providers/nvidia.svg" width="42" alt="NVIDIA NIM"/><br/><b>NVIDIA NIM</b><br/><sub>GLM, MiniMax<br/>~ 40 RPM free </sub></td>
+    <td align="center" width="150"><img src="./public/providers/cerebras.svg" width="42" alt="Cerebras"/><br/><b>Cerebras</b><br/><sub>GLM 4.7, GPT-OSS <br/> Ọkan-akoko $5 gbese; kaadi ti a beere </sub></td>
+    <td align="center" width="150"><img src="./public/providers/openrouter.svg" width="42" alt="OpenRouter"/><br/><b>OpenRouter</b><br/><sub>: awọn awoṣe ọfẹ <br/>+$10 → ti o ga RPM</sub></td>
   </tr>
 </table>
 
-📖 Àkójọ ẹ̀rọ-kíkà ní kíkún → [`docs/reference/PROVIDER_REFERENCE.md`](docs/reference/PROVIDER_REFERENCE.md)
+📖 Full ẹrọ-ṣeékà katalogi → [`docs/reference/PROVIDER_REFERENCE.md`](docs/reference/PROVIDER_REFERENCE.md)
 
 <br/>
 </div>
@@ -1290,29 +1290,29 @@ port kan, nítorí náà kò sí package CLI-nìkan lọ́tọ̀ ní báyìí.
 <br/>
 <div align="center">
 
-## 🛠️ Àkójọ Èròjà Ìmọ̀-ẹ̀rọ
+## 🛠️ Tech Stack
 
 </div>
 
 <table>
-  <tr><th align="left">Ìpele</th><th align="left">Ìmọ̀-ẹ̀rọ</th></tr>
-  <tr><td nowrap><b>Àkókò Ṣíṣe</b></td><td>Node.js 22.x / 24.x LTS — <code>&gt;=22.22.2 &lt;23 || &gt;=24.0.0 &lt;27</code></td></tr>
-  <tr><td nowrap><b>Èdè</b></td><td>TypeScript 6.0 — <b>100% TypeScript</b> káàkiri <code>src/</code> àti <code>open-sse/</code> (kò sí <code>any</code> rárá nínú ẹ̀yà-àkọ́kọ́ láti v2.0)</td></tr>
-  <tr><td nowrap><b>Ìlànà-iṣẹ́</b></td><td>Next.js 16 + React 19 + Tailwind CSS 4</td></tr>
-  <tr><td nowrap><b>Ìbùdó Dátà</b></td><td>better-sqlite3 (SQLite, ìkọsílẹ̀ WAL) + LowDB (JSON àtijọ́) — àwọn modulu ìkápá 147, àwọn migrations 213</td></tr>
-  <tr><td nowrap><b>Ìrántilẹ́</b></td><td>àwáàrí kíkún-ọ̀rọ̀ SQLite FTS5 + àwọn vector embeddings tí a dín kù sí int8, ìdínkù oní-ìru</td></tr>
-  <tr><td nowrap><b>Àwọn Àpẹẹrẹ</b></td><td>Zod 4 — ìjẹ̀rìsí I/O irinṣẹ́ MCP + àwọn àdéhùn API</td></tr>
-  <tr><td nowrap><b>Àwọn Ìlànà Ìbánisọ̀rọ̀</b></td><td>MCP (stdio / HTTP / SSE) + A2A v0.3 (JSON-RPC 2.0 + SSE)</td></tr>
-  <tr><td nowrap><b>Ṣíṣàn</b></td><td>Server-Sent Events (SSE) + afárá WebSocket (<code>/v1/ws</code>)</td></tr>
-  <tr><td nowrap><b>Ìfùnpọ̀</b></td><td>ìlà-iṣẹ́ ẹ́rọ mẹ́jìlá — RTK, Caveman, LLMLingua-2 (MobileBERT ONNX), GCF, OmniGlyph</td></tr>
-  <tr><td nowrap><b>Ìfàṣẹsí àti Ààbò</b></td><td>OAuth 2.0 (PKCE) + JWT + Àwọn Kọ́kọ́rọ́ API + ìfàṣẹsí MCP oní-ìdíwọ́ · AES-256-GCM ní ìpamọ́ · DOMPurify</td></tr>
-  <tr><td nowrap><b>Ìfárápamọ́</b></td><td>wreq-js — ìfarada ìdámọ̀ọ́ TLS JA3 / JA4, proxy oní-ìpele mẹ́ta</td></tr>
-  <tr><td nowrap><b>Ìfaradà</b></td><td>Circuit breaker, exponential backoff, anti-thundering-herd, ìwòsàn-fúnrarẹ̀ auto-combo</td></tr>
-  <tr><td nowrap><b>Ìkọsílẹ̀</b></td><td>pino — àwọn àkọsílẹ̀ JSON oní-ìlànà pẹ̀lú àyíká ìbéèrè</td></tr>
-  <tr><td nowrap><b>Ìdánwò</b></td><td>Node.js test runner + Vitest — <b>àwọn ìkéde ìdánwò ìdúró 56,000+</b> káàkiri àwọn fáìlì ìdánwò tí wọ́n ń tọpinpin 7,800+ (unit, integration, E2E, ààbò, àyíká-ìbáṣepọ̀)</td></tr>
-  <tr><td nowrap><b>Àwọn Pẹpẹ</b></td><td>Kòǹpútà Tábìlì (Electron) · Android (Termux) · PWA (browser kankan)</td></tr>
-  <tr><td nowrap><b>CI/CD</b></td><td>GitHub Actions — ìtẹ̀jáde npm fúnrarẹ̀ + Docker Hub nígbà ìtúpalẹ̀</td></tr>
-  <tr><td nowrap><b>Àwọn Ìsopọ̀</b></td><td><a href="https://omniroute.online">Ìbùdó Ayélujára</a> · <a href="https://www.npmjs.com/package/omniroute">npm</a> · <a href="https://hub.docker.com/r/diegosouzapw/omniroute">Docker Hub</a></td></tr>
+  <tr><th align="left"> Layer </th><th align="left"> Technology </th></tr>
+  <tr><td nowrap><b> Akoko asiko </b></td><td>Node.js 22.x / 24.x LTS — <code>&gt;= 22.22.2 &lt; 23 || &gt;= 24.0.0 &lt; 27 </code></td></tr>
+  <tr><td nowrap><b> Ede </b></td><td>TypeScript 6.0 — <b> 100% TypeScript</b> kọja <code> src/</code> ati <code> ìmọ-sse/</code> (odo <code> eyikeyi </code> ni mojuto lati v2.0)</td></tr>
+  <tr><td nowrap><b> Framework </b></td><td>Next.js 16 + React 19 + Tailwind CSS 4 </td></tr>
+  <tr><td nowrap><b> Database </b></td><td> better-sqlite3 (SQLite, WAL journaling) + LowDB (ogún JSON ) — 147 domain module, 213 migrations </td></tr>
+  <tr><td nowrap><b> Iranti </b></td><td>SQLite FTS5 ọrọ-kikun + int8-iwọn awọn ifibọ fekito, ti tẹ ibajẹ </td></tr>
+  <tr><td nowrap><b> Awọn eto </b></td><td>Zod — MCP ọpa I/O afọwọsi + API awọn adehun </td></tr>
+  <tr><td nowrap><b> Ilana </b></td><td>MCP (stdio / HTTP / SSE) + A2A v0.3 (JSON-RPC 2.0 + SSE)</td></tr>
+  <tr><td nowrap><b> ṣiṣanwọle </b></td><td> Awọn iṣẹlẹ ti a firanṣẹ olupin (SSE) + WebSocket afara (<code>/ v1/ws </code>)</td></tr>
+  <tr><td nowrap><b> Funmorawon </b></td><td> 12-engine opo - RTK, Caveman, LLMLingua-2 (MobileBERT ONNX), GCF, OmniGlyph</td></tr>
+  <tr><td nowrap><b> Auth &amp; aabo </b></td><td>OAuth 2.0 (PKCE) + JWT + API Awọn bọtini + MCP scoped auth · AES-256-GCM ni isinmi · DOMPurify </td></tr>
+  <tr><td nowrap><b> Stealth </b></td><td> wreq-js — JA3 / JA4 TLS afarawe ika ọwọ, aṣoju ipele 3 </td></tr>
+  <tr><td nowrap><b> Resilience </b></td><td> Circuit fifọ, ipadasẹhin ti o pọju, agbo-ẹran-ara-àrá, auto-konbo ara-iwosan </td></tr>
+  <tr><td nowrap><b> Wíwọlé </b></td><td> pino - awọn igbasilẹ JSON ti a ṣe pẹlu ipo ibeere </td></tr>
+  <tr><td nowrap><b> Idanwo </b></td><td>Node.js olusare idanwo + Vitest — <b> 56,000 + awọn ikede idanwo aimi </b> kọja 7,800 + awọn faili idanwo itọpa (kuro, iṣọpọ, E2E, aabo, ilolupo)</td></tr>
+  <tr><td nowrap><b> Platforms </b></td><td>-iṣẹ (Electron) · Android (Termux) · PWA (eyikeyi ẹrọ aṣawakiri)</td></tr>
+  <tr><td nowrap><b>CI/CD</b></td><td>GitHub Awọn iṣe — auto npm ṣe atẹjade + Docker Hub lori itusilẹ </td></tr>
+  <tr><td nowrap><b> Awọn ọna asopọ </b></td><td><a href="https://omniroute.online"> Aaye ayelujara </a> · <a href="https://www.npmjs.com/package/omniroute"> npm </a> · <a href="https://hub.docker.com/r/diegosouzapw/omniroute">Docker Hub </a></td></tr>
 </table>
 
 <div align="center">

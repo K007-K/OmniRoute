@@ -6,14 +6,14 @@
 
 <div align="center">
 
-<img src="./docs/screenshots/MainOmniRoute.png" alt="Πίνακας ελέγχου OmniRoute" width="820"/>
+<img src="./docs/screenshots/MainOmniRoute.png" alt="OmniRoute Dashboard" width="820"/>
 
 <br/>
 <br/>
 
 # 🚀 OmniRoute — Η δωρεάν πύλη AI
 
-<img src="./docs/diagrams/readme-hero.svg" width="100%" alt="OmniRoute — Μην σταματάτε ποτέ να γράφετε κώδικα. Κάθε εργαλείο AI → 376 πάροχοι — 150+ δωρεάν — μέσω ενός endpoint. Claude Code, Codex, Cursor, Cline, Copilot & Antigravity σε ΔΩΡΕΑΝ Claude / GPT / Gemini με αυτόματη εναλλακτική δρομολόγηση. Η συνδυασμένη συμπίεση RTK + Caveman εξοικονομεί 15–95% των token (~89% κατά μέσο όρο) — χωρίς να φτάνετε ποτέ στα όρια. 376 πάροχοι AI · 150+ δωρεάν πακέτα · ~1,62 δισ. δωρεάν token/μήνα · 20 στρατηγικές δρομολόγησης · $0 για να ξεκινήσετε."/>
+<img src="./docs/diagrams/readme-hero.svg" width="100%" alt="OmniRoute — Never stop coding. Every AI tool → 377 providers — 150+ free — through one endpoint. Claude Code, Codex, Cursor, Cline, Copilot & Antigravity into FREE Claude / GPT / Gemini with auto-fallback. RTK + Caveman stacked compression saves 15–95% tokens (~89% avg) — never hit limits. 377 AI providers · 150+ free tiers · ~1.62B free tokens/mo · 20 routing strategies · $0 to start."/>
 
 </div>
 
@@ -222,33 +222,33 @@
 
 <a id="first-run"></a>
 
-## 🆓 Εγκαταστήστε, συνδέστε έναν πάροχο και, στη συνέχεια, δρομολογήστε μέσω ενός τελικού σημείου
+## 🆓 Εγκαταστήστε, συνδέστε έναν πάροχο και μετά δρομολογήστε μέσα από ένα τελικό σημείο
 
 </div>
 
-<img src="./docs/diagrams/works-zero-config.svg" width="100%" alt="Τρία βήματα: εγκαταστήστε και εκκινήστε το OmniRoute, συνδέστε έναν επιλέξιμο πάροχο με τον δικό σας λογαριασμό ή το δικό σας κλειδί API και, στη συνέχεια, κατευθύνετε το εργαλείο σας στο localhost:20128/v1 χρησιμοποιώντας ένα κλειδί API του OmniRoute και το μοντέλο auto. Η δρομολόγηση εξαρτάται από τις διαθέσιμες επιλέξιμες συνδέσεις και τα όρια των παρόχων."/>
+<img src="./docs/diagrams/works-zero-config.svg" width="100%" alt="Three steps: install and start OmniRoute, connect an eligible provider with your own account or API key, then point your tool at localhost:20128/v1 using an OmniRoute API key and model auto. Routing depends on available eligible connections and provider limits."/>
 
 ```bash
-# Αφού συνδέσετε έναν πάροχο, αντιγράψτε το κλειδί OmniRoute από το Dashboard → Endpoints:
+# After connecting a provider, copy your OmniRoute key from Dashboard → Endpoints:
 curl http://localhost:20128/v1/chat/completions \
   -H "Authorization: Bearer YOUR_OMNIROUTE_KEY" \
   -H "Content-Type: application/json" \
   -d '{"model":"auto","messages":[{"role":"user","content":"Hello!"}]}'
 ```
 
-<sub>Το `auto` χρειάζεται μια επιλέξιμη διαδρομή. Μια νέα εγκατάσταση ενδέχεται να μην έχει επιλέξιμους προορισμούς χωρίς κλειδί και ένας πάροχος χωρίς κλειδί ενδέχεται να απορρίπτει προγράμματα-πελάτες τρίτων. Οι πάροχοι που επισημαίνονται ως `tos: avoid`, συμπεριλαμβανομένου του Kiro, εξαιρούνται από προεπιλογή από την αυτόματη δρομολόγηση· η σύνδεση ενός λογαριασμού δεν παρακάμπτει αυτήν τη ρύθμιση. Ανατρέξτε στον [Οδηγό δωρεάν βαθμίδων](docs/getting-started/FREE-TIERS-GUIDE.md) προτού επιλέξετε πάροχο.</sub>
+<sub> `auto` χρειάζεται μια κατάλληλη διαδρομή. Μια νέα εγκατάσταση δεν μπορεί να έχει κατάλληλους στόχους χωρίς κλειδί και ένας πάροχος χωρίς κλειδί μπορεί να απορρίψει πελάτες τρίτων. Οι πάροχοι με την ένδειξη `tos: avoid`, συμπεριλαμβανομένου Kiro, εξαιρούνται από την αυτόματη δρομολόγηση από προεπιλογή. Η σύνδεση ενός λογαριασμού δεν παρακάμπτει αυτήν τη ρύθμιση. Δείτε τον [Οδηγό Free Tiers](docs/getting-started/FREE-TIERS-GUIDE.md) πριν επιλέξετε πάροχο.</sub>
 
-<sub>📦 Έτοιμα για αντιγραφή και επικόλληση σενάρια γρήγορης εκκίνησης για **Python, Node.js, PHP και cURL** → [`examples/quickstart/`](examples/quickstart/)</sub>
+<sub>📦 Αντιγραφή-επικόλληση σεναρίων γρήγορης εκκίνησης για** Python, Node.js, PHP και cURL** → [`examples/quickstart/`](examples/quickstart/)</sub>
 
 <br/>
 
 <div align="center">
 
-# 💥 Η Υπόσχεση
+# 💥 Η υπόσχεση
 
 </div>
 
-<img src="./docs/diagrams/promise-pillars.svg" width="100%" alt="Η Υπόσχεση — Ένα τελικό σημείο και 376 πάροχοι. Η αυτόματη εναλλακτική δρομολόγηση διατηρεί τη λειτουργία όσο υπάρχει διαθέσιμος ένας άλλος υγιής προορισμός. Έξι πυλώνες: ανθεκτική εναλλακτική δρομολόγηση μεταξύ 376 παρόχων · εξοικονόμηση έως και 95% σε token για επιλέξιμους φόρτους εργασίας · αρχικό κόστος $0 με 150+ δωρεάν βαθμίδες και 52 επαναλαμβανόμενους/χωρίς κλειδί, για πάντα δωρεάν παρόχους · 37 ενσωματώσεις CLI/agent μέσω μίας διαμόρφωσης · συμβατότητα με OpenAI, Claude, Gemini και Responses API στο /v1 · έλεγχοι παραγωγής που περιλαμβάνουν circuit breakers, απόκρυψη TLS, MCP με 110 εργαλεία, A2A, μνήμη, προστατευτικά μέτρα, αξιολογήσεις και 56.000+ δηλώσεις στατικών δοκιμών σε 7.800+ παρακολουθούμενα αρχεία δοκιμών."/>
+<img src="./docs/diagrams/promise-pillars.svg" width="100%" alt="The Promise — One endpoint and 377 providers. Automatic fallback keeps routing while another healthy target is available. Six pillars: resilient fallback across 377 providers · up to 95% token savings on eligible workloads · $0 to start with 150+ free tiers and 52 recurring/keyless free-forever providers · 37 CLI/agent integrations through one config · OpenAI, Claude, Gemini and Responses API compatibility at /v1 · production controls including circuit breakers, TLS stealth, MCP 110 tools, A2A, memory, guardrails, evals and 56,000+ static test declarations across 7,800+ tracked test files."/>
 
 <br/>
 <br/>
@@ -259,11 +259,11 @@ curl http://localhost:20128/v1/chat/completions \
 
 </div>
 
-<img src="./docs/diagrams/why-pain-fix.svg" width="100%" alt="Γιατί OmniRoute — σταματήστε να διαχειρίζεστε ταυτόχρονα 10 πίνακες ελέγχου, ανενεργά κλειδιά API και απρόσμενους λογαριασμούς. Δέκα καθημερινά προβλήματα και οι λύσεις τους: λήξη αχρησιμοποίητου ορίου → μεγιστοποίηση συνδρομών· όρια ρυθμού εν μέσω προγραμματισμού → αυτόματη εναλλακτική δρομολόγηση 4 βαθμίδων (Συνδρομή → API → Οικονομικά → Δωρεάν)· έξοδοι εργαλείων που καταναλώνουν token → συμπίεση RTK + Caveman (15–95%)· ακριβά API → δρομολόγηση βελτιστοποιημένη ως προς το κόστος· κάθε εργαλείο με τη δική του ρύθμιση → ένα τελικό σημείο, ένας πίνακας ελέγχου· αποκλεισμένη πρόσβαση σε AI → proxy 3 επιπέδων + απόκρυψη TLS· ανενεργά κλειδιά → ανθεκτικότητα 3 επιπέδων (circuit breakers, περίοδος αναμονής κλειδιών, αποκλεισμός μοντέλου)· ομάδα που μοιράζεται μία συνδρομή → δεξαμενές κλειδιών με δίκαιη κατανομή ορίων· προτροπές μέσω του cloud κάποιου άλλου → τοπική λειτουργία κατά προτεραιότητα με κλειδιά κρυπτογραφημένα μέσω AES-256-GCM· έλλειψη ορατότητας δαπανών → αναλυτικά στοιχεία σε πραγματικό χρόνο (χρήση, όριο, εξοικονόμηση, καθυστέρηση p95)."/>
+<img src="./docs/diagrams/why-pain-fix.svg" width="100%" alt="Why OmniRoute — stop juggling 10 dashboards, dead API keys and surprise bills. Ten daily pains vs fixes: quota expiring unused → maximize subscriptions; rate limits mid-coding → 4-tier auto-fallback (Subscription → API → Cheap → Free); tool outputs burning tokens → RTK + Caveman compression (15–95%); expensive APIs → cost-optimized routing; every tool its own setup → one endpoint, one dashboard; AI blocked → 3-level proxy + TLS stealth; dead keys → 3-layer resilience (circuit breakers, key cooldown, model lockout); team sharing one subscription → key pools with fair-share quotas; prompts through someone's cloud → local-first with AES-256-GCM encrypted keys; no spend visibility → live analytics (usage, quota, savings, p95 latency)."/>
 
 <div align="center">
 
-<img src="./docs/diagrams/tier-cascade.svg" width="100%" alt="Ροή αιτημάτων OmniRoute: το IDE ή το CLI σας (Claude Code, Cursor, Cline…) καλεί ένα τοπικό τελικό σημείο (http://localhost:20128/v1)· ο Έξυπνος Δρομολογητής OmniRoute (συμπίεση RTK + Caveman, 20 στρατηγικές δρομολόγησης, circuit breakers, απόκρυψη TLS, MCP, A2A, προστατευτικά μέτρα) μπορεί να χρησιμοποιεί εναλλακτική δρομολόγηση μεταξύ 4 βαθμίδων παρόχων όσο παραμένει διαθέσιμος ένας επιλέξιμος και υγιής προορισμός — Βαθμίδα 1 Συνδρομή, Βαθμίδα 2 Κλειδί API, Βαθμίδα 3 Οικονομικά και Βαθμίδα 4 Δωρεάν."/>
+<img src="./docs/diagrams/tier-cascade.svg" width="100%" alt="OmniRoute request flow: your IDE or CLI (Claude Code, Cursor, Cline…) calls one local endpoint (http://localhost:20128/v1); the OmniRoute Smart Router (RTK + Caveman compression, 20 routing strategies, circuit breakers, TLS stealth, MCP, A2A, guardrails) can fall back across 4 provider tiers while an eligible healthy target remains — Tier 1 Subscription, Tier 2 API Key, Tier 3 Cheap and Tier 4 Free."/>
 
 </div>
 
@@ -504,13 +504,13 @@ curl http://localhost:20128/v1/chat/completions \
 
 <div align="center">
 
-## 🏆 Τι κάνει το OmniRoute να ξεχωρίζει
+## 🏆 Τι ξεχωρίζει OmniRoute
 
 </div>
 
-<img src="./docs/diagrams/comparison-table.svg" width="100%" alt="Τι κάνει το OmniRoute να ξεχωρίζει — ένα χρονολογημένο στιγμιότυπο σύγκρισης χαρακτηριστικών με τα 9router, OpenRouter, CLIProxyAPI και LiteLLM σε 13 δυνατότητες. OmniRoute: 376 πάροχοι, 150+ ενσωματωμένα δωρεάν επίπεδα, 20 στρατηγικές δρομολόγησης, συμπίεση token με 12 μηχανές, ενσωματωμένος διακομιστής MCP με 110 εργαλεία, πρωτόκολλο πρακτόρων A2A, μόνιμη μνήμη, προστατευτικά μέτρα, πράκτορες cloud, απόκρυψη μέσω αποτυπώματος TLS, Desktop/Termux/PWA και περιβάλλον χρήστη με 67 τοπικές προσαρμογές i18n. Το OmniRoute διατίθεται με άδεια MIT και μπορεί να φιλοξενηθεί σε ιδιόκτητη υποδομή. Οι δυνατότητες και οι αριθμοί των ανταγωνιστών ενδέχεται να αλλάξουν· ανατρέξτε στη συνδεδεμένη μεθοδολογία."/>
+<img src="./docs/diagrams/comparison-table.svg" width="100%" alt="What sets OmniRoute apart — a dated feature snapshot vs 9router, OpenRouter, CLIProxyAPI and LiteLLM across 13 capabilities. OmniRoute: 377 providers, 150+ free tiers built in, 20 routing strategies, 12-engine token compression, built-in MCP server with 110 tools, A2A agent protocol, persistent memory, guardrails, cloud agents, TLS fingerprint stealth, Desktop/Termux/PWA and 67 i18n UI locales. OmniRoute is MIT-licensed and self-hostable. Competitor capabilities and counts may change; see the linked methodology."/>
 
-<sub>📊 Πλήρης μεθοδολογία &amp; λεπτομέρειες ανά χαρακτηριστικό σε σύγκριση με τα 9router, OpenRouter, CLIProxyAPI &amp; LiteLLM → [`docs/comparison/OMNIROUTE_VS_ALTERNATIVES.md`](docs/comparison/OMNIROUTE_VS_ALTERNATIVES.md)</sub>
+<sub>📊 Πλήρης μεθοδολογία &amp; λεπτομέρεια ανά δυνατότητα έναντι 9router, OpenRouter, CLIProxyAPI &amp; LiteLLM → [`docs/comparison/OMNIROUTE_VS_ALTERNATIVES.md`](docs/comparison/OMNIROUTE_VS_ALTERNATIVES.md)</sub>
 
 <br/>
 
@@ -587,35 +587,35 @@ Pix copia-e-cola:
 
 </div>
 
-> Πρόσφατες σημαντικές αλλαγές από την έκδοση **v3.8.20 → v3.8.53**. Πλήρες ιστορικό στο [`CHANGELOG.md`](CHANGELOG.md).
+> Πρόσφατα highlights από** v3.8.20 → v3.8.53** . Πλήρες ιστορικό στο [`CHANGELOG.md`](CHANGELOG.md).
 
-- **⚖️ Δρομολόγηση `quota-weighted`** — η 20ή συνδυαστική στρατηγική παρακάμπτει τους λογαριασμούς των οποίων το όριο έχει εξαντληθεί και, στη συνέχεια, επιλέγει μεταξύ των υπολοίπων αναλογικά με το εναπομείναν όριο ÷ τον τρέχοντα φόρτο, διατηρώντας τις υπάρχουσες συνομιλίες καρφιτσωμένες. → [Αυτόματος συνδυασμός](docs/routing/AUTO-COMBO.md)
-- **🧰 Λειτουργία χωρίς γραφικό περιβάλλον** — το `omniroute serve --headless` (ή `OMNIROUTE_HEADLESS=1`) εκτελεί μόνο τη μηχανή διαμεσολάβησης `/v1/*`, με τον πίνακα ελέγχου και τα υποσυστήματα που προορίζονται αποκλειστικά για αυτόν απενεργοποιημένα. → [Λειτουργία χωρίς γραφικό περιβάλλον](docs/guides/HEADLESS.md)
-- **🔎 Ανακάλυψη μοντέλων** — το `/v1/models` φιλτράρει κατά δυνατότητα, πλαίσιο, είδος και κείμενο, ενώ το `POST /v1/models/query` επιστρέφει μια σύντομη, ντετερμινιστική λίστα επιλογών με την ίδια ορατότητα ανά κλειδί. → [Αναφορά API](docs/reference/API_REFERENCE.md)
-- **🔑 Έλεγχος δρομολόγησης ανά κλειδί** — καρφιτσώστε ένα κλειδί API σε ένα μοντέλο ή συνδυασμό με το `forcedModel` και προσθέστε ή αφαιρέστε ατομικά τα μοντέλα και τους συνδυασμούς ενός κλειδιού (`/api/keys/{id}/access`). → [Αναφορά API](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
-- **🛡️ Λεπτομερέστεροι έλεγχοι PII** — επιλογή ανά τύπο, έως 20 επικυρωμένα προσαρμοσμένα μοτίβα απόκρυψης και μετρητές ανίχνευσης ανά τύπο· η ίδια η απόκρυψη παραμένει προαιρετική. → [Μηχανισμοί προστασίας](docs/security/GUARDRAILS.md)
-- **🌍 67 γλώσσες** — πίνακας ελέγχου, αντίγραφα τεκμηρίωσης και CLI, με το `npm run i18n:add-locale` να προσθέτει μια γλώσσα παντού με μία εντολή. → [Οδηγός i18n](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — εισερχόμενη ανάθεση A2A προς τον στόλο πρακτόρων σας, δεξιότητες Conductor στην Κάρτα Πράκτορα και ένας πίνακας ελέγχου με φωνητική συνομιλία push-to-talk Faro. → [Διακομιστής A2A](docs/frameworks/A2A-SERVER.md)
-- **🛂 Προσαρμοστική αποδοχή και προστασία από υπερφόρτωση** — τα απαιτητικά αιτήματα συνομιλίας μπαίνουν σε ουρά αντί να επιστρέφουν 503, με ατομικές κυλιόμενες μισθώσεις RPM ανά σύνδεση. → [Οδηγός ανθεκτικότητας](docs/architecture/RESILIENCE_GUIDE.md)
-- **🗂️ Κανονική ταξινόμηση `/v1/models`** — ένα συνεχόμενο μπλοκ ομαδοποιημένο ανά πάροχο για κάθε πάροχο (με τους συνδυασμούς καρφιτσωμένους πρώτους), σταθερό σε κάθε πηγή καταλόγου. → [Αναφορά API](docs/reference/API_REFERENCE.md)
-- **🗜️ Ενίσχυση συμπίεσης** — προστασία από διόγκωση ενεργοποιημένη από προεπιλογή, πακέτα Caveman για DE / FR / JA + Κινεζικά (wényán), φίλτρα RTK για Gradle και .NET. → [Συμπίεση](docs/compression/COMPRESSION_ENGINES.md)
-- **💸 Ειλικρινές κόστος σταθερής χρέωσης** — οι πάροχοι συνδρομών / προγραμμάτων προγραμματισμού εμφανίζουν **$0** στην ανάλυση κόστους· ο προϋπολογισμός, τα όρια και η δρομολόγηση εξακολουθούν να εκτιμώνται. → [Αναφορά API](docs/reference/API_REFERENCE.md)
-- **⚖️ Δρομολόγηση Quota-Share** — κατανέμετε δίκαια το όριο ενός κοινόχρηστου λογαριασμού μεταξύ συγκεντρωμένων κλειδιών, με διατήρηση της αξιοποίησης ώστε τα αδρανή μερίδια να παραχωρούνται προσωρινά. → [Οδηγός ανθεκτικότητας](docs/architecture/RESILIENCE_GUIDE.md)
-- **🤖 Ρύθμιση CLI/πράκτορα με μία εντολή** — 15 καταχωρισμένες εντολές `setup-*`· το `omniroute run` εκκινεί 7 CLI (Claude Code, Codex, Aider, Goose, OpenCode, Qwen Code, Gemini CLI)· το `omniroute configure` υποστηρίζει 11 προορισμούς με διαδραστικό επιλογέα παρόχου+μοντέλου και αγαπημένα ανά πλαίσιο. → [Ενσωματώσεις CLI](docs/guides/CLI-INTEGRATIONS.md)
-- **🛰️ Απομακρυσμένη λειτουργία** — χειριστείτε ένα απομακρυσμένο OmniRoute με διακριτικά περιορισμένης εμβέλειας (`connect` / `contexts` / `tokens`) και ένα βοηθητικό εργαλείο OAuth `antigravity` για εγκαταστάσεις VPS. → [Απομακρυσμένη λειτουργία](docs/guides/REMOTE-MODE.md)
-- **🧭 Εξυπνότερη αυτόματη δρομολόγηση** — συνδυασμοί `auto/<category>:<tier>`, **Fusion** (πάνελ μοντέλων + κριτής), δρομολόγηση με επίγνωση εργασιών, παρακάμψεις μοντέλου / λειτουργίας / προϋπολογισμού USD ανά αίτημα. → [Αυτόματος συνδυασμός](docs/routing/AUTO-COMBO.md)
-- **🗜️ Αρθρωτή συμπίεση** — 12 συνθέσιμες μηχανές + Compression Studios: LLMLingua-2, Ultra δύο επιπέδων, omniglyph, πύλη πιστότητας ανά βήμα, GCF v3.2, πρόγραμμα επεξεργασίας με αναδιάταξη μέσω μεταφοράς. → [Συμπίεση](docs/compression/COMPRESSION_ENGINES.md)
-- **🕵️ Διαφανής αποκρυπτογράφηση MITM (TPROXY)** — καταγράψτε CLI που αγνοούν τις μεταβλητές περιβάλλοντος διακομιστή μεσολάβησης, με CA ανά SNI και πρόγραμμα εγκατάστασης χώρου αποθήκευσης εμπιστοσύνης. → [MITM/TPROXY](docs/security/MITM-TPROXY-DECRYPT.md)
-- **💸 Τηλεμετρία κόστους παντού** — κεφαλίδες κόστους/χρήσης `X-OmniRoute-*` σε κάθε τελικό σημείο, κεφαλίδα εξοικονόμησης cache-HIT, όρια δαπανών USD ανά κλειδί. → [Αναφορά API](docs/reference/API_REFERENCE.md)
-- **🧠 Μνήμη που ελέγχετε εσείς** — απενεργοποιημένη από προεπιλογή, προαιρετική κβαντοποίηση διανυσμάτων int8 + απομείωση βάσει τύπου, `x-omniroute-no-memory` ανά αίτημα. → [Μνήμη](docs/frameworks/MEMORY.md)
-- **🛡️ Ασφάλεια** — προστασία από έγχυση προτροπών σε κάθε διαδρομή LLM (σουίτα red-team), προαιρετικός μηχανισμός προστασίας απόκρυψης διαπιστευτηρίων (αποκρύπτει κλειδιά API/μυστικά που διέρρευσαν και προς τις δύο κατευθύνσεις), δωρεάν διαδικτυακή αναζήτηση DuckDuckGo ως έσχατη λύση και προαιρετική πύλη σύνδεσης OIDC για τον πίνακα ελέγχου (η σύνδεση με κωδικό πρόσβασης παραμένει πάντα διαθέσιμη). → [Μηχανισμοί προστασίας](docs/security/GUARDRAILS.md)
-- **🖼️ Νέα τελικά σημεία** — τα `/v1/ocr` (Mistral OCR) και `/v1/audio/translations` (τύπου Whisper) ολοκληρώνουν την επιφάνεια πολυμέσων. → [Αναφορά API](docs/reference/API_REFERENCE.md)
-- **🎨 Δημιουργία εικόνων / βίντεο / ήχου** — ένα API για πολυμέσα: βίντεο xAI Grok Imagine και Novita AI, ComfyUI, Magnific, Adobe Firefly, Segmind και πάροχοι ομιλίας όπως η ElevenLabs. → [Αναφορά API](docs/reference/API_REFERENCE.md)
-- **🌍 Ανάπτυξη και λειτουργίες** — `basePath` αντίστροφου διακομιστή μεσολάβησης, αυτόματος εντοπισμός γλώσσας προγράμματος περιήγησης, παρακολούθηση συσκευών ανά κλειδί, εμπιστοσύνη MITM χωρίς δικαιώματα root, τοπικοποίηση zh-TW. → [Περιβάλλον](docs/reference/ENVIRONMENT.md)
-- **🤝 Περισσότεροι πάροχοι και πράκτορες** — πράκτορες cloud (Codex Cloud, Cursor, Devin, Jules), Grok Build (xAI) με πρόγραμμα περιήγησης + σύνδεση OAuth, πλήρως υποστηριζόμενη κάρτα Ollama, Claude Opus 5 και Sonnet 5, επίσημη συνεργασία με την Kimi (Code/Web/Moonshot), Zed, Requesty, SenseNova, Yuanbao, Agnes AI… και ένας ανανεωμένος **κατάλογος 376 παρόχων**. → [Πάροχοι](docs/reference/PROVIDER_REFERENCE.md)
-- **📡 Διαφάνεια δρομολόγησης** — κάθε απόκριση περιλαμβάνει μια κεφαλίδα `X-OmniRoute-Decision` που αναφέρει τη στρατηγική/τον πάροχο/την καθυστέρηση που την εξυπηρέτησε, μια νέα συνδυαστική στρατηγική `cache-optimized` + ο παράγοντας Auto-Combo `cacheAffinity` δρομολογούν τα επαναλαμβανόμενα αιτήματα πίσω στη σύνδεση που διατηρεί το αποθηκευμένο πρόθεμα, ενώ ένα τελικό σημείο μόνο για ανάγνωση `/v1/auto-combo/{channel}/candidates` εκθέτει το ενεργό σύνολο υποψηφίων ενός καναλιού `auto/*`. → [Αυτόματος συνδυασμός](docs/routing/AUTO-COMBO.md)
-- **⚡ Τοπική απόδοση & υποδομή** — τοπικό Redis με ένα κλικ, εργαλεία ανάπτυξης relay για Cloudflare Workers / Deno Deploy, Bifrost & Mux ως εποπτευόμενες ενσωματωμένες υπηρεσίες. → [Ενσωματωμένες Υπηρεσίες](docs/frameworks/EMBEDDED-SERVICES.md)
-- **🧩 Επίσης στο πακέτο** — πλαίσιο πρόσθετων + αγορά, πλαίσια δεξιοτήτων Omni/Agent/GitHub, ενσωμάτωση θησαυροφυλακίου Obsidian (22 εργαλεία MCP), Batch & Files APIs συμβατά με OpenAI, σημασιολογική cache αποκρίσεων, παιχνιδοποίηση με πίνακες κατάταξης, ανακάλυψη πρακτόρων ACP (15 ενσωματωμένοι πράκτορες), προγραμματισμένη εξαγωγή αρχείων καταγραφής στο BigQuery, `auto/chaos` παράλληλη διανομή σε πολλαπλά μοντέλα, γέφυρα bot Telegram, διαχειριστής εκδόσεων εντός εφαρμογής και κατατάξεις δωρεάν παρόχων LMArena-ELO. → [Τεκμηρίωση](docs/README.md)
+- **δρομολόγηση ⚖️ `quota-weighted`** — η 20η στρατηγική συνδυασμού παρακάμπτει τους εξαντλημένους λογαριασμούς και, στη συνέχεια, αντλεί από τους υπόλοιπους αναλογικά με το υπόλοιπο όριο ÷ φόρτου κατά την πτήση, διατηρώντας καρφιτσωμένες τις υπάρχουσες συνομιλίες. → [Auto-Combo](docs/routing/AUTO-COMBO.md)
+- **🧰 Headless mode** — `omniroute serve --headless` (ή `OMNIROUTE_HEADLESS=1`) εκτελεί μόνο τη μηχανή μεσολάβησης `/v1/*`, με απενεργοποιημένα τον πίνακα εργαλείων και τα υποσυστήματα μόνο για ταμπλό. → [Headless Mode](docs/guides/HEADLESS.md)
+- **Ανακάλυψη μοντέλου 🔎** — `/v1/models` φιλτράρει κατά δυνατότητα, πλαίσιο, είδος και κείμενο και `POST /v1/models/query` επιστρέφει μια σύντομη ντετερμινιστική σύντομη λίστα με την ίδια ορατότητα ανά κλειδί. → [API Αναφορά](docs/reference/API_REFERENCE.md)
+- **🔑 Έλεγχος δρομολόγησης ανά κλειδί** — καρφιτσώστε ένα κλειδί API σε ένα μοντέλο ή σύνθετο με `forcedModel` και προσθέστε ή αφαιρέστε τα μοντέλα και τους συνδυασμούς ενός κλειδιού ατομικά (`/api/keys/{id}/access`). → [API Αναφορά](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
+- **🛡️ Λεπτά χειριστήρια PII** — επιλογή ανά τύπο, έως και 20 επικυρωμένα προσαρμοσμένα μοτίβα κάλυψης και μετρητές ανίχνευσης ανά τύπο. Η ίδια η κάλυψη παραμένει ενεργή. → [προστατευτικά κιγκλιδώματα](docs/security/GUARDRAILS.md)
+- **🌍 67 γλώσσες** — πίνακας εργαλείων, καθρέφτες εγγράφων και CLI, με `npm run i18n:add-locale` να προσθέτει μια γλώσσα παντού σε μία εντολή. [Οδηγός](docs/guides/I18N.md) → i18n
+- **🎛️ OmniConductor** — Εισερχόμενη αντιπροσωπεία A2A στον στόλο πρακτόρων σας, δεξιότητες μαέστρου στην Κάρτα πρακτόρων και πίνακας ταμπλό με φωνητική συνομιλία push-to-talk Faro. Διακομιστής → [A2A](docs/frameworks/A2A-SERVER.md)
+- **🛂 Προσαρμοστική προστασία εισόδου & υπερφόρτωσης** — ουρά αιτημάτων συνομιλίας βαρέων βαρών αντί για 503ing, με ατομικές κυλιόμενες μισθώσεις RPM ανά σύνδεση. → [Οδηγός ανθεκτικότητας](docs/architecture/RESILIENCE_GUIDE.md)
+- **🗂️ Κανονική παραγγελία `/v1/models`** — ένα συνεχόμενο μπλοκ ομαδοποιημένου παρόχου ανά πάροχο (συνδυασμοί καρφιτσωμένοι πρώτοι), σταθερό σε κάθε πηγή καταλόγου. → [API Αναφορά](docs/reference/API_REFERENCE.md)
+- **🗜️ σκλήρυνση με συμπίεση** — προεπιλεγμένο προστατευτικό φουσκώματος, πακέτα Caveman για DE / FR / JA + κινέζικα (wényán), φίλτρα RTK για Gradle & .NET. → [συμπίεση](docs/compression/COMPRESSION_ENGINES.md)
+- **💸 Τίμιο κατ' αποκοπή κόστος** — διαβάζουν οι πάροχοι συνδρομών/προγραμμάτων κωδικοποίησης** $0** στην ανάλυση κόστους? προϋπολογισμός, ποσόστωση και δρομολόγηση συνεχίζουν να υπολογίζουν. → [API Αναφορά](docs/reference/API_REFERENCE.md)
+- **⚖️ Quota-Δρομολόγηση κοινής χρήσης** — Διαχωρίστε το όριο ενός κοινόχρηστου λογαριασμού σε ομαδοποιημένα κλειδιά, εξοικονομώντας έτσι την εργασία, ώστε να παραχωρούνται τα αδρανή τμήματα. → [Οδηγός ανθεκτικότητας](docs/architecture/RESILIENCE_GUIDE.md)
+- **🤖 Ρύθμιση CLI/agent με μία εντολή** — 15 καταχωρημένες εντολές `setup-*`. `omniroute run` κυκλοφορεί το 7 CLIs (Claude Code, Codex, Aider, Goose, OpenCode, Qwen Code, Gemini CLI); `omniroute configure` υποστηρίζει 11 στόχους με έναν διαδραστικό πάροχο επιλογής μοντέλων + και αγαπημένα ανά πλαίσιο. → [CLI ενσωματώσεις](docs/guides/CLI-INTEGRATIONS.md)
+- **🛰️ Απομακρυσμένη λειτουργία** — οδηγήστε ένα απομακρυσμένο OmniRoute με διακριτικά εμβέλειας (`connect` / `contexts` / `tokens`) + ένα βοηθητικό `antigravity` OAuth για εγκαταστάσεις VPS. → [Απομακρυσμένη λειτουργία](docs/guides/REMOTE-MODE.md)
+- **🧭 Εξυπνότερη αυτόματη δρομολόγηση** — συνδυασμοί `auto/<category>:<tier>`,** Συγχώνευση** (κριτής πίνακας μοντέλων + ), δρομολόγηση με επίγνωση εργασιών, μοντέλο / λειτουργία / παρακάμψεις προϋπολογισμού USD ανά αίτημα. → [Auto-Combo](docs/routing/AUTO-COMBO.md)
+- **🗜️ Συνδεόμενη συμπίεση** — 12 συνθέσιμες μηχανές + Compression Studios: LLMLingua-2, Ultra δύο επιπέδων, omniglyph, πύλη πιστότητας ανά βήμα, GCF v3.2, επεξεργασία αναδιάταξης μεταφοράς. [Συμπίεση](docs/compression/COMPRESSION_ENGINES.md) →
+- **🕵️ Διαφανές MITM αποκρυπτογράφηση (TPROXY)** — καταγράψτε CLIs που αγνοεί τα env vars του διακομιστή μεσολάβησης, με ένα πρόγραμμα εγκατάστασης αξιόπιστου καταστήματος ανά SNI CA +. → [MITM/TPROXY](docs/security/MITM-TPROXY-DECRYPT.md)
+- **💸 Κόστος τηλεμετρίας παντού** — Κεφαλίδες `X-OmniRoute-*` cost/usage σε κάθε τελικό σημείο, κεφαλίδα αποταμίευσης κρυφής μνήμης HIT, όρια δαπανών USD ανά κλειδί. → [API Αναφορά](docs/reference/API_REFERENCE.md)
+- **🧠 Μνήμη που ελέγχετε** — απενεργοποιημένο από προεπιλογή, συμμετοχή int8 διανυσματικής κβαντοποίησης + πληκτρολογημένη αποσύνθεση, ανά αίτημα `x-omniroute-no-memory`. [Μνήμη](docs/frameworks/MEMORY.md) →
+- **🛡️ Security** — Προφυλακτήρας άμεσης έγχυσης σε κάθε διαδρομή LLM (σουίτα red-team), προστατευτικό κιγκλίδωμα συγκάλυψης διαπιστευτηρίων (διαγραφή διέρρευσε API keys/secrets και προς τις δύο κατευθύνσεις), δωρεάν αναζήτηση ιστού DuckDuckGo τελευταίας λύσης και μια προαιρετική πύλη σύνδεσης OIDC για το ταμπλό (η σύνδεση με κωδικό πρόσβασης παραμένει πάντα διαθέσιμη). → [προστατευτικά κιγκλιδώματα](docs/security/GUARDRAILS.md)
+- **🖼️ Νέα τελικά σημεία** — `/v1/ocr` (Mistral OCR) και `/v1/audio/translations` (στυλ Whisper) ολοκληρώνουν την επιφάνεια του μέσου. → [API Αναφορά](docs/reference/API_REFERENCE.md)
+- **🎨 Δημιουργία εικόνας / βίντεο / ήχου** — ένα API για πολυμέσα: xAI Grok Imagine & Novita AI βίντεο, ComfyUI, Magnific, Adobe Firefly, Segmind και πάροχοι ομιλίας όπως ElevenLabs. → [API Αναφορά](docs/reference/API_REFERENCE.md)
+- **🌍 Deployment & ops** — αντίστροφος διακομιστής μεσολάβησης `basePath`, αυτόματη ανίχνευση γλώσσας προγράμματος περιήγησης, παρακολούθηση συσκευής ανά κλειδί, αξιοπιστία MITM χωρίς root, εντοπισμός zh-TW. → [Περιβάλλον](docs/reference/ENVIRONMENT.md)
+- **🤝 Περισσότεροι πάροχοι και πράκτορες** — πράκτορες cloud (Codex Cloud, Cursor, Devin, Jules), Grok Build (xAI) με σύνδεση προγράμματος περιήγησης + OAuth, κάρτα πρώτης κατηγορίας Ollama, Claude Opus 5 & Sonnet 5, επίσημη συνεργασία Kimi (Code/Web/Moonshot), Zed, Αίτημα, SenseNova και AI…,** 377-κατάλογος παρόχων** . [Πάροχοι](docs/reference/PROVIDER_REFERENCE.md) →
+- **Διαφάνεια δρομολόγησης 📡** — κάθε απάντηση φέρει μια κεφαλίδα `X-OmniRoute-Decision` που ονομάζει το strategy/provider/latency που την εξυπηρέτησε, μια νέα στρατηγική συνδυασμού `cache-optimized` + Auto-Combo παράγοντας `cacheAffinity` αιτήματα επανάληψης διαδρομής πίσω στη σύνδεση που κρατά το προσωρινά αποθηκευμένο πρόθεμα και ένα τελικό σημείο `/v1/auto-combo/{channel}/candidates` μόνο για ανάγνωση εκθέτει τη ζωντανή ομάδα υποψηφίων καναλιών `auto/*`. → [Auto-Combo](docs/routing/AUTO-COMBO.md)
+- **⚡ Τοπικές επιδόσεις & infra** — τοπικά Redis, Cloudflare Workers / Deno Deploy, Bifrost & Mux ως εποπτευόμενες ενσωματωμένες υπηρεσίες με ένα κλικ. → [Embedded Services](docs/frameworks/EMBEDDED-SERVICES.md)
+- **🧩 Επίσης στο κουτί** — πλαίσιο προσθηκών + marketplace, πλαίσια δεξιοτήτων Omni/Agent/GitHub, ενσωμάτωση Obsidian vault (22 εργαλεία MCP ), Συμβατά με OpenAI Batch & Files APIs, κρυφή μνήμη σημασιολογικής απόκρισης, παιχνιδοποίηση με leaderboards, εντοπισμός πράκτορα ACP (15 ενσωματωμένοι πράκτορες), προγραμματισμένη εξαγωγή αρχείων καταγραφής σε BigQuery-fan, `auto/chaos`, multi-out, Telegram del bridge, έναν διαχειριστή εκδόσεων εντός εφαρμογής και κατάταξη δωρεάν παρόχων LMARena-ELO. → [Έγγραφα](docs/README.md)
 
 <br/>
 
@@ -693,35 +693,35 @@ omniroute configure codex          # also: claude opencode qwen aider goose gemi
 
 <div align="center">
 
-## 🌐 376 πάροχοι AI — 153 επισημασμένοι στον κατάλογο ως δωρεάν
+## 🌐 377 AI Providers — 153 Catalog-Marketed Free
 
 </div>
 
-> **376 καταχωρισμένοι πάροχοι** στις κανονικές συλλογές συνομιλίας, πολυμέσων, αναζήτησης, τοπικών υπηρεσιών, πρακτόρων cloud και συστήματος, συμπεριλαμβανομένων **153 που διαθέτουν μεταδεδομένα εντοπισμού `hasFree: true`**. Το μητρώο μοντέλων συνομιλίας καλύπτει **239 παρόχους / 3.059 διακριτά ζεύγη παρόχου-μοντέλου / 1.475 ανεπεξέργαστα αναγνωριστικά μοντέλων**· ο ξεχωριστός κατάλογος δωρεάν ορίων χρήσης περιλαμβάνει **471 εγγραφές ανά μοντέλο**, **34 επαναλαμβανόμενες δεξαμενές** και **52 επαναλαμβανόμενους/χωρίς κλειδί παρόχους που παραμένουν δωρεάν για πάντα**. Αυτοί οι παρονομαστές είναι διαφορετικοί εκ σχεδιασμού· οι ορισμοί και οι υπολογισμοί με απαλοιφή διπλοτύπων ανά δεξαμενή βρίσκονται στην [Αναφορά παρόχων](docs/reference/PROVIDER_REFERENCE.md) και στα [Δωρεάν επίπεδα](docs/reference/FREE_TIERS.md).
+> **377 εγγεγραμμένοι πάροχοι** σε όλες τις συλλογές κανονικής συνομιλίας, πολυμέσων, αναζήτησης, τοπικής, cloud-agent και συστήματος, συμπεριλαμβανομένων** 153 μεταφέροντας μεταδεδομένα ανακάλυψης `hasFree: true`** . Το μητρώο μοντέλου συνομιλίας καλύπτει** 239 πάροχοι / 3.059 ξεχωριστά ζεύγη παρόχου-μοντέλου / 1.475 ακατέργαστο μοντέλο IDs** ; ο χωριστός κατάλογος ελεύθερου προϋπολογισμού έχει** 471 σειρές ανά μοντέλο** ,** 34 επαναλαμβανόμενες πισίνες** και** 52 δωρεάν πάροχοι recurring/keyless για πάντα** . Αυτοί είναι διαφορετικοί παρονομαστές από το σχεδιασμό. Οι ορισμοί και οι υπολογισμοί που έχουν διαγραφεί από την ομάδα είναι ζωντανοί στην [Αναφορά παρόχου](docs/reference/PROVIDER_REFERENCE.md) και [στις δωρεάν βαθμίδες](docs/reference/FREE_TIERS.md).
 
 <div align="center">
 
-### 🏢 Κάθε μεγάλο εργαστήριο — μέσω ενός ενιαίου endpoint
+### 🏢 Κάθε σημαντικό εργαστήριο — μέσα από ένα τελικό σημείο
 
 <table>
   <tr>
     <td align="center" width="80"><picture><source media="(prefers-color-scheme:dark)" srcset="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-png@1.91.0/dark/openai.png"/><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/openai.svg" width="40" alt="OpenAI"/></picture><br/><sub>OpenAI</sub><br/><sub>                           </sub></td>
     <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/claude-color.svg" width="40" alt="Anthropic"/><br/><sub>Anthropic</sub><br/><sub>                           </sub></td>
     <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/gemini-color.svg" width="40" alt="Gemini"/><br/><sub>Gemini</sub><br/><sub>                           </sub></td>
-    <td align="center" width="80"><picture><source media="(prefers-color-scheme:dark)" srcset="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-png@1.91.0/dark/grok.png"/><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/grok.svg" width="40" alt="xAI Grok"/></picture><br/><sub>xAI Grok</sub><br/><sub>                           </sub></td>
+    <td align="center" width="80"><picture><source media="(prefers-color-scheme:dark)" srcset="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-png@1.91.0/dark/grok.png"/><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/grok.svg" width="40" alt="xAI Grok"/></picture><br/><sub> xAI Grok</sub><br/><sub> </sub></td>
     <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/deepseek-color.svg" width="40" alt="DeepSeek"/><br/><sub>DeepSeek</sub><br/><sub>                           </sub></td>
     <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/mistral-color.svg" width="40" alt="Mistral"/><br/><sub>Mistral</sub><br/><sub>                           </sub></td>
   </tr>
   <tr>
     <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/qwen-color.svg" width="40" alt="Qwen"/><br/><sub>Qwen</sub><br/><sub>                           </sub></td>
-    <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/meta-color.svg" width="40" alt="Meta Llama"/><br/><sub>Meta Llama</sub><br/><sub>                           </sub></td>
+    <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/meta-color.svg" width="40" alt="Meta Llama"/><br/><sub> Meta Llama</sub><br/><sub> </sub></td>
     <td align="center" width="80"><picture><source media="(prefers-color-scheme:dark)" srcset="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-png@1.91.0/dark/groq.png"/><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/groq.svg" width="40" alt="Groq"/></picture><br/><sub>Groq</sub><br/><sub>                           </sub></td>
     <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/nvidia-color.svg" width="40" alt="NVIDIA"/><br/><sub>NVIDIA</sub><br/><sub>                           </sub></td>
     <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/minimax-color.svg" width="40" alt="MiniMax"/><br/><sub>MiniMax</sub><br/><sub>                           </sub></td>
     <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/cohere-color.svg" width="40" alt="Cohere"/><br/><sub>Cohere</sub><br/><sub>                           </sub></td>
   </tr>
   <tr>
-    <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/perplexity-color.svg" width="40" alt="Perplexity"/><br/><sub>Perplexity</sub><br/><sub>                           </sub></td>
+    <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/perplexity-color.svg" width="40" alt="Perplexity"/><br/><sub> αμηχανία </sub><br/><sub> </sub></td>
     <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/huggingface-color.svg" width="40" alt="Hugging Face"/><br/><sub>HuggingFace</sub><br/><sub>                           </sub></td>
     <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/together-color.svg" width="40" alt="Together"/><br/><sub>Together</sub><br/><sub>                           </sub></td>
     <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/fireworks-color.svg" width="40" alt="Fireworks"/><br/><sub>Fireworks</sub><br/><sub>                           </sub></td>
@@ -730,32 +730,32 @@ omniroute configure codex          # also: claude opencode qwen aider goose gemi
   </tr>
 </table>
 
-<sub>…και 350+ ακόμη — κάθε εικονίδιο ανακτάται δυναμικά από τον κατάλογο παρόχων του πίνακα ελέγχου. 📖 [Αναφορά παρόχων](docs/reference/PROVIDER_REFERENCE.md)</sub>
+<sub>…και 350 + περισσότερα — κάθε εικονίδιο επιλύεται ζωντανά από τον κατάλογο παρόχων του πίνακα ελέγχου. 📖 [Αναφορά παρόχου](docs/reference/PROVIDER_REFERENCE.md)</sub>
 
 <br/>
 
-### 🆓 Δωρεάν για πάντα — $0, χωρίς κάρτα
+### 🆓 Δωρεάν για πάντα — 0 $, χωρίς κάρτα
 
 <table>
   <tr>
-    <td align="center" width="150"><img src="./public/providers/cli-generic.svg" width="42" alt="OpenCode Zen"/><br/><b>OpenCode Zen</b><br/><sub>DeepSeek V4, Nemotron 3<br/>Χωρίς όριο token</sub></td>
-    <td align="center" width="150"><img src="./public/providers/cli-generic.svg" width="42" alt="Kilo Code"/><br/><b>Kilo Code</b><br/><sub>Αυτόματη δρομολόγηση, Tencent Hy3<br/>Δωρεάν για πάντα</sub></td>
-    <td align="center" width="150"><img src="./public/providers/requesty.svg" width="42" alt="Requesty"/><br/><b>Requesty</b><br/><sub>GPT-OSS 120B, Nemotron<br/>Δωρεάν για πάντα</sub></td>
-    <td align="center" width="150"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/siliconcloud-color.svg" width="42" alt="SiliconFlow"/><br/><b>SiliconFlow</b><br/><sub>DeepSeek V3.2 / R1<br/>Δωρεάν βαθμίδα</sub></td>
-    <td align="center" width="150"><img src="./public/providers/zhipu.svg" width="42" alt="Z.AI GLM"/><br/><b>Z.AI GLM</b><br/><sub>GLM-4.7 / 4.5-Flash<br/>Δωρεάν για πάντα</sub></td>
-    <td align="center" width="150"><img src="./public/providers/baidu.svg" width="42" alt="Baidu ERNIE"/><br/><b>Baidu ERNIE</b><br/><sub>ERNIE 4.0<br/>Δωρεάν για πάντα</sub></td>
+    <td align="center" width="150"><img src="./public/providers/cli-generic.svg" width="42" alt="OpenCode Zen"/><br/><b>OpenCode zen </b><br/><sub>DeepSeek V4, Nemotron 3 <br/> Χωρίς token cap </sub></td>
+    <td align="center" width="150"><img src="./public/providers/cli-generic.svg" width="42" alt="Kilo Code"/><br/><b> Kilo Code </b><br/><sub> Αυτόματος δρομολογητής, Tencent Hy3 <br/> Δωρεάν για πάντα </sub></td>
+    <td align="center" width="150"><img src="./public/providers/requesty.svg" width="42" alt="Requesty"/><br/><b> Αίτημα </b><br/><sub> GPT-OSS 120B, Nemotron <br/> Δωρεάν για πάντα </sub></td>
+    <td align="center" width="150"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/siliconcloud-color.svg" width="42" alt="SiliconFlow"/><br/><b>SiliconFlow</b><br/><sub>DeepSeek V3.2 / R1 <br/> Δωρεάν βαθμίδα </sub></td>
+    <td align="center" width="150"><img src="./public/providers/zhipu.svg" width="42" alt="Z.AI GLM"/><br/><b> Z.AI GLM</b><br/><sub> GLM-4.7 / 4.5-Flash <br/> Δωρεάν για πάντα </sub></td>
+    <td align="center" width="150"><img src="./public/providers/baidu.svg" width="42" alt="Baidu ERNIE"/><br/><b>Baidu ERNIE</b><br/><sub>ERNIE 4.0 <br/> Δωρεάν για πάντα </sub></td>
   </tr>
   <tr>
-    <td align="center" width="150"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/qoder-color.svg" width="42" alt="Qoder AI"/><br/><b>Qoder AI</b><br/><sub>Qwen3-Max, Kimi-K2<br/>Απεριόριστη ΔΩΡΕΑΝ χρήση</sub></td>
-    <td align="center" width="150"><img src="./public/providers/pollinations.svg" width="42" alt="Pollinations"/><br/><b>Pollinations</b><br/><sub>GPT, Llama, Claude<br/>Δεν απαιτείται κλειδί</sub></td>
-    <td align="center" width="150"><img src="./public/providers/cloudflare.svg" width="42" alt="Cloudflare AI"/><br/><b>Cloudflare AI</b><br/><sub>50+ μοντέλα<br/>10K νευρώνες/ημέρα</sub></td>
-    <td align="center" width="150"><img src="./public/providers/nvidia.svg" width="42" alt="NVIDIA NIM"/><br/><b>NVIDIA NIM</b><br/><sub>GLM, MiniMax<br/>~40 RPM δωρεάν</sub></td>
-    <td align="center" width="150"><img src="./public/providers/cerebras.svg" width="42" alt="Cerebras"/><br/><b>Cerebras</b><br/><sub>GLM 4.7, GPT-OSS<br/>Εφάπαξ πίστωση $5· απαιτείται κάρτα</sub></td>
-    <td align="center" width="150"><img src="./public/providers/openrouter.svg" width="42" alt="OpenRouter"/><br/><b>OpenRouter</b><br/><sub>:free μοντέλα<br/>+$10 → υψηλότερο RPM</sub></td>
+    <td align="center" width="150"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/qoder-color.svg" width="42" alt="Qoder AI"/><br/><b>Qoder AI</b><br/><sub> Qwen3-Max, Kimi-K2 <br/> Απεριόριστο FREE</sub></td>
+    <td align="center" width="150"><img src="./public/providers/pollinations.svg" width="42" alt="Pollinations"/><br/><b> Επικονίαση </b><br/><sub>GPT, Llama, Claude<br/> Δεν χρειάζεται κλειδί </sub></td>
+    <td align="center" width="150"><img src="./public/providers/cloudflare.svg" width="42" alt="Cloudflare AI"/><br/><b>Cloudflare AI</b><br/><sub> 50 + μοντέλα <br/> 10K neurons/day</sub></td>
+    <td align="center" width="150"><img src="./public/providers/nvidia.svg" width="42" alt="NVIDIA NIM"/><br/><b>NVIDIA NIM</b><br/><sub>GLM, MiniMax<br/>~ 40 RPM δωρεάν </sub></td>
+    <td align="center" width="150"><img src="./public/providers/cerebras.svg" width="42" alt="Cerebras"/><br/><b>Cerebras</b><br/><sub>GLM 4.7, GPT-OSS <br/> Εφάπαξ πίστωση 5 $. απαιτείται κάρτα </sub></td>
+    <td align="center" width="150"><img src="./public/providers/openrouter.svg" width="42" alt="OpenRouter"/><br/><b>OpenRouter</b><br/><sub>:δωρεάν μοντέλα <br/>+ 10 $ → υψηλότερο RPM</sub></td>
   </tr>
 </table>
 
-📖 Πλήρης μηχαναγνώσιμος κατάλογος → [`docs/reference/PROVIDER_REFERENCE.md`](docs/reference/PROVIDER_REFERENCE.md)
+📖 Πλήρης μηχάνημα αναγνώσιμος κατάλογος → [`docs/reference/PROVIDER_REFERENCE.md`](docs/reference/PROVIDER_REFERENCE.md)
 
 <br/>
 </div>
@@ -1290,29 +1290,29 @@ OMNIROUTE_SKIP_POSTINSTALL=1 npm install -g omniroute   # CI=1 επίσης τη
 <br/>
 <div align="center">
 
-## 🛠️ Τεχνολογική Στοίβα
+## 🛠️ Tech Stack
 
 </div>
 
 <table>
-  <tr><th align="left">Επίπεδο</th><th align="left">Τεχνολογία</th></tr>
-  <tr><td nowrap><b>Περιβάλλον εκτέλεσης</b></td><td>Node.js 22.x / 24.x LTS — <code>&gt;=22.22.2 &lt;23 || &gt;=24.0.0 &lt;27</code></td></tr>
-  <tr><td nowrap><b>Γλώσσα</b></td><td>TypeScript 6.0 — <b>100% TypeScript</b> σε <code>src/</code> και <code>open-sse/</code> (μηδέν <code>any</code> στον πυρήνα από την v2.0)</td></tr>
-  <tr><td nowrap><b>Πλαίσιο</b></td><td>Next.js 16 + React 19 + Tailwind CSS 4</td></tr>
-  <tr><td nowrap><b>Βάση δεδομένων</b></td><td>better-sqlite3 (SQLite, ημερολόγιο WAL) + LowDB (παλαιού τύπου JSON) — 147 ενότητες τομέα, 213 μεταναστεύσεις</td></tr>
-  <tr><td nowrap><b>Μνήμη</b></td><td>SQLite FTS5 πλήρους κειμένου + διανυσματικές ενσωματώσεις κβαντισμένες σε int8, τυποποιημένη φθορά</td></tr>
-  <tr><td nowrap><b>Σχήματα</b></td><td>Zod 4 — επικύρωση I/O εργαλείων MCP + συμβάσεις API</td></tr>
-  <tr><td nowrap><b>Πρωτόκολλα</b></td><td>MCP (stdio / HTTP / SSE) + A2A v0.3 (JSON-RPC 2.0 + SSE)</td></tr>
-  <tr><td nowrap><b>Μετάδοση ροής</b></td><td>Server-Sent Events (SSE) + γέφυρα WebSocket (<code>/v1/ws</code>)</td></tr>
-  <tr><td nowrap><b>Συμπίεση</b></td><td>Αγωγός 12 μηχανισμών — RTK, Caveman, LLMLingua-2 (MobileBERT ONNX), GCF, OmniGlyph</td></tr>
-  <tr><td nowrap><b>Έλεγχος ταυτότητας &amp; ασφάλεια</b></td><td>OAuth 2.0 (PKCE) + JWT + Κλειδιά API + έλεγχος ταυτότητας με εύρος MCP · AES-256-GCM σε κατάσταση ηρεμίας · DOMPurify</td></tr>
-  <tr><td nowrap><b>Απόκρυψη</b></td><td>wreq-js — πλαστοπροσωπία αποτυπώματος TLS JA3 / JA4, διαμεσολαβητής 3 επιπέδων</td></tr>
-  <tr><td nowrap><b>Ανθεκτικότητα</b></td><td>Διακόπτης κυκλώματος, εκθετική αναμονή, προστασία από thundering herd, αυτοθεραπεία auto-combo</td></tr>
-  <tr><td nowrap><b>Καταγραφή</b></td><td>pino — δομημένα αρχεία καταγραφής JSON με πλαίσιο αιτήματος</td></tr>
-  <tr><td nowrap><b>Δοκιμές</b></td><td>Εκτελεστής δοκιμών Node.js + Vitest — <b>56.000+ στατικές δηλώσεις δοκιμών</b> σε 7.800+ καταγεγραμμένα αρχεία δοκιμών (μοναδιαίες, ολοκλήρωσης, E2E, ασφάλειας, οικοσυστήματος)</td></tr>
-  <tr><td nowrap><b>Πλατφόρμες</b></td><td>Επιτραπέζιος υπολογιστής (Electron) · Android (Termux) · PWA (οποιοσδήποτε περιηγητής)</td></tr>
-  <tr><td nowrap><b>CI/CD</b></td><td>GitHub Actions — αυτόματη δημοσίευση npm + Docker Hub κατά την κυκλοφορία</td></tr>
-  <tr><td nowrap><b>Σύνδεσμοι</b></td><td><a href="https://omniroute.online">Ιστότοπος</a> · <a href="https://www.npmjs.com/package/omniroute">npm</a> · <a href="https://hub.docker.com/r/diegosouzapw/omniroute">Docker Hub</a></td></tr>
+  <tr><th align="left"> Layer </th><th align="left"> Τεχνολογία </th></tr>
+  <tr><td nowrap><b> Runtime </b></td><td>Node.js 22.x / 24.x LTS — <code>&gt;= 22.22.2 &lt; 23 || &gt;= 24.0.0 &lt; 27 </code></td></tr>
+  <tr><td nowrap><b> Γλώσσα </b></td><td>TypeScript 6.0 — <b> 100% TypeScript</b> σε <code> src/</code> και <code> open-sse/</code> (μηδέν <code> οποιοδήποτε </code> στον πυρήνα από την έκδοση 2.0)</td></tr>
+  <tr><td nowrap><b> Πλαίσιο </b></td><td>Next.js 16 + React 19 + Tailwind CSS 4 </td></tr>
+  <tr><td nowrap><b> βάση δεδομένων </b></td><td> καλύτερη-sqlite3 (SQLite, WAL journaling) + LowDB (JSON legacy) — 147 λειτουργικές μονάδες τομέα, 213 μετεγκαταστάσεις </td></tr>
+  <tr><td nowrap><b> Μνήμη </b></td><td>SQLite FTS5 πλήρες κείμενο + int8-quantized vector embeddings, typed decay </td></tr>
+  <tr><td nowrap><b> Σχήματα </b></td><td>Zod 4 — MCP εργαλείο I/O επικύρωση + API συμβόλαια </td></tr>
+  <tr><td nowrap><b> πρωτόκολλα </b></td><td>MCP (stdio / HTTP / SSE) + A2A v0.3 (JSON-RPC 2.0 + SSE)</td></tr>
+  <tr><td nowrap><b></b></td><td> συμβάντα απεσταλμένων διακομιστή (SSE) + WebSocket bridge (<code>/v1/ws </code>)</td></tr>
+  <tr><td nowrap><b> Συμπίεση </b></td><td> 12-κινητήρας αγωγός — RTK, Caveman, LLMLingua-2 (MobileBERT ONNX), GCF, OmniGlyph</td></tr>
+  <tr><td nowrap><b> Auth &amp; security </b></td><td>OAuth 2.0 (PKCE) + JWT + API Keys + MCP scoped auth · AES-256-GCM in rest · DOMPurify </td></tr>
+  <tr><td nowrap><b> Stealth </b></td><td> wreq-js — πλαστοπροσωπία δακτυλικών αποτυπωμάτων JA3 / JA4 TLS, διακομιστής μεσολάβησης 3 επιπέδων </td></tr>
+  <tr><td nowrap><b> Ανθεκτικότητα </b></td><td> διακόπτης κυκλώματος, εκθετική οπισθοδρόμηση, αγέλη κατά της βροντής, αυτόματη σύνθετη αυτοθεραπεία </td></tr>
+  <tr><td nowrap><b> Καταγραφή </b></td><td> pino — δομημένα αρχεία καταγραφής JSON με πλαίσιο αιτήματος </td></tr>
+  <tr><td nowrap><b> Δοκιμή </b></td><td>Node.js δοκιμαστικό πρόγραμμα εκτέλεσης + Vitest — <b> 56.000 + δηλώσεις στατικής δοκιμής </b> σε 7.800 αρχεία ελέγχου παρακολούθησης + (μονάδα, ενοποίηση, E2E, ασφάλεια, οικοσύστημα)</td></tr>
+  <tr><td nowrap><b> Πλατφόρμες </b></td><td> επιφάνεια εργασίας (Electron) · Android (Termux) · PWA (οποιοδήποτε πρόγραμμα περιήγησης)</td></tr>
+  <tr><td nowrap><b>CI/CD</b></td><td>GitHub Ενέργειες — αυτόματη npm δημοσίευση + Docker Hub κατά την κυκλοφορία </td></tr>
+  <tr><td nowrap><b> Σύνδεσμοι </b></td><td><a href="https://omniroute.online"> Ιστότοπος </a> · <a href="https://www.npmjs.com/package/omniroute"> npm </a> · <a href="https://hub.docker.com/r/diegosouzapw/omniroute">Docker Hub </a></td></tr>
 </table>
 
 <div align="center">
