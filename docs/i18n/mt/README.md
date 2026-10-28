@@ -6,14 +6,14 @@
 
 <div align="center">
 
-<img src="./docs/screenshots/MainOmniRoute.png" alt="OmniRoute Dashboard" width="820"/>
+<img src="./docs/screenshots/MainOmniRoute.png" alt="Dashboard ta’ OmniRoute" width="820"/>
 
 <br/>
 <br/>
 
-# 🚀 OmniRoute — The Free AI Gateway
+# 🚀 OmniRoute — Il-Gateway tal-AI Bla Ħlas
 
-<img src="./docs/diagrams/readme-hero.svg" width="100%" alt="OmniRoute — Never stop coding. Every AI tool → 377 providers — 150+ free — through one endpoint. Claude Code, Codex, Cursor, Cline, Copilot & Antigravity into FREE Claude / GPT / Gemini with auto-fallback. RTK + Caveman stacked compression saves 15–95% tokens (~89% avg) — never hit limits. 377 AI providers · 150+ free tiers · ~1.62B free tokens/mo · 20 routing strategies · $0 to start."/>
+<img src="./docs/diagrams/readme-hero.svg" width="100%" alt="OmniRoute — Qatt tieqaf tikkowdja. Kull għodda tal-AI → 377 fornitur — 150+ bla ħlas — permezz ta’ endpoint wieħed. Claude Code, Codex, Cursor, Cline, Copilot u Antigravity għal Claude / GPT / Gemini BLA ĦLAS b’riżerva awtomatika. Il-kompressjoni kkombinata RTK + Caveman tiffranka 15–95% tat-tokens (~89% bħala medja) — qatt ma tilħaq il-limiti. 377 fornitur tal-AI · 150+ livelli bla ħlas · ~1.62B tokens bla ħlas/xahar · 20 strateġija ta’ routing · $0 biex tibda."/>
 
 </div>
 
@@ -222,48 +222,48 @@
 
 <a id="first-run"></a>
 
-## 🆓 Installa, qabbad fornitur, imbagħad rotta minn endpoint wieħed
+## 🆓 Installa, qabbad fornitur, imbagħad irrotta permezz ta' endpoint wieħed
 
 </div>
 
-<img src="./docs/diagrams/works-zero-config.svg" width="100%" alt="Three steps: install and start OmniRoute, connect an eligible provider with your own account or API key, then point your tool at localhost:20128/v1 using an OmniRoute API key and model auto. Routing depends on available eligible connections and provider limits."/>
+<img src="./docs/diagrams/works-zero-config.svg" width="100%" alt="Tliet passi: installa u niedi OmniRoute, qabbad fornitur eliġibbli bil-kont tiegħek stess jew bl-API key tiegħek, imbagħad idderieġi l-għodda tiegħek lejn localhost:20128/v1 billi tuża API key ta' OmniRoute u l-mudell auto. L-irrottar jiddependi fuq konnessjonijiet eliġibbli disponibbli u l-limiti tal-fornituri."/>
 
 ```bash
-# After connecting a provider, copy your OmniRoute key from Dashboard → Endpoints:
+# Wara li tkun qabbadt fornitur, ikkopja l-key ta' OmniRoute tiegħek minn Dashboard → Endpoints:
 curl http://localhost:20128/v1/chat/completions \
   -H "Authorization: Bearer YOUR_OMNIROUTE_KEY" \
   -H "Content-Type: application/json" \
   -d '{"model":"auto","messages":[{"role":"user","content":"Hello!"}]}'
 ```
 
-<sub> `auto` teħtieġ rotta eliġibbli. Installazzjoni ġdida jista' jkollha l-ebda miri mingħajr ċavetta eliġibbli, u fornitur mingħajr ċavetta jista' jirrifjuta klijenti ta' partijiet terzi. Fornituri mmarkati `tos: avoid`, inkluż Kiro, huma esklużi minn rotta awtomatika b'mod awtomatiku; il-konnessjoni ta' kont ma tegħlebx dak is-setting. Ara l [-Gwida dwar il-Livelli Ħieles](docs/getting-started/FREE-TIERS-GUIDE.md) qabel ma tagħżel fornitur.</sub>
+<sub>`auto` jeħtieġ rotta eliġibbli. Installazzjoni ġdida tista' ma jkollha l-ebda mira eliġibbli mingħajr key, u fornitur mingħajr key jista' jirrifjuta klijenti ta' partijiet terzi. B'mod standard, fornituri mmarkati `tos: avoid`, inkluż Kiro, huma esklużi mill-irrottar awtomatiku; li tqabbad kont ma jirrimpjazzax dak is-setting. Ara l-[Gwida dwar is-Saffi B'xejn](docs/getting-started/FREE-TIERS-GUIDE.md) qabel ma tagħżel fornitur.</sub>
 
-<sub>📦 Ikkopja-pejst skripts ta' bidu ta' malajr għal** Python, Node.js, PHP, u cURL** → [`examples/quickstart/`](examples/quickstart/)</sub>
+<sub>📦 Skripts ta' quickstart kopja-u-pejst għal **Python, Node.js, PHP, u cURL** → [`examples/quickstart/`](examples/quickstart/)</sub>
 
 <br/>
 
 <div align="center">
 
-# 💥 Il-Weghda
+# 💥 Il-Wiegħda
 
 </div>
 
-<img src="./docs/diagrams/promise-pillars.svg" width="100%" alt="The Promise — One endpoint and 377 providers. Automatic fallback keeps routing while another healthy target is available. Six pillars: resilient fallback across 377 providers · up to 95% token savings on eligible workloads · $0 to start with 150+ free tiers and 52 recurring/keyless free-forever providers · 37 CLI/agent integrations through one config · OpenAI, Claude, Gemini and Responses API compatibility at /v1 · production controls including circuit breakers, TLS stealth, MCP 110 tools, A2A, memory, guardrails, evals and 56,000+ static test declarations across 7,800+ tracked test files."/>
+<img src="./docs/diagrams/promise-pillars.svg" width="100%" alt="Il-Wiegħda — Endpoint wieħed u 377 fornitur. Il-fallback awtomatiku jkompli jirrotta sakemm tkun disponibbli mira oħra b'saħħitha. Sitt pilastri: fallback reżiljenti fuq 377 fornitur · sa 95% ffrankar ta' tokens fuq tagħbijiet eliġibbli · $0 biex tibda b'150+ saff b'xejn u 52 fornitur rikorrenti/mingħajr key b'xejn għal dejjem · 37 integrazzjoni CLI/aġent permezz ta' konfigurazzjoni waħda · kompatibilità ma' OpenAI, Claude, Gemini u Responses API fuq /v1 · kontrolli ta' produzzjoni inklużi circuit breakers, TLS stealth, MCP b'110 għodda, A2A, memorja, guardrails, evals u 56,000+ dikjarazzjoni ta' testijiet statiċi fuq 7,800+ fajl ta' testijiet ittraċċat."/>
 
 <br/>
 <br/>
 
 <div align="center">
 
-# 🤔 Ghaliex OmniRoute?
+# 🤔 Għaliex OmniRoute?
 
 </div>
 
-<img src="./docs/diagrams/why-pain-fix.svg" width="100%" alt="Why OmniRoute — stop juggling 10 dashboards, dead API keys and surprise bills. Ten daily pains vs fixes: quota expiring unused → maximize subscriptions; rate limits mid-coding → 4-tier auto-fallback (Subscription → API → Cheap → Free); tool outputs burning tokens → RTK + Caveman compression (15–95%); expensive APIs → cost-optimized routing; every tool its own setup → one endpoint, one dashboard; AI blocked → 3-level proxy + TLS stealth; dead keys → 3-layer resilience (circuit breakers, key cooldown, model lockout); team sharing one subscription → key pools with fair-share quotas; prompts through someone's cloud → local-first with AES-256-GCM encrypted keys; no spend visibility → live analytics (usage, quota, savings, p95 latency)."/>
+<img src="./docs/diagrams/why-pain-fix.svg" width="100%" alt="Għaliex OmniRoute — ieqaf taqleb bejn 10 dashboards, API keys mejta u fatturi sorpriża. Għaxar uġigħ ta' kuljum kontra s-soluzzjonijiet: kwota li tiskadi mingħajr ma tintuża → massimizza l-abbonamenti; rate limits f'nofs l-ikkowdjar → auto-fallback b'4 saffi (Abonnament → API → Irħis → B'xejn); outputs tal-għodod li jħarqu tokens → kumpressjoni RTK + Caveman (15–95%); APIs għoljin → irrottar ottimizzat għall-ispiża; kull għodda bis-setup tagħha stess → endpoint wieħed, dashboard wieħed; AI imblokkat → proxy b'3 livelli + TLS stealth; keys mejta → reżiljenza b'3 saffi (circuit breakers, cooldown tal-keys, lockout tal-mudell); tim li jaqsam abbonament wieħed → pools ta' keys b'kwoti ta' qsim ġust; prompts li jgħaddu mis-sħaba ta' xi ħadd ieħor → local-first b'keys kriptati b'AES-256-GCM; l-ebda viżibilità tal-infiq → analytics live (użu, kwota, ffrankar, latenza p95)."/>
 
 <div align="center">
 
-<img src="./docs/diagrams/tier-cascade.svg" width="100%" alt="OmniRoute request flow: your IDE or CLI (Claude Code, Cursor, Cline…) calls one local endpoint (http://localhost:20128/v1); the OmniRoute Smart Router (RTK + Caveman compression, 20 routing strategies, circuit breakers, TLS stealth, MCP, A2A, guardrails) can fall back across 4 provider tiers while an eligible healthy target remains — Tier 1 Subscription, Tier 2 API Key, Tier 3 Cheap and Tier 4 Free."/>
+<img src="./docs/diagrams/tier-cascade.svg" width="100%" alt="Il-fluss tat-talbiet ta' OmniRoute: l-IDE jew il-CLI tiegħek (Claude Code, Cursor, Cline…) iċempel endpoint lokali wieħed (http://localhost:20128/v1); l-Smart Router ta' OmniRoute (kumpressjoni RTK + Caveman, 20 strateġija ta' irrottar, circuit breakers, TLS stealth, MCP, A2A, guardrails) jista' jagħmel fallback fuq 4 saffi ta' fornituri sakemm tibqa' teżisti mira b'saħħitha u eliġibbli — Saff 1 Abonnament, Saff 2 API Key, Saff 3 Irħis u Saff 4 B'xejn."/>
 
 </div>
 
@@ -504,13 +504,13 @@ L-**20** strateġija kollha — ħallat u qabbel f’kull pass tal-combo:
 
 <div align="center">
 
-## 🏆 What Sets OmniRoute Apparti
+## 🏆 X'Jagħmel lil OmniRoute Differenti
 
 </div>
 
-<img src="./docs/diagrams/comparison-table.svg" width="100%" alt="What sets OmniRoute apart — a dated feature snapshot vs 9router, OpenRouter, CLIProxyAPI and LiteLLM across 13 capabilities. OmniRoute: 377 providers, 150+ free tiers built in, 20 routing strategies, 12-engine token compression, built-in MCP server with 110 tools, A2A agent protocol, persistent memory, guardrails, cloud agents, TLS fingerprint stealth, Desktop/Termux/PWA and 67 i18n UI locales. OmniRoute is MIT-licensed and self-hostable. Competitor capabilities and counts may change; see the linked methodology."/>
+<img src="./docs/diagrams/comparison-table.svg" width="100%" alt="X'jagħmel lil OmniRoute differenti — stampa puntwali datata tal-karatteristiċi mqabbla ma' 9router, OpenRouter, CLIProxyAPI u LiteLLM fuq 13-il kapaċità. OmniRoute: 377 fornitur, aktar minn 150 livell bla ħlas integrat, 20 strateġija ta' routing, kompressjoni tat-tokens bi 12-il magna, server MCP integrat b'110 għodod, protokoll tal-aġenti A2A, memorja persistenti, guardrails, aġenti tal-cloud, ħabi tal-marki tas-swaba' TLS, Desktop/Termux/PWA u 67 lokalizzazzjoni tal-UI. OmniRoute huwa liċenzjat taħt l-MIT u jista' jiġi ospitat lokalment. Il-kapaċitajiet u l-għadd tal-kompetituri jistgħu jinbidlu; ara l-metodoloġija marbuta."/>
 
-<sub>📊 Metodoloġija sħiħa &amp; dettall għal kull karatteristika vs 9router, OpenRouter, CLIProxyAPI &amp; LiteLLM → [`docs/comparison/OMNIROUTE_VS_ALTERNATIVES.md`](docs/comparison/OMNIROUTE_VS_ALTERNATIVES.md)</sub>
+<sub>📊 Metodoloġija sħiħa &amp; dettalji għal kull karatteristika mqabbla ma' 9router, OpenRouter, CLIProxyAPI &amp; LiteLLM → [`docs/comparison/OMNIROUTE_VS_ALTERNATIVES.md`](docs/comparison/OMNIROUTE_VS_ALTERNATIVES.md)</sub>
 
 <br/>
 
@@ -578,35 +578,35 @@ Radar huwa fakultattiv u juża GET biss. Il-klijent OmniRoute ma jtellax prompts
 
 </div>
 
-> Il-punti ewlenin riċenti minn** v3.8.20 → v3.8.53** . Storja sħiħa [`CHANGELOG.md`](CHANGELOG.md).
+> Punti salienti reċenti minn **v3.8.20 → v3.8.53**. L-istorja sħiħa fi [`CHANGELOG.md`](CHANGELOG.md).
 
-- **⚖️ `quota-weighted` routing** — l-20 strateġija ta’ kombinazzjoni taqbeż il-kontijiet eżawriti, imbagħad tiġbed fost il-bqija fi proporzjon mal-kwota li jibqa’ ÷ tat-tagħbija matul it-titjira, u żżomm il-konversazzjonijiet eżistenti ippinjat. → [Auto-Combo](docs/routing/AUTO-COMBO.md)
-- **🧰 Mod bla ras** — `omniroute serve --headless` (jew `OMNIROUTE_HEADLESS=1`) iħaddem biss il-magna proxy `/v1/*`, bid-daxxbord u s-sottosistemi tad-daxxbord biss mitfija. → [Modalità Bla Ras](docs/guides/HEADLESS.md)
-- **🔎 Mudell skoperta** — `/v1/models` jiffiltra skont il-kapaċità, il-kuntest, it-tip u t-test, u `POST /v1/models/query` jirritorna lista qasira deterministika bl-istess viżibilità għal kull ċavetta. → [API Referenza](docs/reference/API_REFERENCE.md)
-- **🔑 Kontroll tar-rotta għal kull ċavetta** — pin ċavetta API għal mudell jew kombo wieħed `forcedModel`, u żid jew neħħi l-mudelli u l-combos ta' ċavetta atomikament (`/api/keys/{id}/access`). → [API Referenza](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
-- **🛡️ Kontrolli PII ifjen** — għażla għal kull tip, sa 20 mudell ta’ masking personalizzat validati u counters ta’ detezzjoni għal kull tip; masking innifsu jibqa 'opt-in. → [Guardrails](docs/security/GUARDRAILS.md)
-- **🌍 67 lingwa** — dashboard, docs mirja u CLI, `npm run i18n:add-locale` iżżid lingwa kullimkien f'kmand wieħed. → [i18n Gwida](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — delegazzjoni A2A deħlin għall-flotta tal-aġent tiegħek, ħiliet ta’ Konduttur fuq il-Karta tal-Aġent, u panel tad-daxxbord b’chat bil-vuċi Faro push-to-talk. → [A2A Server](docs/frameworks/A2A-SERVER.md)
-- **🛂 Ammissjoni adattiva u protezzjoni ta' tagħbija żejda** — kju ta' talbiet ta' chat heavyweight minflok 503ing, b'kirjiet rolling RPM atomiċi għal kull konnessjoni. → [Gwida tar-Reżiljenza](docs/architecture/RESILIENCE_GUIDE.md)
-- **🗂️ Canonical `/v1/models` ordering** — blokka waħda kontigwa raggruppata mill-fornituri għal kull fornitur (combos ippinjat l-ewwel), stabbli f'kull sors ta' katalogu. → [API Referenza](docs/reference/API_REFERENCE.md)
-- **🗜️ Ebusija tal-kompressjoni** — gwardja tal-inflazzjoni default-on, pakketti Caveman għal DE / FR / JA + Chinese (wényán), filtri RTK għal Gradle & .NET. → [Kompressjoni](docs/compression/COMPRESSION_ENGINES.md)
-- **💸 Spiża b'rata fissa onesta** — fornituri ta' abbonament / pjan ta' kodifikazzjoni jinqraw** $0** fl-analiżi tal-ispejjeż; baġit, kwota u routing iżommu stima. → [API Referenza](docs/reference/API_REFERENCE.md)
-- **⚖️ Quota-Share routing** — taqsam il-kwota ta' kont kondiviż b'mod ġust bejn iċ-ċwievet miġbura flimkien, b'konservazzjoni tax-xogħol sabiex slices inattivi jiġu mislufa. → [Gwida tar-Reżiljenza](docs/architecture/RESILIENCE_GUIDE.md)
-- **🤖 One-kmand CLI/agent setup** — 15-il kmand `setup-*` irreġistrat; `omniroute run` tniedi 7 CLIs (Claude Code, Codex, Aider, Goose, OpenCode, Qwen Code, Gemini CLI); `omniroute configure` jappoġġja 11-il mira bi fornitur interattiv + model picker u favoriti għal kull kuntest. → [CLI Integrazzjonijiet](docs/guides/CLI-INTEGRATIONS.md)
-- **🛰️ Remote mode** — issuq OmniRoute remot b'tokens skoped (`connect` / `contexts` / `tokens`) + an `antigravity` OAuth helper għall-installazzjonijiet VPS. → [Modalità Remota](docs/guides/REMOTE-MODE.md)
-- **🧭 Auto-routing aktar intelliġenti** — `auto/<category>:<tier>` combos,** Fużjoni** (mudell panel + imħallef), routing konxju tal-kompitu, mudell għal kull talba / mod / overrides tal-baġit USD. → [Auto-Combo](docs/routing/AUTO-COMBO.md)
-- **🗜️ Kompressjoni Pluggable** — 12-il magna kompostabbli + Compression Studios: LLMLingua-2, Ultra b'żewġ livelli, omniglyph, xatba ta 'fedeltà għal kull pass, GCF v3.2, editur ta' ordni mill-ġdid tad-drag. → [Kompressjoni](docs/compression/COMPRESSION_ENGINES.md)
-- **🕵️ Decrypt MITM trasparenti (TPROXY)** — jaqbad CLIs li jinjora proxy env vars, b'installatur ta' trust-store għal kull SNI CA +. → [MITM/TPROXY](docs/security/MITM-TPROXY-DECRYPT.md)
-- **💸 Cost telemetrija kullimkien** — `X-OmniRoute-*` cost/usage headers fuq kull endpoint, header ta' tfaddil cache-HIT, kwoti ta' jonfqu USD għal kull ċavetta. → [API Referenza](docs/reference/API_REFERENCE.md)
-- **🧠 Memorja inti tikkontrolla** — off b'mod awtomatiku, opt-in int8 vector kwantizzazzjoni + ittajpjat decay, kull talba `x-omniroute-no-memory`. → [Memorja](docs/frameworks/MEMORY.md)
-- **🛡️ Sigurtà** — gwardja ta’ injezzjoni fil-pront fuq kull rotta LLM (suite tat-tim aħmar), guardrail ta’ masking ta’ kredenzjali opt-in (redacts leaked API keys/secrets fiż-żewġ direzzjonijiet), tfittxija tal-web tal-aħħar riżors DuckDuckGo b’xejn, u gate tal-login OIDC fakultattiv għad-dashboard (il-login tal-password dejjem jibqa’ disponibbli). → [Guardrails](docs/security/GUARDRAILS.md)
-- **🖼️ Punti ta' tmiem ġodda** — `/v1/ocr` (Mistral OCR) u `/v1/audio/translations` (Whisper-style) iqarrbu l-wiċċ tal-midja. → [API Referenza](docs/reference/API_REFERENCE.md)
-- **🎨 Ġenerazzjoni tal-immaġni / vidjo / awdjo** — API wieħed għall-midja: xAI Grok Imagine & Novita AI video, ComfyUI, Magnific, Adobe Firefly, Segmind, u fornituri tad-diskors bħal ElevenLabs. → [API Referenza](docs/reference/API_REFERENCE.md)
-- **🌍 Deployment & ops** — reverse-proxy `basePath`, skoperta awtomatika bil-lingwa tal-brawżer, traċċar tal-apparat għal kull ċavetta, fiduċja MITM mingħajr għerq, lokalizzazzjoni zh-TW. → [Ambjent](docs/reference/ENVIRONMENT.md)
-- **🤝 Aktar fornituri u aġenti** — aġenti tal-cloud (Codex Cloud, Cursor, Devin, Jules), Grok Build (xAI) bil-browser + OAuth login, Ollama first-class card, Claude Opus 5 & Sonnet 5, Kimi official partnership (Code/Web/Moonshot), Zed, SenseNova, Yuqanz, u … AI** 377-katalgu tal-fornitur** . → [Fornituri](docs/reference/PROVIDER_REFERENCE.md)
-- **📡 Trasparenza tar-rotot** — kull tweġiba ġġorr header `X-OmniRoute-Decision` li jsemmi l strategy/provider/latency li servaha, strateġija ġdida `cache-optimized` combo + Auto-Combo `cacheAffinity` factor route repeat requests back to the connection holding the cached prefix, u endpoint `/v1/auto-combo/{channel}/candidates` li jinqara biss jesponi pool ta’ kandidati ħajjin ta’ kanal `auto/*`. → [Auto-Combo](docs/routing/AUTO-COMBO.md)
-- **⚡ Local performance & infra** — klikk waħda lokali Redis, Cloudflare Ħaddiema / Deno Deploy relay deployers, Bifrost & Mux bħala servizzi integrati sorveljati. → [Servizzi Inkorporati](docs/frameworks/EMBEDDED-SERVICES.md)
-- **🧩 Fil-kaxxa wkoll** — plugin framework + marketplace, Omni/Agent/GitHub skills frameworks, Obsidian vault integration (22 MCP tool), OpenAI-compatible Batch & Files APIs, semantic response cache, gamification with leaderboards, ACP agent discovery (15 built-in agent), skedat log export to BigQuery, `auto/chaos` -model an parallel, Telegram maniġer tal-verżjoni fl-app u klassifiki tal-fornituri b'xejn LMArena-ELO. → [Docs](docs/README.md)
+- **⚖️ Rottar `quota-weighted`** — l-20 strateġija combo taqbeż il-kontijiet eżawriti, imbagħad tagħżel fost il-bqija b'mod proporzjonali mal-kwota li fadal diviża bit-tagħbija in-flight, filwaqt li żżomm il-konversazzjonijiet eżistenti mwaħħla. → [Auto-Combo](docs/routing/AUTO-COMBO.md)
+- **🧰 Modalità headless** — `omniroute serve --headless` (jew `OMNIROUTE_HEADLESS=1`) jħaddem biss il-magna proxy `/v1/*`, bid-dashboard u s-sottosistemi tad-dashboard biss mitfija. → [Modalità Headless](docs/guides/HEADLESS.md)
+- **🔎 Skoperta tal-mudelli** — `/v1/models` jiffiltra skont il-kapaċità, il-kuntest, it-tip u t-test, u `POST /v1/models/query` jirritorna shortlist qasira u deterministika bl-istess viżibilità skont iċ-ċavetta. → [Referenza tal-API](docs/reference/API_REFERENCE.md)
+- **🔑 Kontroll tar-rottar skont iċ-ċavetta** — waħħal ċavetta API ma' mudell wieħed jew combo b'`forcedModel`, u żid jew neħħi l-mudelli u l-combos ta' ċavetta b'mod atomiku (`/api/keys/{id}/access`). → [Referenza tal-API](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
+- **🛡️ Kontrolli PII aktar raffinati** — għażla skont it-tip, sa 20-il mudell ta' masking personalizzat u validat, u kontaturi tas-sejbien skont it-tip; il-masking innifsu jibqa' opt-in. → [Guardrails](docs/security/GUARDRAILS.md)
+- **🌍 67-il lingwa** — dashboard, mera tad-dokumentazzjoni u CLI, b'`npm run i18n:add-locale` iżżid lingwa kullimkien b'kmand wieħed. → [Gwida i18n](docs/guides/I18N.md)
+- **🎛️ OmniConductor** — delegazzjoni A2A inbound lejn il-flotta ta' aġenti tiegħek, ħiliet Conductor fuq l-Agent Card, u pannell tad-dashboard b'chat bil-vuċi push-to-talk ta' Faro. → [A2A Server](docs/frameworks/A2A-SERVER.md)
+- **🛂 Ammissjoni adattiva u protezzjoni mill-tagħbija żejda** — talbiet chat tqil jidħlu fil-kju minflok ma jirċievu 503, b'leases rolling RPM atomiċi għal kull konnessjoni. → [Gwida tar-Reżiljenza](docs/architecture/RESILIENCE_GUIDE.md)
+- **🗂️ Ordni kanonika ta' `/v1/models`** — blokk wieħed kontinwu raggruppat skont il-provider għal kull provider (combos mwaħħla l-ewwel), stabbli fuq kull sors tal-katalogu. → [Referenza tal-API](docs/reference/API_REFERENCE.md)
+- **🗜️ Irwebbit tal-kompressjoni** — gwardja kontra l-inflazzjoni mixgħula b'mod predefinit, pakketti Caveman għal DE / FR / JA + Ċiniż (wényán), filtri RTK għal Gradle & .NET. → [Kompressjoni](docs/compression/COMPRESSION_ENGINES.md)
+- **💸 Spiża onesta b'rata fissa** — il-providers ta' abbonament / pjan ta' kodifikazzjoni jidhru **$0** fl-analitika tal-ispejjeż; il-baġit, il-kwota u r-rottar jibqgħu jistmaw. → [Referenza tal-API](docs/reference/API_REFERENCE.md)
+- **⚖️ Rottar Quota-Share** — jaqsam il-kwota ta' kont kondiviż b'mod ġust fuq ċwievet pooled, b'konservazzjoni tax-xogħol sabiex il-porzjonijiet idle jitselfu. → [Gwida tar-Reżiljenza](docs/architecture/RESILIENCE_GUIDE.md)
+- **🤖 Setup ta' CLI/aġent b'kmand wieħed** — 15-il kmand `setup-*` reġistrat; `omniroute run` jniedi 7 CLIs (Claude Code, Codex, Aider, Goose, OpenCode, Qwen Code, Gemini CLI); `omniroute configure` jappoġġa 11-il mira b'għażliet interattiva ta' provider+mudell u favoriti skont il-kuntest. → [Integrazzjonijiet CLI](docs/guides/CLI-INTEGRATIONS.md)
+- **🛰️ Modalità remota** — imexxi OmniRoute remot b'tokens b'ambitu limitat (`connect` / `contexts` / `tokens`) + għajnuna OAuth `antigravity` għal installazzjonijiet fuq VPS. → [Modalità Remota](docs/guides/REMOTE-MODE.md)
+- **🧭 Rottar awtomatiku aktar intelliġenti** — combos `auto/<category>:<tier>`, **Fusion** (pannell ta' mudelli + ġudikant), rottar konxju tal-kompitu, u overrides ta' mudell / modalità / baġit f'USD għal kull talba. → [Auto-Combo](docs/routing/AUTO-COMBO.md)
+- **🗜️ Kompressjoni pluggable** — 12-il magna komponibbli + Compression Studios: LLMLingua-2, Ultra b'żewġ livelli, omniglyph, gate ta' fidelity għal kull pass, GCF v3.2, u editur bi tkaxkir u rriordnar. → [Kompressjoni](docs/compression/COMPRESSION_ENGINES.md)
+- **🕵️ Dekriptar MITM trasparenti (TPROXY)** — aqbad CLIs li jinjuraw il-varjabbli ambjentali tal-proxy, b'CA għal kull SNI + installatur tat-trust-store. → [MITM/TPROXY](docs/security/MITM-TPROXY-DECRYPT.md)
+- **💸 Telemetrija tal-ispejjeż kullimkien** — headers tal-ispiża/użu `X-OmniRoute-*` fuq kull endpoint, header tal-iffrankar fi każ ta' cache-HIT, u kwoti ta' nefqa f'USD skont iċ-ċavetta. → [Referenza tal-API](docs/reference/API_REFERENCE.md)
+- **🧠 Memorja li tikkontrolla** — mitfija b'mod predefinit, kwantizzazzjoni opt-in ta' vetturi int8 + decay bit-tip, u `x-omniroute-no-memory` għal kull talba. → [Memorja](docs/frameworks/MEMORY.md)
+- **🛡️ Sigurtà** — gwardja kontra l-injezzjoni ta' prompts fuq kull rotta LLM (suite ta' red team), guardrail opt-in għall-masking ta' kredenzjali (iħabbi ċwievet/sigrieti tal-API li nixxew fiż-żewġ direzzjonijiet), tfittxija tal-web b'xejn b'DuckDuckGo bħala l-aħħar għażla, u gate tal-login OIDC fakultattiv għad-dashboard (il-login bil-password jibqa' dejjem disponibbli). → [Guardrails](docs/security/GUARDRAILS.md)
+- **🖼️ Endpoints ġodda** — `/v1/ocr` (Mistral OCR) u `/v1/audio/translations` (stil Whisper) jikkomplew il-wiċċ tal-midja. → [Referenza tal-API](docs/reference/API_REFERENCE.md)
+- **🎨 Ġenerazzjoni ta' immaġni / vidjo / awdjo** — API waħda għall-midja: vidjo ta' xAI Grok Imagine & Novita AI, ComfyUI, Magnific, Adobe Firefly, Segmind, u providers tad-diskors bħal ElevenLabs. → [Referenza tal-API](docs/reference/API_REFERENCE.md)
+- **🌍 Użu u operazzjonijiet** — `basePath` għar-reverse-proxy, sejbien awtomatiku tal-lingwa tal-browser, intraċċar tal-apparat skont iċ-ċavetta, trust MITM mingħajr root, u lokalizzazzjoni zh-TW. → [Ambjent](docs/reference/ENVIRONMENT.md)
+- **🤝 Aktar providers u aġenti** — aġenti fil-cloud (Codex Cloud, Cursor, Devin, Jules), Grok Build (xAI) b'login mill-browser + OAuth, karta ta' klassi l-ewwel għal Ollama, Claude Opus 5 & Sonnet 5, sħubija uffiċjali ma' Kimi (Code/Web/Moonshot), Zed, Requesty, SenseNova, Yuanbao, Agnes AI… u **katalogu aġġornat ta' 376 provider**. → [Providers](docs/reference/PROVIDER_REFERENCE.md)
+- **📡 Trasparenza tar-rottar** — kull tweġiba ġġor header `X-OmniRoute-Decision` li jissemma l-istrateġija/provider/latenza li servieha, strateġija combo ġdida `cache-optimized` flimkien mal-fattur `cacheAffinity` ta' Auto-Combo jirrotaaw it-talbiet ripetuti lura lejn il-konnessjoni li żżomm il-prefiss fil-cache, u endpoint read-only `/v1/auto-combo/{channel}/candidates` jesponi l-pool ħaj ta' kandidati ta' kanal `auto/*`. → [Auto-Combo](docs/routing/AUTO-COMBO.md)
+- **⚡ Prestazzjoni u infrastruttura lokali** — Redis lokali b'klikk waħda, deployers tar-relay Cloudflare Workers / Deno Deploy, Bifrost u Mux bħala servizzi inkorporati sorveljati. → [Servizzi Inkorporati](docs/frameworks/EMBEDDED-SERVICES.md)
+- **🧩 Ukoll fil-kaxxa** — framework ta' plugins + marketplace, frameworks ta' skills Omni/Agent/GitHub, integrazzjoni tal-vault ta' Obsidian (22 għodda MCP), APIs Batch & Files kompatibbli ma' OpenAI, cache semantika tar-risposti, gamifikazzjoni b'leaderboards, skoperta ta' aġenti ACP (15-il aġent inkorporat), esportazzjoni skedata tal-logs lejn BigQuery, fan-out parallelu multi-mudell `auto/chaos`, pont għal bot Telegram, maniġer tal-verżjonijiet fl-app u klassifiki LMArena-ELO tal-fornituri b'xejn. → [Dokumentazzjoni](docs/README.md)
 
 <br/>
 
@@ -684,35 +684,35 @@ Kull kmand jonora l-kuntest remot attiv (`omniroute connect <host>`), `--dry-run
 
 <div align="center">
 
-## 🌐 377 AI Providers — 153 Catalog-Marked Free
+## 🌐 377 Fornitur tal-IA — 153 Immarkati bħala Bla Ħlas fil-Katalgu
 
 </div>
 
-> **377 fornitur irreġistrat** madwar iċ-chat kanoniku, il-midja, it-tfittxija, il-kollezzjonijiet lokali, tal-aġent tal-cloud u tas-sistema, inkluż** 153 li jġorru `hasFree: true` metadata ta' skoperta** . Ir-reġistru tal-mudell taċ-chat ikopri** 239 fornitur / 3,059 par distinti fornitur-mudell / 1,475 mudell mhux maħdum IDs** ; il-katalgu separat tal-baġit ħieles għandu** 471 ringieli għal kull mudell** ,** 34 pool rikorrenti** u** 52 recurring/keyless fornitur b'xejn għal dejjem** . Dawn huma denominaturi differenti skond id-disinn; definizzjonijiet u kalkoli deduppjati bil-pool jgħixu fil-Livelli ta' [Referenza tal-Fornitur](docs/reference/PROVIDER_REFERENCE.md) u [Ħieles](docs/reference/FREE_TIERS.md).
+> **377 fornitur irreġistrat** fil-kollezzjonijiet kanoniċi taċ-chat, tal-midja, tat-tiftix, lokali, tal-aġenti tal-cloud u tas-sistema, inklużi **153 b’metadejta ta’ skoperta `hasFree: true`**. Ir-reġistru tal-mudelli taċ-chat ikopri **239 fornitur / 3,059 par distint ta’ fornitur u mudell / 1,475 ID mhux ipproċessat ta’ mudell**; il-katalgu separat tal-baġits bla ħlas għandu **471 ringiela għal kull mudell**, **34 pool rikorrenti** u **52 fornitur rikorrenti/mingħajr ċavetta li jibqa’ bla ħlas għal dejjem**. Dawn għandhom denominaturi differenti apposta; id-definizzjonijiet u l-kalkoli bil-pools mingħajr duplikati jinsabu fir-[Referenza tal-Fornituri](docs/reference/PROVIDER_REFERENCE.md) u fil-[Livelli Bla Ħlas](docs/reference/FREE_TIERS.md).
 
 <div align="center">
 
-### 🏢 Kull laboratorju ewlieni — permezz ta' endpoint wieħed
+### 🏢 Kull laboratorju ewlieni — permezz ta’ endpoint wieħed
 
 <table>
   <tr>
     <td align="center" width="80"><picture><source media="(prefers-color-scheme:dark)" srcset="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-png@1.91.0/dark/openai.png"/><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/openai.svg" width="40" alt="OpenAI"/></picture><br/><sub>OpenAI</sub><br/><sub>                           </sub></td>
     <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/claude-color.svg" width="40" alt="Anthropic"/><br/><sub>Anthropic</sub><br/><sub>                           </sub></td>
     <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/gemini-color.svg" width="40" alt="Gemini"/><br/><sub>Gemini</sub><br/><sub>                           </sub></td>
-    <td align="center" width="80"><picture><source media="(prefers-color-scheme:dark)" srcset="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-png@1.91.0/dark/grok.png"/><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/grok.svg" width="40" alt="xAI Grok"/></picture><br/><sub> xAI Grok</sub><br/><sub> </sub></td>
+    <td align="center" width="80"><picture><source media="(prefers-color-scheme:dark)" srcset="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-png@1.91.0/dark/grok.png"/><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/grok.svg" width="40" alt="xAI Grok"/></picture><br/><sub>xAI Grok</sub><br/><sub>                           </sub></td>
     <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/deepseek-color.svg" width="40" alt="DeepSeek"/><br/><sub>DeepSeek</sub><br/><sub>                           </sub></td>
     <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/mistral-color.svg" width="40" alt="Mistral"/><br/><sub>Mistral</sub><br/><sub>                           </sub></td>
   </tr>
   <tr>
     <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/qwen-color.svg" width="40" alt="Qwen"/><br/><sub>Qwen</sub><br/><sub>                           </sub></td>
-    <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/meta-color.svg" width="40" alt="Meta Llama"/><br/><sub> Meta Llama</sub><br/><sub> </sub></td>
+    <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/meta-color.svg" width="40" alt="Meta Llama"/><br/><sub>Meta Llama</sub><br/><sub>                           </sub></td>
     <td align="center" width="80"><picture><source media="(prefers-color-scheme:dark)" srcset="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-png@1.91.0/dark/groq.png"/><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/groq.svg" width="40" alt="Groq"/></picture><br/><sub>Groq</sub><br/><sub>                           </sub></td>
     <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/nvidia-color.svg" width="40" alt="NVIDIA"/><br/><sub>NVIDIA</sub><br/><sub>                           </sub></td>
     <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/minimax-color.svg" width="40" alt="MiniMax"/><br/><sub>MiniMax</sub><br/><sub>                           </sub></td>
     <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/cohere-color.svg" width="40" alt="Cohere"/><br/><sub>Cohere</sub><br/><sub>                           </sub></td>
   </tr>
   <tr>
-    <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/perplexity-color.svg" width="40" alt="Perplexity"/><br/><sub> Perplessità </sub><br/><sub> </sub></td>
+    <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/perplexity-color.svg" width="40" alt="Perplexity"/><br/><sub>Perplexity</sub><br/><sub>                           </sub></td>
     <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/huggingface-color.svg" width="40" alt="Hugging Face"/><br/><sub>HuggingFace</sub><br/><sub>                           </sub></td>
     <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/together-color.svg" width="40" alt="Together"/><br/><sub>Together</sub><br/><sub>                           </sub></td>
     <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/fireworks-color.svg" width="40" alt="Fireworks"/><br/><sub>Fireworks</sub><br/><sub>                           </sub></td>
@@ -721,28 +721,28 @@ Kull kmand jonora l-kuntest remot attiv (`omniroute connect <host>`), `--dry-run
   </tr>
 </table>
 
-<sub>… u 350 + aktar — kull ikona tissolva diretta mill-katalgu tal-fornitur tad-dashboard. 📖 [Fornitur Referenza](docs/reference/PROVIDER_REFERENCE.md)</sub>
+<sub>…u aktar minn 350 oħra — kull ikona tiġi riżolta live mill-katalgu tal-fornituri tad-dashboard. 📖 [Referenza tal-Fornituri](docs/reference/PROVIDER_REFERENCE.md)</sub>
 
 <br/>
 
-### 🆓 Free Forever — $0, l-ebda karta
+### 🆓 Bla Ħlas Għal Dejjem — $0, mingħajr kard
 
 <table>
   <tr>
-    <td align="center" width="150"><img src="./public/providers/cli-generic.svg" width="42" alt="OpenCode Zen"/><br/><b>OpenCode Zen </b><br/><sub>DeepSeek V4, Nemotron 3 <br/> Ebda token cap </sub></td>
-    <td align="center" width="150"><img src="./public/providers/cli-generic.svg" width="42" alt="Kilo Code"/><br/><b> Kilo Code </b><br/><sub> Auto-router, Tencent Hy3 <br/> Free forever </sub></td>
-    <td align="center" width="150"><img src="./public/providers/requesty.svg" width="42" alt="Requesty"/><br/><b> Requesty </b><br/><sub> GPT-OSS 120B, Nemotron <br/> Free forever </sub></td>
-    <td align="center" width="150"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/siliconcloud-color.svg" width="42" alt="SiliconFlow"/><br/><b>SiliconFlow</b><br/><sub>DeepSeek V3.2 / R1 <br/> Free tier </sub></td>
-    <td align="center" width="150"><img src="./public/providers/zhipu.svg" width="42" alt="Z.AI GLM"/><br/><b> Z.AI GLM</b><br/><sub> GLM-4.7 / 4.5-Flash <br/> Free forever </sub></td>
-    <td align="center" width="150"><img src="./public/providers/baidu.svg" width="42" alt="Baidu ERNIE"/><br/><b>Baidu ERNIE</b><br/><sub>ERNIE 4.0 <br/> Free forever </sub></td>
+    <td align="center" width="150"><img src="./public/providers/cli-generic.svg" width="42" alt="OpenCode Zen"/><br/><b>OpenCode Zen</b><br/><sub>DeepSeek V4, Nemotron 3<br/>Ebda limitu ta’ tokens</sub></td>
+    <td align="center" width="150"><img src="./public/providers/cli-generic.svg" width="42" alt="Kilo Code"/><br/><b>Kilo Code</b><br/><sub>Router awtomatiku, Tencent Hy3<br/>B’xejn għal dejjem</sub></td>
+    <td align="center" width="150"><img src="./public/providers/requesty.svg" width="42" alt="Requesty"/><br/><b>Requesty</b><br/><sub>GPT-OSS 120B, Nemotron<br/>B’xejn għal dejjem</sub></td>
+    <td align="center" width="150"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/siliconcloud-color.svg" width="42" alt="SiliconFlow"/><br/><b>SiliconFlow</b><br/><sub>DeepSeek V3.2 / R1<br/>Livell bla ħlas</sub></td>
+    <td align="center" width="150"><img src="./public/providers/zhipu.svg" width="42" alt="Z.AI GLM"/><br/><b>Z.AI GLM</b><br/><sub>GLM-4.7 / 4.5-Flash<br/>B’xejn għal dejjem</sub></td>
+    <td align="center" width="150"><img src="./public/providers/baidu.svg" width="42" alt="Baidu ERNIE"/><br/><b>Baidu ERNIE</b><br/><sub>ERNIE 4.0<br/>B’xejn għal dejjem</sub></td>
   </tr>
   <tr>
-    <td align="center" width="150"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/qoder-color.svg" width="42" alt="Qoder AI"/><br/><b>Qoder AI</b><br/><sub> Qwen3-Max, Kimi-K2 <br/> Unlimited FREE</sub></td>
-    <td align="center" width="150"><img src="./public/providers/pollinations.svg" width="42" alt="Pollinations"/><br/><b> Pollinazzjonijiet </b><br/><sub>GPT, Llama, Claude<br/> Ebda ċavetta meħtieġa </sub></td>
-    <td align="center" width="150"><img src="./public/providers/cloudflare.svg" width="42" alt="Cloudflare AI"/><br/><b>Cloudflare AI</b><br/><sub> 50 + models <br/> 10K neurons/day</sub></td>
-    <td align="center" width="150"><img src="./public/providers/nvidia.svg" width="42" alt="NVIDIA NIM"/><br/><b>NVIDIA NIM</b><br/><sub>GLM, MiniMax<br/>~ 40 RPM free </sub></td>
-    <td align="center" width="150"><img src="./public/providers/cerebras.svg" width="42" alt="Cerebras"/><br/><b>Cerebras</b><br/><sub>GLM 4.7, GPT-OSS <br/> Kreditu ta’ $5 ta’ darba; karta meħtieġa </sub></td>
-    <td align="center" width="150"><img src="./public/providers/openrouter.svg" width="42" alt="OpenRouter"/><br/><b>OpenRouter</b><br/><sub>:mudelli b'xejn <br/>+$10 → ogħla RPM</sub></td>
+    <td align="center" width="150"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/qoder-color.svg" width="42" alt="Qoder AI"/><br/><b>Qoder AI</b><br/><sub>Qwen3-Max, Kimi-K2<br/>BLA LIMITU U B’XEJN</sub></td>
+    <td align="center" width="150"><img src="./public/providers/pollinations.svg" width="42" alt="Pollinations"/><br/><b>Pollinations</b><br/><sub>GPT, Llama, Claude<br/>M’hemmx bżonn ċavetta</sub></td>
+    <td align="center" width="150"><img src="./public/providers/cloudflare.svg" width="42" alt="Cloudflare AI"/><br/><b>Cloudflare AI</b><br/><sub>Aktar minn 50 mudell<br/>10K newroni kuljum</sub></td>
+    <td align="center" width="150"><img src="./public/providers/nvidia.svg" width="42" alt="NVIDIA NIM"/><br/><b>NVIDIA NIM</b><br/><sub>GLM, MiniMax<br/>~40 RPM b’xejn</sub></td>
+    <td align="center" width="150"><img src="./public/providers/cerebras.svg" width="42" alt="Cerebras"/><br/><b>Cerebras</b><br/><sub>GLM 4.7, GPT-OSS<br/>Kreditu ta’ $5 għal darba waħda; karta meħtieġa</sub></td>
+    <td align="center" width="150"><img src="./public/providers/openrouter.svg" width="42" alt="OpenRouter"/><br/><b>OpenRouter</b><br/><sub>Mudelli :free<br/>+$10 → RPM ogħla</sub></td>
   </tr>
 </table>
 
@@ -1281,29 +1281,29 @@ Metriċi kanoniċi fl-2026-10-18: **1.976 vidjo uniku** · **20.220.289 darba ma
 <br/>
 <div align="center">
 
-## 🛠️ Tech Stack
+## 🛠️ Stack Teknoloġiku
 
 </div>
 
 <table>
-  <tr><th align="left"> Saff </th><th align="left"> Teknoloġija </th></tr>
-  <tr><td nowrap><b> Runtime </b></td><td>Node.js 22.x / 24.x LTS — <code>&gt;= 22.22.2 &lt; 23 || &gt;=</tr>&lt;</code></td>
-  <tr><td nowrap><b> Lingwa </b></td><td>TypeScript 6.0 — <b> 100% TypeScript</b> madwar <code> src/</code> <code> open-sse </tr></code> (zero <code> any </code> in core since v2.0)</td>
-  <tr><td nowrap><b> Framework </b></td><td>Next.js 16 + React 19 + Tailwind CSS 4 </td></tr>
-  <tr><td nowrap><b> Database </b></td><td> better-sqlite3 (SQLite, WAL journaling) + LowDB (JSON legacy) — 147 modulu tad-dominju, 213 migrazzjoni </td></tr>
-  <tr><td nowrap><b> Memorja </b></td><td>SQLite FTS5 full-test + int8-kwantizzat vector embeddings, ittajpjat decay </td></tr>
-  <tr><td nowrap><b> Skemi </b></td><td>Zod 4 — MCP validazzjoni I/O + API kuntratti </td></tr>
-  <tr><td nowrap><b> Protokolli </b></td><td>MCP stdio / HTTP / SSE) + A2A v0.3 (JSON-RPC 2.0 + SSE)</td></tr>
-  <tr><td nowrap><b> Streaming </b></td><td> Server-Sent Events (SSE) + WebSocket bridge (<code>/v1/ws </code>)</td></tr>
-  <tr><td nowrap><b> Compression </b></td><td> 12-engine pipeline — RTK, Caveman, LLMLingua-2 (MobileBERT ONNX), GCF, OmniGlyph</td></tr>
-  <tr><td nowrap><b> Auth &amp; security </b></td><td>OAuth 2.0 (PKCE) + JWT + API Keys + MCP scoped auth · AES-256-GCM waqt il-mistrieħ · DOMPurify </td></tr>
-  <tr><td nowrap><b> Stealth </b></td><td> wreq-js — JA3 / JA4 TLS impersonazzjoni tal-marki tas-swaba', 3-level proxy </td></tr>
-  <tr><td nowrap><b> Reżiljenza </b></td><td> Circuit breaker, backoff esponenzjali, anti-thundering-merħla, auto-combo self-healing </td></tr>
-  <tr><td nowrap><b> Logging </b></td><td> pino — strutturat JSON logs with request context </td></tr>
-  <tr><td nowrap><b> Testing </b></td><td>Node.js test runner + Vitest — <b> 56,000 + static test statements </b> across 7,800 + tracked test files (unità, integrazzjoni </tr>E2E, sigurtà, ekosistema)</td>
-  <tr><td nowrap><b> Pjattaformi </b></td><td> Desktop (Electron) · Android (Termux) · PWA (kull browser)</td></tr>
-  <tr><td nowrap><b>CI/CD</b></td><td>GitHub Azzjonijiet — auto npm publish + Docker Hub on release </td></tr>
-  <tr><td nowrap><b> Links </b></td><td><a href="https://omniroute.online"> Website </a> · <a href="https://www.npmjs.com/package/omniroute"> npm </a> · <a href="https://hub.docker.com/r/diegosouzapw/omniroute">Docker Hub </a></td></tr>
+  <tr><th align="left">Saff</th><th align="left">Teknoloġija</th></tr>
+  <tr><td nowrap><b>Runtime</b></td><td>Node.js 22.x / 24.x LTS — <code>&gt;=22.22.2 &lt;23 || &gt;=24.0.0 &lt;27</code></td></tr>
+  <tr><td nowrap><b>Lingwa</b></td><td>TypeScript 6.0 — <b>100% TypeScript</b> madwar <code>src/</code> u <code>open-sse/</code> (xejn <code>any</code> fil-qalba mill-v2.0)</td></tr>
+  <tr><td nowrap><b>Framework</b></td><td>Next.js 16 + React 19 + Tailwind CSS 4</td></tr>
+  <tr><td nowrap><b>Database</b></td><td>better-sqlite3 (SQLite, WAL journaling) + LowDB (JSON legacy) — 147 modulu tad-dominju, 213 migrazzjoni</td></tr>
+  <tr><td nowrap><b>Memorja</b></td><td>SQLite FTS5 bit-test sħiħ + vector embeddings kwantizzati int8, decay ittajpjat</td></tr>
+  <tr><td nowrap><b>Skemi</b></td><td>Zod 4 — validazzjoni I/O tal-għodod MCP + kuntratti API</td></tr>
+  <tr><td nowrap><b>Protokolli</b></td><td>MCP (stdio / HTTP / SSE) + A2A v0.3 (JSON-RPC 2.0 + SSE)</td></tr>
+  <tr><td nowrap><b>Streaming</b></td><td>Server-Sent Events (SSE) + pont WebSocket (<code>/v1/ws</code>)</td></tr>
+  <tr><td nowrap><b>Kompressjoni</b></td><td>Pipeline b'12-il magna — RTK, Caveman, LLMLingua-2 (MobileBERT ONNX), GCF, OmniGlyph</td></tr>
+  <tr><td nowrap><b>Awtentikazzjoni u sigurtà</b></td><td>OAuth 2.0 (PKCE) + JWT + API Keys + awtentikazzjoni MCP b'ambitu · AES-256-GCM fil-mistrieħ · DOMPurify</td></tr>
+  <tr><td nowrap><b>Stealth</b></td><td>wreq-js — imitazzjoni tal-fingerprint TLS JA3 / JA4, proxy b'3 livelli</td></tr>
+  <tr><td nowrap><b>Reżiljenza</b></td><td>Circuit breaker, backoff esponenzjali, anti-thundering-herd, self-healing auto-combo</td></tr>
+  <tr><td nowrap><b>Logging</b></td><td>pino — logs JSON strutturati bil-kuntest tat-talba</td></tr>
+  <tr><td nowrap><b>Ittestjar</b></td><td>Node.js test runner + Vitest — <b>56,000+ dikjarazzjoni statika ta' testijiet</b> fi 7,800+ fajl ta' testijiet ittraċċati (unità, integrazzjoni, E2E, sigurtà, ekosistema)</td></tr>
+  <tr><td nowrap><b>Pjattaformi</b></td><td>Desktop (Electron) · Android (Termux) · PWA (kwalunkwe browser)</td></tr>
+  <tr><td nowrap><b>CI/CD</b></td><td>GitHub Actions — pubblikazzjoni awtomatika npm + Docker Hub fuq rilaxx</td></tr>
+  <tr><td nowrap><b>Ħoloq</b></td><td><a href="https://omniroute.online">Websajt</a> · <a href="https://www.npmjs.com/package/omniroute">npm</a> · <a href="https://hub.docker.com/r/diegosouzapw/omniroute">Docker Hub</a></td></tr>
 </table>
 
 <div align="center">

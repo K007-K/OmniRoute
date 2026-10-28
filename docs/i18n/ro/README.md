@@ -6,14 +6,14 @@
 
 <div align="center">
 
-<img src="./docs/screenshots/MainOmniRoute.png" alt="OmniRoute Dashboard" width="820"/>
+<img src="./docs/screenshots/MainOmniRoute.png" alt="Panoul de control OmniRoute" width="820"/>
 
 <br/>
 <br/>
 
-# 🚀 OmniRoute — Gateway AI gratuit
+# 🚀 OmniRoute — Gateway-ul AI gratuit
 
-<img src="./docs/diagrams/readme-hero.svg" width="100%" alt="OmniRoute — Never stop coding. Every AI tool → 377 providers — 150+ free — through one endpoint. Claude Code, Codex, Cursor, Cline, Copilot & Antigravity into FREE Claude / GPT / Gemini with auto-fallback. RTK + Caveman stacked compression saves 15–95% tokens (~89% avg) — never hit limits. 377 AI providers · 150+ free tiers · ~1.62B free tokens/mo · 20 routing strategies · $0 to start."/>
+<img src="./docs/diagrams/readme-hero.svg" width="100%" alt="OmniRoute — Nu te opri niciodată din programat. Orice instrument AI → 377 de furnizori — peste 150 gratuiți — printr-un singur endpoint. Claude Code, Codex, Cursor, Cline, Copilot și Antigravity în Claude / GPT / Gemini GRATUIT, cu fallback automat. Compresia combinată RTK + Caveman economisește 15–95% din tokenuri (~89% în medie) — fără să mai atingi limitele. 377 de furnizori AI · peste 150 de niveluri gratuite · ~1,62 mld. de tokenuri gratuite/lună · 20 de strategii de rutare · cost inițial de 0 USD."/>
 
 </div>
 
@@ -222,23 +222,23 @@
 
 <a id="first-run"></a>
 
-## 🆓 Instalați, conectați un furnizor, apoi rutați printr-un punct final
+## 🆓 Instalează, conectează un furnizor, apoi direcționează printr-un singur endpoint
 
 </div>
 
-<img src="./docs/diagrams/works-zero-config.svg" width="100%" alt="Three steps: install and start OmniRoute, connect an eligible provider with your own account or API key, then point your tool at localhost:20128/v1 using an OmniRoute API key and model auto. Routing depends on available eligible connections and provider limits."/>
+<img src="./docs/diagrams/works-zero-config.svg" width="100%" alt="Trei pași: instalează și pornește OmniRoute, conectează un furnizor eligibil folosind propriul cont sau propria cheie API, apoi configurează instrumentul să utilizeze localhost:20128/v1 cu o cheie API OmniRoute și modelul auto. Direcționarea depinde de conexiunile eligibile disponibile și de limitele furnizorului."/>
 
 ```bash
-# After connecting a provider, copy your OmniRoute key from Dashboard → Endpoints:
+# După conectarea unui furnizor, copiază cheia OmniRoute din Tablou de bord → Endpointuri:
 curl http://localhost:20128/v1/chat/completions \
   -H "Authorization: Bearer YOUR_OMNIROUTE_KEY" \
   -H "Content-Type: application/json" \
   -d '{"model":"auto","messages":[{"role":"user","content":"Hello!"}]}'
 ```
 
-<sub> `auto` are nevoie de o rută eligibilă. O nouă instalare nu poate avea ținte eligibile fără cheie, iar un furnizor fără cheie poate respinge clienții terți. Furnizorii marcați `tos: avoid`, inclusiv Kiro, sunt excluși de la rutarea automată în mod implicit; conectarea unui cont nu anulează această setare. Consultați [Ghidul nivelurilor gratuite](docs/getting-started/FREE-TIERS-GUIDE.md) înainte de a alege un furnizor.</sub>
+<sub>`auto` necesită o rută eligibilă. Este posibil ca o instalare nouă să nu aibă destinații eligibile fără cheie, iar un furnizor fără cheie poate respinge clienții terți. Furnizorii marcați cu `tos: avoid`, inclusiv Kiro, sunt excluși implicit din direcționarea automată; conectarea unui cont nu suprascrie această setare. Consultă [Ghidul nivelurilor gratuite](docs/getting-started/FREE-TIERS-GUIDE.md) înainte de a alege un furnizor.</sub>
 
-<sub>📦 Copiați-lipiți scripturile de pornire rapidă pentru** Python, Node.js, PHP și cURL** → [`examples/quickstart/`](examples/quickstart/)</sub>
+<sub>📦 Scripturi de pornire rapidă gata de copiat și lipit pentru **Python, Node.js, PHP și cURL** → [`examples/quickstart/`](examples/quickstart/)</sub>
 
 <br/>
 
@@ -248,7 +248,7 @@ curl http://localhost:20128/v1/chat/completions \
 
 </div>
 
-<img src="./docs/diagrams/promise-pillars.svg" width="100%" alt="The Promise — One endpoint and 377 providers. Automatic fallback keeps routing while another healthy target is available. Six pillars: resilient fallback across 377 providers · up to 95% token savings on eligible workloads · $0 to start with 150+ free tiers and 52 recurring/keyless free-forever providers · 37 CLI/agent integrations through one config · OpenAI, Claude, Gemini and Responses API compatibility at /v1 · production controls including circuit breakers, TLS stealth, MCP 110 tools, A2A, memory, guardrails, evals and 56,000+ static test declarations across 7,800+ tracked test files."/>
+<img src="./docs/diagrams/promise-pillars.svg" width="100%" alt="Promisiunea — Un singur endpoint și 377 de furnizori. Mecanismul automat de rezervă menține direcționarea atât timp cât este disponibilă o altă destinație funcțională. Șase piloni: mecanism de rezervă rezilient pentru 377 de furnizori · economii de până la 95% la tokenuri pentru sarcinile de lucru eligibile · cost inițial de $0, cu peste 150 de niveluri gratuite și 52 de furnizori recurenți/fără cheie, gratuiți permanent · 37 de integrări CLI/agent printr-o singură configurație · compatibilitate cu OpenAI, Claude, Gemini și Responses API la /v1 · controale pentru producție, inclusiv întrerupătoare de circuit, disimulare TLS, 110 instrumente MCP, A2A, memorie, mecanisme de protecție, evaluări și peste 56.000 de declarații de teste statice în peste 7.800 de fișiere de test urmărite."/>
 
 <br/>
 <br/>
@@ -259,11 +259,11 @@ curl http://localhost:20128/v1/chat/completions \
 
 </div>
 
-<img src="./docs/diagrams/why-pain-fix.svg" width="100%" alt="Why OmniRoute — stop juggling 10 dashboards, dead API keys and surprise bills. Ten daily pains vs fixes: quota expiring unused → maximize subscriptions; rate limits mid-coding → 4-tier auto-fallback (Subscription → API → Cheap → Free); tool outputs burning tokens → RTK + Caveman compression (15–95%); expensive APIs → cost-optimized routing; every tool its own setup → one endpoint, one dashboard; AI blocked → 3-level proxy + TLS stealth; dead keys → 3-layer resilience (circuit breakers, key cooldown, model lockout); team sharing one subscription → key pools with fair-share quotas; prompts through someone's cloud → local-first with AES-256-GCM encrypted keys; no spend visibility → live analytics (usage, quota, savings, p95 latency)."/>
+<img src="./docs/diagrams/why-pain-fix.svg" width="100%" alt="De ce OmniRoute — nu mai jongla cu 10 tablouri de bord, chei API nefuncționale și facturi neașteptate. Zece probleme zilnice și soluțiile lor: cotă care expiră neutilizată → valorifică la maximum abonamentele; limite de rată în timpul programării → mecanism automat de rezervă pe 4 niveluri (Abonament → API → Ieftin → Gratuit); rezultatele instrumentelor consumă tokenuri → compresie RTK + Caveman (15–95%); API-uri costisitoare → direcționare optimizată pentru costuri; fiecare instrument necesită propria configurare → un singur endpoint, un singur tablou de bord; acces AI blocat → proxy pe 3 niveluri + disimulare TLS; chei nefuncționale → reziliență pe 3 niveluri (întrerupătoare de circuit, perioadă de așteptare pentru chei, blocarea modelului); o echipă care partajează un singur abonament → grupuri de chei cu cote echitabile; solicitări transmise prin serviciul cloud al altcuiva → abordare locală prioritară, cu chei criptate prin AES-256-GCM; lipsa vizibilității asupra cheltuielilor → analize în timp real (utilizare, cotă, economii, latență p95)."/>
 
 <div align="center">
 
-<img src="./docs/diagrams/tier-cascade.svg" width="100%" alt="OmniRoute request flow: your IDE or CLI (Claude Code, Cursor, Cline…) calls one local endpoint (http://localhost:20128/v1); the OmniRoute Smart Router (RTK + Caveman compression, 20 routing strategies, circuit breakers, TLS stealth, MCP, A2A, guardrails) can fall back across 4 provider tiers while an eligible healthy target remains — Tier 1 Subscription, Tier 2 API Key, Tier 3 Cheap and Tier 4 Free."/>
+<img src="./docs/diagrams/tier-cascade.svg" width="100%" alt="Fluxul solicitărilor OmniRoute: IDE-ul sau CLI-ul tău (Claude Code, Cursor, Cline…) apelează un singur endpoint local (http://localhost:20128/v1); routerul inteligent OmniRoute (compresie RTK + Caveman, 20 de strategii de direcționare, întrerupătoare de circuit, disimulare TLS, MCP, A2A, mecanisme de protecție) poate comuta între 4 niveluri de furnizori atât timp cât rămâne disponibilă o destinație eligibilă și funcțională — Nivelul 1 Abonament, Nivelul 2 Cheie API, Nivelul 3 Ieftin și Nivelul 4 Gratuit."/>
 
 </div>
 
@@ -504,13 +504,13 @@ Toate cele **20** de strategii — combină-le după preferință pentru fiecare
 
 <div align="center">
 
-## 🏆 Ce îl deosebește OmniRoute
+## 🏆 Ce diferențiază OmniRoute
 
 </div>
 
-<img src="./docs/diagrams/comparison-table.svg" width="100%" alt="What sets OmniRoute apart — a dated feature snapshot vs 9router, OpenRouter, CLIProxyAPI and LiteLLM across 13 capabilities. OmniRoute: 377 providers, 150+ free tiers built in, 20 routing strategies, 12-engine token compression, built-in MCP server with 110 tools, A2A agent protocol, persistent memory, guardrails, cloud agents, TLS fingerprint stealth, Desktop/Termux/PWA and 67 i18n UI locales. OmniRoute is MIT-licensed and self-hostable. Competitor capabilities and counts may change; see the linked methodology."/>
+<img src="./docs/diagrams/comparison-table.svg" width="100%" alt="Ce diferențiază OmniRoute — o imagine de ansamblu datată a funcționalităților în comparație cu 9router, OpenRouter, CLIProxyAPI și LiteLLM, pentru 13 capabilități. OmniRoute: 377 de furnizori, peste 150 de niveluri gratuite integrate, 20 de strategii de rutare, compresie de tokenuri cu 12 motoare, server MCP integrat cu 110 instrumente, protocol de agenți A2A, memorie persistentă, mecanisme de protecție, agenți cloud, disimularea amprentei TLS, Desktop/Termux/PWA și interfață tradusă în 67 de limbi. OmniRoute este licențiat sub MIT și poate fi auto-găzduit. Capabilitățile și valorile concurenților se pot schimba; consultați metodologia din link."/>
 
-<sub>📊 Metodologie completă &amp; detaliu per-funcție vs 9router, OpenRouter, CLIProxyAPI &amp; LiteLLM → [`docs/comparison/OMNIROUTE_VS_ALTERNATIVES.md`](docs/comparison/OMNIROUTE_VS_ALTERNATIVES.md)</sub>
+<sub>📊 Metodologia completă &amp; detalii pentru fiecare funcționalitate în comparație cu 9router, OpenRouter, CLIProxyAPI &amp; LiteLLM → [`docs/comparison/OMNIROUTE_VS_ALTERNATIVES.md`](docs/comparison/OMNIROUTE_VS_ALTERNATIVES.md)</sub>
 
 <br/>
 
@@ -586,35 +586,35 @@ catalogul actual la **[radar.omniroute.online/planos](https://radar.omniroute.on
 
 </div>
 
-> Repere recente de la** v3.8.20 → v3.8.53** . Istoricul complet în [`CHANGELOG.md`](CHANGELOG.md).
+> Repere recente din **v3.8.20 → v3.8.53**. Istoricul complet în [`CHANGELOG.md`](CHANGELOG.md).
 
-- **rutare ⚖️ `quota-weighted`** — a 20-a strategie combo omite conturile epuizate, apoi atrage printre restul proporțional cu cota rămasă ÷ în timpul zborului, păstrând conversațiile existente fixate. → [Auto-Combo](docs/routing/AUTO-COMBO.md)
-- **🧰 modul fără cap** — `omniroute serve --headless` (sau `OMNIROUTE_HEADLESS=1`) rulează numai motorul proxy `/v1/*`, cu tabloul de bord și subsistemele numai pentru tabloul de bord dezactivate. → [Modul fără cap](docs/guides/HEADLESS.md)
-- **🔎 Descoperirea modelului** — `/v1/models` filtrează după capacitate, context, tip și text, iar `POST /v1/models/query` returnează o scurtă listă scurtă deterministă cu aceeași vizibilitate per-cheie. → [API Referință](docs/reference/API_REFERENCE.md)
-- **🔑 Control de rutare pe tastă** — fixați o cheie API la un model sau combo cu `forcedModel` și adăugați sau eliminați modelele și combo-urile unei chei atomic (`/api/keys/{id}/access`). → [API Referință](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
-- **🛡️ Comenzi PII fine** — selecție pe tip, până la 20 de modele de mascare personalizate validate și contoare de detecție pe tip; mascarea în sine rămâne opt-in. → [Balustrade](docs/security/GUARDRAILS.md)
-- **🌍 67 de limbi** — tabloul de bord, oglinzile documentelor și CLI, cu `npm run i18n:add-locale` adăugând o limbă peste tot într-o singură comandă. → [i18n](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — delegare A2A de intrare către flota dvs. de agenți, abilități de conducător pe cardul agentului și un panou de bord cu chat vocal Faro apăsați și vorbiți. → [A2A Server](docs/frameworks/A2A-SERVER.md)
-- **🛂 Admitere adaptivă și protecție la suprasarcină** — coadă grea de solicitări de chat în loc de 503ing, cu închirieri rulante atomice RPM per conexiune. [Ghid de rezistență](docs/architecture/RESILIENCE_GUIDE.md) →
-- **🗂️ Comanda canonică `/v1/models`** — un bloc contiguu grupat de furnizori pentru fiecare furnizor (combinații fixate mai întâi), stabil în fiecare sursă de catalog. → [API Referință](docs/reference/API_REFERENCE.md)
-- **🗜️ Intarire prin compresie** — garda de umflare implicită, pachete Caveman pentru DE / FR / JA + Chinese (wényán), filtre RTK pentru Gradle & .NET. → [Compresie](docs/compression/COMPRESSION_ENGINES.md)
-- **💸 Cost forfetar cinstit** — furnizorii de abonament / plan de codare citesc** 0 USD** în analiza costurilor; buget, cotă și rutare continuă estimări. → [API Referință](docs/reference/API_REFERENCE.md)
-- **⚖️ Cota-Partajare rutare** — împărțiți în mod echitabil cota unui cont partajat între cheile grupate, economisind munca, astfel încât secțiunile inactive să fie împrumutate. [Ghid de rezistență](docs/architecture/RESILIENCE_GUIDE.md) →
-- **🤖 Configurare CLI/agent cu o singură comandă** — 15 comenzi `setup-*` înregistrate; `omniroute run` lansează 7 CLIs (Claude Code, Codex, Aider, Goose, OpenCode, Qwen Code, Gemini CLI); `omniroute configure` acceptă 11 ținte cu un furnizor interactiv + model selector și favorite per context. → [CLI Integrari](docs/guides/CLI-INTEGRATIONS.md)
-- **🛰️ Modul la distanță** — conduceți un OmniRoute la distanță cu jetoane scoped (`connect` / `contexts` / `tokens`) + un ajutor `antigravity` OAuth pentru instalări VPS. → [Remote Mode](docs/guides/REMOTE-MODE.md)
-- **🧭 Rutare automată mai inteligentă** - combo `auto/<category>:<tier>`,** Fuziune** (modelul panel + judge), rutare care ține cont de sarcini, anulări de model/mod/mod/buget per cerere. → [Auto-Combo](docs/routing/AUTO-COMBO.md)
-- **🗜️ Compresie conectabilă** — 12 motoare composabile + Compression Studios: LLMLingua-2, Ultra cu două niveluri, omniglyph, poarta de fidelitate pe pas, GCF v3.2, editor de reordonare prin glisare. → [Compresie](docs/compression/COMPRESSION_ENGINES.md)
-- **🕵️ Decriptare MITM transparentă (TPROXY)** — capturați CLIs care ignoră proxy env vars, cu un program de instalare per-SNI CA + trust-store. → [MITM/TPROXY](docs/security/MITM-TPROXY-DECRYPT.md)
-- **💸 Cost telemetrie peste tot** — anteturi `X-OmniRoute-*` cost/usage pe fiecare punct final, antet pentru economii cache-HIT, cote de cheltuieli USD per cheie. → [API Referință](docs/reference/API_REFERENCE.md)
-- **🧠 Memoria pe care o controlezi** — dezactivat în mod implicit, opt-in int8 cuantizare vectorială + tip decay, per-cerere `x-omniroute-no-memory`. → [Memorie](docs/frameworks/MEMORY.md)
-- **🛡️ Securitate** — gardă de injecție promptă pe fiecare rută LLM (suită red-team), balustradă de mascare a acreditărilor opt-in (redactează API keys/secrets scurs în ambele direcții), căutare gratuită pe web DuckDuckGo de ultimă instanță și o poartă opțională de conectare OIDC pentru tabloul de bord (autentificarea prin parolă rămâne întotdeauna disponibilă). → [Balustrade](docs/security/GUARDRAILS.md)
-- **🖼️ Puncte finale noi** — `/v1/ocr` (Mistral OCR) și `/v1/audio/translations` (în stil șoaptă) completează suprafața media. → [API Referință](docs/reference/API_REFERENCE.md)
-- **🎨 imagine / video / audio** — un API pentru media: xAI Grok Imagine & Novita AI video, ComfyUI, Magnific, Adobe Firefly, Segmind și furnizori de vorbire, cum ar fi ElevenLabs. → [API Referință](docs/reference/API_REFERENCE.md)
-- **🌍 Implementare și operațiuni** — reverse-proxy `basePath`, detectarea automată a limbii browserului, urmărirea dispozitivului per-cheie, încredere MITM fără rădăcină, localizare zh-TW. → [Mediu](docs/reference/ENVIRONMENT.md)
-- **🤝 Mai mulți furnizori și agenți** — agenți cloud (Codex Cloud, Cursor, Devin, Jules), Grok Build (xAI) cu browser + OAuth login, Ollama first-class card, Claude Opus 5 & Sonnet 5, Kimi official partnership (Code/Web/Moonshot), Zed, Requesty, SenseNova Yusbao, AI… împrospătat** 377-catalog furnizor** . [Furnizorii](docs/reference/PROVIDER_REFERENCE.md) →
-- **📡 Transparența rutare** — fiecare răspuns poartă un antet `X-OmniRoute-Decision` care denumește strategy/provider/latency care l-a servit, o nouă strategie combo `cache-optimized` + Auto-Combo `cacheAffinity` factor de solicitare de repetare a rutei înapoi la conexiunea care deține prefixul în cache, iar un punct final `/v1/auto-combo/{channel}/candidates` numai pentru citire expune pool-ul de candidați live al unui canal `auto/*`. → [Auto-Combo](docs/routing/AUTO-COMBO.md)
-- **⚡ Performanță locală și infra** — cu un singur clic local Redis, Cloudflare Workers / Deno Deploy implementatori releu, Bifrost & Mux ca servicii încorporate supravegheate. → [Servicii încorporate](docs/frameworks/EMBEDDED-SERVICES.md)
-- **🧩 De asemenea, în cutie** — plugin framework + marketplace, Omni/Agent/GitHub skills frameworks, Obsidian vault integration (22 de instrumente MCP ), OpenAI compatibil Batch & Files APIs, cache de răspuns semantic, gamification cu clasamente, ACP agent discovery (15 agenți încorporați), export programat de jurnal în BigQuery, bridgez- `auto/chaos` -out multi-model, bridgez- Telegram, bridgez-qi Managerul de versiuni în aplicație și clasamentele LMArena-ELO ale furnizorilor gratuiti. → [Docs](docs/README.md)
+- **⚖️ Rutare `quota-weighted`** — a 20-a strategie de combo sare peste conturile epuizate, apoi extrage dintre celelalte proporțional cu cota rămasă ÷ sarcina în curs, păstrând conversațiile existente fixate. → [Auto-Combo](docs/routing/AUTO-COMBO.md)
+- **🧰 Mod headless** — `omniroute serve --headless` (sau `OMNIROUTE_HEADLESS=1`) rulează doar motorul proxy `/v1/*`, cu dashboard-ul și subsistemele dedicate dashboard-ului oprite. → [Mod headless](docs/guides/HEADLESS.md)
+- **🔎 Descoperirea modelelor** — `/v1/models` filtrează după capabilitate, context, tip și text, iar `POST /v1/models/query` returnează o listă scurtă deterministă cu aceeași vizibilitate pe cheie. → [Referință API](docs/reference/API_REFERENCE.md)
+- **🔑 Controlul rutării pe cheie** — fixează o cheie API pe un singur model sau combo cu `forcedModel`, și adaugă sau elimină atomic modelele și combo-urile unei chei (`/api/keys/{id}/access`). → [Referință API](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
+- **🛡️ Controale PII mai fine** — selecție pe tip, până la 20 de șabloane de mascare personalizate validate și contoare de detectare pe tip; mascarea în sine rămâne opt-in. → [Guardrails](docs/security/GUARDRAILS.md)
+- **🌍 67 de limbi** — dashboard, mirror-uri de documentație și CLI, cu `npm run i18n:add-locale` care adaugă o limbă peste tot cu o singură comandă. → [Ghid i18n](docs/guides/I18N.md)
+- **🎛️ OmniConductor** — delegare A2A inbound către flota ta de agenți, skill-uri Conductor pe Agent Card și un panou în dashboard cu chat vocal push-to-talk Faro. → [Server A2A](docs/frameworks/A2A-SERVER.md)
+- **🛂 Admitere adaptivă & protecție la supraîncărcare** — cererile grele de chat intră în coadă în loc să returneze 503, cu lease-uri rulante RPM atomice per conexiune. → [Ghid de reziliență](docs/architecture/RESILIENCE_GUIDE.md)
+- **🗂️ Ordine canonică `/v1/models`** — un singur bloc contiguu grupat pe provider pentru fiecare provider (combo-urile fixate primele), stabil în orice sursă de catalog. → [Referință API](docs/reference/API_REFERENCE.md)
+- **🗜️ Consolidarea compresiei** — gardă de inflație activată implicit, pachete Caveman pentru DE / FR / JA + chineză (wényán), filtre RTK pentru Gradle & .NET. → [Compresie](docs/compression/COMPRESSION_ENGINES.md)
+- **💸 Cost flat-rate onest** — providerii de abonament / plan de codare apar cu **$0** în analiza costurilor; bugetul, cota și rutarea continuă să estimeze. → [Referință API](docs/reference/API_REFERENCE.md)
+- **⚖️ Rutare Quota-Share** — împarte cota unui cont partajat în mod echitabil între cheile din pool, cu funcționare work-conserving astfel încât porțiunile inactive să fie împrumutate. → [Ghid de reziliență](docs/architecture/RESILIENCE_GUIDE.md)
+- **🤖 Configurare CLI/agent cu o singură comandă** — 15 comenzi `setup-*` înregistrate; `omniroute run` lansează 7 CLI-uri (Claude Code, Codex, Aider, Goose, OpenCode, Qwen Code, Gemini CLI); `omniroute configure` suportă 11 ținte cu un selector interactiv provider+model și favorite pe context. → [Integrări CLI](docs/guides/CLI-INTEGRATIONS.md)
+- **🛰️ Mod remote** — controlează un OmniRoute aflat la distanță cu token-uri cu scopuri limitate (`connect` / `contexts` / `tokens`) + un helper OAuth `antigravity` pentru instalări pe VPS. → [Mod remote](docs/guides/REMOTE-MODE.md)
+- **🧭 Rutare automată mai deșteaptă** — combo-uri `auto/<category>:<tier>`, **Fusion** (panou de modele + judge), rutare conștientă de sarcină, suprascrieri per cerere de model / mod / buget USD. → [Auto-Combo](docs/routing/AUTO-COMBO.md)
+- **🗜️ Compresie plug-in** — 12 motoare compozabile + Compression Studios: LLMLingua-2, Ultra pe două niveluri, omniglyph, poartă de fidelitate pe pas, GCF v3.2, editor cu reordonare prin tragere. → [Compresie](docs/compression/COMPRESSION_ENGINES.md)
+- **🕵️ Decriptare MITM transparentă (TPROXY)** — capturează CLI-uri care ignoră variabilele de mediu proxy, cu un CA per SNI + instalator de trust-store. → [MITM/TPROXY](docs/security/MITM-TPROXY-DECRYPT.md)
+- **💸 Telemetrie de cost peste tot** — header-e de cost/utilizare `X-OmniRoute-*` pe fiecare endpoint, header de economii pentru cache-HIT, cote de cheltuială USD pe cheie. → [Referință API](docs/reference/API_REFERENCE.md)
+- **🧠 Memorie pe care o controlezi** — dezactivată implicit, cuantizare vectorială int8 opt-in + decay tipizat, `x-omniroute-no-memory` per cerere. → [Memorie](docs/frameworks/MEMORY.md)
+- **🛡️ Securitate** — gardă anti-prompt-injection pe fiecare rută LLM (suită red-team), guardrail opt-in de mascare a credențialelor (redactează cheile API/secretele scurse în ambele direcții), căutare web de ultimă instanță gratuită DuckDuckGo și o poartă opțională de autentificare OIDC pentru dashboard (autentificarea cu parolă rămâne mereu disponibilă). → [Guardrails](docs/security/GUARDRAILS.md)
+- **🖼️ Endpoint-uri noi** — `/v1/ocr` (Mistral OCR) și `/v1/audio/translations` (stil Whisper) completează suprafața media. → [Referință API](docs/reference/API_REFERENCE.md)
+- **🎨 Generare de imagini / video / audio** — un singur API pentru media: xAI Grok Imagine & Novita AI video, ComfyUI, Magnific, Adobe Firefly, Segmind și provideri de voce precum ElevenLabs. → [Referință API](docs/reference/API_REFERENCE.md)
+- **🌍 Implementare & ops** — `basePath` pentru reverse-proxy, detectare automată a limbii browserului, urmărirea dispozitivelor pe cheie, trust MITM fără root, localizare zh-TW. → [Environment](docs/reference/ENVIRONMENT.md)
+- **🤝 Mai mulți provideri & agenți** — agenți cloud (Codex Cloud, Cursor, Devin, Jules), Grok Build (xAI) cu autentificare prin browser + OAuth, card Ollama first-class, Claude Opus 5 & Sonnet 5, parteneriat oficial Kimi (Code/Web/Moonshot), Zed, Requesty, SenseNova, Yuanbao, Agnes AI… și un **catalog de 376 de provideri** reîmprospătat. → [Provideri](docs/reference/PROVIDER_REFERENCE.md)
+- **📡 Transparență în rutare** — fiecare răspuns poartă un header `X-OmniRoute-Decision` care numește strategia/providerul/latența care l-a servit, o nouă strategie de combo `cache-optimized` + factorul `cacheAffinity` din Auto-Combo care rutează cererile repetate înapoi la conexiunea ce deține prefixul din cache, și un endpoint read-only `/v1/auto-combo/{channel}/candidates` care expune pool-ul live de candidați al unui canal `auto/*`. → [Auto-Combo](docs/routing/AUTO-COMBO.md)
+- **⚡ Performanță locală și infrastructură** — Redis local cu un singur clic, implementatoare relay Cloudflare Workers / Deno Deploy, Bifrost & Mux ca servicii încorporate supravegheate. → [Servicii încorporate](docs/frameworks/EMBEDDED-SERVICES.md)
+- **🧩 De asemenea, incluse** — framework de pluginuri + marketplace, framework-uri de competențe Omni/Agent/GitHub, integrare cu seiful Obsidian (22 de instrumente MCP), API-uri Batch & Files compatibile cu OpenAI, cache semantic de răspunsuri, gamificare cu clasamente, descoperirea agenților ACP (15 agenți încorporați), export programat de jurnale către BigQuery, distribuire paralelă multi-model `auto/chaos`, o punte bot Telegram, un manager de versiuni în aplicație și clasamente LMArena-ELO pentru furnizori gratuiti. → [Documentație](docs/README.md)
 
 <br/>
 
@@ -692,35 +692,35 @@ Fiecare comandă onorează contextul activ la distanță (`omniroute connect <ho
 
 <div align="center">
 
-## 🌐 377 Furnizori AI — 153 Marcați în catalog gratuit
+## 🌐 377 de furnizori AI — 153 marcați în catalog ca fiind gratuiți
 
 </div>
 
-> **377 de furnizori înregistrați** prin chat canonic, media, căutare, local, agent cloud și colecții de sistem, inclusiv** 153 care transportă metadate de descoperire `hasFree: true`** . Registrul modelului de chat acoperă** 239 furnizori / 3.059 perechi distincte furnizor-model / 1.475 IDs model brut** ; catalogul separat cu buget gratuit are** 471 rânduri per model** ,** 34 de piscine recurente** şi** 52 de furnizori recurring/keyless gratuit pentru totdeauna** . Aceștia sunt numitori diferiți prin design; definițiile și calculele deducate din grup se află în [Referința furnizorului](docs/reference/PROVIDER_REFERENCE.md) și [Nivelurile gratuite](docs/reference/FREE_TIERS.md).
+> **377 de furnizori înregistrați** în colecțiile canonice de chat, media, căutare, locale, agenți cloud și de sistem, inclusiv **153 care au metadatele de descoperire `hasFree: true`**. Registrul modelelor de chat acoperă **239 de furnizori / 3.059 de perechi distincte furnizor-model / 1.475 de ID-uri brute de modele**; catalogul separat pentru bugete gratuite are **471 de intrări per model**, **34 de fonduri recurente** și **52 de furnizori gratuiți permanent, recurenți/fără cheie**. Acestea au în mod intenționat numitori diferiți; definițiile și calculele cu eliminarea duplicatelor dintre fonduri se găsesc în [Referința furnizorilor](docs/reference/PROVIDER_REFERENCE.md) și [Nivelurile gratuite](docs/reference/FREE_TIERS.md).
 
 <div align="center">
 
-### 🏢 Fiecare laborator major – printr-un singur punct final
+### 🏢 Toate laboratoarele importante — printr-un singur endpoint
 
 <table>
   <tr>
     <td align="center" width="80"><picture><source media="(prefers-color-scheme:dark)" srcset="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-png@1.91.0/dark/openai.png"/><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/openai.svg" width="40" alt="OpenAI"/></picture><br/><sub>OpenAI</sub><br/><sub>                           </sub></td>
     <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/claude-color.svg" width="40" alt="Anthropic"/><br/><sub>Anthropic</sub><br/><sub>                           </sub></td>
     <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/gemini-color.svg" width="40" alt="Gemini"/><br/><sub>Gemini</sub><br/><sub>                           </sub></td>
-    <td align="center" width="80"><picture><source media="(prefers-color-scheme:dark)" srcset="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-png@1.91.0/dark/grok.png"/><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/grok.svg" width="40" alt="xAI Grok"/></picture><br/><sub> xAI Grok</sub><br/><sub> </sub></td>
+    <td align="center" width="80"><picture><source media="(prefers-color-scheme:dark)" srcset="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-png@1.91.0/dark/grok.png"/><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/grok.svg" width="40" alt="xAI Grok"/></picture><br/><sub>xAI Grok</sub><br/><sub>                           </sub></td>
     <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/deepseek-color.svg" width="40" alt="DeepSeek"/><br/><sub>DeepSeek</sub><br/><sub>                           </sub></td>
     <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/mistral-color.svg" width="40" alt="Mistral"/><br/><sub>Mistral</sub><br/><sub>                           </sub></td>
   </tr>
   <tr>
     <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/qwen-color.svg" width="40" alt="Qwen"/><br/><sub>Qwen</sub><br/><sub>                           </sub></td>
-    <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/meta-color.svg" width="40" alt="Meta Llama"/><br/><sub> Meta Llama</sub><br/><sub> </sub></td>
+    <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/meta-color.svg" width="40" alt="Meta Llama"/><br/><sub>Meta Llama</sub><br/><sub>                           </sub></td>
     <td align="center" width="80"><picture><source media="(prefers-color-scheme:dark)" srcset="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-png@1.91.0/dark/groq.png"/><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/groq.svg" width="40" alt="Groq"/></picture><br/><sub>Groq</sub><br/><sub>                           </sub></td>
     <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/nvidia-color.svg" width="40" alt="NVIDIA"/><br/><sub>NVIDIA</sub><br/><sub>                           </sub></td>
     <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/minimax-color.svg" width="40" alt="MiniMax"/><br/><sub>MiniMax</sub><br/><sub>                           </sub></td>
     <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/cohere-color.svg" width="40" alt="Cohere"/><br/><sub>Cohere</sub><br/><sub>                           </sub></td>
   </tr>
   <tr>
-    <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/perplexity-color.svg" width="40" alt="Perplexity"/><br/><sub> Nedumerire </sub><br/><sub> </sub></td>
+    <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/perplexity-color.svg" width="40" alt="Perplexity"/><br/><sub>Perplexity</sub><br/><sub>                           </sub></td>
     <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/huggingface-color.svg" width="40" alt="Hugging Face"/><br/><sub>HuggingFace</sub><br/><sub>                           </sub></td>
     <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/together-color.svg" width="40" alt="Together"/><br/><sub>Together</sub><br/><sub>                           </sub></td>
     <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/fireworks-color.svg" width="40" alt="Fireworks"/><br/><sub>Fireworks</sub><br/><sub>                           </sub></td>
@@ -729,32 +729,32 @@ Fiecare comandă onorează contextul activ la distanță (`omniroute connect <ho
   </tr>
 </table>
 
-<sub>… și încă 350 + — fiecare pictogramă se rezolvă în direct din catalogul furnizorilor tabloului de bord. 📖 [Referință furnizor](docs/reference/PROVIDER_REFERENCE.md)</sub>
+<sub>…și încă peste 350 — fiecare pictogramă este preluată în timp real din catalogul de furnizori al panoului de control. 📖 [Referința furnizorilor](docs/reference/PROVIDER_REFERENCE.md)</sub>
 
 <br/>
 
-### 🆓 Free Forever — 0 USD, fără card
+### 🆓 Gratuit pentru totdeauna — 0 $, fără card
 
 <table>
   <tr>
-    <td align="center" width="150"><img src="./public/providers/cli-generic.svg" width="42" alt="OpenCode Zen"/><br/><b>OpenCode Zen </b><br/><sub>DeepSeek V4, Nemotron 3 <br/> Fără token cap </sub></td>
-    <td align="center" width="150"><img src="./public/providers/cli-generic.svg" width="42" alt="Kilo Code"/><br/><b> Kilo Code </b><br/><sub> Auto-router, Tencent Hy3 <br/> Free forever </sub></td>
-    <td align="center" width="150"><img src="./public/providers/requesty.svg" width="42" alt="Requesty"/><br/><b> Solicitare </b><br/><sub> GPT-OSS 120B, Nemotron <br/> Gratuit pentru totdeauna </sub></td>
-    <td align="center" width="150"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/siliconcloud-color.svg" width="42" alt="SiliconFlow"/><br/><b>SiliconFlow</b><br/><sub>DeepSeek V3.2 / R1 <br/> Nivel gratuit </sub></td>
-    <td align="center" width="150"><img src="./public/providers/zhipu.svg" width="42" alt="Z.AI GLM"/><br/><b> Z.AI GLM</b><br/><sub> GLM-4.7 / 4.5-Flash <br/> Gratuit pentru totdeauna </sub></td>
-    <td align="center" width="150"><img src="./public/providers/baidu.svg" width="42" alt="Baidu ERNIE"/><br/><b>Baidu ERNIE</b><br/><sub>ERNIE 4.0 <br/> Gratuit pentru totdeauna </sub></td>
+    <td align="center" width="150"><img src="./public/providers/cli-generic.svg" width="42" alt="OpenCode Zen"/><br/><b>OpenCode Zen</b><br/><sub>DeepSeek V4, Nemotron 3<br/>Fără limită de tokenuri</sub></td>
+    <td align="center" width="150"><img src="./public/providers/cli-generic.svg" width="42" alt="Kilo Code"/><br/><b>Kilo Code</b><br/><sub>Rutare automată, Tencent Hy3<br/>Gratuit pentru totdeauna</sub></td>
+    <td align="center" width="150"><img src="./public/providers/requesty.svg" width="42" alt="Requesty"/><br/><b>Requesty</b><br/><sub>GPT-OSS 120B, Nemotron<br/>Gratuit pentru totdeauna</sub></td>
+    <td align="center" width="150"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/siliconcloud-color.svg" width="42" alt="SiliconFlow"/><br/><b>SiliconFlow</b><br/><sub>DeepSeek V3.2 / R1<br/>Nivel gratuit</sub></td>
+    <td align="center" width="150"><img src="./public/providers/zhipu.svg" width="42" alt="Z.AI GLM"/><br/><b>Z.AI GLM</b><br/><sub>GLM-4.7 / 4.5-Flash<br/>Gratuit pentru totdeauna</sub></td>
+    <td align="center" width="150"><img src="./public/providers/baidu.svg" width="42" alt="Baidu ERNIE"/><br/><b>Baidu ERNIE</b><br/><sub>ERNIE 4.0<br/>Gratuit pentru totdeauna</sub></td>
   </tr>
   <tr>
-    <td align="center" width="150"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/qoder-color.svg" width="42" alt="Qoder AI"/><br/><b>Qoder AI</b><br/><sub> Qwen3-Max, Kimi-K2 <br/> Nelimitat FREE</sub></td>
-    <td align="center" width="150"><img src="./public/providers/pollinations.svg" width="42" alt="Pollinations"/><br/><b> Polenizări </b><br/><sub>GPT, Llama, Claude<br/> Nu este nevoie de cheie </sub></td>
-    <td align="center" width="150"><img src="./public/providers/cloudflare.svg" width="42" alt="Cloudflare AI"/><br/><b>Cloudflare AI</b><br/><sub> 50 + modele <br/> 10K neurons/day</sub></td>
-    <td align="center" width="150"><img src="./public/providers/nvidia.svg" width="42" alt="NVIDIA NIM"/><br/><b>NVIDIA NIM</b><br/><sub>GLM, MiniMax<br/>~ 40 RPM gratuit </sub></td>
-    <td align="center" width="150"><img src="./public/providers/cerebras.svg" width="42" alt="Cerebras"/><br/><b>Cerebras</b><br/><sub>GLM 4.7, GPT-OSS <br/> Credit unic de 5 USD; card necesar </sub></td>
-    <td align="center" width="150"><img src="./public/providers/openrouter.svg" width="42" alt="OpenRouter"/><br/><b>OpenRouter</b><br/><sub>:modele gratuite <br/>+ 10 $ → mai mare RPM</sub></td>
+    <td align="center" width="150"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/qoder-color.svg" width="42" alt="Qoder AI"/><br/><b>Qoder AI</b><br/><sub>Qwen3-Max, Kimi-K2<br/>GRATUIT și nelimitat</sub></td>
+    <td align="center" width="150"><img src="./public/providers/pollinations.svg" width="42" alt="Pollinations"/><br/><b>Pollinations</b><br/><sub>GPT, Llama, Claude<br/>Nu este necesară nicio cheie</sub></td>
+    <td align="center" width="150"><img src="./public/providers/cloudflare.svg" width="42" alt="Cloudflare AI"/><br/><b>Cloudflare AI</b><br/><sub>Peste 50 de modele<br/>10K neuroni/zi</sub></td>
+    <td align="center" width="150"><img src="./public/providers/nvidia.svg" width="42" alt="NVIDIA NIM"/><br/><b>NVIDIA NIM</b><br/><sub>GLM, MiniMax<br/>~40 RPM gratuit</sub></td>
+    <td align="center" width="150"><img src="./public/providers/cerebras.svg" width="42" alt="Cerebras"/><br/><b>Cerebras</b><br/><sub>GLM 4.7, GPT-OSS<br/>Credit unic de $5; este necesar un card</sub></td>
+    <td align="center" width="150"><img src="./public/providers/openrouter.svg" width="42" alt="OpenRouter"/><br/><b>OpenRouter</b><br/><sub>Modele :free<br/>+$10 → RPM mai mare</sub></td>
   </tr>
 </table>
 
-📖 Catalog complet citibil de mașină → [`docs/reference/PROVIDER_REFERENCE.md`](docs/reference/PROVIDER_REFERENCE.md)
+📖 Catalog complet, lizibil automat → [`docs/reference/PROVIDER_REFERENCE.md`](docs/reference/PROVIDER_REFERENCE.md)
 
 <br/>
 </div>
@@ -1289,29 +1289,29 @@ Metrici canonice la 2026-10-18: **1.976 de videoclipuri unice** · **20.220.289 
 <br/>
 <div align="center">
 
-## 🛠️ Tech Stack
+## 🛠️ Stack tehnologic
 
 </div>
 
 <table>
-  <tr><th align="left"> Strat </th><th align="left"> Tehnologie </th></tr>
-  <tr><td nowrap><b> Timp de rulare </b></td><td>Node.js 22.x / 24.x LTS — <code>&gt;= 22.22.2 &lt; 23 || &gt;=</tr>&lt;</td></code>
-  <tr><td nowrap><b> Limbă </b></td><td>TypeScript 6.0 — <b> 100% TypeScript</b> în <code> src/</code> și <code> open-sse/</code> (zero <code> orice </code> în core de la v2.0)</td></tr>
-  <tr><td nowrap><b> Framework </b></td><td>Next.js 16 + React 19 + Tailwind CSS 4 </td></tr>
-  <tr><td nowrap><b> Baza de date </b></td><td> better-sqlite3 (SQLite, WAL journaling) + LowDB (JSON legacy) — 147 module de domeniu, 213 migrari </td></tr>
-  <tr><td nowrap><b> Memorie </b></td><td>SQLite FTS5 text integral + înglobări vectoriale cuantizate int8, dezintegrare tastat </td></tr>
-  <tr><td nowrap><b> Scheme </b></td><td>Zod 4 — instrument MCP validare I/O + contracte </td>API </tr>
-  <tr><td nowrap><b> Protocoale </b></td><td>MCP (stdio / HTTP / SSE) + A2A v0.3 (JSON-RPC 2.0 + SSE)</td></tr>
-  <tr><td nowrap><b> Streaming </b></td><td> Evenimente trimise de server (SSE) + WebSocket bridge (<code>/v1/ws </code>)</td></tr>
-  <tr><td nowrap><b> Compresie </b></td><td> conductă cu 12 motoare — RTK, Caveman, LLMLingua-2 (MobileBERT ONNX), GCF, OmniGlyph</td></tr>
-  <tr><td nowrap><b> Auth &amp; security </b></td><td>OAuth 2.0 (PKCE) + JWT + API Chei + MCP scoped auth · AES-256-GCM în repaus · DOMPurify </td></tr>
-  <tr><td nowrap><b> Stealth </b></td><td> wreq-js — JA3 / JA4 TLS imitarea amprentei, proxy pe 3 nivele </td></tr>
-  <tr><td nowrap><b> Reziliență </b></td><td> Întrerupător de circuit, backoff exponențial, anti-tunet-turd, auto-combo auto-vindecare </td></tr>
-  <tr><td nowrap><b> Înregistrare </b></td><td> pino — jurnale JSON structurate cu context de solicitare </td></tr>
-  <tr><td nowrap><b> Testare </b></td><td>Node.js test runner + Vitest — <b> 56.000 + declarații de testare statică </b> în 7.800 </tr> fișiere de testare urmărite + (unitate, integrare, E2E, securitate, ecosistem)</td>
-  <tr><td nowrap><b> Platforme </b></td><td> Desktop (Electron) · Android (Termux) · PWA (orice browser)</td></tr>
-  <tr><td nowrap><b>CI/CD</b></td><td>GitHub Acțiuni — auto npm publish + Docker Hub la lansare </td></tr>
-  <tr><td nowrap><b> Link-uri </b></td><td><a href="https://omniroute.online"> Site web </a> · <a href="https://www.npmjs.com/package/omniroute"> npm </a> · <a href="https://hub.docker.com/r/diegosouzapw/omniroute">Docker Hub </a></td></tr>
+  <tr><th align="left">Nivel</th><th align="left">Tehnologie</th></tr>
+  <tr><td nowrap><b>Runtime</b></td><td>Node.js 22.x / 24.x LTS — <code>&gt;=22.22.2 &lt;23 || &gt;=24.0.0 &lt;27</code></td></tr>
+  <tr><td nowrap><b>Limbaj</b></td><td>TypeScript 6.0 — <b>100% TypeScript</b> în <code>src/</code> și <code>open-sse/</code> (zero <code>any</code> în nucleu începând cu v2.0)</td></tr>
+  <tr><td nowrap><b>Framework</b></td><td>Next.js 16 + React 19 + Tailwind CSS 4</td></tr>
+  <tr><td nowrap><b>Bază de date</b></td><td>better-sqlite3 (SQLite, jurnalizare WAL) + LowDB (JSON legacy) — 147 module de domeniu, 213 migrări</td></tr>
+  <tr><td nowrap><b>Memorie</b></td><td>SQLite FTS5 full-text + embeddings vectoriali cuantizați int8, decay tipizat</td></tr>
+  <tr><td nowrap><b>Scheme</b></td><td>Zod 4 — validare I/O pentru uneltele MCP + contracte API</td></tr>
+  <tr><td nowrap><b>Protocoale</b></td><td>MCP (stdio / HTTP / SSE) + A2A v0.3 (JSON-RPC 2.0 + SSE)</td></tr>
+  <tr><td nowrap><b>Streaming</b></td><td>Server-Sent Events (SSE) + punte WebSocket (<code>/v1/ws</code>)</td></tr>
+  <tr><td nowrap><b>Compresie</b></td><td>Pipeline cu 12 motoare — RTK, Caveman, LLMLingua-2 (MobileBERT ONNX), GCF, OmniGlyph</td></tr>
+  <tr><td nowrap><b>Autentificare și securitate</b></td><td>OAuth 2.0 (PKCE) + JWT + chei API + autentificare MCP cu domenii de aplicare · AES-256-GCM în repaus · DOMPurify</td></tr>
+  <tr><td nowrap><b>Stealth</b></td><td>wreq-js — impersonare a amprentei TLS JA3 / JA4, proxy pe 3 niveluri</td></tr>
+  <tr><td nowrap><b>Reziliență</b></td><td>Circuit breaker, backoff exponențial, anti-thundering-herd, auto-vindecare auto-combo</td></tr>
+  <tr><td nowrap><b>Logare</b></td><td>pino — jurnale JSON structurate cu contextul cererii</td></tr>
+  <tr><td nowrap><b>Testare</b></td><td>Node.js test runner + Vitest — <b>peste 56.000 de declarații de test statice</b> în peste 7.800 de fișiere de test urmărite (unitare, de integrare, E2E, de securitate, de ecosistem)</td></tr>
+  <tr><td nowrap><b>Platforme</b></td><td>Desktop (Electron) · Android (Termux) · PWA (orice browser)</td></tr>
+  <tr><td nowrap><b>CI/CD</b></td><td>GitHub Actions — publicare automată npm + Docker Hub la lansare</td></tr>
+  <tr><td nowrap><b>Linkuri</b></td><td><a href="https://omniroute.online">Website</a> · <a href="https://www.npmjs.com/package/omniroute">npm</a> · <a href="https://hub.docker.com/r/diegosouzapw/omniroute">Docker Hub</a></td></tr>
 </table>
 
 <div align="center">

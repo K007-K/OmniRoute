@@ -6,14 +6,14 @@
 
 <div align="center">
 
-<img src="./docs/screenshots/MainOmniRoute.png" alt="OmniRoute Dashboard" width="820"/>
+<img src="./docs/screenshots/MainOmniRoute.png" alt="OmniRoute ဒက်ရှ်ဘုတ်" width="820"/>
 
 <br/>
 <br/>
 
-# 🚀 OmniRoute — အခမဲ့ AI ဂိတ်ဝေး
+# 🚀 OmniRoute — အခမဲ့ AI Gateway
 
-<img src="./docs/diagrams/readme-hero.svg" width="100%" alt="OmniRoute — Never stop coding. Every AI tool → 377 providers — 150+ free — through one endpoint. Claude Code, Codex, Cursor, Cline, Copilot & Antigravity into FREE Claude / GPT / Gemini with auto-fallback. RTK + Caveman stacked compression saves 15–95% tokens (~89% avg) — never hit limits. 377 AI providers · 150+ free tiers · ~1.62B free tokens/mo · 20 routing strategies · $0 to start."/>
+<img src="./docs/diagrams/readme-hero.svg" width="100%" alt="OmniRoute — ကုဒ်ရေးသားမှုကို ဘယ်တော့မှ မရပ်လိုက်ပါနှင့်။ AI ကိရိယာတိုင်း → ဝန်ဆောင်မှုပေးသူ 377 ခု — အခမဲ့ 150+ ခု — endpoint တစ်ခုတည်းမှတစ်ဆင့်။ Claude Code၊ Codex၊ Cursor၊ Cline၊ Copilot နှင့် Antigravity တို့ကို အလိုအလျောက် fallback ပါရှိသော အခမဲ့ Claude / GPT / Gemini နှင့် ချိတ်ဆက်ပါ။ RTK + Caveman အဆင့်ဆင့်ဖိသိပ်မှုက token 15–95% (~89% ပျမ်းမျှ) ကို ချွေတာပေးသောကြောင့် ကန့်သတ်ချက်များကို ဘယ်တော့မှ မထိတော့ပါ။ AI ဝန်ဆောင်မှုပေးသူ 377 ခု · အခမဲ့အဆင့် 150+ ခု · တစ်လလျှင် အခမဲ့ token ~1.62B · လမ်းကြောင်းရွေးချယ်မှု မဟာဗျူဟာ 20 ခု · စတင်ရန် $0။"/>
 
 </div>
 
@@ -222,48 +222,48 @@
 
 <a id="first-run"></a>
 
-## 🆓 ထည့်သွင်းပါ၊ ဝန်ဆောင်မှုပေးသူတစ်ဦးကို ချိတ်ဆက်ပါ၊ ထို့နောက် အဆုံးမှတ်တစ်ခုမှတစ်ဆင့် လမ်းကြောင်းပေးပါ။
+## 🆓 ထည့်သွင်းပါ၊ provider တစ်ခု ချိတ်ဆက်ပါ၊ ပြီးနောက် endpoint တစ်ခုတည်းမှတဆင့် route လုပ်ပါ
 
 </div>
 
-<img src="./docs/diagrams/works-zero-config.svg" width="100%" alt="Three steps: install and start OmniRoute, connect an eligible provider with your own account or API key, then point your tool at localhost:20128/v1 using an OmniRoute API key and model auto. Routing depends on available eligible connections and provider limits."/>
+<img src="./docs/diagrams/works-zero-config.svg" width="100%" alt="အဆင့်သုံးဆင့်- OmniRoute ကို ထည့်သွင်းပြီး စတင်ပါ၊ သင့်ကိုယ်ပိုင် account သို့မဟုတ် API key ဖြင့် eligible provider တစ်ခု ချိတ်ဆက်ပါ၊ ပြီးနောက် OmniRoute API key နှင့် model auto ကို အသုံးပြု၍ သင့် tool ကို localhost:20128/v1 သို့ ညွှန်ပါ။ Routing သည် ရရှိနိုင်သော eligible ချိတ်ဆက်မှုများနှင့် provider ကန့်သတ်ချက်များပေါ် မူတည်သည်။"/>
 
 ```bash
-# After connecting a provider, copy your OmniRoute key from Dashboard → Endpoints:
+# Provider တစ်ခု ချိတ်ဆက်ပြီးနောက်၊ Dashboard → Endpoints မှ သင့် OmniRoute key ကို ကူးယူပါ-
 curl http://localhost:20128/v1/chat/completions \
   -H "Authorization: Bearer YOUR_OMNIROUTE_KEY" \
   -H "Content-Type: application/json" \
   -d '{"model":"auto","messages":[{"role":"user","content":"Hello!"}]}'
 ```
 
-<sub> `auto` အရည်အချင်းပြည့်မီသော လမ်းကြောင်းတစ်ခု လိုအပ်သည်။ အသစ်တပ်ဆင်မှုတွင် အရည်အချင်းပြည့်မီသော သော့မဲ့ပစ်မှတ်များ မရှိနိုင်ပါ၊ သော့မပါသောဝန်ဆောင်မှုပေးသူတစ်ဦးသည် ပြင်ပကုမ္ပဏီဖောက်သည်များကို ငြင်းပယ်နိုင်သည်။ `tos: avoid` အပါအဝင် Kiro ဟု အမှတ်အသားပြုထားသည့် ဝန်ဆောင်မှုပေးသူများကို မူရင်းအတိုင်း အလိုအလျောက်လမ်းကြောင်းပေးခြင်းမှ ဖယ်ထုတ်ထားသည်။ အကောင့်တစ်ခုကို ချိတ်ဆက်ခြင်းသည် ထိုဆက်တင်ကို မကျော်စေပါ။ ဝန်ဆောင်မှုပေးသူကို မရွေးချယ်မီ [အခမဲ့အဆင့်လမ်းညွှန်ကို](docs/getting-started/FREE-TIERS-GUIDE.md) ကြည့်ပါ။</sub>
+<sub>`auto` သည် eligible route တစ်ခု လိုအပ်သည်။ ထည့်သွင်းမှုအသစ်တွင် eligible keyless target များ လုံးဝမရှိနိုင်ပြီး၊ keyless provider က third-party client များကို ငြင်းပယ်နိုင်သည်။ Kiro အပါအဝင် `tos: avoid` ဟု မှတ်သားထားသော provider များကို automatic routing မှ မူလသတ်မှတ်ချက်အရ ဖယ်ထုတ်ထားပြီး၊ account ချိတ်ဆက်ခြင်းက ထိုသတ်မှတ်ချက်ကို ကျော်လွန်စေမည်မဟုတ်ပါ။ Provider တစ်ခု မရွေးချယ်မီ [Free Tiers Guide](docs/getting-started/FREE-TIERS-GUIDE.md) ကို ကြည့်ပါ။</sub>
 
-<sub>📦 အမြန်စတင်ရန် scripts များကို ကူးထည့်ပါ။** Python၊ Node.js၊ PHP နှင့် cURL** → [`examples/quickstart/`](examples/quickstart/)</sub>
+<sub>📦 **Python, Node.js, PHP နှင့် cURL** အတွက် copy-paste quickstart script များ → [`examples/quickstart/`](examples/quickstart/)</sub>
 
 <br/>
 
 <div align="center">
 
-# 💥 The Promise
+# 💥 ကတိ
 
 </div>
 
-<img src="./docs/diagrams/promise-pillars.svg" width="100%" alt="The Promise — One endpoint and 377 providers. Automatic fallback keeps routing while another healthy target is available. Six pillars: resilient fallback across 377 providers · up to 95% token savings on eligible workloads · $0 to start with 150+ free tiers and 52 recurring/keyless free-forever providers · 37 CLI/agent integrations through one config · OpenAI, Claude, Gemini and Responses API compatibility at /v1 · production controls including circuit breakers, TLS stealth, MCP 110 tools, A2A, memory, guardrails, evals and 56,000+ static test declarations across 7,800+ tracked test files."/>
+<img src="./docs/diagrams/promise-pillars.svg" width="100%" alt="ကတိ — Endpoint တစ်ခုနှင့် provider 377 ခု။ နောက်ထပ် ကျန်းမာသော target တစ်ခု ရရှိနိုင်သေးသရွေ့ automatic fallback က routing ကို ဆက်လက်လုပ်ဆောင်နေမည်။ အဓိကအချက်ခြောက်ချက်- provider 377 ခုအပေါ် resilient fallback · eligible workload များတွင် token 95% အထိ သက်သာစေခြင်း · free tier 150+ နှင့် recurring/keyless free-forever provider 52 ခုဖြင့် $0 ဖြင့် စတင်နိုင်ခြင်း · config တစ်ခုတည်းမှတဆင့် CLI/agent integration 37 ခု · /v1 တွင် OpenAI, Claude, Gemini နှင့် Responses API compatibility · circuit breaker, TLS stealth, MCP tool 110 ခု, A2A, memory, guardrail, eval နှင့် track လုပ်ထားသော test file 7,800+ ကျော်အပေါ် static test declaration 56,000+ အပါအဝင် production ထိန်းချုပ်မှုများ"/>
 
 <br/>
 <br/>
 
 <div align="center">
 
-# 🤔 အဘယ်ကြောင့် OmniRoute?
+# 🤔 ဘာကြောင့် OmniRoute လဲ?
 
 </div>
 
-<img src="./docs/diagrams/why-pain-fix.svg" width="100%" alt="Why OmniRoute — stop juggling 10 dashboards, dead API keys and surprise bills. Ten daily pains vs fixes: quota expiring unused → maximize subscriptions; rate limits mid-coding → 4-tier auto-fallback (Subscription → API → Cheap → Free); tool outputs burning tokens → RTK + Caveman compression (15–95%); expensive APIs → cost-optimized routing; every tool its own setup → one endpoint, one dashboard; AI blocked → 3-level proxy + TLS stealth; dead keys → 3-layer resilience (circuit breakers, key cooldown, model lockout); team sharing one subscription → key pools with fair-share quotas; prompts through someone's cloud → local-first with AES-256-GCM encrypted keys; no spend visibility → live analytics (usage, quota, savings, p95 latency)."/>
+<img src="./docs/diagrams/why-pain-fix.svg" width="100%" alt="ဘာကြောင့် OmniRoute လဲ — dashboard 10 ခု၊ သေသွားသော API key များနှင့် မမျှော်လင့်ထားသော ဘေလ်များကို ရင်ဆိုင်နေရခြင်းမှ ရပ်တန့်ပါ။ နေ့စဉ် နာကျင်မှုဆယ်ခုနှင့် ဖြေရှင်းချက်များ- မသုံးဘဲ သက်တမ်းကုန်သွားသော quota → subscription များကို အကျိုးရှိဆုံး အသုံးချပါ; code ရေးနေစဉ် rate limit → 4-tier auto-fallback (Subscription → API → Cheap → Free); tool output များက token များ လောင်ကျွမ်းစေခြင်း → RTK + Caveman compression (15–95%); expensive API များ → cost-optimized routing; tool တိုင်းအတွက် ကိုယ်ပိုင် setup → endpoint တစ်ခု၊ dashboard တစ်ခု; AI ပိတ်ဆို့ခံရခြင်း → 3-level proxy + TLS stealth; သေသွားသော key များ → 3-layer resilience (circuit breaker, key cooldown, model lockout); team တစ်ခုလုံး subscription တစ်ခု မျှဝေသုံးခြင်း → fair-share quota ပါသော key pool များ; prompt များ တစ်ခြားသူ၏ cloud မှတဆင့် → AES-256-GCM encryption လုပ်ထားသော key များဖြင့် local-first; အသုံးစာရိတ် မမြင်နိုင်ခြင်း → live analytics (usage, quota, savings, p95 latency)"/>
 
 <div align="center">
 
-<img src="./docs/diagrams/tier-cascade.svg" width="100%" alt="OmniRoute request flow: your IDE or CLI (Claude Code, Cursor, Cline…) calls one local endpoint (http://localhost:20128/v1); the OmniRoute Smart Router (RTK + Caveman compression, 20 routing strategies, circuit breakers, TLS stealth, MCP, A2A, guardrails) can fall back across 4 provider tiers while an eligible healthy target remains — Tier 1 Subscription, Tier 2 API Key, Tier 3 Cheap and Tier 4 Free."/>
+<img src="./docs/diagrams/tier-cascade.svg" width="100%" alt="OmniRoute request flow- သင့် IDE သို့မဟုတ် CLI (Claude Code, Cursor, Cline…) က local endpoint တစ်ခု (http://localhost:20128/v1) ကို ခေါ်ဆိုသည်။ OmniRoute Smart Router (RTK + Caveman compression, routing strategy 20 ခု, circuit breaker, TLS stealth, MCP, A2A, guardrail) သည် eligible ကျန်းမာသော target ကျန်ရှိနေသေးသရွေ့ provider tier 4 ခုအပေါ် fallback လုပ်နိုင်သည် — Tier 1 Subscription, Tier 2 API Key, Tier 3 Cheap နှင့် Tier 4 Free"/>
 
 </div>
 
@@ -504,13 +504,13 @@ strategy **20** ခုလုံးကို ကွန်ဘိုအဆင့်
 
 <div align="center">
 
-## 🏆 သည် OmniRoute ခြားခြင်းကို သတ်မှတ်သည်။
+## 🏆 OmniRoute ကို ထူးခြားစေသည့်အရာများ
 
 </div>
 
-<img src="./docs/diagrams/comparison-table.svg" width="100%" alt="What sets OmniRoute apart — a dated feature snapshot vs 9router, OpenRouter, CLIProxyAPI and LiteLLM across 13 capabilities. OmniRoute: 377 providers, 150+ free tiers built in, 20 routing strategies, 12-engine token compression, built-in MCP server with 110 tools, A2A agent protocol, persistent memory, guardrails, cloud agents, TLS fingerprint stealth, Desktop/Termux/PWA and 67 i18n UI locales. OmniRoute is MIT-licensed and self-hostable. Competitor capabilities and counts may change; see the linked methodology."/>
+<img src="./docs/diagrams/comparison-table.svg" width="100%" alt="OmniRoute ကို ထူးခြားစေသည့်အရာများ — စွမ်းဆောင်ရည် 13 မျိုးအရ 9router၊ OpenRouter၊ CLIProxyAPI နှင့် LiteLLM တို့နှင့် ရက်စွဲအလိုက် နှိုင်းယှဉ်ထားသည့် စွမ်းဆောင်ချက်အကျဉ်းချုပ်။ OmniRoute တွင် ဝန်ဆောင်မှုပေးသူ 377 ခု၊ အသင့်ထည့်သွင်းထားသော အခမဲ့အဆင့် 150 ကျော်၊ လမ်းကြောင်းသတ်မှတ်ခြင်းနည်းဗျူဟာ 20 မျိုး၊ အင်ဂျင် 12 ခုသုံး တိုကင်ချုံ့စနစ်၊ ကိရိယာ 110 ပါသည့် အသင့်ထည့်သွင်းထားသော MCP ဆာဗာ၊ A2A အေးဂျင့်ပရိုတိုကော၊ အမြဲတမ်းမှတ်ဉာဏ်၊ ကာကွယ်ရေးစည်းမျဉ်းများ၊ ကလောက်ဒ်အေးဂျင့်များ၊ TLS fingerprint ကို ဖုံးကွယ်ခြင်း၊ Desktop/Termux/PWA နှင့် i18n UI ဒေသသုံးဘာသာစကား 67 မျိုး ပါဝင်သည်။ OmniRoute သည် MIT လိုင်စင်ဖြင့် ထုတ်ဝေထားပြီး ကိုယ်ပိုင်ဆာဗာတွင် လက်ခံတင်ဆက်နိုင်သည်။ ပြိုင်ဘက်များ၏ စွမ်းဆောင်ရည်များနှင့် အရေအတွက်များသည် ပြောင်းလဲနိုင်သည်။ လင့်ခ်ချိတ်ထားသော နည်းစနစ်ကို ကြည့်ပါ။"/>
 
-<sub>📊 နည်းစနစ်အပြည့်အစုံ &amp; per-feature detail vs 9router, OpenRouter, CLIProxyAPI &amp; LiteLLM → [`docs/comparison/OMNIROUTE_VS_ALTERNATIVES.md`](docs/comparison/OMNIROUTE_VS_ALTERNATIVES.md)</sub>
+<sub>📊 နည်းစနစ်အပြည့်အစုံနှင့် စွမ်းဆောင်ချက်တစ်ခုချင်းအလိုက် 9router၊ OpenRouter၊ CLIProxyAPI နှင့် LiteLLM တို့နှင့် အသေးစိတ်နှိုင်းယှဉ်ချက် → [`docs/comparison/OMNIROUTE_VS_ALTERNATIVES.md`](docs/comparison/OMNIROUTE_VS_ALTERNATIVES.md)</sub>
 
 <br/>
 
@@ -576,39 +576,39 @@ Radar သည် opt-in ဖြစ်ပြီး GET-only ဖြစ်ပါသ�
 
 <div align="center">
 
-## ✨ ဘာအသစ်လဲ။
+## ✨ ဘာအသစ်တွေရှိလဲ
 
 </div>
 
-> မကြာသေးမီကမှ ပေါ်လွင်လာသည်။** v3.8.20 → v3.8.53** . [`CHANGELOG.md`](CHANGELOG.md) တွင်သမိုင်းအပြည့်အစုံ။
+> **v3.8.20 → v3.8.53** ကာလအတွင်းက ထူးခြားချက်များ။ မှတ်တမ်းအပြည့်အစုံကို [`CHANGELOG.md`](CHANGELOG.md) မှာ ကြည့်ပါ။
 
-- **⚖️ `quota-weighted` လမ်းကြောင်း** — 20th ပေါင်းစပ်နည်းဗျူဟာသည် ကုန်ဆုံးသွားသောအကောင့်များကို ကျော်သွားသည်၊ ထို့နောက် ကျန်ရှိသော quota ÷ in-flight load သို့ အချိုးအစားဆွဲကာ၊ ရှိပြီးသားစကားဝိုင်းများကို ပင်တွဲထားသည်။ → [Auto-Combo](docs/routing/AUTO-COMBO.md)
-- **🧰 Headless မုဒ်** — `omniroute serve --headless` (သို့မဟုတ် `OMNIROUTE_HEADLESS=1`) သည် ဒက်ရှ်ဘုတ်နှင့် ဒက်ရှ်ဘုတ်-သီးသန့်ခွဲစနစ်များကို ပိတ်ထားခြင်းဖြင့် `/v1/*` ပရောက်စီအင်ဂျင်ကိုသာ လုပ်ဆောင်သည်။ → [ခေါင်းမဲ့မုဒ်](docs/guides/HEADLESS.md)
-- **🔎 မော်ဒယ်ရှာဖွေမှု** — `/v1/models` စွမ်းရည်၊ အကြောင်းအရာ၊ အမျိုးအစားနှင့် စာသားဖြင့် စစ်ထုတ်ပြီး `POST /v1/models/query` တူညီသောသော့တစ်ခုစီမြင်နိုင်စွမ်းဖြင့် တိုတောင်းသော အဆုံးအဖြတ်ဆန်သောစာရင်းကို ပြန်ပေးသည်။ → [API အကိုးအကား](docs/reference/API_REFERENCE.md)
-- **🔑 Per-key လမ်းကြောင်းထိန်းချုပ်မှု** — API သော့ကို မော်ဒယ်တစ်ခုသို့ `forcedModel` ဖြင့် တွဲချိတ်ပါ၊ ကီးတစ်ခု၏ မော်ဒယ်များနှင့် ပေါင်းစပ်မှုများကို အက်တမ်အလိုက် (`/api/keys/{id}/access`) ပေါင်းထည့် သို့မဟုတ် ဖယ်ရှားပါ။ → [API ကိုးကား](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
-- **🛡️ Finer PII ထိန်းချုပ်မှုများ** - အမျိုးအစားတစ်ခုချင်းရွေးချယ်မှု၊ အတည်ပြုထားသော စိတ်ကြိုက်မျက်နှာဖုံးပုံစံ 20 အထိနှင့် အမျိုးအစားအလိုက် ထောက်လှမ်းမှုကောင်တာများ။ မျက်နှာဖုံးစွပ်ခြင်းသည် ကိုယ်တိုင်ရွေးချယ်ဝင်ရောက်မှုရှိနေပါသည်။ → [Guardrails](docs/security/GUARDRAILS.md)
-- **🌍 67 ဘာသာစကားများ** — `npm run i18n:add-locale` သည် command တစ်ခုတည်းတွင် နေရာတိုင်းတွင် ဘာသာစကားတစ်ခုကို ပေါင်းထည့်ခြင်းဖြင့် ဒက်ရှ်ဘုတ်၊ docs mirrors နှင့် CLI။ → [i18n လမ်းညွှန်](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — သင့်အေးဂျင့်အဖွဲ့ထံသို့ A2A ကိုယ်စားလှယ်အဖွဲ့၊ အေးဂျင့်ကတ်ရှိ စပယ်ယာကျွမ်းကျင်မှု၊ နှင့် Faro တွန်းအားပေးစကားပြောနိုင်သော အသံချတ်ပါရှိသော ဒိုင်ခွက်အကန့်တစ်ခု။ → [A2A ဆာဗာ](docs/frameworks/A2A-SERVER.md)
-- **🛂 အလိုက်သင့် ဝင်ခွင့်နှင့် ဝန်ပိုခြင်း အကာအကွယ်** — ဟဲဗီးဝိတ်ချတ်သည် ချိတ်ဆက်မှုတစ်ခုလျှင် အနုမြူဗုံး RPM ငှားရမ်းမှုဖြင့် 503ing အစား တန်းစီရန် တောင်းဆိုသည်။ → [ခံနိုင်ရည်ရှိမှုလမ်းညွှန်](docs/architecture/RESILIENCE_GUIDE.md)
-- **🗂️ Canonical `/v1/models` အော်ဒါမှာခြင်း။** — ဝန်ဆောင်မှုပေးသူတစ်ဦးစီမှ အုပ်စုဖွဲ့ထားသော ဘလောက်တစ်ခု (combos များကို ဦးစွာထိုးထားသည်)၊ ကတ်တလောက်အရင်းအမြစ်တိုင်းတွင် တည်ငြိမ်သည်။ → [API အကိုးအကား](docs/reference/API_REFERENCE.md)
-- **🗜️ Compression တင်းမာခြင်း။** — default-on ငွေကြေးဖောင်းပွမှုကာကွယ်မှု၊ DE / FR / JA + Chinese (wényán), Gradle & အတွက် RTK စစ်ထုတ်မှုများ။NET→ [Compression](docs/compression/COMPRESSION_ENGINES.md)
-- **💸 ရိုးသားသောနှုန်းထား ကုန်ကျစရိတ်** — စာရင်းသွင်းမှု / coding-plan ပံ့ပိုးပေးသူများဖတ်ပါ။** $0** ကုန်ကျစရိတ်ခွဲခြမ်းစိတ်ဖြာမှု၌ ဘတ်ဂျက်၊ ခွဲတမ်းနှင့် လမ်းကြောင်းကို ဆက်လက် ခန့်မှန်းသည်။ → [API အကိုးအကား](docs/reference/API_REFERENCE.md)
-- **⚖️ Quota-Share လမ်းကြောင်း** — မျှဝေထားသောအကောင့်၏ခွဲတမ်းကို ပေါင်းစပ်ထားသောသော့များဖြင့် မျှမျှတတခွဲ၍ အလုပ်အားထိန်းသိမ်းသောကြောင့် idle slices များကို ထုတ်ချေးပါ။ → [ခံနိုင်ရည်ရှိမှုလမ်းညွှန်](docs/architecture/RESILIENCE_GUIDE.md)
-- **🤖 One-command CLI/agent စနစ်ထည့်သွင်းခြင်း။** - မှတ်ပုံတင်ထားသော `setup-*` အမိန့် ၁၅ ခု၊ `omniroute run` သည် 7 CLIs (Claude Code, Codex, Aider, Goose, OpenCode, Qwen Code, Gemini CLI); `omniroute configure` အပြန်အလှန်အကျိုးပြုသည့်ပံ့ပိုးပေးသူ+ မော်ဒယ်ရွေးချယ်သူနှင့် အကြောင်းအရာအလိုက် စိတ်ကြိုက်ရွေးချယ်မှုများဖြင့် ပစ်မှတ် ၁၁ ခုကို ပံ့ပိုးပေးသည်။ → [CLI ပေါင်းစည်းမှုများ](docs/guides/CLI-INTEGRATIONS.md)
-- **🛰️ အဝေးထိန်းမုဒ်** — zqc တိုကင်များ (`connect` / `contexts` / `tokens`) + နှင့် VPS ထည့်သွင်းမှုအတွက် `antigravity` OAuth အထောက်အကူပေးသည့် အဝေးထိန်း OmniRoute မောင်းနှင်ပါ။ → [အဝေးထိန်းမုဒ်](docs/guides/REMOTE-MODE.md)
-- **🧭 ထက်မြက်သော အလိုအလျောက်လမ်းကြောင်းပေးခြင်း** — `auto/<category>:<tier>` combos၊** ပေါင်းစပ်** (မော်ဒယ်ဘောင် + တရားသူကြီး)၊ အလုပ်သတိထားလမ်းပြခြင်း၊ တောင်းဆိုချက်တိုင်း မော်ဒယ်/မုဒ်/ USD-ဘတ်ဂျတ်ကို အစားထိုးသည်။ → [Auto-Combo](docs/routing/AUTO-COMBO.md)
-- **🗜️ Pluggable compression** — ပေါင်းစပ်နိုင်သောအင်ဂျင် 12 ခု + Compression Studios- LLMLingua-2၊ two-tier Ultra၊ omniglyph၊ per-step fidelity gate၊ GCF v3.2၊ drag-reorder editor။ → [Compression](docs/compression/COMPRESSION_ENGINES.md)
-- **🕵️ Transparent MITM ကုဒ်ဝှက်ခြင်း (TPROXY)** — per-SNI CA + trust-store installer ဖြင့် proxy env vars ကို လျစ်လျူရှုသော CLIs ဖမ်းယူပါ။ → [MITM/TPROXY](docs/security/MITM-TPROXY-DECRYPT.md)
-- **💸 ကုန်ကျစရိတ် telemetry နေရာတိုင်း** — အဆုံးမှတ်တိုင်းရှိ `X-OmniRoute-*` cost/usage ခေါင်းစီးများ၊ ကက်ရှ်-HIT ငွေစုခေါင်းစဥ်များ၊ per-key USD ခွဲတမ်းများကို အသုံးပြုသည်။ → [API အကိုးအကား](docs/reference/API_REFERENCE.md)
-- **🧠 Memory သည် သင်ထိန်းချုပ်သည်။** — ပုံမှန်အားဖြင့် ပိတ်သည်၊ int8 vector quantization + တွင် ရိုက်ထည့်ထားသော ပျက်စီးယိုယွင်းမှု၊ per-request `x-omniroute-no-memory` ရွေးချယ်ပါ။ → [မှတ်ဉာဏ်](docs/frameworks/MEMORY.md)
-- **🛡️ လုံခြုံရေး** — LLM လမ်းကြောင်းတိုင်း (အနီရောင်အသင်းအစုံ)၊ အထောက်အထား-မျက်နှာဖုံးအုပ်ထားသော guardrail (လမ်းကြောင်းနှစ်ခုလုံးတွင် API keys/secrets ပေါက်ကြားလာသော အချက်များကို) အခမဲ့ DuckDuckGo နောက်ဆုံး-အပန်းဖြေဝဘ်ရှာဖွေမှု၊ နှင့် ဒက်ရှ်ဘုတ်အတွက် ရွေးချယ်နိုင်သော OIDC အကောင့်ဝင်ဂိတ်တစ်ခု (စကားဝှက်ဝင်ရောက်မှု အမြဲရှိနေသည်)။ → [Guardrails](docs/security/GUARDRAILS.md)
-- **🖼️ New အဆုံးမှတ်များ** — `/v1/ocr` (Mistral OCR) နှင့် `/v1/audio/translations` ( တိတ်တိတ်လေး စတိုင် ) မီဒီယာမျက်နှာပြင်ကို ဝိုင်းထားသည်။ → [API အကိုးအကား](docs/reference/API_REFERENCE.md)
-- **🎨 ရုပ်ပုံ / ဗီဒီယို / အသံမျိုးဆက်** — မီဒီယာအတွက် API တစ်ခု- xAI Grok Imagine & Novita AI ဗီဒီယို၊ ComfyUI၊ Magnific၊ Adobe Firefly၊ Segmind နှင့် ElevenLabs ကဲ့သို့သော စကားပြောဝန်ဆောင်မှုပေးသူများ။ → [API အကိုးအကား](docs/reference/API_REFERENCE.md)
-- **🌍 ဖြန့်ကျက်ခြင်းနှင့် လုပ်ဆောင်မှုများ** — reverse-proxy `basePath`၊ ဘရောက်ဆာ-ဘာသာစကား အလိုအလျောက်ရှာဖွေမှု၊ သော့တစ်ခုစီကိရိယာ ခြေရာခံခြင်း၊ root-less MITM ယုံကြည်မှု၊ zh-TW နယ်မြေသတ်မှတ်ခြင်း။ → [ပတ်ဝန်းကျင်](docs/reference/ENVIRONMENT.md)
-- **🤝 ဝန်ဆောင်မှုပေးသူများနှင့် အေးဂျင့်များ** Devin ဘရောက်ဆာCodex Cursor အကောင့်ဝင်ခြင်း + Ollama ပထမတန်းစား OAuth ၊ Claude Opus 5 & Sonnet 5၊ Kimi တရားဝင်ပါတနာ (Code/Web/Moonshot) ၊ Grok Build (xAI) Jules တောင်းဆိုချက်၊ Zed၊ SenseNova၊ Yuanbao နှင့် AI** 377- ဝန်ဆောင်မှုပေးသူ ကတ်တလောက်** . → [ဝန်ဆောင်မှုပေးသူများ](docs/reference/PROVIDER_REFERENCE.md)
-- **📡 Routing ပွင့်လင်းမြင်သာမှု** — တုံ့ပြန်မှုတိုင်းတွင် ၎င်းကိုအသုံးပြုသော strategy/provider/latency အမည်ပေးထားသော `X-OmniRoute-Decision` ခေါင်းစီးတစ်ခုပါရှိသည်၊ `cache-optimized` ပေါင်းစပ်နည်းဗျူဟာအသစ် + Auto-Combo `cacheAffinity` အချက်ပြလမ်းကြောင်းသည် ကက်ရှ်ရှေ့ဆက်ကိုကိုင်ဆောင်ထားသည့် ချိတ်ဆက်မှုဆီသို့ ပြန်၍တောင်းဆိုမှုများရှိပြီး၊ ဖတ်ရန်-သပ်သပ် `/v1/auto-combo/{channel}/candidates` အဆုံးမှတ်သည် `auto/*` ချန်နယ်၏ တိုက်ရိုက်ကိုယ်စားလှယ်လောင်းအုပ်စုကို ဖော်ထုတ်သည်။ → [အော်တို-ပေါင်းစပ်](docs/routing/AUTO-COMBO.md)
-- **⚡ ဒေသဆိုင်ရာစွမ်းဆောင်ရည်နှင့် အင်ဖရာ** — တစ်ချက်နှိပ်ရုံဖြင့် local Redis၊ Cloudflare Workers / Deno Deploy relay deployers၊ Bifrost & Mux သည် ကြီးကြပ်ထားသော ထည့်သွင်းထားသော ဝန်ဆောင်မှုများအဖြစ်။ → [Embedded ဝန်ဆောင်မှုများ](docs/frameworks/EMBEDDED-SERVICES.md)
-- **🧩 ကိုလည်း box ထဲမှာ** — plugin framework + စျေးကွက်၊ Omni/Agent/GitHub ကျွမ်းကျင်မှုဘောင်များ၊ Obsidian vault ပေါင်းစပ်မှု (22 MCP ကိရိယာများ)၊ OpenAI-compatible Batch & Files APIs၊ semantic response cache၊ gamification with leaderboards၊ ACP agent ရှာဖွေမှု ( built-in အေးဂျင့် Telegram ခု) ၊ BigQuery၊ `auto/chaos` parallel fan app နှင့် multi-mo LMArena-ELO အခမဲ့ဝန်ဆောင်မှုပေးသူ အဆင့်များ။ → [Docs](docs/README.md)
+- **⚖️ `quota-weighted` routing** — ကွမ်ဘို မဟာဗျူဟာ ၂၀ ခုမြောက်က ကုန်ဆုံးသွားတဲ့ အကောင့်တွေကို ကျော်သွားပြီး၊ ကျန်တဲ့အကောင့်တွေကြားမှာ ကျန်ရှိတဲ့ quota ÷ in-flight load အချိုးအစားနဲ့ ရွေးချယ်ကာ ရှိပြီးသား စကားဝိုင်းတွေကို pin ထားဆဲဖြစ်သည်။ → [Auto-Combo](docs/routing/AUTO-COMBO.md)
+- **🧰 Headless မုဒ်** — `omniroute serve --headless` (သို့မဟုတ် `OMNIROUTE_HEADLESS=1`) က `/v1/*` proxy engine ကိုသာ run ပြီး dashboard နဲ့ dashboard-only subsystem တွေကိုပိတ်ထားသည်။ → [Headless Mode](docs/guides/HEADLESS.md)
+- **🔎 မော်ဒယ် ရှာဖွေတွေ့ရှိမှု** — `/v1/models` ကို capability, context, kind နဲ့ text ဖြင့် filter လုပ်နိုင်ပြီး၊ `POST /v1/models/query` က တူညီတဲ့ per-key visibility နဲ့ အတို deterministic shortlist တစ်ခုကို ပြန်ပေးသည်။ → [API Reference](docs/reference/API_REFERENCE.md)
+- **🔑 Per-key routing ထိန်းချုပ်မှု** — `forcedModel` ဖြင့် API key တစ်ခုကို မော်ဒယ် သို့မဟုတ် combo တစ်ခုသို့ pin လုပ်နိုင်ပြီး၊ key ရဲ့ မော်ဒယ်တွေနဲ့ combo တွေကို atomically ထည့်/ဖြုတ်နိုင်သည် (`/api/keys/{id}/access`)။ → [API Reference](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
+- **🛡️ ပိုသေးစိတ်တဲ့ PII ထိန်းချုပ်မှုများ** — type အလိုက် ရွေးချယ်နိုင်မှု၊ အတည်ပြုပြီးသော စိတ်ကြိုက် masking pattern ၂၀ ခုအထိနဲ့ type အလိုက် detection counter များ; masking ကိုယ်တိုင်ကတော့ opt-in အဖြစ်သာ ဆက်ရှိနေသည်။ → [Guardrails](docs/security/GUARDRAILS.md)
+- **🌍 ဘာသာစကား ၆၇ ခု** — dashboard, docs mirror များနဲ့ CLI အတွက်၊ `npm run i18n:add-locale` က ဘာသာစကားတစ်ခုကို command တစ်ခုတည်းနဲ့ နေရာတိုင်းသို့ ထည့်ပေးသည်။ → [i18n Guide](docs/guides/I18N.md)
+- **🎛️ OmniConductor** — သင့် agent fleet သို့ inbound A2A delegation၊ Agent Card ပေါ်က Conductor skill များ၊ Faro push-to-talk voice chat ပါဝင်တဲ့ dashboard panel တစ်ခု။ → [A2A Server](docs/frameworks/A2A-SERVER.md)
+- **🛂 Adaptive admission & overload ကာကွယ်မှု** — heavyweight chat request တွေကို 503 မဖြစ်စေဘဲ queue ထဲတင်ပေးပြီး၊ connection တစ်ခုချင်းစီအတွက် atomic RPM rolling lease များ အသုံးပြုသည်။ → [Resilience Guide](docs/architecture/RESILIENCE_GUIDE.md)
+- **🗂️ Canonical `/v1/models` စီစဉ်မှု** — provider တစ်ခုချင်းစီအတွက် provider-အုပ်စုလိုက် ဆက်စပ် block တစ်ခုချင်း (combo တွေကို အရင် pin ထား)၊ catalog source အားလုံးမှာ တည်ငြိမ်နေသည်။ → [API Reference](docs/reference/API_REFERENCE.md)
+- **🗜️ Compression ခိုင်မာစေခြင်း** — default-on inflation guard၊ DE / FR / JA + တရုတ် (wényán) အတွက် Caveman pack များ၊ Gradle & .NET အတွက် RTK filter များ။ → [Compression](docs/compression/COMPRESSION_ENGINES.md)
+- **💸 ရိုးသားတဲ့ flat-rate ကုန်ကျစရိတ်** — subscription / coding-plan provider တွေကို cost analytics မှာ **$0** အဖြစ် ဖော်ပြပြီး; budget, quota & routing ကတော့ ခန့်မှန်းချက်တွေ ဆက်လုပ်နေသည်။ → [API Reference](docs/reference/API_REFERENCE.md)
+- **⚖️ Quota-Share routing** — shared account တစ်ခုရဲ့ quota ကို pooled key တွေကြား မျှတစွာ ခွဲဝေပြီး၊ idle slice တွေကို အခြားသူများအား ငှားထားနိုင်အောင် work-conserving ဖြစ်သည်။ → [Resilience Guide](docs/architecture/RESILIENCE_GUIDE.md)
+- **🤖 Command တစ်ခုတည်း CLI/agent setup** — register လုပ်ထားတဲ့ `setup-*` command ၁၅ ခု; `omniroute run` က CLI ၇ ခု (Claude Code, Codex, Aider, Goose, OpenCode, Qwen Code, Gemini CLI) ကို launch လုပ်သည်; `omniroute configure` က interactive provider+model picker နဲ့ per-context favorites ဖြင့် target ၁၁ ခုကို support လုပ်သည်။ → [CLI Integrations](docs/guides/CLI-INTEGRATIONS.md)
+- **🛰️ Remote မုဒ်** — scoped token များ (`connect` / `contexts` / `tokens`) ဖြင့် remote OmniRoute ကို ထိန်းချုပ်နိုင်ပြီး၊ VPS install များအတွက် `antigravity` OAuth helper ပါ။ → [Remote Mode](docs/guides/REMOTE-MODE.md)
+- **🧭 ပိုဉာဏ်ရည်မြင့်တဲ့ auto-routing** — `auto/<category>:<tier>` combo များ၊ **Fusion** (model panel + judge), task-aware routing, per-request model / mode / USD-budget override များ။ → [Auto-Combo](docs/routing/AUTO-COMBO.md)
+- **🗜️ Pluggable compression** — composable engine ၁၂ ခု + Compression Studios: LLMLingua-2, two-tier Ultra, omniglyph, per-step fidelity gate, GCF v3.2, drag-reorder editor။ → [Compression](docs/compression/COMPRESSION_ENGINES.md)
+- **🕵️ Transparent MITM decrypt (TPROXY)** — proxy env var တွေကို လျစ်လျူရှုတဲ့ CLI တွေကို ဖမ်းဆီးနိုင်ပြီး၊ per-SNI CA + trust-store installer ပါဝင်သည်။ → [MITM/TPROXY](docs/security/MITM-TPROXY-DECRYPT.md)
+- **💸 နေရာတိုင်းမှာ cost telemetry** — endpoint တိုင်းမှာ `X-OmniRoute-*` cost/usage header များ၊ cache-HIT savings header၊ per-key USD spend quota များ။ → [API Reference](docs/reference/API_REFERENCE.md)
+- **🧠 သင်ထိန်းချုပ်နိုင်တဲ့ memory** — default အဖြစ် ပိတ်ထား၊ opt-in int8 vector quantization + typed decay၊ per-request `x-omniroute-no-memory`။ → [Memory](docs/frameworks/MEMORY.md)
+- **🛡️ လုံခြုံမှု** — LLM route တိုင်းမှာ prompt-injection guard (red-team suite), opt-in credential-masking guardrail (ပေါက်ကြားသွားတဲ့ API key/secret တွေကို နှစ်ဘက်စလုံးမှာ redact လုပ်ပေး), အခမဲ့ DuckDuckGo last-resort web search, dashboard အတွက် optional OIDC login gate (password login ကတော့ အမြဲရနိုင်ဆဲ)။ → [Guardrails](docs/security/GUARDRAILS.md)
+- **🖼️ Endpoint အသစ်များ** — `/v1/ocr` (Mistral OCR) နဲ့ `/v1/audio/translations` (Whisper-style) တို့က media surface ကို ပြည့်စုံစေသည်။ → [API Reference](docs/reference/API_REFERENCE.md)
+- **🎨 ပုံရိပ် / ဗီဒီယို / အသံ ထုတ်လုပ်မှု** — media အတွက် API တစ်ခုတည်း: xAI Grok Imagine & Novita AI video, ComfyUI, Magnific, Adobe Firefly, Segmind, ElevenLabs ကဲ့သို့ speech provider များ။ → [API Reference](docs/reference/API_REFERENCE.md)
+- **🌍 Deployment & ops** — reverse-proxy `basePath`, browser-language auto-detect, per-key device tracking, root-less MITM trust, zh-TW localization။ → [Environment](docs/reference/ENVIRONMENT.md)
+- **🤝 Provider နဲ့ agent ပိုများလာသည်** — cloud agent များ (Codex Cloud, Cursor, Devin, Jules), browser + OAuth login ပါတဲ့ Grok Build (xAI), Ollama first-class card, Claude Opus 5 & Sonnet 5, Kimi တရားဝင် မိတ်ဆွေဖက် (Code/Web/Moonshot), Zed, Requesty, SenseNova, Yuanbao, Agnes AI… နဲ့ ပြန်လည်ဆန်းသစ်ထားတဲ့ **376-provider catalog**။ → [Providers](docs/reference/PROVIDER_REFERENCE.md)
+- **📡 Routing ပွင့်လင်းမြင်သာမှု** — response တိုင်းမှာ ၎င်းကို ဝန်ဆောင်မှုပေးတဲ့ strategy/provider/latency ကို ဖော်ပြတဲ့ `X-OmniRoute-Decision` header ပါဝင်ပြီး၊ `cache-optimized` combo strategy အသစ် + Auto-Combo `cacheAffinity` factor က ထပ်လာတဲ့ request တွေကို cached prefix ကိုင်ဆောင်ထားတဲ့ connection ဆီ ပြန်ပို့ပေးသည်၊ read-only `/v1/auto-combo/{channel}/candidates` endpoint ကလည်း `auto/*` channel တစ်ခုရဲ့ live candidate pool ကို ဖော်ပြပေးသည်။ → [Auto-Combo](docs/routing/AUTO-COMBO.md)
+- **⚡ ဒေသတွင်း စွမ်းဆောင်ရည်နှင့် အခြေခံအဆောက်အအုံ** — တစ်ချက်နှိပ်ရုံဖြင့် အသုံးပြုနိုင်သော local Redis၊ Cloudflare Workers / Deno Deploy relay deployer များ၊ ကြီးကြပ်ခံ embedded service များအဖြစ် ပါဝင်သော Bifrost နှင့် Mux။ → [Embedded ဝန်ဆောင်မှုများ](docs/frameworks/EMBEDDED-SERVICES.md)
+- **🧩 ထပ်ပါဝင်သောအရာများ** — plugin framework + marketplace၊ Omni/Agent/GitHub skills framework များ၊ Obsidian vault ပေါင်းစည်းမှု (MCP tool 22 ခု)၊ OpenAI-compatible Batch & Files API များ၊ semantic response cache၊ leaderboard များပါ gamification၊ ACP agent ရှာဖွေတွေ့ရှိမှု (built-in agent 15 ခု)၊ BigQuery သို့ စီစဉ်ထားသော log တင်ပို့မှု၊ `auto/chaos` parallel multi-model fan-out၊ Telegram bot တံတား၊ app အတွင်းရှိ version manager နှင့် LMArena-ELO free-provider အဆင့်သတ်မှတ်ချက်များ။ → [စာရွက်စာတမ်းများ](docs/README.md)
 
 <br/>
 
@@ -686,35 +686,35 @@ omniroute configure codex          # also: claude opencode qwen aider goose gemi
 
 <div align="center">
 
-## 🌐 377 AI ဝန်ဆောင်မှုပေးသူများ — 153 ကတ်တလောက်-မှတ်သားထားသော အခမဲ့
+## 🌐 AI ဝန်ဆောင်မှုပေးသူ 377 ခု — Catalog တွင် အခမဲ့ဟု မှတ်သားထားသည့် 153 ခု
 
 </div>
 
-> **စာရင်းသွင်းပေးသူ ၃၇၇ ဦး** canonical ချတ်၊ မီဒီယာ၊ ရှာဖွေမှု၊ ဒေသတွင်း၊ cloud-agent နှင့် စနစ်စုဆောင်းမှုများ အပါအဝင်** 153 `hasFree: true` ရှာဖွေတွေ့ရှိမှု မက်တာဒေတာကို သယ်ဆောင်လာသည်။** . chat model registry တွင် ပါဝင်ပါသည်။** ဝန်ဆောင်မှုပေးသူ 239 / 3,059 ထူးခြားသောပံ့ပိုးသူ-မော်ဒယ်အတွဲများ / 1,475 မော်ဒယ် IDs အကြမ်း** ; သီးခြားအခမဲ့ဘတ်ဂျက်ကတ်တလောက် ပါရှိသည်။** ၄၇၁ မော်ဒယ် တန်းစီ** ၊** ထပ်တလဲလဲ ရေကန် ၃၄ ခု** နှင့်** 52 recurring/keyless အခမဲ့ ထာဝရပံ့ပိုးပေးသူများ** . ၎င်းတို့သည် ဒီဇိုင်းအားဖြင့် ကွဲပြားသော ပိုင်းခြေများဖြစ်သည်။ အဓိပ္ပါယ်ဖွင့်ဆိုချက်များနှင့် ပေါင်းထည့်ထားသော တွက်ချက်မှုများသည် [ဝန်ဆောင်မှုပေးသူအကိုးအကား](docs/reference/PROVIDER_REFERENCE.md) နှင့် [အခမဲ့အဆင့်များတွင်](docs/reference/FREE_TIERS.md) နေထိုင်ပါသည်။
+> canonical chat၊ media၊ search၊ local၊ cloud-agent နှင့် system collection များတစ်လျှောက် **မှတ်ပုံတင်ထားသော ဝန်ဆောင်မှုပေးသူ 377 ခု** ရှိပြီး ၎င်းတို့အနက် **153 ခုတွင် `hasFree: true` ရှာဖွေတွေ့ရှိမှု metadata ပါဝင်သည်**။ Chat model registry တွင် **ဝန်ဆောင်မှုပေးသူ 239 ခု / မတူညီသော provider-model အတွဲ 3,059 ခု / raw model ID 1,475 ခု** ပါဝင်ပြီး၊ သီးခြား free-budget catalog တွင် **model တစ်ခုချင်းအလိုက် row 471 ခု**၊ **ထပ်တလဲလဲရရှိနိုင်သော pool 34 ခု** နှင့် **ထပ်တလဲလဲရရှိနိုင်သော/keyless အမြဲတမ်းအခမဲ့ ဝန်ဆောင်မှုပေးသူ 52 ခု** ပါဝင်သည်။ ဒီဇိုင်းအရ ၎င်းတို့၏ ပိုင်းခြေများသည် မတူညီပါသည်။ သတ်မှတ်ချက်များနှင့် pool များကို ထပ်နေမှုဖယ်ရှား၍ တွက်ချက်ထားပုံကို [ဝန်ဆောင်မှုပေးသူ ကိုးကားချက်](docs/reference/PROVIDER_REFERENCE.md) နှင့် [အခမဲ့အဆင့်များ](docs/reference/FREE_TIERS.md) တွင် ကြည့်ရှုနိုင်သည်။
 
 <div align="center">
 
-### 🏢 အဓိကဓာတ်ခွဲခန်းတိုင်း — အဆုံးမှတ်တစ်ခုမှတဆင့်
+### 🏢 အဓိက lab အားလုံး — endpoint တစ်ခုတည်းမှတစ်ဆင့်
 
 <table>
   <tr>
     <td align="center" width="80"><picture><source media="(prefers-color-scheme:dark)" srcset="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-png@1.91.0/dark/openai.png"/><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/openai.svg" width="40" alt="OpenAI"/></picture><br/><sub>OpenAI</sub><br/><sub>                           </sub></td>
     <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/claude-color.svg" width="40" alt="Anthropic"/><br/><sub>Anthropic</sub><br/><sub>                           </sub></td>
     <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/gemini-color.svg" width="40" alt="Gemini"/><br/><sub>Gemini</sub><br/><sub>                           </sub></td>
-    <td align="center" width="80"><picture><source media="(prefers-color-scheme:dark)" srcset="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-png@1.91.0/dark/grok.png"/><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/grok.svg" width="40" alt="xAI Grok"/></picture><br/><sub> xAI Grok</sub><br/><sub> </sub></td>
+    <td align="center" width="80"><picture><source media="(prefers-color-scheme:dark)" srcset="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-png@1.91.0/dark/grok.png"/><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/grok.svg" width="40" alt="xAI Grok"/></picture><br/><sub>xAI Grok</sub><br/><sub>                           </sub></td>
     <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/deepseek-color.svg" width="40" alt="DeepSeek"/><br/><sub>DeepSeek</sub><br/><sub>                           </sub></td>
     <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/mistral-color.svg" width="40" alt="Mistral"/><br/><sub>Mistral</sub><br/><sub>                           </sub></td>
   </tr>
   <tr>
     <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/qwen-color.svg" width="40" alt="Qwen"/><br/><sub>Qwen</sub><br/><sub>                           </sub></td>
-    <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/meta-color.svg" width="40" alt="Meta Llama"/><br/><sub> Meta Llama</sub><br/><sub> </sub></td>
+    <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/meta-color.svg" width="40" alt="Meta Llama"/><br/><sub>Meta Llama</sub><br/><sub>                           </sub></td>
     <td align="center" width="80"><picture><source media="(prefers-color-scheme:dark)" srcset="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-png@1.91.0/dark/groq.png"/><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/groq.svg" width="40" alt="Groq"/></picture><br/><sub>Groq</sub><br/><sub>                           </sub></td>
     <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/nvidia-color.svg" width="40" alt="NVIDIA"/><br/><sub>NVIDIA</sub><br/><sub>                           </sub></td>
     <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/minimax-color.svg" width="40" alt="MiniMax"/><br/><sub>MiniMax</sub><br/><sub>                           </sub></td>
     <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/cohere-color.svg" width="40" alt="Cohere"/><br/><sub>Cohere</sub><br/><sub>                           </sub></td>
   </tr>
   <tr>
-    <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/perplexity-color.svg" width="40" alt="Perplexity"/><br/><sub> ရှုပ်ထွေးခြင်း</sub><br/><sub> </sub></td>
+    <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/perplexity-color.svg" width="40" alt="Perplexity"/><br/><sub>Perplexity</sub><br/><sub>                           </sub></td>
     <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/huggingface-color.svg" width="40" alt="Hugging Face"/><br/><sub>HuggingFace</sub><br/><sub>                           </sub></td>
     <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/together-color.svg" width="40" alt="Together"/><br/><sub>Together</sub><br/><sub>                           </sub></td>
     <td align="center" width="80"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/fireworks-color.svg" width="40" alt="Fireworks"/><br/><sub>Fireworks</sub><br/><sub>                           </sub></td>
@@ -723,32 +723,32 @@ omniroute configure codex          # also: claude opencode qwen aider goose gemi
   </tr>
 </table>
 
-<sub>… နှင့် နောက်ထပ် 350 + — အိုင်ကွန်တိုင်းသည် ဒက်ရှ်ဘုတ်၏ ပံ့ပိုးပေးကတ်တလောက်မှ တိုက်ရိုက်ဖြေရှင်းသည်။ 📖 [ပံ့ပိုးသူ အကိုးအကား](docs/reference/PROVIDER_REFERENCE.md)</sub>
+<sub>…နှင့် နောက်ထပ် 350+ ခု — icon တစ်ခုစီကို dashboard ၏ ဝန်ဆောင်မှုပေးသူ catalog မှ တိုက်ရိုက် ရယူဖော်ပြသည်။ 📖 [ဝန်ဆောင်မှုပေးသူ ကိုးကားချက်](docs/reference/PROVIDER_REFERENCE.md)</sub>
 
 <br/>
 
-### 🆓 အခမဲ့ Forever — $0၊ ကတ်မရှိပါ။
+### 🆓 ထာဝရအခမဲ့ — $0၊ ကတ်မလိုပါ
 
 <table>
   <tr>
-    <td align="center" width="150"><img src="./public/providers/cli-generic.svg" width="42" alt="OpenCode Zen"/><br/><b>OpenCode Zen </b><br/><sub>DeepSeek V4, Nemotron 3 <br/></sub></td>
-    <td align="center" width="150"><img src="./public/providers/cli-generic.svg" width="42" alt="Kilo Code"/><br/><b> Kilo Code </b><br/><sub> အော်တို-ရောက်တာ, Tencent Hy3 <br/> အခမဲ့ထာဝစဉ်</sub></td>
-    <td align="center" width="150"><img src="./public/providers/requesty.svg" width="42" alt="Requesty"/><br/><b> တောင်းဆိုချက်</b><br/><sub> GPT-OSS 120B၊ Nemotron <br/> အခမဲ့</sub></td>
-    <td align="center" width="150"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/siliconcloud-color.svg" width="42" alt="SiliconFlow"/><br/><b>SiliconFlow</b><br/><sub>DeepSeek V3.2 / R1 <br/> အခမဲ့အဆင့်</sub></td>
-    <td align="center" width="150"><img src="./public/providers/zhipu.svg" width="42" alt="Z.AI GLM"/><br/><b> Z.AI GLM</b><br/><sub> GLM-4.7 / 4.5-Flash <br/> Free forever </sub></td>
-    <td align="center" width="150"><img src="./public/providers/baidu.svg" width="42" alt="Baidu ERNIE"/><br/><b>Baidu ERNIE</b><br/><sub>ERNIE 4.0 <br/> Free </sub></td>
+    <td align="center" width="150"><img src="./public/providers/cli-generic.svg" width="42" alt="OpenCode Zen"/><br/><b>OpenCode Zen</b><br/><sub>DeepSeek V4, Nemotron 3<br/>တိုကင်ကန့်သတ်ချက်မရှိ</sub></td>
+    <td align="center" width="150"><img src="./public/providers/cli-generic.svg" width="42" alt="Kilo Code"/><br/><b>Kilo Code</b><br/><sub>အလိုအလျောက်လမ်းကြောင်းရွေးချယ်မှု, Tencent Hy3<br/>အမြဲတမ်းအခမဲ့</sub></td>
+    <td align="center" width="150"><img src="./public/providers/requesty.svg" width="42" alt="Requesty"/><br/><b>Requesty</b><br/><sub>GPT-OSS 120B, Nemotron<br/>အမြဲတမ်းအခမဲ့</sub></td>
+    <td align="center" width="150"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/siliconcloud-color.svg" width="42" alt="SiliconFlow"/><br/><b>SiliconFlow</b><br/><sub>DeepSeek V3.2 / R1<br/>အခမဲ့အဆင့်</sub></td>
+    <td align="center" width="150"><img src="./public/providers/zhipu.svg" width="42" alt="Z.AI GLM"/><br/><b>Z.AI GLM</b><br/><sub>GLM-4.7 / 4.5-Flash<br/>အမြဲတမ်းအခမဲ့</sub></td>
+    <td align="center" width="150"><img src="./public/providers/baidu.svg" width="42" alt="Baidu ERNIE"/><br/><b>Baidu ERNIE</b><br/><sub>ERNIE 4.0<br/>အမြဲတမ်းအခမဲ့</sub></td>
   </tr>
   <tr>
-    <td align="center" width="150"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/qoder-color.svg" width="42" alt="Qoder AI"/><br/><b>Qoder AI</b><br/><sub> Qwen3-Max, Kimi-K2 <br/> န့်အသတ်မရှိ FREE</sub></td>
-    <td align="center" width="150"><img src="./public/providers/pollinations.svg" width="42" alt="Pollinations"/><br/><b> ဝတ်မှုန်ကူးခြင်း</b><br/><sub>GPT, Llama, Claude<br/> သော့မလိုအပ်သော</sub></td>
-    <td align="center" width="150"><img src="./public/providers/cloudflare.svg" width="42" alt="Cloudflare AI"/><br/><b>Cloudflare AI</b><br/><sub> 50 + မော်ဒယ်များ<br/> 10K neurons/day</sub></td>
-    <td align="center" width="150"><img src="./public/providers/nvidia.svg" width="42" alt="NVIDIA NIM"/><br/><b>NVIDIA NIM</b><br/><sub>GLM, MiniMax<br/>~ 40 RPM အခမဲ့</sub></td>
-    <td align="center" width="150"><img src="./public/providers/cerebras.svg" width="42" alt="Cerebras"/><br/><b>Cerebras</b><br/><sub>GLM 4.7၊ GPT-OSS <br/> တစ်ကြိမ် $5 ခရက်ဒစ်; ကတ်</sub></td> လိုအပ်သည်။
-    <td align="center" width="150"><img src="./public/providers/openrouter.svg" width="42" alt="OpenRouter"/><br/><b>OpenRouter</b><br/><sub>: အခမဲ့မော်ဒယ်များ<br/>+$10 → အဆင့်မြင့် RPM</sub></td>
+    <td align="center" width="150"><img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.91.0/icons/qoder-color.svg" width="42" alt="Qoder AI"/><br/><b>Qoder AI</b><br/><sub>Qwen3-Max, Kimi-K2<br/>အကန့်အသတ်မရှိ အခမဲ့</sub></td>
+    <td align="center" width="150"><img src="./public/providers/pollinations.svg" width="42" alt="Pollinations"/><br/><b>Pollinations</b><br/><sub>GPT, Llama, Claude<br/>ကီးမလိုအပ်ပါ</sub></td>
+    <td align="center" width="150"><img src="./public/providers/cloudflare.svg" width="42" alt="Cloudflare AI"/><br/><b>Cloudflare AI</b><br/><sub>မော်ဒယ် 50 ကျော်<br/>တစ်ရက်လျှင် neuron 10K</sub></td>
+    <td align="center" width="150"><img src="./public/providers/nvidia.svg" width="42" alt="NVIDIA NIM"/><br/><b>NVIDIA NIM</b><br/><sub>GLM, MiniMax<br/>~40 RPM အခမဲ့</sub></td>
+    <td align="center" width="150"><img src="./public/providers/cerebras.svg" width="42" alt="Cerebras"/><br/><b>Cerebras</b><br/><sub>GLM 4.7, GPT-OSS<br/>တစ်ကြိမ်သုံး $5 ခရက်ဒစ်; ကတ်လိုအပ်သည်</sub></td>
+    <td align="center" width="150"><img src="./public/providers/openrouter.svg" width="42" alt="OpenRouter"/><br/><b>OpenRouter</b><br/><sub>:free မော်ဒယ်များ<br/>+$10 → ပိုမိုမြင့်မားသော RPM</sub></td>
   </tr>
 </table>
 
-📖 အပြည့်အစုံ စက်-ဖတ်နိုင်သော ကတ်တလောက် → [`docs/reference/PROVIDER_REFERENCE.md`](docs/reference/PROVIDER_REFERENCE.md)
+📖 စက်ဖြင့်ဖတ်ရှုနိုင်သော ကတ်တလောက်အပြည့်အစုံ → [`docs/reference/PROVIDER_REFERENCE.md`](docs/reference/PROVIDER_REFERENCE.md)
 
 <br/>
 </div>
@@ -1283,29 +1283,29 @@ port တစ်ခုတည်းရှိ process တစ်ခုတည်းက
 <br/>
 <div align="center">
 
-## 🛠️ Tech Stack
+## 🛠️ နည်းပညာ Stack
 
 </div>
 
 <table>
-  <tr><th align="left"> Layer </th><th align="left"> နည်းပညာ</th></tr>
-  <tr><td nowrap><b> Runtime </b></td><td>Node.js 22.x / 24.x LTS — <code>&gt;= 22.22.2 &lt; 23 || &gt;= 24.0.0 &lt; 27 </code></td></tr>
-  <tr><td nowrap><b> ဘာသာစကား</b></td><td>TypeScript 6.0 — <b> 100% TypeScript</b> ကိုဖြတ်၍ <code> src/</code> နှင့် <code> open-sse/</code> (v2.0 မှစတင်ကာ core ရှိ</code> မည်သည့် <code>)</td></tr>
-  <tr><td nowrap><b> Framework </b></td><td>Next.js 16 + React 19 + Tailwind CSS 4 </td></tr>
-  <tr><td nowrap><b> ဒေတာဘေ့စ်</b></td><td> ပိုမိုကောင်းမွန်သော-sqlite3 (SQLite၊ WAL ဂျာနယ်ထုတ်ခြင်း) + LowDB (JSON အမွေအနှစ်) — 147 ဒိုမိန်း မော်ဂျူးများ၊ ရွှေ့ပြောင်းခြင်း 213 </td></tr>
-  <tr><td nowrap><b> Memory </b></td><td>SQLite FTS5 စာသားအပြည့်အစုံ + int8-quantized vector embeddings၊ typed decay </td></tr>
-  <tr><td nowrap><b> Schemas </b></td><td>Zod 4 — MCP tool I/O validation + API စာချုပ်များ</td></tr>
-  <tr><td nowrap><b> ကော</b></td><td>MCP (stdio / HTTP / SSE) + A2A v0.3 (JSON-RPC 2.0 + SSE)</td></tr>
-  <tr><td nowrap><b> ထုတ်လွှင့်ခြင်း</b></td><td> Server-Sent Events (SSE) + WebSocket တံတား (<code>/v1/ws </code>)</td></tr>
-  <tr><td nowrap><b> ဖိသိပ်မှု</b></td><td> 12 အင်ဂျင် ပိုက်လိုင်း — RTK, Caveman, LLMLingua-2 (MobileBERT ONNX), GCF, OmniGlyph</td></tr>
-  <tr><td nowrap><b> Auth &amp; လုံခြုံရေး</b></td><td>OAuth 2.0 (PKCE) + JWT + API သော့များ + MCP scoped auth · AES-256-GCM အနားယူချိန် · DOMPurify </td></tr>
-  <tr><td nowrap><b> ကိုယ်ပျောက်</b></td><td> wreq-js — JA3 / JA4 TLS လက်ဗွေအယောင်ဆောင်ခြင်း၊ 3 အဆင့် proxy </td></tr>
-  <tr><td nowrap><b> ခံနိုင်ရည်ရှိမှု</b></td><td> Circuit breaker၊ exponential backoff၊ မိုးခြိမ်းသံဆန့်ကျင်-နွားအုပ်၊ အလိုအလျောက် ပေါင်းစပ်- ကိုယ်တိုင်-ကုစားခြင်း</td></tr>
-  <tr><td nowrap><b> မှတ်တမ်း</b></td><td> pino — တောင်းဆိုချက်အကြောင်းအရာ</td></tr> ဖွဲ့စည်းတည်ဆောက်ထားသော JSON မှတ်တမ်းများ
-  <tr><td nowrap><b> စမ်းသပ်ခြင်း</b></td><td>Node.js အပြေးသမား + Vitest — <b> 56,000 + တည်ငြိမ်စမ်းသပ်ကြေငြာချက်များ</b> 7,800 + ခြေရာခံထားသော စမ်းသပ်ဖိုင်များ (ယူနစ်၊ ပေါင်းစပ်မှု၊ E2E၊ လုံခြုံရေး၊ ဂေဟစနစ်)</td></tr>
-  <tr><td nowrap><b> ပလပ်ဖောင်းများ</b></td><td> Desktop (Electron) · Android (Termux) · PWA (မည်သည့်ဘရောက်ဆာ)</td></tr>
-  <tr><td nowrap><b>CI/CD</b></td><td>GitHub လုပ်ဆောင်ချက်များ — အလိုအလျောက် npm ဖြန့်ချိသည့် + Docker Hub </td></tr>
-  <tr><td nowrap><b> Links </b></td><td><a href="https://omniroute.online"> Website </a> · <a href="https://www.npmjs.com/package/omniroute"> npm </a> · <a href="https://hub.docker.com/r/diegosouzapw/omniroute">Docker Hub </a></td></tr>
+  <tr><th align="left">အလွှာ</th><th align="left">နည်းပညာ</th></tr>
+  <tr><td nowrap><b>Runtime</b></td><td>Node.js 22.x / 24.x LTS — <code>&gt;=22.22.2 &lt;23 || &gt;=24.0.0 &lt;27</code></td></tr>
+  <tr><td nowrap><b>ဘာသာစကား</b></td><td>TypeScript 6.0 — <code>src/</code> နှင့် <code>open-sse/</code> တစ်လျှောက်လုံး <b>100% TypeScript</b> (v2.0 ကတည်းက core တွင် <code>any</code> လုံးဝမသုံး)</td></tr>
+  <tr><td nowrap><b>Framework</b></td><td>Next.js 16 + React 19 + Tailwind CSS 4</td></tr>
+  <tr><td nowrap><b>ဒေတာဘေ့စ်</b></td><td>better-sqlite3 (SQLite, WAL journaling) + LowDB (JSON legacy) — domain module 147 ခု၊ migration 213 ခု</td></tr>
+  <tr><td nowrap><b>မမ်မိုရီ</b></td><td>SQLite FTS5 full-text + int8-quantized vector embedding များ၊ typed decay</td></tr>
+  <tr><td nowrap><b>Schema များ</b></td><td>Zod 4 — MCP tool I/O အတည်ပြုစစ်ဆေးခြင်း + API contract များ</td></tr>
+  <tr><td nowrap><b>ပရိုတိုကောလ်များ</b></td><td>MCP (stdio / HTTP / SSE) + A2A v0.3 (JSON-RPC 2.0 + SSE)</td></tr>
+  <tr><td nowrap><b>Streaming</b></td><td>Server-Sent Events (SSE) + WebSocket bridge (<code>/v1/ws</code>)</td></tr>
+  <tr><td nowrap><b>Compression</b></td><td>engine 12 ခုပါ pipeline — RTK, Caveman, LLMLingua-2 (MobileBERT ONNX), GCF, OmniGlyph</td></tr>
+  <tr><td nowrap><b>Auth နှင့် လုံခြုံရေး</b></td><td>OAuth 2.0 (PKCE) + JWT + API Keys + MCP scoped auth · သိုလှောင်ထားသောဒေတာအတွက် AES-256-GCM · DOMPurify</td></tr>
+  <tr><td nowrap><b>Stealth</b></td><td>wreq-js — JA3 / JA4 TLS fingerprint အယောင်ဆောင်ခြင်း၊ အဆင့် ၃ ဆင့် proxy</td></tr>
+  <tr><td nowrap><b>Resilience</b></td><td>Circuit breaker၊ exponential backoff၊ anti-thundering-herd၊ auto-combo self-healing</td></tr>
+  <tr><td nowrap><b>Logging</b></td><td>pino — request context ပါဝင်သော structured JSON log များ</td></tr>
+  <tr><td nowrap><b>စမ်းသပ်ခြင်း</b></td><td>Node.js test runner + Vitest — ခြေရင်းခံထားသော test file 7,800+ ကျော်တွင် <b>static test declaration 56,000+</b> (unit, integration, E2E, security, ecosystem)</td></tr>
+  <tr><td nowrap><b>ပလက်ဖောင်းများ</b></td><td>Desktop (Electron) · Android (Termux) · PWA (မည်သည့် browser မှမဆို)</td></tr>
+  <tr><td nowrap><b>CI/CD</b></td><td>GitHub Actions — release အသစ်တိုင်းတွင် အလိုအလျောက် npm publish + Docker Hub</td></tr>
+  <tr><td nowrap><b>လင့်ခ်များ</b></td><td><a href="https://omniroute.online">ဝဘ်ဆိုဒ်</a> · <a href="https://www.npmjs.com/package/omniroute">npm</a> · <a href="https://hub.docker.com/r/diegosouzapw/omniroute">Docker Hub</a></td></tr>
 </table>
 
 <div align="center">
