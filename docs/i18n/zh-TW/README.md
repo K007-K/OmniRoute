@@ -71,7 +71,7 @@
 
 |                     |     v3.8.50      | **v3.8.51** |      `v3.8.53+`       |
 | ------------------- | :--------------: | :---------: | :-------------------: |
-| 🌐提供者            |       352        |   **358**   |          376          |
+| 🌐提供者            |       352        |   **358**   |          377          |
 | 🧠獨特的聊天模式IDs |       1320       |  **1374**   |         1475          |
 | 🖼️模態橋            | 🆕視覺+音頻+視頻 |      ✓      |           ✓           |
 | 📡雷達免費目錄      |    🆕選擇加入    |      ✓      |           ✓           |
@@ -603,7 +603,7 @@ Radar 採選擇加入制，且僅使用 GET。OmniRoute 用戶端不會上傳提
 - **🖼️ 新端點** — `/v1/ocr`（Mistral OCR）與 `/v1/audio/translations`（Whisper 風格）補齊了媒體介面。→ [API Reference](docs/reference/API_REFERENCE.md)
 - **🎨 影像 / 影片 / 音訊生成** — 以單一 API 處理媒體：xAI Grok Imagine 與 Novita AI 影片、ComfyUI、Magnific、Adobe Firefly、Segmind，以及 ElevenLabs 等語音提供者。→ [API Reference](docs/reference/API_REFERENCE.md)
 - **🌍 部署與維運** — 反向代理 `basePath`、瀏覽器語言自動偵測、逐金鑰裝置追蹤、免 root 的 MITM 信任、zh-TW 在地化。→ [Environment](docs/reference/ENVIRONMENT.md)
-- **🤝 更多提供者與代理** — 雲端代理（Codex Cloud、Cursor、Devin、Jules）、Grok Build（xAI）搭配瀏覽器 + OAuth 登入、Ollama 一級卡片、Claude Opus 5 與 Sonnet 5、Kimi 官方合作（Code/Web/Moonshot）、Zed、Requesty、SenseNova、Yuanbao、Agnes AI……以及更新後的 **376 個提供者目錄**。→ [Providers](docs/reference/PROVIDER_REFERENCE.md)
+- **🤝 更多提供者與代理** — 雲端代理（Codex Cloud、Cursor、Devin、Jules）、Grok Build（xAI）搭配瀏覽器 + OAuth 登入、Ollama 一級卡片、Claude Opus 5 與 Sonnet 5、Kimi 官方合作（Code/Web/Moonshot）、Zed、Requesty、SenseNova、Yuanbao、Agnes AI……以及更新後的 **377 個提供者目錄**。→ [Providers](docs/reference/PROVIDER_REFERENCE.md)
 - **📡 路由透明度** — 每個回應都帶有 `X-OmniRoute-Decision` 標頭，指出負責處理的策略/提供者/延遲；新增 `cache-optimized` combo 策略 + Auto-Combo 的 `cacheAffinity` 因子，可將重複請求導回持有快取前綴的連線；唯讀的 `/v1/auto-combo/{channel}/candidates` 端點會公開 `auto/*` 通道的即時候選池。→ [Auto-Combo](docs/routing/AUTO-COMBO.md)
 - **⚡ 本機效能與基礎架構** — 一鍵啟用本機 Redis、Cloudflare Workers / Deno Deploy 中繼部署工具，以及作為受監管嵌入式服務執行的 Bifrost 與 Mux。→ [嵌入式服務](docs/frameworks/EMBEDDED-SERVICES.md)
 - **🧩 內建功能** — 外掛程式框架與市集、Omni/Agent/GitHub 技能框架、Obsidian 儲存庫整合（22 個 MCP 工具）、與 OpenAI 相容的 Batch 與 Files API、語意回應快取、包含排行榜的遊戲化機制、ACP 代理探索（15 個內建代理）、排程匯出日誌至 BigQuery、`auto/chaos` 平行多模型扇出、Telegram 機器人橋接、應用程式內版本管理器，以及 LMArena-ELO 免費提供者排名。→ [文件](docs/README.md)

@@ -71,7 +71,7 @@
 
 |                               |          v3.8.50          | **v3.8.51** |        `v3.8.53+`        |
 | ----------------------------- | :-----------------------: | :---------: | :----------------------: |
-| 🌐 доставчици                 |            352            |   **358**   |           376            |
+| 🌐 доставчици                 |            352            |   **358**   |           377            |
 | 🧠 Уникален чат модел IDs     |           1320            |  **1374**   |           1475           |
 | 🖼️ модален мост               | 🆕 vision + аудио + видео |      ✓      |            ✓             |
 | Безплатен каталог на 📡 Radar |      включване в 🆕       |      ✓      |            ✓             |
@@ -611,7 +611,7 @@ Radar се използва само по желание и поддържа е�
 - **🖼️ Нови endpoint-и** — `/v1/ocr` (Mistral OCR) и `/v1/audio/translations` (в стил Whisper) допълват медийната повърхност. → [API Reference](docs/reference/API_REFERENCE.md)
 - **🎨 Генериране на изображения / видео / аудио** — един API за медии: xAI Grok Imagine & Novita AI видео, ComfyUI, Magnific, Adobe Firefly, Segmind и доставчици на реч като ElevenLabs. → [API Reference](docs/reference/API_REFERENCE.md)
 - **🌍 Внедряване и операции** — `basePath` за обратно прокси, автоматично откриване на езика на браузъра, проследяване на устройства за всеки ключ, MITM доверие без root, локализация zh-TW. → [Environment](docs/reference/ENVIRONMENT.md)
-- **🤝 Още доставчици и агенти** — облачни агенти (Codex Cloud, Cursor, Devin, Jules), Grok Build (xAI) с вход през браузър + OAuth, първокласна карта за Ollama, Claude Opus 5 & Sonnet 5, официално партньорство с Kimi (Code/Web/Moonshot), Zed, Requesty, SenseNova, Yuanbao, Agnes AI… и обновен **каталог с 376 доставчика**. → [Providers](docs/reference/PROVIDER_REFERENCE.md)
+- **🤝 Още доставчици и агенти** — облачни агенти (Codex Cloud, Cursor, Devin, Jules), Grok Build (xAI) с вход през браузър + OAuth, първокласна карта за Ollama, Claude Opus 5 & Sonnet 5, официално партньорство с Kimi (Code/Web/Moonshot), Zed, Requesty, SenseNova, Yuanbao, Agnes AI… и обновен **каталог с 377 доставчика**. → [Providers](docs/reference/PROVIDER_REFERENCE.md)
 - **📡 Прозрачност на маршрутизирането** — всеки отговор носи заглавка `X-OmniRoute-Decision`, указваща стратегията/доставчика/латентността, които са го обслужили, нова комбо стратегия `cache-optimized` + фактор `cacheAffinity` на Auto-Combo връщат повторните заявки обратно към връзката, държаща кеширания префикс, а endpoint-ът само за четене `/v1/auto-combo/{channel}/candidates` показва живия набор от кандидати на канал `auto/*`. → [Auto-Combo](docs/routing/AUTO-COMBO.md)
 - **⚡ Локална производителност и инфраструктура** — локален Redis с едно кликване, деплойъри на Cloudflare Workers / Deno Deploy relay, Bifrost и Mux като supervised вградени услуги. → [Вградени услуги](docs/frameworks/EMBEDDED-SERVICES.md)
 - **🧩 Още в комплекта** — плъгин рамка + пазар, рамки за умения Omni/Agent/GitHub, интеграция с Obsidian vault (22 MCP инструмента), OpenAI-съвместими Batch и Files API, семантичен кеш на отговори, геймификация с класации, откриване на агенти чрез ACP (15 вградени агента), планиран експорт на логове към BigQuery, паралелно разклоняване към множество модели с `auto/chaos`, мост за Telegram бот, вграден мениджър на версии и класации на безплатни доставчици по LMArena-ELO. → [Документация](docs/README.md)

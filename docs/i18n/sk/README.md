@@ -71,7 +71,7 @@
 
 |                                  |          v3.8.50          | **v3.8.51** |      `v3.8.53+`       |
 | -------------------------------- | :-----------------------: | :---------: | :-------------------: |
-| Poskytovatelia 🌐                |            352            |   **358**   |          376          |
+| Poskytovatelia 🌐                |            352            |   **358**   |          377          |
 | 🧠 Unikátny model chatu IDs      |           1320            |  **1374**   |         1475          |
 | 🖼️ Modality Bridge               | 🆕 vision + audio + video |      ✓      |           ✓           |
 | Bezplatný katalóg radarov 📡     |      🆕 prihlásenie       |      ✓      |           ✓           |
@@ -603,7 +603,7 @@ Radar je voliteľný a používa iba požiadavky GET. Klient OmniRoute neodosiel
 - **🖼️ Nové endpointy** — `/v1/ocr` (Mistral OCR) a `/v1/audio/translations` (v štýle Whisper) dopĺňajú mediálne rozhranie. → [API Reference](docs/reference/API_REFERENCE.md)
 - **🎨 Generovanie obrázkov / videa / zvuku** — jedno API pre médiá: xAI Grok Imagine & Novita AI video, ComfyUI, Magnific, Adobe Firefly, Segmind a rečoví poskytovatelia ako ElevenLabs. → [API Reference](docs/reference/API_REFERENCE.md)
 - **🌍 Nasadenie a prevádzka** — reverse-proxy `basePath`, automatická detekcia jazyka prehliadača, sledovanie zariadení podľa kľúča, root-less MITM trust, lokalizácia zh-TW. → [Environment](docs/reference/ENVIRONMENT.md)
-- **🤝 Viac poskytovateľov a agentov** — cloudoví agenti (Codex Cloud, Cursor, Devin, Jules), Grok Build (xAI) s prihlásením cez prehliadač + OAuth, prvotriedna karta Ollama, Claude Opus 5 & Sonnet 5, oficiálne partnerstvo s Kimi (Code/Web/Moonshot), Zed, Requesty, SenseNova, Yuanbao, Agnes AI… a obnovený **katalóg 376 poskytovateľov**. → [Providers](docs/reference/PROVIDER_REFERENCE.md)
+- **🤝 Viac poskytovateľov a agentov** — cloudoví agenti (Codex Cloud, Cursor, Devin, Jules), Grok Build (xAI) s prihlásením cez prehliadač + OAuth, prvotriedna karta Ollama, Claude Opus 5 & Sonnet 5, oficiálne partnerstvo s Kimi (Code/Web/Moonshot), Zed, Requesty, SenseNova, Yuanbao, Agnes AI… a obnovený **katalóg 377 poskytovateľov**. → [Providers](docs/reference/PROVIDER_REFERENCE.md)
 - **📡 Transparentnosť smerovania** — každá odpoveď nesie hlavičku `X-OmniRoute-Decision` s názvom stratégie/poskytovateľa/latencie, ktorá ju obslúžila, nová stratégia comba `cache-optimized` + faktor `cacheAffinity` v Auto-Combo smeruje opakované požiadavky späť na pripojenie, ktoré drží cached prefix, a read-only endpoint `/v1/auto-combo/{channel}/candidates` sprístupňuje živý fond kandidátov kanála `auto/*`. → [Auto-Combo](docs/routing/AUTO-COMBO.md)
 - **⚡ Lokálny výkon a infraštruktúra** — jednoklikový lokálny Redis, deployery relay pre Cloudflare Workers / Deno Deploy, Bifrost a Mux ako supervidované vstavané služby. → [Vstavané služby](docs/frameworks/EMBEDDED-SERVICES.md)
 - **🧩 Tiež v balení** — rámec pluginov + marketplace, rámce zručností Omni/Agent/GitHub, integrácia s Obsidian vault (22 MCP nástrojov), OpenAI-kompatibilné Batch & Files API, sémantická cache odpovedí, gamifikácia s rebríčkami, ACP agent discovery (15 vstavaných agentov), plánovaný export logov do BigQuery, paralelné multi-model fan-out `auto/chaos`, Telegram bot bridge, správca verzií priamo v aplikácii a rebríčky poskytovateľov zdarma podľa LMArena-ELO. → [Dokumentácia](docs/README.md)

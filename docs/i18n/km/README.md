@@ -71,7 +71,7 @@
 
 |                               |             v3.8.50              | **v3.8.51** |      `v3.8.53+`       |
 | ----------------------------- | :------------------------------: | :---------: | :-------------------: |
-| អ្នកផ្តល់សេវា🌐               |               352                |   **358**   |          376          |
+| អ្នកផ្តល់សេវា🌐               |               352                |   **358**   |          377          |
 | 🧠 គំរូជជែកតែមួយគត់ IDs       |               1320               |  **1374**   |         1475          |
 | 🖼️ ស្ពាន Modality             | 🆕 ចក្ខុវិស័យ + អូឌីយ៉ូ + វីដេអូ |      ✓      |           ✓           |
 | 📡 រ៉ាដាកាតាឡុកឥតគិតថ្លៃ      |          🆕 ជ្រើសរើសចូល          |      ✓      |           ✓           |
@@ -603,7 +603,7 @@ Radar គឺជាមុខងារដែលត្រូវជ្រើសរ�
 - **🖼️ Endpoint ថ្មីៗ** — `/v1/ocr` (Mistral OCR) និង `/v1/audio/translations` (បែប Whisper) បំពេញផ្ទៃមេឌៀឱ្យពេញលេញ។ → [API Reference](docs/reference/API_REFERENCE.md)
 - **🎨 ការបង្កើតរូបភាព / វីដេអូ / សំឡេង** — API តែមួយសម្រាប់មេឌៀ: xAI Grok Imagine & Novita AI video, ComfyUI, Magnific, Adobe Firefly, Segmind និងអ្នកផ្តល់សេវាសំឡេងដូចជា ElevenLabs។ → [API Reference](docs/reference/API_REFERENCE.md)
 - **🌍 ការដាក់ឱ្យដំណើរការ និងប្រតិបត្តិការ** — `basePath` សម្រាប់ reverse-proxy, ការរកឃើញភាសាកម្មវិធីរុករកដោយស្វ័យប្រវត្តិ, ការតាមដានឧបករណ៍តាម key, ការទុកចិត្ត MITM ដោយគ្មាន root, ការធ្វើមូលដ្ឋានីយកម្ម zh-TW។ → [Environment](docs/reference/ENVIRONMENT.md)
-- **🤝 អ្នកផ្តល់សេវា និង agent បន្ថែម** — cloud agent (Codex Cloud, Cursor, Devin, Jules), Grok Build (xAI) ជាមួយការចូលតាមកម្មវិធីរុករក + OAuth, កាត Ollama ថ្នាក់ដំបូង, Claude Opus 5 & Sonnet 5, ភាពជាដៃគូផ្លូវការ Kimi (Code/Web/Moonshot), Zed, Requesty, SenseNova, Yuanbao, Agnes AI… និង **កាតាឡុកអ្នកផ្តល់សេវា 376** ដែលបានធ្វើបច្ចុប្បន្នភាព។ → [Providers](docs/reference/PROVIDER_REFERENCE.md)
+- **🤝 អ្នកផ្តល់សេវា និង agent បន្ថែម** — cloud agent (Codex Cloud, Cursor, Devin, Jules), Grok Build (xAI) ជាមួយការចូលតាមកម្មវិធីរុករក + OAuth, កាត Ollama ថ្នាក់ដំបូង, Claude Opus 5 & Sonnet 5, ភាពជាដៃគូផ្លូវការ Kimi (Code/Web/Moonshot), Zed, Requesty, SenseNova, Yuanbao, Agnes AI… និង **កាតាឡុកអ្នកផ្តល់សេវា 377** ដែលបានធ្វើបច្ចុប្បន្នភាព។ → [Providers](docs/reference/PROVIDER_REFERENCE.md)
 - **📡 ភាពថ្លាត្រង់នៃការនាំផ្លូវ** — រាល់ការឆ្លើយតបមាន header `X-OmniRoute-Decision` ដែលបញ្ជាក់ឈ្មោះយុទ្ធសាស្ត្រ/អ្នកផ្តល់សេវា/ភាពយឺតយ៉ាវដែលបានផ្តល់សេវា, យុទ្ធសាស្ត្រ combo `cache-optimized` ថ្មី + កត្តា `cacheAffinity` របស់ Auto-Combo នាំសំណើដដែលៗត្រឡប់ទៅការតភ្ជាប់ដែលកាន់បុព្វបទដែលបានឃ្លាំងទុក ហើយ endpoint អានតែប៉ុណ្ណោះ `/v1/auto-combo/{channel}/candidates` បង្ហាញពីបញ្ជីបេក្ខជនផ្ទាល់របស់ឆានែល `auto/*`។ → [Auto-Combo](docs/routing/AUTO-COMBO.md)
 - **⚡ ដំណើរការក្នុងស្រុក & ហេដ្ឋារចនាសម្ព័ន្ធ** — Redis ក្នុងស្រុកដោយការចុចតែម្តង, ឧបករណ៍ deploy relay សម្រាប់ Cloudflare Workers / Deno Deploy, Bifrost & Mux ជាសេវាកម្ម embedded ដែលមានការត្រួតពិនិត្យ។ → [សេវាកម្ម Embedded](docs/frameworks/EMBEDDED-SERVICES.md)
 - **🧩 អ្វីៗផ្សេងទៀតដែលមានក្នុងប្រអប់** — ក្របខ័ណ្ឌ plugin + marketplace, ក្របខ័ណ្ឌជំនាញ Omni/Agent/GitHub, ការរួមបញ្ចូល Obsidian vault (ឧបករណ៍ MCP ចំនួន 22), Batch & Files APIs ដែលឆបគ្នានឹង OpenAI, cache response តាមអត្ថន័យ, gamification ជាមួយតារាងពិន្ទុ, ការរកឃើញ agent ACP (agent ដែលមានស្រាប់ចំនួន 15), ការនាំចេញ log តាមកាលវិភាគទៅ BigQuery, `auto/chaos` ការបញ្ជូនចេញ (fan-out) ម៉ូដែលច្រើនបែបស្របគ្នា, ស្ពាន Telegram bot, កម្មវិធីគ្រប់គ្រងកំណែក្នុងកម្មវិធី និងចំណាត់ថ្នាក់អ្នកផ្តល់សេវាឥតគិតថ្លៃ LMArena-ELO។ → [ឯកសារ](docs/README.md)

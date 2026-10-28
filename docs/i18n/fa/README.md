@@ -71,7 +71,7 @@
 
 |                            |        نسخه 3.8.50        | **نسخه 3.8.51** |      `v3.8.53+`       |
 | -------------------------- | :-----------------------: | :-------------: | :-------------------: |
-| ارائه دهندگان 🌐           |            352            |     **358**     |          376          |
+| ارائه دهندگان 🌐           |            352            |     **358**     |          377          |
 | 🧠 مدل چت منحصر به فرد IDs |           1320            |    **1374**     |         1475          |
 | پل مدالیتی 🖼️              | 🆕 vision + audio + video |        ✓        |           ✓           |
 | کاتالوگ رایگان رادار 📡    |      🆕 انتخاب کنید       |        ✓        |           ✓           |
@@ -603,7 +603,7 @@ OmniRoute دارای مجوز MIT است و بهصورت عمومی نگهدار
 - **🖼️ endpointهای جدید** — `/v1/ocr` (Mistral OCR) و `/v1/audio/translations` (به سبک Whisper) سطح رسانه را کامل میکنند. → [API Reference](docs/reference/API_REFERENCE.md)
 - **🎨 تولید تصویر / ویدئو / صدا** — یک API برای رسانه: ویدئوی xAI Grok Imagine و Novita AI، ComfyUI، Magnific، Adobe Firefly، Segmind، و ارائهدهندگان گفتار مانند ElevenLabs. → [API Reference](docs/reference/API_REFERENCE.md)
 - **🌍 استقرار و عملیات** — `basePath` پروکسی معکوس، تشخیص خودکار زبان مرورگر، ردیابی دستگاه بهازای هر کلید، اعتماد MITM بدون root، بومیسازی zh-TW. → [Environment](docs/reference/ENVIRONMENT.md)
-- **🤝 ارائهدهندگان و عاملهای بیشتر** — عاملهای ابری (Codex Cloud، Cursor، Devin، Jules)، Grok Build (xAI) با ورود مرورگر + OAuth، کارت درجهیک Ollama، Claude Opus 5 و Sonnet 5، همکاری رسمی Kimi (Code/Web/Moonshot)، Zed، Requesty، SenseNova، Yuanbao، Agnes AI… و یک **کاتالوگ ۳۷۶ ارائهدهندهای** بازآوریشده. → [Providers](docs/reference/PROVIDER_REFERENCE.md)
+- **🤝 ارائهدهندگان و عاملهای بیشتر** — عاملهای ابری (Codex Cloud، Cursor، Devin، Jules)، Grok Build (xAI) با ورود مرورگر + OAuth، کارت درجهیک Ollama، Claude Opus 5 و Sonnet 5، همکاری رسمی Kimi (Code/Web/Moonshot)، Zed، Requesty، SenseNova، Yuanbao، Agnes AI… و یک **کاتالوگ ۳۷۷ ارائهدهندهای** بازآوریشده. → [Providers](docs/reference/PROVIDER_REFERENCE.md)
 - **📡 شفافیت مسیریابی** — هر پاسخ یک هدر `X-OmniRoute-Decision` حمل میکند که استراتژی/ارائهدهنده/تأخیرِ سروکننده را نام میبرد، یک استراتژی ترکیبی جدید `cache-optimized` + عامل `cacheAffinity` در Auto-Combo درخواستهای تکراری را به اتصالی که پیشوند کششده را نگه داشته بازمیگرداند، و یک endpoint فقطخواندنی `/v1/auto-combo/{channel}/candidates` استخر کاندیدهای زنده یک کانال `auto/*` را آشکار میکند. → [Auto-Combo](docs/routing/AUTO-COMBO.md)
 - **⚡ عملکرد و زیرساخت محلی** — راهاندازی Redis محلی با یک کلیک، استقراردهندههای رله برای Cloudflare Workers / Deno Deploy و سرویسهای تعبیهشده Bifrost و Mux با نظارت داخلی. ← [سرویسهای تعبیهشده](docs/frameworks/EMBEDDED-SERVICES.md)
 - **🧩 امکانات دیگری که در اختیار دارید** — چارچوب افزونه + بازارچه، چارچوبهای مهارت Omni/Agent/GitHub، یکپارچهسازی مخزن Obsidian (با ۲۲ ابزار MCP)، APIهای Batch و Files سازگار با OpenAI، کش معنایی پاسخها، بازیوارسازی همراه با جدولهای امتیازات، کشف عاملهای ACP (شامل ۱۵ عامل داخلی)، خروجیگیری زمانبندیشده از گزارشها به BigQuery، توزیع موازی چندمدلی `auto/chaos`، پل ربات Telegram، مدیر نسخه درونبرنامهای و رتبهبندی ارائهدهندگان رایگان LMArena-ELO. ← [مستندات](docs/README.md)

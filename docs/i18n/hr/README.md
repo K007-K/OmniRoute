@@ -71,7 +71,7 @@
 
 |                                   |          v3.8.50          | **v3.8.51** |       `v3.8.53+`        |
 | --------------------------------- | :-----------------------: | :---------: | :---------------------: |
-| 🌐 pružatelji usluga              |            352            |   **358**   |           376           |
+| 🌐 pružatelji usluga              |            352            |   **358**   |           377           |
 | 🧠 Jedinstveni model chata IDs    |           1320            |  **1374**   |          1475           |
 | 🖼️ Modalni most                   | 🆕 vizija + audio + video |      ✓      |            ✓            |
 | 📡 Radar besplatni katalog        |      🆕 uključivanje      |      ✓      |            ✓            |
@@ -611,7 +611,7 @@ trenutačnom katalogu na **[radar.omniroute.online/planos](https://radar.omnirou
 - **🖼️ Novi endpointi** — `/v1/ocr` (Mistral OCR) i `/v1/audio/translations` (u stilu Whispera) zaokružuju medijsku površinu. → [API Reference](docs/reference/API_REFERENCE.md)
 - **🎨 Generiranje slika / videa / zvuka** — jedan API za medije: xAI Grok Imagine i Novita AI video, ComfyUI, Magnific, Adobe Firefly, Segmind i govorni pružatelji poput ElevenLabsa. → [API Reference](docs/reference/API_REFERENCE.md)
 - **🌍 Implementacija i operacije** — reverse-proxy `basePath`, automatsko prepoznavanje jezika preglednika, praćenje uređaja po ključu, MITM povjerenje bez roota, zh-TW lokalizacija. → [Environment](docs/reference/ENVIRONMENT.md)
-- **🤝 Više pružatelja i agenata** — cloud agenti (Codex Cloud, Cursor, Devin, Jules), Grok Build (xAI) s prijavom putem preglednika + OAuth, Ollama kartica prvog reda, Claude Opus 5 i Sonnet 5, službeno partnerstvo s Kimijem (Code/Web/Moonshot), Zed, Requesty, SenseNova, Yuanbao, Agnes AI… i osvježeni **katalog od 376 pružatelja**. → [Providers](docs/reference/PROVIDER_REFERENCE.md)
+- **🤝 Više pružatelja i agenata** — cloud agenti (Codex Cloud, Cursor, Devin, Jules), Grok Build (xAI) s prijavom putem preglednika + OAuth, Ollama kartica prvog reda, Claude Opus 5 i Sonnet 5, službeno partnerstvo s Kimijem (Code/Web/Moonshot), Zed, Requesty, SenseNova, Yuanbao, Agnes AI… i osvježeni **katalog od 377 pružatelja**. → [Providers](docs/reference/PROVIDER_REFERENCE.md)
 - **📡 Transparentnost usmjeravanja** — svaki odgovor nosi zaglavlje `X-OmniRoute-Decision` s nazivom strategije/pružatelja/latencije koja ga je poslužila, nova strategija comboa `cache-optimized` + faktor `cacheAffinity` Auto-Comboa vraćaju ponovljene zahtjeve natrag na vezu koja drži predmemorirani prefiks, a endpoint `/v1/auto-combo/{channel}/candidates` samo za čitanje izlaže živi skup kandidata `auto/*` kanala. → [Auto-Combo](docs/routing/AUTO-COMBO.md)
 - **⚡ Lokalne performanse i infrastruktura** — lokalni Redis jednim klikom, alati za implementaciju Cloudflare Workers / Deno Deploy relayja, Bifrost i Mux kao nadzirane ugrađene usluge. → [Ugrađene usluge](docs/frameworks/EMBEDDED-SERVICES.md)
 - **🧩 Također u paketu** — okvir za dodatke + tržnica, okviri Omni/Agent/GitHub vještina, integracija s Obsidian vaultom (22 MCP alata), OpenAI-kompatibilni Batch i Files API-ji, semantička predmemorija odgovora, gamifikacija s ljestvicama poretka, otkrivanje ACP agenata (15 ugrađenih agenata), zakazani izvoz zapisa u BigQuery, paralelno razgranavanje na više modela putem `auto/chaos`, most za Telegram bot, upravitelj verzija unutar aplikacije i LMArena-ELO rangiranje besplatnih pružatelja. → [Dokumentacija](docs/README.md)

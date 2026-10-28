@@ -54,7 +54,7 @@ Capacidades principais:
 - Correlação ID (X-Request-Id) para seguimento de ponta a ponta
 - Registo de auditoria de conformidade com cancelamento por chave API
 - Estrutura de avaliação para a garantia de qualidade LLM
-- Painel de saúde com estado do disjuntor do prestador em tempo real
+- Painel de saúde com estado do disjuntor do fornecedor em tempo real
 - Servidor MCP (110 ferramentas) com 3 transportes (stdio/SSE/Streamable HTTP)
 - Servidor A2A (JSON-RPC 2.0 + SSE) com competências e ciclo de vida de tarefas
 - Sistema de memória (extração, injeção, recuperação, resumo)

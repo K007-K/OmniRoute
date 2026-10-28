@@ -71,7 +71,7 @@
 
 |                               |          v3.8.50          | **v3.8.51** |      `v3.8.53+`       |
 | ----------------------------- | :-----------------------: | :---------: | :-------------------: |
-| 🌐 პროვაიდერები               |            352            |   **358**   |          376          |
+| 🌐 პროვაიდერები               |            352            |   **358**   |          377          |
 | 🧠 უნიკალური ჩატის მოდელი IDs |           1320            |  **1374**   |         1475          |
 | 🖼️ მოდალობის ხიდი             | 🆕 vision + აუდიო + ვიდეო |      ✓      |           ✓           |
 | 📡 Radar უფასო კატალოგი       |         🆕 ჩართვა         |      ✓      |           ✓           |
@@ -603,7 +603,7 @@ Radar-ში მონაწილეობა ნებაყოფლობი
 - **🖼️ ახალი ბოლო-წერტილები** — `/v1/ocr` (Mistral OCR) და `/v1/audio/translations` (Whisper-სტილის) ავსებს მედია-ზედაპირს. → [API მითითება](docs/reference/API_REFERENCE.md)
 - **🎨 გამოსახულების / ვიდეოს / აუდიოს გენერაცია** — ერთი API მედიისთვის: xAI Grok Imagine და Novita AI ვიდეო, ComfyUI, Magnific, Adobe Firefly, Segmind და მეტყველების პროვაიდერები, როგორიცაა ElevenLabs. → [API მითითება](docs/reference/API_REFERENCE.md)
 - **🌍 განლაგება და ოპერაციები** — reverse-proxy `basePath`, ბრაუზერის ენის ავტომატური ამოცნობა, მოწყობილობის თვალყურის დევნება თითო გასაღებზე, root-ის გარეშე MITM ნდობა, zh-TW ლოკალიზაცია. → [გარემო](docs/reference/ENVIRONMENT.md)
-- **🤝 მეტი პროვაიდერი და აგენტი** — ღრუბლოვანი აგენტები (Codex Cloud, Cursor, Devin, Jules), Grok Build (xAI) ბრაუზერით + OAuth შესვლით, Ollama პირველკლასობრივი ბარათი, Claude Opus 5 და Sonnet 5, Kimi-ს ოფიციალური პარტნიორობა (Code/Web/Moonshot), Zed, Requesty, SenseNova, Yuanbao, Agnes AI… და განახლებული **376-პროვაიდერის კატალოგი**. → [პროვაიდერები](docs/reference/PROVIDER_REFERENCE.md)
+- **🤝 მეტი პროვაიდერი და აგენტი** — ღრუბლოვანი აგენტები (Codex Cloud, Cursor, Devin, Jules), Grok Build (xAI) ბრაუზერით + OAuth შესვლით, Ollama პირველკლასობრივი ბარათი, Claude Opus 5 და Sonnet 5, Kimi-ს ოფიციალური პარტნიორობა (Code/Web/Moonshot), Zed, Requesty, SenseNova, Yuanbao, Agnes AI… და განახლებული **377-პროვაიდერის კატალოგი**. → [პროვაიდერები](docs/reference/PROVIDER_REFERENCE.md)
 - **📡 მარშრუტიზაციის გამჭვირვალობა** — ყველა პასუხი ატარებს `X-OmniRoute-Decision` თავსართს, რომელიც ასახელებს მომსახურე სტრატეგიას/პროვაიდერს/ლატენტობას, ახალი `cache-optimized` კომბო-სტრატეგია + Auto-Combo `cacheAffinity` ფაქტორი განმეორებით მოთხოვნებს ქეშირებული პრეფიქსის მქონე კავშირზე აბრუნებს, ხოლო მხოლოდ-წაკითხვის `/v1/auto-combo/{channel}/candidates` ბოლო-წერტილი აჩვენებს `auto/*` არხის ცოცხალ კანდიდატთა აუზს. → [Auto-Combo](docs/routing/AUTO-COMBO.md)
 - **⚡ ლოკალური წარმადობა და ინფრასტრუქტურა** — ერთი დაწკაპუნებით ლოკალური Redis, Cloudflare Workers / Deno Deploy relay-ის განლაგების ინსტრუმენტები, Bifrost და Mux როგორც ზედამხედველობის ქვეშ მყოფი ჩაშენებული სერვისები. → [ჩაშენებული სერვისები](docs/frameworks/EMBEDDED-SERVICES.md)
 - **🧩 ასევე კომპლექტშია** — პლაგინების ფრეიმვორკი + მარკეტპლეისი, Omni/Agent/GitHub უნარების ფრეიმვორკები, Obsidian vault-ის ინტეგრაცია (22 MCP ინსტრუმენტი), OpenAI-სთან თავსებადი Batch და Files API-ები, სემანტიკური პასუხების ქეში, გეიმიფიკაცია ლიდერბორდებით, ACP აგენტების აღმოჩენა (15 ჩაშენებული აგენტი), ლოგების დაგეგმილი ექსპორტი BigQuery-ში, `auto/chaos` პარალელური მულტიმოდელური fan-out, Telegram ბოტის ხიდი, აპლიკაციის შინაგანი ვერსიების მენეჯერი და LMArena-ELO უფასო პროვაიდერების რეიტინგები. → [დოკუმენტაცია](docs/README.md)

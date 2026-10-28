@@ -71,7 +71,7 @@
 
 |                     |     v3.8.50      | **v3.8.51** |      `v3.8.53+`       |
 | ------------------- | :--------------: | :---------: | :-------------------: |
-| 🌐提供者            |       352        |   **358**   |          376          |
+| 🌐提供者            |       352        |   **358**   |          377          |
 | 🧠独特的聊天模式IDs |       1320       |  **1374**   |         1475          |
 | 🖼️模态桥            | 🆕视觉+音频+视频 |      ✓      |           ✓           |
 | 📡雷达免费目录      |    🆕选择加入    |      ✓      |           ✓           |
@@ -603,7 +603,7 @@ Radar 需主动选择启用，且仅使用 GET 请求。OmniRoute 客户端不�
 - **🖼️ 新增端点** — `/v1/ocr`（Mistral OCR）和 `/v1/audio/translations`（Whisper 风格）完善了媒体能力面。→ [API 参考](docs/reference/API_REFERENCE.md)
 - **🎨 图像 / 视频 / 音频生成** — 一个 API 搞定媒体：xAI Grok Imagine 与 Novita AI 视频、ComfyUI、Magnific、Adobe Firefly、Segmind，以及 ElevenLabs 等语音提供者。→ [API 参考](docs/reference/API_REFERENCE.md)
 - **🌍 部署与运维** — 反向代理 `basePath`、浏览器语言自动检测、按密钥的设备跟踪、无 root 的 MITM 信任、zh-TW 本地化。→ [环境变量](docs/reference/ENVIRONMENT.md)
-- **🤝 更多提供者与代理** — 云代理（Codex Cloud、Cursor、Devin、Jules）、带浏览器 + OAuth 登录的 Grok Build（xAI）、Ollama 一等公民卡片、Claude Opus 5 与 Sonnet 5、Kimi 官方合作（Code/Web/Moonshot）、Zed、Requesty、SenseNova、Yuanbao、Agnes AI……以及焕新的 **376 提供者目录**。→ [提供者](docs/reference/PROVIDER_REFERENCE.md)
+- **🤝 更多提供者与代理** — 云代理（Codex Cloud、Cursor、Devin、Jules）、带浏览器 + OAuth 登录的 Grok Build（xAI）、Ollama 一等公民卡片、Claude Opus 5 与 Sonnet 5、Kimi 官方合作（Code/Web/Moonshot）、Zed、Requesty、SenseNova、Yuanbao、Agnes AI……以及焕新的 **377 提供者目录**。→ [提供者](docs/reference/PROVIDER_REFERENCE.md)
 - **📡 路由透明度** — 每个响应都带有 `X-OmniRoute-Decision` 响应头，标明处理该请求的策略/提供者/延迟；新增的 `cache-optimized` 组合策略 + Auto-Combo 的 `cacheAffinity` 因子会将重复请求路由回持有缓存前缀的连接；只读的 `/v1/auto-combo/{channel}/candidates` 端点会暴露 `auto/*` 通道的实时候选池。→ [Auto-Combo](docs/routing/AUTO-COMBO.md)
 - **⚡ 本地性能与基础设施** — 一键本地 Redis、Cloudflare Workers / Deno Deploy 中继部署器、将 Bifrost 与 Mux 作为受监管的嵌入式服务。→ [嵌入式服务](docs/frameworks/EMBEDDED-SERVICES.md)
 - **🧩 开箱即用** — 插件框架 + 应用市场、Omni/Agent/GitHub 技能框架、Obsidian 库集成（22 个 MCP 工具）、OpenAI 兼容的 Batch 与 Files API、语义响应缓存、带排行榜的游戏化机制、ACP 代理发现（15 个内置代理）、定时将日志导出至 BigQuery、`auto/chaos` 并行多模型扇出、Telegram 机器人桥接、应用内版本管理器以及 LMArena-ELO 免费提供者排名。→ [文档](docs/README.md)

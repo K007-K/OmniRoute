@@ -71,7 +71,7 @@
 
 |                                 |        v3.8.50         | **v3.8.51** |      `v3.8.53+`       |
 | ------------------------------- | :--------------------: | :---------: | :-------------------: |
-| Soláthraithe 🌐                 |          352           |   **358**   |          376          |
+| Soláthraithe 🌐                 |          352           |   **358**   |          377          |
 | 🧠 Múnla comhrá uathúil IDs     |          1320          |  **1374**   |         1475          |
 | 🖼️ Droichead Módúlachta         |  🆕 + fuaime + físeán  |      ✓      |           ✓           |
 | 📡 radar catalóg saor in aisce, | 🆕 rogha an diúltaithe |      ✓      |           ✓           |
@@ -612,7 +612,7 @@ faoin gcatalóg reatha ag **[radar.omniroute.online/planos](https://radar.omniro
 - **🖼️ Críochphointí nua** — críochnaíonn `/v1/ocr` (Mistral OCR) agus `/v1/audio/translations` (ar nós Whisper) dromchla na meán. → [Tagairt API](docs/reference/API_REFERENCE.md)
 - **🎨 Giniúint íomhá / físe / fuaime** — API amháin do na meáin: físeán xAI Grok Imagine & Novita AI, ComfyUI, Magnific, Adobe Firefly, Segmind, agus soláthraithe cainte ar nós ElevenLabs. → [Tagairt API](docs/reference/API_REFERENCE.md)
 - **🌍 Imscaradh & oibríochtaí** — `basePath` frithsheachfhreastalaí, uathbhraith theanga an bhrabhsálaí, rianú gléasanna in aghaidh na heochrach, iontaobhas MITM gan root, logánú zh-TW. → [Timpeallacht](docs/reference/ENVIRONMENT.md)
-- **🤝 Tuilleadh soláthraithe & gníomhairí** — gníomhairí scamall (Codex Cloud, Cursor, Devin, Jules), Grok Build (xAI) le logáil isteach brabhsálaí + OAuth, cárta céad-aicme Ollama, Claude Opus 5 & Sonnet 5, comhpháirtíocht oifigiúil Kimi (Code/Web/Moonshot), Zed, Requesty, SenseNova, Yuanbao, Agnes AI… agus **catalóg 376 sholáthraí** athnuachan. → [Soláthraithe](docs/reference/PROVIDER_REFERENCE.md)
+- **🤝 Tuilleadh soláthraithe & gníomhairí** — gníomhairí scamall (Codex Cloud, Cursor, Devin, Jules), Grok Build (xAI) le logáil isteach brabhsálaí + OAuth, cárta céad-aicme Ollama, Claude Opus 5 & Sonnet 5, comhpháirtíocht oifigiúil Kimi (Code/Web/Moonshot), Zed, Requesty, SenseNova, Yuanbao, Agnes AI… agus **catalóg 377 sholáthraí** athnuachan. → [Soláthraithe](docs/reference/PROVIDER_REFERENCE.md)
 - **📡 Trédhearcacht ródaithe** — iompraíonn gach freagra ceanntásc `X-OmniRoute-Decision` a ainmníonn an straitéis/soláthraí/latency a sheirbheáil é, ródaíonn straitéis teaglama nua `cache-optimized` mar aon le fachtóir Auto-Combo `cacheAffinity` iarratais arís ar ais chuig an nasc a choinníonn an réimír thaiscthe, agus nochtann críochphointe inléite amháin `/v1/auto-combo/{channel}/candidates` linn iarrthóirí bheo chainéil `auto/*`. → [Auto-Combo](docs/routing/AUTO-COMBO.md)
 - **⚡ Feidhmíocht áitiúil & infreastruchtúr** — Redis áitiúil le haon chliceáil amháin, imscairteoirí sealaíochta Cloudflare Workers / Deno Deploy, Bifrost & Mux mar sheirbhísí leabaithe faoi mhaoirseacht. → [Seirbhísí Leabaithe](docs/frameworks/EMBEDDED-SERVICES.md)
 - **🧩 Sa bhosca freisin** — creatlach breiseán + margadh, creataí scileanna Omni/Agent/GitHub, comhtháthú vault Obsidian (22 uirlis MCP), APIanna Batch & Files comhoiriúnacha le OpenAI, taisce freagartha séimeantaí, cluichíocht le cláir cheannais, aimsiú gníomhairí ACP (15 gníomhaire ionsuite), onnmhairiú sceidealta logaí go BigQuery, fan-out ilmhúnla comhthreomhar `auto/chaos`, droichead bot Telegram, bainisteoir leagain laistigh den aip agus rangúcháin soláthraithe saor in aisce LMArena-ELO. → [Doiciméid](docs/README.md)

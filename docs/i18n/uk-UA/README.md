@@ -71,7 +71,7 @@
 
 |                                  |          v3.8.50          | **v3.8.51** |      `v3.8.53+`       |
 | -------------------------------- | :-----------------------: | :---------: | :-------------------: |
-| Постачальники 🌐                 |            352            |   **358**   |          376          |
+| Постачальники 🌐                 |            352            |   **358**   |          377          |
 | 🧠 Унікальна модель чату IDs     |           1320            |  **1374**   |         1475          |
 | Міст модальності 🖼️              | 🆕 vision + audio + video |      ✓      |           ✓           |
 | Безкоштовний каталог 📡 Radar    |     підключення до 🆕     |      ✓      |           ✓           |
@@ -603,7 +603,7 @@ Radar використовується за бажанням і лише чер�
 - **🖼️ Нові ендпоінти** — `/v1/ocr` (Mistral OCR) і `/v1/audio/translations` (у стилі Whisper) доповнюють медійну поверхню. → [API Reference](docs/reference/API_REFERENCE.md)
 - **🎨 Генерація зображень / відео / аудіо** — один API для медіа: xAI Grok Imagine і відео Novita AI, ComfyUI, Magnific, Adobe Firefly, Segmind і мовленнєві провайдери, як-от ElevenLabs. → [API Reference](docs/reference/API_REFERENCE.md)
 - **🌍 Розгортання й експлуатація** — `basePath` для зворотного проксі, автовизначення мови браузера, відстеження пристроїв для кожного ключа, довіра MITM без root, локалізація zh-TW. → [Environment](docs/reference/ENVIRONMENT.md)
-- **🤝 Більше провайдерів і агентів** — хмарні агенти (Codex Cloud, Cursor, Devin, Jules), Grok Build (xAI) зі входом через браузер + OAuth, повноцінна картка Ollama, Claude Opus 5 і Sonnet 5, офіційне партнерство з Kimi (Code/Web/Moonshot), Zed, Requesty, SenseNova, Yuanbao, Agnes AI… і оновлений **каталог на 376 провайдерів**. → [Providers](docs/reference/PROVIDER_REFERENCE.md)
+- **🤝 Більше провайдерів і агентів** — хмарні агенти (Codex Cloud, Cursor, Devin, Jules), Grok Build (xAI) зі входом через браузер + OAuth, повноцінна картка Ollama, Claude Opus 5 і Sonnet 5, офіційне партнерство з Kimi (Code/Web/Moonshot), Zed, Requesty, SenseNova, Yuanbao, Agnes AI… і оновлений **каталог на 377 провайдерів**. → [Providers](docs/reference/PROVIDER_REFERENCE.md)
 - **📡 Прозорість маршрутизації** — кожна відповідь містить заголовок `X-OmniRoute-Decision`, що вказує стратегію/провайдера/затримку, які її обслужили; нова стратегія комбо `cache-optimized` + фактор Auto-Combo `cacheAffinity` повертають повторні запити до з'єднання, що тримає кешований префікс; а ендпоінт лише для читання `/v1/auto-combo/{channel}/candidates` показує живий пул кандидатів каналу `auto/*`. → [Auto-Combo](docs/routing/AUTO-COMBO.md)
 - **⚡ Локальна продуктивність та інфраструктура** — локальний Redis в один клік, розгортання релею Cloudflare Workers / Deno Deploy, Bifrost і Mux як керовані вбудовані сервіси. → [Вбудовані сервіси](docs/frameworks/EMBEDDED-SERVICES.md)
 - **🧩 Також у комплекті** — фреймворк плагінів + маркетплейс, фреймворки навичок Omni/Agent/GitHub, інтеграція з Obsidian vault (22 MCP-інструменти), OpenAI-сумісні Batch & Files API, семантичний кеш відповідей, гейміфікація з таблицями лідерів, виявлення ACP-агентів (15 вбудованих агентів), запланований експорт логів до BigQuery, паралельний багатомодельний fan-out `auto/chaos`, міст для Telegram-бота, вбудований менеджер версій і рейтинги безкоштовних провайдерів за LMArena-ELO. → [Документація](docs/README.md)

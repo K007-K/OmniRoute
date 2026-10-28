@@ -71,7 +71,7 @@
 
 |                              |         v3.8.50          | **v3.8.51** |      `v3.8.53+`       |
 | ---------------------------- | :----------------------: | :---------: | :-------------------: |
-| 🌐 প্রদানকারী                |           352            |   **358**   |          376          |
+| 🌐 প্রদানকারী                |           352            |   **358**   |          377          |
 | 🧠 অনন্য চ্যাট মডেল IDs      |           1320           |  **1374**   |         1475          |
 | 🖼️ মডেলটি সেতু               | 🆕 vision + অডিও + ভিডিও |      ✓      |           ✓           |
 | 📡 রাডার বিনামূল্যে ক্যাটালগ |        🆕 অপ্ট-ইন        |      ✓      |           ✓           |
@@ -603,7 +603,7 @@ Radar ব্যবহার ঐচ্ছিক এবং এটি কেবল 
 - **🖼️ নতুন এন্ডপয়েন্ট** — `/v1/ocr` (Mistral OCR) এবং `/v1/audio/translations` (Whisper-ধাঁচের) মিডিয়া সুবিধাগুলোকে পূর্ণতা দেয়। → [API রেফারেন্স](docs/reference/API_REFERENCE.md)
 - **🎨 ছবি / ভিডিও / অডিও তৈরি** — মিডিয়ার জন্য একটি API: xAI Grok Imagine ও Novita AI ভিডিও, ComfyUI, Magnific, Adobe Firefly, Segmind এবং ElevenLabs-এর মতো স্পিচ প্রোভাইডার। → [API রেফারেন্স](docs/reference/API_REFERENCE.md)
 - **🌍 ডিপ্লয়মেন্ট ও অপারেশন** — রিভার্স-প্রক্সি `basePath`, ব্রাউজারের ভাষা স্বয়ংক্রিয় শনাক্তকরণ, প্রতি-কী ডিভাইস ট্র্যাকিং, রুটবিহীন MITM ট্রাস্ট এবং zh-TW স্থানীয়করণ। → [এনভায়রনমেন্ট](docs/reference/ENVIRONMENT.md)
-- **🤝 আরও প্রোভাইডার ও এজেন্ট** — ক্লাউড এজেন্ট (Codex Cloud, Cursor, Devin, Jules), ব্রাউজার + OAuth লগইনসহ Grok Build (xAI), প্রথম-শ্রেণির Ollama কার্ড, Claude Opus 5 ও Sonnet 5, Kimi-এর আনুষ্ঠানিক অংশীদারত্ব (Code/Web/Moonshot), Zed, Requesty, SenseNova, Yuanbao, Agnes AI… এবং হালনাগাদ **৩৭৬-প্রোভাইডারের ক্যাটালগ**। → [প্রোভাইডার](docs/reference/PROVIDER_REFERENCE.md)
+- **🤝 আরও প্রোভাইডার ও এজেন্ট** — ক্লাউড এজেন্ট (Codex Cloud, Cursor, Devin, Jules), ব্রাউজার + OAuth লগইনসহ Grok Build (xAI), প্রথম-শ্রেণির Ollama কার্ড, Claude Opus 5 ও Sonnet 5, Kimi-এর আনুষ্ঠানিক অংশীদারত্ব (Code/Web/Moonshot), Zed, Requesty, SenseNova, Yuanbao, Agnes AI… এবং হালনাগাদ **৩৭৭-প্রোভাইডারের ক্যাটালগ**। → [প্রোভাইডার](docs/reference/PROVIDER_REFERENCE.md)
 - **📡 রাউটিংয়ের স্বচ্ছতা** — প্রতিটি রেসপন্সে একটি `X-OmniRoute-Decision` হেডার থাকে, যা ব্যবহৃত কৌশল/প্রোভাইডার/লেটেন্সির নাম জানায়; নতুন `cache-optimized` কম্বো কৌশল + Auto-Combo `cacheAffinity` ফ্যাক্টর পুনরাবৃত্ত অনুরোধগুলোকে ক্যাশ করা প্রিফিক্সধারী সংযোগে ফেরত পাঠায়; এবং একটি রিড-অনলি `/v1/auto-combo/{channel}/candidates` এন্ডপয়েন্ট কোনো `auto/*` চ্যানেলের লাইভ প্রার্থী পুল প্রকাশ করে। → [Auto-Combo](docs/routing/AUTO-COMBO.md)
 - **⚡ লোকাল পারফরম্যান্স ও ইনফ্রা** — ওয়ান-ক্লিক লোকাল Redis, Cloudflare Workers / Deno Deploy রিলে ডিপ্লয়ার, Bifrost ও Mux সুপারভাইজড এমবেডেড সার্ভিস হিসেবে। → [Embedded Services](docs/frameworks/EMBEDDED-SERVICES.md)
 - **🧩 বক্সের ভেতরেও আরও আছে** — প্লাগইন ফ্রেমওয়ার্ক + মার্কেটপ্লেস, Omni/Agent/GitHub স্কিল ফ্রেমওয়ার্ক, Obsidian ভল্ট ইন্টিগ্রেশন (২২টি MCP টুল), OpenAI-সামঞ্জস্যপূর্ণ Batch ও Files API, সেম্যান্টিক রেসপন্স ক্যাশ, লিডারবোর্ডসহ গেমিফিকেশন, ACP এজেন্ট ডিসকভারি (১৫টি বিল্ট-ইন এজেন্ট), BigQuery-তে নির্ধারিত লগ এক্সপোর্ট, `auto/chaos` প্যারালাল মাল্টি-মডেল ফ্যান-আউট, একটি টেলিগ্রাম বট ব্রিজ, ইন-অ্যাপ ভার্সন ম্যানেজার এবং LMArena-ELO ফ্রি-প্রোভাইডার র্যাঙ্কিং। → [Docs](docs/README.md)

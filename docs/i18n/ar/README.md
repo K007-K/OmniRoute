@@ -71,7 +71,7 @@
 
 |                                          |           v3.8.50           | **v3.8.51** |      `v3.8.53+`       |
 | ---------------------------------------- | :-------------------------: | :---------: | :-------------------: |
-| 🌐                                       |             352             |   **358**   |          376          |
+| 🌐                                       |             352             |   **358**   |          377          |
 | 🧠 نموذج الدردشة الفريد IDs              |            1320             |  **1374**   |         1475          |
 | 🖼️ طريقة الجسر                           | 🆕 الرؤية + الصوت + الفيديو |      ✓      |           ✓           |
 | كتالوج 📡 الرادار المجاني                |        🆕 التقيد في         |      ✓      |           ✓           |
@@ -603,7 +603,7 @@ Radar اختياري ويستخدم طلبات GET فقط. لا يرفع عمي�
 - **🖼️ نقاط نهاية جديدة** — تُكمل `/v1/ocr` (Mistral OCR) و`/v1/audio/translations` (بنمط Whisper) واجهة الوسائط. → [API Reference](docs/reference/API_REFERENCE.md)
 - **🎨 توليد الصور / الفيديو / الصوت** — واجهة API واحدة للوسائط: فيديو xAI Grok Imagine وNovita AI، وComfyUI، وMagnific، وAdobe Firefly، وSegmind، ومزوّدو الكلام مثل ElevenLabs. → [API Reference](docs/reference/API_REFERENCE.md)
 - **🌍 النشر والتشغيل** — `basePath` في البروكسي العكسي، والكشف التلقائي للغة المتصفح، وتتبّع الأجهزة لكل مفتاح، وثقة MITM بدون جذر، وتعريب zh-TW. → [Environment](docs/reference/ENVIRONMENT.md)
-- **🤝 المزيد من المزوّدين والوكلاء** — وكلاء سحابيون (Codex Cloud، Cursor، Devin، Jules)، وGrok Build (xAI) مع تسجيل دخول عبر المتصفح + OAuth، وبطاقة Ollama من الدرجة الأولى، وClaude Opus 5 وSonnet 5، وشراكة Kimi الرسمية (Code/Web/Moonshot)، وZed، وRequesty، وSenseNova، وYuanbao، وAgnes AI… و**كتالوج محدّث يضم 376 مزوّدًا**. → [Providers](docs/reference/PROVIDER_REFERENCE.md)
+- **🤝 المزيد من المزوّدين والوكلاء** — وكلاء سحابيون (Codex Cloud، Cursor، Devin، Jules)، وGrok Build (xAI) مع تسجيل دخول عبر المتصفح + OAuth، وبطاقة Ollama من الدرجة الأولى، وClaude Opus 5 وSonnet 5، وشراكة Kimi الرسمية (Code/Web/Moonshot)، وZed، وRequesty، وSenseNova، وYuanbao، وAgnes AI… و**كتالوج محدّث يضم 377 مزوّدًا**. → [Providers](docs/reference/PROVIDER_REFERENCE.md)
 - **📡 شفافية التوجيه** — كل استجابة تحمل ترويسة `X-OmniRoute-Decision` تسمّي الاستراتيجية/المزوّد/زمن الاستجابة الذي خدمها، واستراتيجية تجميع جديدة `cache-optimized` + عامل `cacheAffinity` في Auto-Combo يعيدان الطلبات المتكررة إلى الاتصال الذي يحتفظ بالبادئة المخزّنة مؤقتًا، وتكشف نقطة نهاية للقراءة فقط `/v1/auto-combo/{channel}/candidates` عن مجموعة المرشحين الحية لقناة `auto/*`. → [Auto-Combo](docs/routing/AUTO-COMBO.md)
 - **⚡ الأداء المحلي والبنية التحتية** — Redis محلي بنقرة واحدة، وأدوات نشر الترحيل على Cloudflare Workers / Deno Deploy، وBifrost وMux كخدمات مضمنة خاضعة للإشراف. → [الخدمات المضمنة](docs/frameworks/EMBEDDED-SERVICES.md)
 - **🧩 وأيضًا ضمن الحزمة** — إطار عمل الإضافات + سوق، وأُطر مهارات Omni/Agent/GitHub، وتكامل خزنة Obsidian (22 أداة MCP)، وواجهات Batch & Files APIs المتوافقة مع OpenAI، وذاكرة تخزين مؤقت دلالية للاستجابات، والتلعيب مع لوحات الصدارة، واكتشاف وكلاء ACP (15 وكيلًا مدمجًا)، وتصدير السجلات المجدول إلى BigQuery، و`auto/chaos` للتوزيع المتوازي متعدد النماذج، وجسر بوت Telegram، ومدير إصدارات داخل التطبيق، وتصنيفات المزوّدين المجانيين LMArena-ELO. → [المستندات](docs/README.md)

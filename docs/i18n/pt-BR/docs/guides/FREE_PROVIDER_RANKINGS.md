@@ -21,7 +21,7 @@ A classificação é calculada a partir de três fontes reais:
 
 1. As listas de provedores gratuitos - `NOAUTH_PROVIDERS`, mais entradas `OAUTH_PROVIDERS` / `APIKEY_PROVIDERS` sinalizadas como `hasFree` (`src/shared/constants/providers.ts`).
 2. O catálogo de modelos de cada provedor do registro do provedor (`open-sse/config/providerRegistry.ts`).
-3. Pontuações de ajuste de tarefas derivadas de ELO armazenadas na tabela `model_intelligence` DB pelo mecanismo de sincronização Arena ELO (`src/lib/arenaEloSync.ts`).
+3. Pontuações de ajuste de tarefa derivadas de ELO armazenadas na tabela `model_intelligence` DB pelo mecanismo de sincronização Arena ELO (`src/lib/arenaEloSync.ts`).
 
 A lógica de junção reside em `src/lib/freeProviderRankings.ts`.
 

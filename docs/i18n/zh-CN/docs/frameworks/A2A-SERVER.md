@@ -151,7 +151,7 @@ curl -X POST http://localhost:20128/a2a \
 
 ## 可用技能
 
-OmniRoute公开了`src/lib/a2a/taskExecution.ts::A2A_SKILL_HANDLERS`中连接的 6 个A2A技能。每个技能模块都位于`src/lib/a2a/skills/`中。
+OmniRoute公开了`src/lib/a2a/taskExecution.ts::A2A_SKILL_HANDLERS`中的 6 个A2A技能。每个技能模块都位于`src/lib/a2a/skills/`中。
 
 | 技能       | ID                   | 描述                                                                                                        | 标签             | 示例                       |
 | :--------- | :------------------- | :---------------------------------------------------------------------------------------------------------- | :--------------- | :------------------------- |

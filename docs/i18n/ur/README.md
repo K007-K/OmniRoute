@@ -71,7 +71,7 @@
 
 |                         |        v3.8.50        | **v3.8.51** |      `v3.8.53+`       |
 | ----------------------- | :-------------------: | :---------: | :-------------------: |
-| 🌐 فراہم کرنے والے      |          352          |   **358**   |          376          |
+| 🌐 فراہم کرنے والے      |          352          |   **358**   |          377          |
 | 🧠 منفرد چیٹ ماڈل IDs   |         1320          |  **1374**   |         1475          |
 | 🖼️ موڈالٹی پل           | 🆕 وژن + آڈیو + ویڈیو |      ✓      |           ✓           |
 | 📡 ریڈار مفت کیٹلاگ     |       🆕 آپٹ ان       |      ✓      |           ✓           |
@@ -607,7 +607,7 @@ Radar اختیاری ہے اور صرف GET استعمال کرتا ہے۔ OmniR
 - **🖼️ نئے اینڈ پوائنٹس** — `/v1/ocr` (Mistral OCR) اور `/v1/audio/translations` (Whisper طرز) میڈیا کی سطح کو مکمل کرتے ہیں۔ → [API حوالہ](docs/reference/API_REFERENCE.md)
 - **🎨 تصویر / ویڈیو / آڈیو جنریشن** — میڈیا کے لیے ایک API: xAI Grok Imagine اور Novita AI ویڈیو، ComfyUI، Magnific، Adobe Firefly، Segmind، اور ElevenLabs جیسے اسپیچ فراہم کنندگان۔ → [API حوالہ](docs/reference/API_REFERENCE.md)
 - **🌍 تعیناتی اور آپریشنز** — ریورس-پراکسی `basePath`، براؤزر زبان کی خودکار شناخت، فی-کلید ڈیوائس ٹریکنگ، root کے بغیر MITM ٹرسٹ، zh-TW لوکلائزیشن۔ → [ماحول](docs/reference/ENVIRONMENT.md)
-- **🤝 مزید فراہم کنندگان اور ایجنٹس** — کلاؤڈ ایجنٹس (Codex Cloud، Cursor، Devin، Jules)، براؤزر + OAuth لاگ اِن کے ساتھ Grok Build (xAI)، Ollama فرسٹ-کلاس کارڈ، Claude Opus 5 اور Sonnet 5، Kimi سرکاری شراکت داری (Code/Web/Moonshot)، Zed، Requesty، SenseNova، Yuanbao، Agnes AI… اور تازہ شدہ **376 فراہم کنندگان کا کیٹلاگ**۔ → [فراہم کنندگان](docs/reference/PROVIDER_REFERENCE.md)
+- **🤝 مزید فراہم کنندگان اور ایجنٹس** — کلاؤڈ ایجنٹس (Codex Cloud، Cursor، Devin، Jules)، براؤزر + OAuth لاگ اِن کے ساتھ Grok Build (xAI)، Ollama فرسٹ-کلاس کارڈ، Claude Opus 5 اور Sonnet 5، Kimi سرکاری شراکت داری (Code/Web/Moonshot)، Zed، Requesty، SenseNova، Yuanbao، Agnes AI… اور تازہ شدہ **377 فراہم کنندگان کا کیٹلاگ**۔ → [فراہم کنندگان](docs/reference/PROVIDER_REFERENCE.md)
 - **📡 روٹنگ شفافیت** — ہر جواب ایک `X-OmniRoute-Decision` ہیڈر ساتھ لاتا ہے جو اس حکمتِ عملی/فراہم کنندہ/لیٹنسی کا نام بتاتا ہے جس نے اسے پیش کیا، ایک نئی `cache-optimized` کومبو حکمتِ عملی + Auto-Combo `cacheAffinity` عنصر دہرائی گئی درخواستوں کو اسی کنکشن پر واپس بھیجتے ہیں جس کے پاس کیش شدہ prefix موجود ہے، اور ایک صرف-مطالعہ `/v1/auto-combo/{channel}/candidates` اینڈ پوائنٹ کسی `auto/*` چینل کا لائیو امیدوار پول ظاہر کرتا ہے۔ → [Auto-Combo](docs/routing/AUTO-COMBO.md)
 - **⚡ مقامی کارکردگی اور انفراسٹرکچر** — ون کلک مقامی Redis، Cloudflare Workers / Deno Deploy ریلے ڈیپلائرز، Bifrost اور Mux بطور نگرانی شدہ ایمبیڈڈ سروسز۔ → [ایمبیڈڈ سروسز](docs/frameworks/EMBEDDED-SERVICES.md)
 - **🧩 اس کے علاوہ بھی شامل ہے** — پلگ اِن فریم ورک + مارکیٹ پلیس، Omni/Agent/GitHub اسکلز فریم ورکس، Obsidian والٹ انٹیگریشن (22 MCP ٹولز)، OpenAI سے ہم آہنگ Batch اور Files APIs، سیمینٹک رسپانس کیشے، لیڈربورڈز کے ساتھ گیمیفیکیشن، ACP ایجنٹ ڈسکوری (15 بلٹ اِن ایجنٹس)، BigQuery میں شیڈول شدہ لاگ ایکسپورٹ، `auto/chaos` متوازی ملٹی ماڈل فین آؤٹ، ایک Telegram بوٹ برج، ایک اِن ایپ ورژن مینیجر اور LMArena-ELO فری پرووائیڈر رینکنگز۔ → [دستاویزات](docs/README.md)

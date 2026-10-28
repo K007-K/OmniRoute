@@ -71,7 +71,7 @@
 
 |                              |          v3.8.50           | **v3.8.51** |        `v3.8.53+`         |
 | ---------------------------- | :------------------------: | :---------: | :-----------------------: |
-| 🌐 ପ୍ରଦାନକାରୀ \|             |            352             |   **358**   |            376            |
+| 🌐 ପ୍ରଦାନକାରୀ \|             |            352             |   **358**   |            377            |
 | 🧠 ଅନନ୍ୟ ଚାଟ୍ ମଡେଲ୍ IDs      |            1320            |  **1374**   |           1475            |
 | 🖼️ ମୋଡାଲିଟି ବ୍ରିଜ୍ \|        | 🆕 ଦର୍ଶନ + ଅଡିଓ + ଭିଡିଓ \| |      ✓      |             ✓             |
 | 📡 ରାଡାର ମାଗଣା କାଟାଲଗ୍ \|    |       🆕 ଅପ୍ଟ-ଇନ୍ \|       |      ✓      |             ✓             |
@@ -603,7 +603,7 @@ Radar ଇଚ୍ଛାଧୀନ ଏବଂ କେବଳ GET ପାଇଁ ଉଦ୍
 - **🖼️ ନୂତନ endpoints** — `/v1/ocr` (Mistral OCR) ଏବଂ `/v1/audio/translations` (Whisper-style) ମିଡିଆ ସର୍ଫେସ୍ ପୂର୍ଣ୍ଣ କରନ୍ତି। → [API Reference](docs/reference/API_REFERENCE.md)
 - **🎨 ପ୍ରତିଛବି / ଭିଡିଓ / ଅଡିଓ ଜେନେରେସନ୍** — ମିଡିଆ ପାଇଁ ଗୋଟିଏ API: xAI Grok Imagine ଏବଂ Novita AI ଭିଡିଓ, ComfyUI, Magnific, Adobe Firefly, Segmind, ଏବଂ ElevenLabs ପରି speech ପ୍ରଦାତା। → [API Reference](docs/reference/API_REFERENCE.md)
 - **🌍 ନିଯୁକ୍ତି ଏବଂ ଅପରେସନ୍** — reverse-proxy `basePath`, ବ୍ରାଉଜର୍-ଭାଷା auto-detect, ପ୍ରତି-କି ଡିଭାଇସ୍ ଟ୍ରାକିଂ, root-less MITM trust, zh-TW ସ୍ଥାନୀୟକରଣ। → [Environment](docs/reference/ENVIRONMENT.md)
-- **🤝 ଅଧିକ ପ୍ରଦାତା ଏବଂ ଏଜେଣ୍ଟ** — କ୍ଲାଉଡ୍ ଏଜେଣ୍ଟ (Codex Cloud, Cursor, Devin, Jules), ବ୍ରାଉଜର୍ + OAuth ଲଗଇନ୍ ସହ Grok Build (xAI), Ollama first-class କାର୍ଡ, Claude Opus 5 ଏବଂ Sonnet 5, Kimi ସରକାରୀ ସାଥିତ୍ୱ (Code/Web/Moonshot), Zed, Requesty, SenseNova, Yuanbao, Agnes AI… ଏବଂ ଏକ ନିକୁତ **376-ପ୍ରଦାତା କାଟାଲଗ୍**। → [Providers](docs/reference/PROVIDER_REFERENCE.md)
+- **🤝 ଅଧିକ ପ୍ରଦାତା ଏବଂ ଏଜେଣ୍ଟ** — କ୍ଲାଉଡ୍ ଏଜେଣ୍ଟ (Codex Cloud, Cursor, Devin, Jules), ବ୍ରାଉଜର୍ + OAuth ଲଗଇନ୍ ସହ Grok Build (xAI), Ollama first-class କାର୍ଡ, Claude Opus 5 ଏବଂ Sonnet 5, Kimi ସରକାରୀ ସାଥିତ୍ୱ (Code/Web/Moonshot), Zed, Requesty, SenseNova, Yuanbao, Agnes AI… ଏବଂ ଏକ ନିକୁତ **377-ପ୍ରଦାତା କାଟାଲଗ୍**। → [Providers](docs/reference/PROVIDER_REFERENCE.md)
 - **📡 ରୁଟିଂ ସ୍ପଷ୍ଟତା** — ପ୍ରତ୍ୟେକ ପ୍ରତିକ୍ରିୟା ଏକ `X-OmniRoute-Decision` ହେଡର୍ ଧାରଣ କରେ ଯାହା ଏହାକୁ ପରିବେଷଣ କରିଥିବା ରଣନୀତି/ପ୍ରଦାତା/ଲାଟେନ୍ସି ନାମ କରେ, ଏକ ନୂତନ `cache-optimized` କମ୍ବୋ ରଣନୀତି + Auto-Combo `cacheAffinity` ଫ୍ୟାକ୍ଟର୍ ପୁନରାବୃତ୍ତି ଅନୁରୋଧଗୁଡ଼ିକୁ କ୍ୟାଚ୍ ହୋଇଥିବା ପ୍ରିଫିକ୍ସ ଧାରଣ କରିଥିବା ସଂଯୋଗକୁ ଫେରାଇ ଦିଏ, ଏବଂ ଏକ read-only `/v1/auto-combo/{channel}/candidates` ଏଣ୍ଡପଏଣ୍ଟ ଗୋଟିଏ `auto/*` ଚ୍ୟାନେଲର live candidate pool ପ୍ରକାଶ କରେ। → [Auto-Combo](docs/routing/AUTO-COMBO.md)
 - **⚡ ସ୍ଥାନୀୟ କାର୍ଯ୍ୟଦକ୍ଷତା ଓ ଇନ୍ଫ୍ରା** — ୱାନ୍-କ୍ଲିକ୍ ସ୍ଥାନୀୟ Redis, Cloudflare Workers / Deno Deploy ରିଲେ ଡିପ୍ଲୟର୍, ତତ୍ତ୍ଵାବଧାନରେ ଥିବା ଏମ୍ବେଡେଡ୍ ସେବା ଭାବରେ Bifrost ଓ Mux। → [ଏମ୍ବେଡେଡ୍ ସେବାଗୁଡ଼ିକ](docs/frameworks/EMBEDDED-SERVICES.md)
 - **🧩 ବାକ୍ସରେ ଆହୁରି ମଧ୍ୟ ଅଛି** — ପ୍ଲଗିନ୍ ଫ୍ରେମୱାର୍କ + ମାର୍କେଟପ୍ଲେସ୍, Omni/Agent/GitHub ସ୍କିଲ୍ ଫ୍ରେମୱାର୍କ, Obsidian ଭଲ୍ଟ ଇଣ୍ଟିଗ୍ରେସନ୍ (22 MCP ଟୁଲ୍), OpenAI-ସୁସଂଗତ Batch ଓ Files API, ସିମାଣ୍ଟିକ୍ ରିସପନ୍ସ କ୍ୟାସେ, ଲିଡରବୋର୍ଡ ସହିତ ଗେମିଫିକେସନ୍, ACP ଏଜେଣ୍ଟ ଆବିଷ୍କାର (15 ଅନ୍ତର୍ନିର୍ମିତ ଏଜେଣ୍ଟ), BigQueryକୁ ନିର୍ଧାରିତ ଲଗ୍ ରପ୍ତାନି, `auto/chaos` ସମାନ୍ତରାଳ ମଲ୍ଟି-ମଡେଲ୍ ଫ୍ୟାନ୍-ଆଉଟ୍, ଏକ ଟେଲିଗ୍ରାମ୍ ବଟ୍ ବ୍ରିଜ୍, ଏକ ଇନ୍-ଆପ୍ ଭର୍ସନ୍ ମ୍ୟାନେଜର୍ ଏବଂ LMArena-ELO ମାଗଣା-ପ୍ରୋଭାଇଡର୍ ର୍ୟାଙ୍କିଂ। → [ଡକ୍ସ](docs/README.md)

@@ -71,7 +71,7 @@
 
 |                           |          v3.8.50           | **v3.8.51** |      `v3.8.53+`       |
 | ------------------------- | :------------------------: | :---------: | :-------------------: |
-| 🌐 ಪೂರೈಕೆದಾರರು            |            352             |   **358**   |          376          |
+| 🌐 ಪೂರೈಕೆದಾರರು            |            352             |   **358**   |          377          |
 | 🧠 ವಿಶಿಷ್ಟ ಚಾಟ್ ಮಾದರಿ IDs |            1320            |  **1374**   |         1475          |
 | 🖼️ ಮಾದರಿ ಸೇತುವೆ           | 🆕 ದೃಷ್ಟಿ + ಆಡಿಯೊ + ವೀಡಿಯೊ |      ✓      |           ✓           |
 | 📡 ರಾಡಾರ್ ಉಚಿತ ಕ್ಯಾಟಲಾಗ್  |          🆕 ಆಯ್ಕೆ          |      ✓      |           ✓           |
@@ -603,7 +603,7 @@ Radar ಬಳಸುವುದು ಐಚ್ಛಿಕವಾಗಿದ್ದು, ಅ�
 - **🖼️ ಹೊಸ ಎಂಡ್ಪಾಯಿಂಟ್ಗಳು** — `/v1/ocr` (Mistral OCR) ಮತ್ತು `/v1/audio/translations` (Whisper-ಶೈಲಿ) ಮೀಡಿಯಾ ಮೇಲ್ಮೈಯನ್ನು ಪೂರ್ಣಗೊಳಿಸುತ್ತವೆ. → [API Reference](docs/reference/API_REFERENCE.md)
 - **🎨 ಇಮೇಜ್ / ವೀಡಿಯೊ / ಆಡಿಯೊ ಜನರೇಶನ್** — ಮೀಡಿಯಾಗಾಗಿ ಒಂದೇ API: xAI Grok Imagine & Novita AI ವೀಡಿಯೊ, ComfyUI, Magnific, Adobe Firefly, Segmind, ಮತ್ತು ElevenLabs ನಂತಹ ಸ್ಪೀಚ್ ಪ್ರೊವೈಡರ್ಗಳು. → [API Reference](docs/reference/API_REFERENCE.md)
 - **🌍 ಡಿಪ್ಲಾಯ್ಮೆಂಟ್ & ಆಪ್ಸ್** — ರಿವರ್ಸ್-ಪ್ರಾಕ್ಸಿ `basePath`, ಬ್ರೌಸರ್-ಭಾಷೆ ಆಟೋ-ಡಿಟೆಕ್ಟ್, ಪ್ರತಿ-ಕೀಲಿ ಡಿವೈಸ್ ಟ್ರ್ಯಾಕಿಂಗ್, ರೂಟ್-ರಹಿತ MITM ಟ್ರಸ್ಟ್, zh-TW ಲೋಕಲೈಸೇಶನ್. → [Environment](docs/reference/ENVIRONMENT.md)
-- **🤝 ಹೆಚ್ಚಿನ ಪ್ರೊವೈಡರ್ಗಳು & ಏಜೆಂಟ್ಗಳು** — ಕ್ಲೌಡ್ ಏಜೆಂಟ್ಗಳು (Codex Cloud, Cursor, Devin, Jules), ಬ್ರೌಸರ್ + OAuth ಲಾಗಿನ್ನೊಂದಿಗೆ Grok Build (xAI), Ollama ಫಸ್ಟ್-ಕ್ಲಾಸ್ ಕಾರ್ಡ್, Claude Opus 5 & Sonnet 5, Kimi ಅಧಿಕೃತ ಪಾಲುದಾರಿಕೆ (Code/Web/Moonshot), Zed, Requesty, SenseNova, Yuanbao, Agnes AI… ಮತ್ತು ರಿಫ್ರೆಶ್ ಮಾಡಿದ **376-ಪ್ರೊವೈಡರ್ ಕ್ಯಾಟಲಾಗ್**. → [Providers](docs/reference/PROVIDER_REFERENCE.md)
+- **🤝 ಹೆಚ್ಚಿನ ಪ್ರೊವೈಡರ್ಗಳು & ಏಜೆಂಟ್ಗಳು** — ಕ್ಲೌಡ್ ಏಜೆಂಟ್ಗಳು (Codex Cloud, Cursor, Devin, Jules), ಬ್ರೌಸರ್ + OAuth ಲಾಗಿನ್ನೊಂದಿಗೆ Grok Build (xAI), Ollama ಫಸ್ಟ್-ಕ್ಲಾಸ್ ಕಾರ್ಡ್, Claude Opus 5 & Sonnet 5, Kimi ಅಧಿಕೃತ ಪಾಲುದಾರಿಕೆ (Code/Web/Moonshot), Zed, Requesty, SenseNova, Yuanbao, Agnes AI… ಮತ್ತು ರಿಫ್ರೆಶ್ ಮಾಡಿದ **377-ಪ್ರೊವೈಡರ್ ಕ್ಯಾಟಲಾಗ್**. → [Providers](docs/reference/PROVIDER_REFERENCE.md)
 - **📡 ರೂಟಿಂಗ್ ಪಾರದರ್ಶಕತೆ** — ಪ್ರತಿ ಪ್ರತಿಕ್ರಿಯೆಯು ಅದನ್ನು ಸೇವೆ ಮಾಡಿದ ತಂತ್ರ/ಪ್ರೊವೈಡರ್/ಲೇಟೆನ್ಸಿಯನ್ನು ಹೆಸರಿಸುವ `X-OmniRoute-Decision` ಹೆಡರ್ ಅನ್ನು ಹೊತ್ತುಕೊಂಡಿರುತ್ತದೆ, ಹೊಸ `cache-optimized` ಕಾಂಬೋ ತಂತ್ರ + Auto-Combo `cacheAffinity` ಅಂಶವು ಪುನರಾವರ್ತಿತ ವಿನಂತಿಗಳನ್ನು ಕ್ಯಾಶ್ ಮಾಡಿದ ಪ್ರಿಫಿಕ್ಸ್ ಹೊಂದಿರುವ ಸಂಪರ್ಕಕ್ಕೆ ಹಿಂದಿರುಗಿಸುತ್ತವೆ, ಮತ್ತು ರೀಡ್-ಓನ್ಲಿ `/v1/auto-combo/{channel}/candidates` ಎಂಡ್ಪಾಯಿಂಟ್ `auto/*` ಚಾನೆಲ್ನ ಲೈವ್ ಕ್ಯಾಂಡಿಡೇಟ್ ಪೂಲ್ ಅನ್ನು ಅನಾವರಣಗೊಳಿಸುತ್ತದೆ. → [Auto-Combo](docs/routing/AUTO-COMBO.md)
 - **⚡ ಸ್ಥಳೀಯ ಕಾರ್ಯಕ್ಷಮತೆ ಮತ್ತು ಮೂಲಸೌಕರ್ಯ** — ಒಂದೇ ಕ್ಲಿಕ್ನಲ್ಲಿ ಸ್ಥಳೀಯ Redis, Cloudflare Workers / Deno Deploy ರಿಲೇ ಡಿಪ್ಲಾಯರ್ಗಳು, ಮೇಲ್ವಿಚರಣೆಯ ಎಂಬೆಡ್ ಸೇವೆಗಳಾಗಿ Bifrost ಮತ್ತು Mux. → [ಎಂಬೆಡ್ ಸೇವೆಗಳು](docs/frameworks/EMBEDDED-SERVICES.md)
 - **🧩 ಬಾಕ್ಸ್ನಲ್ಲಿ ಇನ್ನಷ್ಟು** — ಪ್ಲಗಿನ್ ಫ್ರೇಮ್ವರ್ಕ್ + ಮಾರ್ಕೆಟ್ಪ್ಲೇಸ್, Omni/Agent/GitHub ಸ್ಕಿಲ್ ಫ್ರೇಮ್ವರ್ಕ್ಗಳು, Obsidian vault ಏಕೀಕರಣ (22 MCP ಟೂಲ್ಗಳು), OpenAI-ಹೊಂದಾಣಿಕೆಯ Batch ಮತ್ತು Files APIಗಳು, ಸೆಮ್ಯಾಂಟಿಕ್ ಪ್ರತಿಕ್ರಿಯೆ ಕ್ಯಾಶೆ, ಲೀಡರ್ಬೋರ್ಡ್ಗಳೊಂದಿಗೆ ಗೇಮಿಫಿಕೇಶನ್, ACP ಏಜೆಂಟ್ ಡಿಸ್ಕವರಿ (15 ಇನ್-ಬಿಲ್ಟ್ ಏಜೆಂಟ್ಗಳು), BigQuery ಗೆ ನಿಗದಿತ ಲಾಗ್ ಎಕ್ಸ್ಪೋರ್ಟ್, `auto/chaos` ಸಮಾನಾಂತರ ಮಲ್ಟಿ-ಮಾಡೆಲ್ ಫ್ಯಾನ್-ಔಟ್, Telegram ಬಾಟ್ ಬ್ರಿಜ್, ಇನ್-ಆ್ಯಪ್ ವರ್ಷನ್ ಮ್ಯಾನೇಜರ್ ಮತ್ತು LMArena-ELO ಉಚಿತ-ಪ್ರೊವೈಡರ್ ರ್ಯಾಂಕಿಂಗ್ಗಳು. → [ಡಾಕ್ಸ್](docs/README.md)

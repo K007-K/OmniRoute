@@ -71,7 +71,7 @@
 
 |                     |      v3.8.50       | **v3.8.51** |      `v3.8.53+`       |
 | ------------------- | :----------------: | :---------: | :-------------------: |
-| 🌐 አቅራቢዎች           |        352         |   **358**   |          376          |
+| 🌐 አቅራቢዎች           |        352         |   **358**   |          377          |
 | 🧠 ልዩ የውይይት ሞዴል IDs |        1320        |  **1374**   |         1475          |
 | 🖼️ ሞዳሊቲ ድልድይ        | 🆕 ራዕይ + ኦዲዮ + ቪዲዮ |      ✓      |           ✓           |
 | 📡 ራዳር ነጻ ካታሎግ      |    🆕 መርጦ መግባት     |      ✓      |           ✓           |
@@ -603,7 +603,7 @@ Radar በምርጫ የሚነቃ ሲሆን GET ጥያቄዎችን ብቻ ይጠ�
 - **🖼️ አዲስ endpoints** — `/v1/ocr` (Mistral OCR) እና `/v1/audio/translations` (Whisper-style) የሚዲያውን ወለል ያጠናቅቃሉ። → [API ማጣቀሻ](docs/reference/API_REFERENCE.md)
 - **🎨 የምስል / ቪዲዮ / ድምፅ መፍጠሪያ** — አንድ API ለሚዲያ፦ xAI Grok Imagine እና Novita AI video፣ ComfyUI፣ Magnific፣ Adobe Firefly፣ Segmind፣ እና እንደ ElevenLabs ያሉ የንግግር አቅራቢዎች። → [API ማጣቀሻ](docs/reference/API_REFERENCE.md)
 - **🌍 መተግበሪያ እና ኦፕሬሽኖች** — reverse-proxy `basePath`፣ የአሳሽ ቋንቋ አውቶማቲክ መገንዘብ፣ በእያንዳንዱ ቁልፍ የመሣሪያ መከታተል፣ ያለ root MITM ታማኝነት፣ zh-TW ስርዓተ-ቋንቋ። → [አካባቢ](docs/reference/ENVIRONMENT.md)
-- **🤝 ተጨማሪ አቅራቢዎች እና ወኪሎች** — የደመና ወኪሎች (Codex Cloud, Cursor, Devin, Jules)፣ የGrok Build (xAI) ከአሳሽ + OAuth login ጋር፣ የOllama first-class card፣ Claude Opus 5 እና Sonnet 5፣ የKimi ኦፊሴላዊ አጋርነት (Code/Web/Moonshot)፣ Zed፣ Requesty፣ SenseNova፣ Yuanbao፣ Agnes AI… እና የተቀየሰ **376-አቅራቢ ካታሎግ**። → [አቅራቢዎች](docs/reference/PROVIDER_REFERENCE.md)
+- **🤝 ተጨማሪ አቅራቢዎች እና ወኪሎች** — የደመና ወኪሎች (Codex Cloud, Cursor, Devin, Jules)፣ የGrok Build (xAI) ከአሳሽ + OAuth login ጋር፣ የOllama first-class card፣ Claude Opus 5 እና Sonnet 5፣ የKimi ኦፊሴላዊ አጋርነት (Code/Web/Moonshot)፣ Zed፣ Requesty፣ SenseNova፣ Yuanbao፣ Agnes AI… እና የተቀየሰ **377-አቅራቢ ካታሎግ**። → [አቅራቢዎች](docs/reference/PROVIDER_REFERENCE.md)
 - **📡 የማስተላለፊያ ግልጽነት** — ከየምላሹ ጋር `X-OmniRoute-Decision` header ይከተላል፣ አገልግሎት የሰጠውን strategy/provider/latency ይሰይማል፣ አዲስ `cache-optimized` combo strategy + Auto-Combo `cacheAffinity` ምክንያት ተደጋጋሚ ጥያቄዎችን ወደ ካሺዱ prefix የያዘው ግንኙነት ይመልሳል፣ እና ለእንባቆም (read-only) የሆነ `/v1/auto-combo/{channel}/candidates` endpoint የ`auto/*` channel የቀጥታ እጩዎችን መደብ ያጋልጣል። → [Auto-Combo](docs/routing/AUTO-COMBO.md)
 - **⚡ የአካባቢ አፈጻጸም እና መሠረተ ልማት** — በአንድ ጠቅታ የሚጀምር የአካባቢ Redis፣ የ Cloudflare Workers / Deno Deploy ሪሌይ ማሰራጫዎች፣ Bifrost እና Mux እንደ ተቆጣጣሪ ያላቸው የተካተቱ አገልግሎቶች። → [የተካተቱ አገልግሎቶች](docs/frameworks/EMBEDDED-SERVICES.md)
 - **🧩 እንዲሁም በሳጥኑ ውስጥ** — የፕላጊን ማዕቀፍ + ገበያ ቦታ፣ የ Omni/Agent/GitHub ክህሎት ማዕቀፎች፣ የ Obsidian vault ውህደት (22 MCP መሣሪያዎች)፣ ከ OpenAI ጋር የሚጣጣሙ Batch እና Files APIዎች፣ የስማንቲክ ምላሽ ካሽ፣ ከአሸናፊዎች ሰሌዳ ጋር ያለ ጌሚፊኬሽን፣ የ ACP ወኪሎች ግኝት (15 የተገነቡ ወኪሎች)፣ በመርሐግብር የተያዘ የመዝገብ ላክ ወደ BigQuery፣ `auto/chaos` ትይዩ ብዙ-ሞዴል ስርጭት፣ የ Telegram ቦት ድልድይ፣ የመተግበሪያ ውስጥ የስሪት አስተዳዳሪ እና የ LMArena-ELO ነጻ አቅራቢዎች ደረጃ አሰጣጥ። → [ሰነዶች](docs/README.md)

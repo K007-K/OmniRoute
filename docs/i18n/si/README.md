@@ -71,7 +71,7 @@
 
 |                                |            v3.8.50            | **v3.8.51** |      `v3.8.53+`       |
 | ------------------------------ | :---------------------------: | :---------: | :-------------------: |
-| 🌐 සපයන්නන්                    |              352              |   **358**   |          376          |
+| 🌐 සපයන්නන්                    |              352              |   **358**   |          377          |
 | 🧠 අද්විතීය කතාබස් ආකෘතිය IDs  |             1320              |  **1374**   |         1475          |
 | 🖼️ මොඩලිටි පාලම                | 🆕 vision + ශ්‍රව්‍ය + වීඩියෝ |      ✓      |           ✓           |
 | 📡 රේඩාර් නොමිලේ නාමාවලිය      |           🆕 තේරීම            |      ✓      |           ✓           |
@@ -603,7 +603,7 @@ Radar භාවිතය තෝරාගත හැකි අතර එය GET �
 - **🖼️ නව endpoints** — `/v1/ocr` (Mistral OCR) සහ `/v1/audio/translations` (Whisper-විලාසයේ) මාධ්ය මතුපිට සම්පූර්ණ කරයි. → [API යොමුව](docs/reference/API_REFERENCE.md)
 - **🎨 රූප / වීඩියෝ / ශ්රව්ය උත්පාදනය** — මාධ්ය සඳහා එක් API එකක්: xAI Grok Imagine & Novita AI වීඩියෝ, ComfyUI, Magnific, Adobe Firefly, Segmind, සහ ElevenLabs වැනි කථන providers. → [API යොමුව](docs/reference/API_REFERENCE.md)
 - **🌍 යෙදවීම සහ මෙහෙයුම්** — reverse-proxy `basePath`, browser-භාෂා ස්වයං-හඳුනාගැනීම, per-key උපාංග නිරීක්ෂණය, root-less MITM trust, zh-TW දේශීයකරණය. → [පරිසරය](docs/reference/ENVIRONMENT.md)
-- **🤝 තවත් providers සහ agents** — cloud agents (Codex Cloud, Cursor, Devin, Jules), browser + OAuth login සමඟ Grok Build (xAI), Ollama first-class card, Claude Opus 5 & Sonnet 5, Kimi නිල හවුල්කාරිත්වය (Code/Web/Moonshot), Zed, Requesty, SenseNova, Yuanbao, Agnes AI… සහ යාවත්කාලීන කළ **376-provider catalog** එකක්. → [Providers](docs/reference/PROVIDER_REFERENCE.md)
+- **🤝 තවත් providers සහ agents** — cloud agents (Codex Cloud, Cursor, Devin, Jules), browser + OAuth login සමඟ Grok Build (xAI), Ollama first-class card, Claude Opus 5 & Sonnet 5, Kimi නිල හවුල්කාරිත්වය (Code/Web/Moonshot), Zed, Requesty, SenseNova, Yuanbao, Agnes AI… සහ යාවත්කාලීන කළ **377-provider catalog** එකක්. → [Providers](docs/reference/PROVIDER_REFERENCE.md)
 - **📡 යොමු කිරීමේ විනිවිදභාවය** — සෑම ප්රතිචාරයක්ම එය සේවය කළ strategy/provider/latency නම් කරන `X-OmniRoute-Decision` header එකක් රැගෙන යයි, නව `cache-optimized` combo strategy එකක් + Auto-Combo `cacheAffinity` සාධකය නැවත නැවත එන ඉල්ලීම් cached prefix එක තබා ඇති connection එක වෙත යොමු කරයි, සහ read-only `/v1/auto-combo/{channel}/candidates` endpoint එකක් `auto/*` channel එකක සජීවී අපේක්ෂක සංචය හෙළි කරයි. → [Auto-Combo](docs/routing/AUTO-COMBO.md)
 - **⚡ දේශීය කාර්යසාධනය සහ යටිතල්හිතුම්** — එක්-ක්ලික් දේශීය Redis, Cloudflare Workers / Deno Deploy relay deploy කරන්නන්, අධීක්ෂණය කරන ලද කාවැද්දූ සේවාවන් ලෙස Bifrost සහ Mux. → [කාවැද්දූ සේවාවන්](docs/frameworks/EMBEDDED-SERVICES.md)
 - **🧩 පෙට්ටියේ තවත් දේ** — plugin රාමුව + marketplace, Omni/Agent/GitHub skills රාමු, Obsidian vault ඒකාබද්ධ කිරීම (MCP මෙවලම් 22ක්), OpenAI-අනුකූල Batch & Files APIs, අර්ථාධාරිත ප්රතිචාර cache, leaderboards සමඟ gamification, ACP agent සොයාගැනීම (බිල්ට්-ඉන් agents 15ක්), BigQuery වෙත උපලේඛිත log නිර්යාතය, `auto/chaos` සමාන්තර බහු-ආකෘති fan-out, Telegram bot පාලමක්, යෙදුම්-ඇතුළත අනුවාද කළමනාකරු සහ LMArena-ELO නොමිලේ-සපයන්නන්ගේ ශ්රේණිගත කිරීම්. → [ලියකියවිලි](docs/README.md)
