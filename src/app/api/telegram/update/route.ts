@@ -22,13 +22,16 @@ import { extractChatMessage, sendTelegramMessage } from "@/lib/telegram/botApi";
 import {
   getTelegramBotToken,
   getTelegramWebhookSecret,
+  getTelegramAllowlistConfigWarnings,
   isTelegramEnabled,
+  isTelegramUserAllowed,
   isTelegramWebhookSecretConfigured,
 } from "@/lib/telegram/config";
 import { verifyInitData, parseInitData } from "@/lib/telegram/initData";
 import { proxyChat } from "@/lib/telegram/chatProxy";
 import { formatTelegramGatewayError } from "@/lib/telegram/errorMessage";
 import { resolveOmniRouteBaseUrl } from "@/shared/utils/resolveOmniRouteBaseUrl";
+import * as log from "@/sse/utils/logger";
 
 /**
  * Telegram update bodies are open-ended (many update types, evolving schema),
@@ -77,10 +80,20 @@ const START_HELP =
   "• Send any message and I'll route it through your configured models.\n" +
   "• Open the Mini App for a full chat UI.";
 
+let allowlistConfigChecked = false;
+
+/** Report allowlist misconfiguration once per process instead of failing silently. */
+function warnOnceAboutAllowlistConfig(): void {
+  if (allowlistConfigChecked) return;
+  allowlistConfigChecked = true;
+  for (const warning of getTelegramAllowlistConfigWarnings()) log.warn("TELEGRAM", warning);
+}
+
 export async function POST(request: Request) {
   if (!isTelegramEnabled()) {
     return NextResponse.json({ ok: false, error: "Telegram not configured" }, { status: 503 });
   }
+  warnOnceAboutAllowlistConfig();
 
   let rawBody: unknown;
   try {
@@ -108,6 +121,12 @@ export async function POST(request: Request) {
     }
     // Resolve the Telegram user id from the verified initData for key mapping.
     const telegramUserId = extractInitDataUserId(initData);
+    if (!isTelegramUserAllowed(telegramUserId)) {
+      log.warn("TELEGRAM", "Mini App user not in TELEGRAM_ALLOWED_USER_IDS", {
+        userId: telegramUserId,
+      });
+      return NextResponse.json({ ok: false, error: "Telegram user not allowed" }, { status: 403 });
+    }
     // Proxy synchronously and return the reply (Mini App awaits the fetch).
     const reply = await proxyChat(telegramUserId, message);
     return NextResponse.json({ ok: true, reply: reply || "⚠️ Empty gateway response." });
@@ -133,6 +152,16 @@ export async function POST(request: Request) {
   const chat = extractChatMessage(update);
   if (!chat) {
     // Non-message updates (callback_query etc.) — acknowledge silently.
+    return NextResponse.json({ ok: true });
+  }
+
+  // Authorize the *sender*, not the chat: in a group every member shares chatId.
+  // Telegram retries non-2xx deliveries, so acknowledge and drop silently.
+  if (!isTelegramUserAllowed(chat.fromId)) {
+    log.warn("TELEGRAM", "Dropped webhook message from a user not in TELEGRAM_ALLOWED_USER_IDS", {
+      userId: chat.fromId ?? null,
+      chatId: chat.chatId,
+    });
     return NextResponse.json({ ok: true });
   }
 
