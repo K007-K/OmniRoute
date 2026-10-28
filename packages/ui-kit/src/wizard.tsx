@@ -1,11 +1,12 @@
 "use client";
-import { useEffect, useId, useRef, type ReactNode } from "react";
+import { useEffect, useId, useRef, useState, type ReactNode } from "react";
 import { ArrowLeft, ArrowRight, Check, LogOut, X } from "lucide-react";
 import { Button } from "./button";
 import { BrandLoader, type BrandLoaderVariant } from "./brand-loader";
 import { Card, CardContent } from "./card";
 import { Tooltip, TooltipContent, TooltipTrigger } from "./tooltip";
 import { cn } from "./lib/utils";
+import { Alert } from "./alert";
 export interface WizardProps {
   steps: readonly { id: string; title: string; mobileTitle?: string; icon?: ReactNode }[];
   activeStep: number;
@@ -45,6 +46,8 @@ export interface WizardProps {
   variant?: "default" | "onboarding";
   /** Fill a height-constrained parent; only the body scrolls. */
   fill?: boolean;
+  /** Content-sized onboarding with a progress rail; compact progress on small screens. */
+  layout?: "stacked" | "sidebar";
   completedSteps?: readonly string[];
   /** Callers enabling all steps remain responsible for navigation guards. */
   stepNavigation?: "previous" | "all";
@@ -78,6 +81,7 @@ export function Wizard({
   onStepSelect,
   variant = "default",
   fill = false,
+  layout = "stacked",
   completedSteps = [],
   stepNavigation = "previous",
   className,
@@ -87,6 +91,12 @@ export function Wizard({
   const scrollArea = useRef<HTMLDivElement>(null);
   const loader = useRef<HTMLDivElement>(null);
   const unavailable = busy || loading;
+  const [showBusy, setShowBusy] = useState(false);
+  useEffect(() => {
+    if (!unavailable) { setShowBusy(false); return; }
+    const timer = setTimeout(() => setShowBusy(true), 150);
+    return () => clearTimeout(timer);
+  }, [unavailable]);
   useEffect(() => {
     if (loading) {
       loader.current?.focus({ preventScroll: true });
@@ -96,7 +106,7 @@ export function Wizard({
     heading.current?.focus({ preventScroll: fill });
   }, [activeStep, fill, loading]);
   return (
-    <Card className={cn("ci-wizard", className)} data-variant={variant} data-fill={fill || undefined}>
+    <Card className={cn("ci-wizard", className)} data-variant={variant} data-layout={layout} data-fill={fill || undefined}>
       <CardContent className="ci-wizard__content">
         <div className="ci-wizard__top">
           <span>
@@ -151,9 +161,7 @@ export function Wizard({
         </div>
         {(showNext || allowBack || (allowSkip && onSkip) || error) && <footer className="ci-wizard__footer">
           {error && (
-            <p className="ci-wizard__error" role="alert">
-              {error}
-            </p>
+            <Alert role="alert" dismissible={false} variant="warning" title="One more thing before continuing" description={error} />
           )}
           {(showNext || allowBack || (allowSkip && onSkip)) && <div className="ci-wizard__actions">
             {allowBack && <Button
@@ -169,12 +177,13 @@ export function Wizard({
                 Skip for now
               </Button>}
               {showNext && <Button
+                loading={showBusy}
                 onClick={nextBlocked ? onNextBlocked : onNext}
                 disabled={unavailable}
                 aria-disabled={nextBlocked || undefined}
                 data-wizard-blocked={nextBlocked || undefined}
               >
-                {unavailable ? "Saving…" : nextLabel || "Continue"}
+                {showBusy ? "Saving…" : nextLabel || "Continue"}
                 <ArrowRight aria-hidden />
               </Button>}
             </div>

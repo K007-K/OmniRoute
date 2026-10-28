@@ -6,6 +6,7 @@ import { Button } from "./button";
 import { Card, CardContent } from "./card";
 import { RadioGroupItem, type RadioGroupItemProps } from "./radio-group";
 import { cn } from "./lib/utils";
+import { Checkbox, type CheckboxProps } from "./checkbox";
 
 export type ChoiceCardTone = "neutral" | "accent" | "info" | "success";
 export interface ChoiceCardProps extends Omit<RadioGroupItemProps, "card" | "label" | "title"> {
@@ -18,6 +19,26 @@ export function ChoiceCard({ title, icon, tone = "neutral", className, ...props 
   return <RadioGroupItem {...props} card className={cn("ci-choice-card", `ci-choice-card--${tone}`, className)} label={
     <span className="ci-choice-card__heading">{icon && <span className="ci-choice-card__icon" aria-hidden>{icon}</span>}<span>{title}</span></span>
   } />;
+}
+
+export interface MultiChoiceCardProps extends Omit<CheckboxProps, "label" | "title"> {
+  title: ReactNode;
+  icon?: ReactNode;
+}
+/** A native checkbox card for independent, multi-select onboarding choices. */
+export function MultiChoiceCard({ title, icon, className, ...props }: MultiChoiceCardProps) {
+  return <Checkbox {...props} card className={cn("ci-choice-card", "ci-multi-choice-card", className)} label={<span className="ci-choice-card__heading">{icon && <span className="ci-choice-card__icon" aria-hidden>{icon}</span>}<span>{title}</span></span>} />;
+}
+
+export interface SetupLayoutProps { children: ReactNode; aside?: ReactNode; className?: string; /** Compact section headings for dense workspace and payment setup. */ headingVariant?: "default" | "compact"; }
+/** Shared content/benefits layout for workspace setup and wallet payment summaries. */
+export function SetupLayout({ children, aside, className, headingVariant = "default" }: SetupLayoutProps) {
+  return <div className={cn("ci-setup-layout", headingVariant === "compact" && "ci-setup-layout--compact", className)}><div className="ci-setup-layout__main">{children}</div>{aside && <aside className="ci-setup-layout__aside">{aside}</aside>}</div>;
+}
+
+export interface SetupBenefitsProps { title: string; description?: string; items: readonly { title: string; description: string; icon?: ReactNode }[]; }
+export function SetupBenefits({ title, description, items }: SetupBenefitsProps) {
+  return <div className="ci-setup-benefits"><h2>{title}</h2>{description && <p>{description}</p>}<ul>{items.map(item => <li key={item.title}>{item.icon && <span aria-hidden>{item.icon}</span>}<div><strong>{item.title}</strong><p>{item.description}</p></div></li>)}</ul></div>;
 }
 
 export interface SetupProgressCardProps {
