@@ -112,7 +112,7 @@
   <tr>
     <td align="right"><b>⚙️ Функции</b></td>
     <td align="center"><a href="#-combos--the-flagship">🎯 Комбинации</a></td>
-    <td align="center"><a href="#-376-ai-providers--153-catalog-marked-free">🌐 Доставчици</a></td>
+    <td align="center"><a href="#-377-ai-providers--153-catalog-marked-free">🌐 Доставчици</a></td>
     <td align="center"><a href="#-full-cli--a2a--mcp">🔌 CLI и MCP</a></td>
   </tr>
   <tr>
